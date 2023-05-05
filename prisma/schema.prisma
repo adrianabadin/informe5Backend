@@ -1,0 +1,130 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["clientExtensions"]
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+enum UserRoles {
+  GOD
+  ADMIN
+  WRITER
+  USER
+}
+
+model Addresses {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  street    String
+  number    Int
+  city      String
+  state     String
+  zipCode   String
+  Users     Users[]
+}
+
+model Users {
+  id          String      @id @default(uuid())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  name        String
+  lastName    String
+  username    String      @unique
+  phone       String
+  hash        String
+  address     Addresses   @relation(fields: [addressesId], references: [id])
+  addressesId String
+  rol         UserRoles
+  posts       Posts[]
+  isVerified  Boolean
+  Video       Video[]
+  RadioPost   RadioPost[]
+  Ads         Ads[]
+
+  @@index([username])
+  @@index([addressesId])
+}
+
+model Photos {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  url       String
+  Posts     Posts[]
+}
+
+model Ads {
+  id              String   @id @default(uuid())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  importance      Int
+  visitCount      Int
+  minTimeExposure Int
+  user            Users    @relation(fields: [usersId], references: [id])
+  usersId         String
+  url             String
+  title           String
+  photoUrl        String
+
+  @@index([usersId])
+}
+
+model Posts {
+  id              String   @id @default(uuid())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  title           String
+  subTitle        String
+  heading         String
+  text            String
+  tags            String
+  photos          Photos[]
+  author          Users    @relation(fields: [usersId], references: [id])
+  usersId         String
+  importance      Int
+  visitCount      Int
+  minTimeExposure Int
+
+  @@index([usersId])
+}
+
+model Video {
+  id              String   @id @default(uuid())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  url             String
+  text            String
+  tags            String
+  title           String
+  author          Users    @relation(fields: [usersId], references: [id])
+  usersId         String
+  importance      Int
+  visitCount      Int
+  minTimeExposure Int
+
+  @@index([usersId])
+}
+
+model RadioPost {
+  id              String   @id @default(uuid())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  importance      Int
+  visitCount      Int
+  minTimeExposure Int
+  author          Users    @relation(fields: [usersId], references: [id])
+  usersId         String
+  title           String
+  text            String
+  tags            String
+
+  @@index([usersId])
+}
