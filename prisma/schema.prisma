@@ -19,6 +19,28 @@ enum UserRoles {
   USER
 }
 
+model Metric {
+  id           String     @id @default(uuid())
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  timeStart    Int
+  timeEnd      Int
+  visitCounter Int
+  Ads          Ads?       @relation(fields: [adsId], references: [id])
+  adsId        String?
+  Posts        Posts?     @relation(fields: [postsId], references: [id])
+  postsId      String?
+  Video        Video?     @relation(fields: [videoId], references: [id])
+  videoId      String?
+  RadioPost    RadioPost? @relation(fields: [radioPostId], references: [id])
+  radioPostId  String?
+
+  @@index([adsId])
+  @@index([postsId])
+  @@index([videoId])
+  @@index([radioPostId])
+}
+
 model Addresses {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
@@ -32,22 +54,25 @@ model Addresses {
 }
 
 model Users {
-  id          String      @id @default(uuid())
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
-  name        String
-  lastName    String
-  username    String      @unique
-  phone       String
-  hash        String
-  address     Addresses   @relation(fields: [addressesId], references: [id])
-  addressesId String
-  rol         UserRoles
-  posts       Posts[]
-  isVerified  Boolean
-  Video       Video[]
-  RadioPost   RadioPost[]
-  Ads         Ads[]
+  id           String      @id @default(uuid())
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  name         String
+  lastName     String
+  username     String      @unique
+  phone        String
+  hash         String
+  address      Addresses?  @relation(fields: [addressesId], references: [id])
+  addressesId  String?
+  rol          UserRoles   @default(USER)
+  posts        Posts[]
+  isVerified   Boolean     @default(false)
+  Video        Video[]
+  RadioPost    RadioPost[]
+  Ads          Ads[]
+  password     String?
+  accessToken  String?
+  refreshToken String?
 
   @@index([username])
   @@index([addressesId])
@@ -62,53 +87,50 @@ model Photos {
 }
 
 model Ads {
-  id              String   @id @default(uuid())
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-  importance      Int
-  visitCount      Int
-  minTimeExposure Int
-  user            Users    @relation(fields: [usersId], references: [id])
-  usersId         String
-  url             String
-  title           String
-  photoUrl        String
+  id         String   @id @default(uuid())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  importance Int
+  metrics    Metric[]
+  user       Users    @relation(fields: [usersId], references: [id])
+  usersId    String
+  url        String
+  title      String
+  photoUrl   String
 
   @@index([usersId])
 }
 
 model Posts {
-  id              String   @id @default(uuid())
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-  title           String
-  subTitle        String
-  heading         String
-  text            String
-  tags            String
-  photos          Photos[]
-  author          Users    @relation(fields: [usersId], references: [id])
-  usersId         String
-  importance      Int
-  visitCount      Int
-  minTimeExposure Int
+  id         String   @id @default(uuid())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  title      String
+  subTitle   String
+  heading    String
+  text       String
+  tags       String
+  photos     Photos[]
+  author     Users    @relation(fields: [usersId], references: [id])
+  usersId    String
+  importance Int
+  metrics    Metric[]
 
   @@index([usersId])
 }
 
 model Video {
-  id              String   @id @default(uuid())
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-  url             String
-  text            String
-  tags            String
-  title           String
-  author          Users    @relation(fields: [usersId], references: [id])
-  usersId         String
-  importance      Int
-  visitCount      Int
-  minTimeExposure Int
+  id         String   @id @default(uuid())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  url        String
+  text       String
+  tags       String
+  title      String
+  author     Users    @relation(fields: [usersId], references: [id])
+  usersId    String
+  importance Int
+  metrics    Metric[]
 
   @@index([usersId])
 }
@@ -125,6 +147,7 @@ model RadioPost {
   title           String
   text            String
   tags            String
+  metrics         Metric[]
 
   @@index([usersId])
 }
