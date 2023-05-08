@@ -19,6 +19,15 @@ enum UserRoles {
   USER
 }
 
+model Session {
+  id        String   @id @default(uuid())
+  sid       String   @unique
+  data      String   @db.LongText
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 model Metric {
   id           String     @id @default(uuid())
   createdAt    DateTime   @default(now())
@@ -61,7 +70,7 @@ model Users {
   lastName     String
   username     String      @unique
   phone        String
-  hash         String
+  hash         String?
   address      Addresses?  @relation(fields: [addressesId], references: [id])
   addressesId  String?
   rol          UserRoles   @default(USER)

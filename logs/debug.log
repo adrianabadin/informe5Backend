@@ -1,0 +1,97 @@
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      name: 'Adrian',
+      lastName: 'Abadin',
+      phone: '111',
+      username: 'aabadin@gmail.com',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
+      createdAt: 2023-05-08T16:02:33.810Z,
+      updatedAt: 2023-05-08T16:02:33.810Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '111',
+      hash: '$argon2id$v=19$m=65536,t=3,p=4$2D4jEChynJaSjVfX7l5+Ww$T7sr7Bg0WFs2owgGX9kWdbTtgaMJ2rQ4bx2y6/FJlx8',
+      addressesId: null,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.tokenIssuance (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:57:11)
+        at AuthService.<anonymous> (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:25:18)
+        at Generator.next (<anonymous>)
+        at fulfilled (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    error: TypeError: req.flash is not a function
+        at allFailed (/run/media/adrianabadin/code/informe5Backend/node_modules/passport/lib/middleware/authenticate.js:134:15)
+        at attempt (/run/media/adrianabadin/code/informe5Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
+        at Strategy.strategy.fail (/run/media/adrianabadin/code/informe5Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
+        at verified (/run/media/adrianabadin/code/informe5Backend/node_modules/passport-local/lib/strategy.js:82:30)
+        at AuthService.<anonymous> (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:28:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
+      createdAt: 2023-05-08T16:02:33.810Z,
+      updatedAt: 2023-05-08T16:02:33.810Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '111',
+      hash: null,
+      addressesId: null,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null
+    }
+  },
+  level: 'debug'
+}

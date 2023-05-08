@@ -21,7 +21,7 @@ if (process.env.NODE_ENV !== 'PRODUCTION') {
   logger.add(new winston.transports.Console({
     format: winston.format.combine(
       winston.format.prettyPrint(),
-      winston.format.colorize(),
+      winston.format.colorize({ all: true }),
       winston.format.timestamp())
   }))
 }

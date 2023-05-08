@@ -4,7 +4,7 @@ import passport from 'passport'
 import { AuthService } from './auth.service'
 import { type Request } from 'express'
 import fs from 'fs'
-const publicKey = fs.readFileSync(`/${process.env.KEYS_PATH as string}/publicKey.pem`, 'utf-8')
+const publicKey = fs.readFileSync(`${process.env.KEYS_PATH as string}/publicKey.pem`, 'utf-8')
 const authService = new AuthService()
 const cookieExtractor = (req: Request): string => {
   let token: string = ''
