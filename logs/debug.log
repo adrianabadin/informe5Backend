@@ -95,3 +95,188 @@
   },
   level: 'debug'
 }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
+      createdAt: 2023-05-08T16:02:33.810Z,
+      updatedAt: 2023-05-08T16:02:33.810Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '111',
+      hash: null,
+      addressesId: null,
+      rol: 'USER',
+      isVerified: false,
+      password: null
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
+      createdAt: 2023-05-08T16:02:33.810Z,
+      updatedAt: 2023-05-08T16:02:33.810Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '111',
+      hash: null,
+      addressesId: null,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
+      createdAt: 2023-05-08T16:02:33.810Z,
+      updatedAt: 2023-05-08T16:02:33.810Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '111',
+      hash: null,
+      addressesId: null,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
+      createdAt: 2023-05-08T16:02:33.810Z,
+      updatedAt: 2023-05-08T16:02:33.810Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '111',
+      hash: null,
+      addressesId: null,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
+      createdAt: 2023-05-08T16:02:33.810Z,
+      updatedAt: 2023-05-08T16:02:33.810Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '111',
+      hash: null,
+      addressesId: null,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
+      createdAt: 2023-05-08T16:02:33.810Z,
+      updatedAt: 2023-05-08T16:02:33.810Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '111',
+      hash: null,
+      addressesId: null,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
+      createdAt: 2023-05-08T16:02:33.810Z,
+      updatedAt: 2023-05-08T16:02:33.810Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '111',
+      hash: null,
+      addressesId: null,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }

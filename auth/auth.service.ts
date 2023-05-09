@@ -1,12 +1,12 @@
 import { DatabaseHandler } from '../Services/database.service'
 import { logger } from '../Services/logger.service'
-import { type Prisma } from '@prisma/client'
+import { type Prisma, type Users } from '@prisma/client'
 import { type Request } from 'express'
 import argon2 from 'argon2'
 import jwt from 'jsonwebtoken'
 import fs from 'fs'
 import dotenv from 'dotenv'
-import { type DoneType } from '../Entities'
+import { type IResponseObject, type DoneType } from '../Entities'
 dotenv.config()
 const privateKey = fs.readFileSync('auth/privateKey.pem', 'utf-8')
 export class AuthService extends DatabaseHandler {
@@ -40,7 +40,8 @@ export class AuthService extends DatabaseHandler {
           logger.debug({
             function: 'AuthService.localLoginVerify', user: { ...user, hash: null }
           })
-          const isValid: boolean = await argon2.verify(user.hash, password)
+          let isValid: boolean = false
+          if ('hash' in user && user.hash !== null && user.hash !== undefined) { isValid = await argon2.verify(user.hash, password) }
           if (isValid) {
             if (user !== null && 'id' in user && user.id !== undefined) {
               this.tokenIssuance(user.id, req)
@@ -90,6 +91,19 @@ export class AuthService extends DatabaseHandler {
         logger.error({ function: 'AuthService.googleAuthVerify', error })
         done(error, false, { message: 'Database Error' })
       }
+    },
+    public serialize = (user: any, done: DoneType) => {
+      done(null, user.id)
+    },
+    public deSerialize = (userId: string, done: DoneType) => {
+      this.prisma.users.gFindById(userId)
+        .then((response: IResponseObject) => {
+          const data: Users = response.data
+          return done(null, data)
+        })
+        .catch(error => {
+          logger.error({ function: 'AuthService.deSerialize', error })
+        })
     }
   ) { super() }
 }
