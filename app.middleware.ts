@@ -11,6 +11,7 @@ import Session from 'express-session'
 import flash from 'connect-flash'
 import { routeHandler } from './app.routes'
 import { engine } from 'express-handlebars'
+import cors from 'cors'
 export const app = express()
 app.use(express.static('public'))
 
@@ -27,6 +28,7 @@ const sessionMiddleware = Session({
   cookie: { maxAge: 60 * 60 * 1000 * 24 },
   secret: 'Dilated flakes of fire fall, like snow in the Alps when there is no wind'
 })
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.engine('handlebars', engine())

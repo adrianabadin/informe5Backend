@@ -20,7 +20,7 @@ export class AuthService extends DatabaseHandler {
           logger.debug({
             function: 'AuthService.localSignUpVerify', user: { ...body, hash: null }
           })
-          user = (await this.prisma.users.gCreate({ ...body })).data
+          user = (await this.prisma.users.gCreate({ ...body, birthDate: (body.birthDate !== undefined) ? new Date(body.birthDate as string) : undefined })).data
           if (user?.id !== undefined) {
             this.tokenIssuance(user.id, req)
             done(null, user, { message: 'Successfully Registred' })
@@ -44,7 +44,6 @@ export class AuthService extends DatabaseHandler {
           if ('hash' in user && user.hash !== null && user.hash !== undefined) { isValid = await argon2.verify(user.hash, password) }
           if (isValid) {
             if (user !== null && 'id' in user && user.id !== undefined) {
-              this.tokenIssuance(user.id, req)
               done(null, user, { message: 'Successfully Logged In' })
             } else done(null, false, { message: 'Password doesent match' })
           } else done(null, false, { message: 'username doesnt exist' })
@@ -54,15 +53,14 @@ export class AuthService extends DatabaseHandler {
         done(error, false, { message: 'Database Error' })
       }
     },
-    public tokenIssuance = (id: string, req: Request) => {
-      req.cookies.jwt = jwt.sign({ sub: id }, privateKey, { algorithm: 'RS256', expiresIn: process.env.TKN_EXPIRATION })
+    public tokenIssuance = (id: string): string => {
+      return jwt.sign({ sub: id }, privateKey, { algorithm: 'RS256', expiresIn: process.env.TKN_EXPIRATION })
     },
     public jwtLoginVerify = async (req: Request, jwtPayload: string, done: DoneType) => {
       try {
         const id = jwtPayload.sub as unknown as string
         const user = await this.prisma.users.gFindById(id)
         if ('username' in user && user.username !== undefined && user.username !== null) {
-          this.tokenIssuance(id, req)
           done(null, user.data, { message: 'Successfully Logged In' })
         } else done(null, false, { message: 'ID doesnt match any registred users' })
       } catch (error) {
@@ -76,7 +74,6 @@ export class AuthService extends DatabaseHandler {
         const [email] = profile.emails.value
         this.prisma.users.findUnique({ where: { username: email } }).then(user => {
           if (user?.username != null) {
-            this.tokenIssuance(user.id, req)
             return done(null, user, { message: 'Successfully Logged in!' })
           } else {
             req.flash('at', accessToken)

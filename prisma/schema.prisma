@@ -62,6 +62,12 @@ model Addresses {
   Users     Users[]
 }
 
+enum Gender {
+  MALE
+  FEMALE
+  NOT_BINARY
+}
+
 model Users {
   id           String      @id @default(uuid())
   createdAt    DateTime    @default(now())
@@ -71,8 +77,7 @@ model Users {
   username     String      @unique
   phone        String
   hash         String?
-  address      Addresses?  @relation(fields: [addressesId], references: [id])
-  addressesId  String?
+  birthDate    DateTime?
   rol          UserRoles   @default(USER)
   posts        Posts[]
   isVerified   Boolean     @default(false)
@@ -82,6 +87,9 @@ model Users {
   password     String?
   accessToken  String?
   refreshToken String?
+  gender       Gender?
+  Addresses    Addresses?  @relation(fields: [addressesId], references: [id])
+  addressesId  String?
 
   @@index([username])
   @@index([addressesId])

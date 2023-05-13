@@ -23,3 +23,203 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:6701
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:6641 {
+      code: 'P2025',
+      clientVersion: '4.13.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.create()` invocation:
+    
+    {
+      data: {
+        name: 'Adrian',
+        username: 'aabadin@gmail.com',
+        lastName: 'abadin',
+        phone: '+542344426406',
+        birthDate: '2023-05-26',
+        ~~~~~~~~~
+        city: '',
+        ~~~~
+        gender: 'NO_BINARIO',
+        ~~~~~~
+        hash: '$argon2id$v=19$m=65536,t=3,p=4$2Oy0gxaWU/8vwyNe/5AL4g$Lou9Jr08Qc4VQGdx0pc7GlE6P6gyZI98c4cRCsY0gn8'
+      }
+    }
+    
+    Unknown arg `birthDate` in data.birthDate for type UsersCreateInput. Available args:
+    
+    type UsersCreateInput {
+      id?: String
+      createdAt?: DateTime
+      updatedAt?: DateTime
+      name: String
+      lastName: String
+      username: String
+      phone: String
+      hash?: String | Null
+      rol?: UserRoles
+      isVerified?: Boolean
+      password?: String | Null
+      accessToken?: String | Null
+      refreshToken?: String | Null
+      address?: AddressesCreateNestedOneWithoutUsersInput
+      posts?: PostsCreateNestedManyWithoutAuthorInput
+      Video?: VideoCreateNestedManyWithoutAuthorInput
+      RadioPost?: RadioPostCreateNestedManyWithoutAuthorInput
+      Ads?: AdsCreateNestedManyWithoutUserInput
+    }
+    Unknown arg `city` in data.city for type UsersCreateInput. Did you mean `id`? Available args:
+    type UsersCreateInput {
+      id?: String
+      createdAt?: DateTime
+      updatedAt?: DateTime
+      name: String
+      lastName: String
+      username: String
+      phone: String
+      hash?: String | Null
+      rol?: UserRoles
+      isVerified?: Boolean
+      password?: String | Null
+      accessToken?: String | Null
+      refreshToken?: String | Null
+      address?: AddressesCreateNestedOneWithoutUsersInput
+      posts?: PostsCreateNestedManyWithoutAuthorInput
+      Video?: VideoCreateNestedManyWithoutAuthorInput
+      RadioPost?: RadioPostCreateNestedManyWithoutAuthorInput
+      Ads?: AdsCreateNestedManyWithoutUserInput
+    }
+    Unknown arg `gender` in data.gender for type UsersCreateInput. Did you mean `Video`? Available args:
+    type UsersCreateInput {
+      id?: String
+      createdAt?: DateTime
+      updatedAt?: DateTime
+      name: String
+      lastName: String
+      username: String
+      phone: String
+      hash?: String | Null
+      rol?: UserRoles
+      isVerified?: Boolean
+      password?: String | Null
+      accessToken?: String | Null
+      refreshToken?: String | Null
+      address?: AddressesCreateNestedOneWithoutUsersInput
+      posts?: PostsCreateNestedManyWithoutAuthorInput
+      Video?: VideoCreateNestedManyWithoutAuthorInput
+      RadioPost?: RadioPostCreateNestedManyWithoutAuthorInput
+      Ads?: AdsCreateNestedManyWithoutUserInput
+    }
+    
+    
+        at mi.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:149:91)
+        at tn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:166:1205)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10962
+        at runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:70:25817)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10951)
+        at t._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10484) {
+      clientVersion: '4.13.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.create()` invocation:
+    
+    {
+      data: {
+        name: 'Adrian',
+        username: 'aabadin@gmail.com',
+        lastName: 'abadin',
+        phone: '+542344426406',
+        birthDate: '2023-06-02',
+        ~~~~~~~~~
+        gender: 'NOT_BINARY',
+        hash: '$argon2id$v=19$m=65536,t=3,p=4$p4Gp1Vxh7H3BpVtsYxsKjA$7CbcAkqPavLAJAnLIoqtLat01vtNnS62JDX8GPThY5c'
+      }
+    }
+    
+    Unknown arg `birthDate` in data.birthDate for type UsersCreateInput. Available args:
+    
+    type UsersCreateInput {
+      id?: String
+      createdAt?: DateTime
+      updatedAt?: DateTime
+      name: String
+      lastName: String
+      username: String
+      phone: String
+      hash?: String | Null
+      rol?: UserRoles
+      isVerified?: Boolean
+      password?: String | Null
+      accessToken?: String | Null
+      refreshToken?: String | Null
+      gender?: Gender | Null
+      posts?: PostsCreateNestedManyWithoutAuthorInput
+      Video?: VideoCreateNestedManyWithoutAuthorInput
+      RadioPost?: RadioPostCreateNestedManyWithoutAuthorInput
+      Ads?: AdsCreateNestedManyWithoutUserInput
+      Addresses?: AddressesCreateNestedOneWithoutUsersInput
+    }
+    
+    
+        at mi.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:149:91)
+        at tn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:166:1205)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10962
+        at runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:70:25817)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10951)
+        at t._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10484) {
+      clientVersion: '4.13.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.create()` invocation:
+    
+    {
+      data: {
+        name: 'Adrian',
+        username: 'aabadin@gmail.com',
+        lastName: 'abadin',
+        phone: '+542344426406',
+        birthDate: '2023-06-02',
+                   ~~~~~~~~~~~~
+        gender: 'NOT_BINARY',
+        hash: '$argon2id$v=19$m=65536,t=3,p=4$0nWmmcv3Dj2gZeYxleWSOA$sZdaLIvYrrNImSGeB61ClybhQb5pm4dZFDaOt5EtSWI'
+      }
+    }
+    
+    Argument birthDate: Got invalid value '2023-06-02' on prisma.createOneUsers. Provided String, expected DateTime or Null.
+    
+    
+        at mi.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:149:91)
+        at tn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:166:1205)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10962
+        at runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:70:25817)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10951)
+        at t._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10484) {
+      clientVersion: '4.13.0'
+    }
+  },
+  level: 'error'
+}
