@@ -6,182 +6,170 @@
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
 {
   message: {
-    function: 'AuthService.localSignUpVerify',
-    user: {
-      name: 'Adrian',
-      lastName: 'Abadin',
-      phone: '111',
-      username: 'aabadin@gmail.com',
-      hash: null
+    accessToken: 'ya29.a0AWY7Ckkq72BrA9PPbWksj3mZ9YsfIXzmMfeHwgBsivSnZXvA5GntHSuoRRci4vnk68iobSs-bsQUoU57damnE2e21LPHCofUfFA0PpUwRZaGHAdHQfnkeB9bcTAn71NgzM677USjlGj3qo08rdmS7I0QvI4laCgYKARISARESFQG1tDrp506nUKpzCxbu_hQu3uwyGg0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      language: 'es',
+      locale: undefined,
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        locale: 'es'
+      }
     }
   },
   level: 'debug'
 }
 {
   message: {
-    function: 'DatabaseHandler.create',
-    data: {
-      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
-      createdAt: 2023-05-08T16:02:33.810Z,
-      updatedAt: 2023-05-08T16:02:33.810Z,
-      name: 'Adrian',
-      lastName: 'Abadin',
-      username: 'aabadin@gmail.com',
-      phone: '111',
-      hash: '$argon2id$v=19$m=65536,t=3,p=4$2D4jEChynJaSjVfX7l5+Ww$T7sr7Bg0WFs2owgGX9kWdbTtgaMJ2rQ4bx2y6/FJlx8',
-      addressesId: null,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null
-    }
-  },
-  level: 'debug'
-}
-{
-  message: {
-    function: 'AuthService.localSignUpVerify',
-    error: TypeError: req.cookies is not a function
-        at AuthService.tokenIssuance (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:57:11)
-        at AuthService.<anonymous> (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:25:18)
-        at Generator.next (<anonymous>)
-        at fulfilled (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:5:58)
+    function: 'AuthService.googleAuthVerify',
+    error: TypeError: Cannot read properties of undefined (reading 'value')
+        at Strategy.googleAuthVerify [as _verify] (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:78:40)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/passport-oauth2/lib/strategy.js:198:24
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/passport-google-oauth2/lib/oauth2.js:165:7
+        at passBackControl (/run/media/adrianabadin/code/informe5Backend/node_modules/oauth/lib/oauth2.js:134:9)
+        at IncomingMessage.<anonymous> (/run/media/adrianabadin/code/informe5Backend/node_modules/oauth/lib/oauth2.js:157:7)
+        at IncomingMessage.emit (node:events:525:35)
+        at endReadableNT (node:internal/streams/readable:1359:12)
+        at processTicksAndRejections (node:internal/process/task_queues:82:21)
   },
   level: 'error'
 }
 { message: 'Listening on 8080', level: 'info' }
 {
   message: {
-    function: 'AuthService.localSignUpVerify',
-    error: TypeError: req.flash is not a function
-        at allFailed (/run/media/adrianabadin/code/informe5Backend/node_modules/passport/lib/middleware/authenticate.js:134:15)
-        at attempt (/run/media/adrianabadin/code/informe5Backend/node_modules/passport/lib/middleware/authenticate.js:183:28)
-        at Strategy.strategy.fail (/run/media/adrianabadin/code/informe5Backend/node_modules/passport/lib/middleware/authenticate.js:305:9)
-        at verified (/run/media/adrianabadin/code/informe5Backend/node_modules/passport-local/lib/strategy.js:82:30)
-        at AuthService.<anonymous> (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:28:16)
-        at Generator.next (<anonymous>)
-        at fulfilled (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:5:58)
+    accessToken: 'ya29.a0AWY7CknFYvRev0h_BdLfT5NIBrj8jN8Iev0_i8Fr1GCr0ywhM2nUCUrc-ljJSkov3NcBq_3jvsdr85ldHskSl1JYHW-JyOj-1MyxWXm7ZINECQr1EJX7HMGJVvnCM57BCAnO6GlcauqtY6lRvPaQc5TWDkt-aCgYKAbMSARESFQG1tDrp9IftmGGeR4_lNqhouVzA_g0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.googleAuthVerify',
+    error: TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+        at Strategy.googleAuthVerify [as _verify] (/run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:78:25)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/passport-oauth2/lib/strategy.js:198:24
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/passport-google-oauth2/lib/oauth2.js:165:7
+        at passBackControl (/run/media/adrianabadin/code/informe5Backend/node_modules/oauth/lib/oauth2.js:134:9)
+        at IncomingMessage.<anonymous> (/run/media/adrianabadin/code/informe5Backend/node_modules/oauth/lib/oauth2.js:157:7)
+        at IncomingMessage.emit (node:events:525:35)
+        at endReadableNT (node:internal/streams/readable:1359:12)
+        at processTicksAndRejections (node:internal/process/task_queues:82:21)
   },
   level: 'error'
 }
 { message: 'Listening on 8080', level: 'info' }
 {
   message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
-      createdAt: 2023-05-08T16:02:33.810Z,
-      updatedAt: 2023-05-08T16:02:33.810Z,
-      name: 'Adrian',
-      lastName: 'Abadin',
-      username: 'aabadin@gmail.com',
-      phone: '111',
-      hash: null,
-      addressesId: null,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null
-    }
-  },
-  level: 'debug'
-}
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{
-  message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
-      createdAt: 2023-05-08T16:02:33.810Z,
-      updatedAt: 2023-05-08T16:02:33.810Z,
-      name: 'Adrian',
-      lastName: 'Abadin',
-      username: 'aabadin@gmail.com',
-      phone: '111',
-      hash: null,
-      addressesId: null,
-      rol: 'USER',
-      isVerified: false,
-      password: null
-    }
-  },
-  level: 'debug'
-}
-{ message: 'Listening on 8080', level: 'info' }
-{
-  message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
-      createdAt: 2023-05-08T16:02:33.810Z,
-      updatedAt: 2023-05-08T16:02:33.810Z,
-      name: 'Adrian',
-      lastName: 'Abadin',
-      username: 'aabadin@gmail.com',
-      phone: '111',
-      hash: null,
-      addressesId: null,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null
-    }
-  },
-  level: 'debug'
-}
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{
-  message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
-      createdAt: 2023-05-08T16:02:33.810Z,
-      updatedAt: 2023-05-08T16:02:33.810Z,
-      name: 'Adrian',
-      lastName: 'Abadin',
-      username: 'aabadin@gmail.com',
-      phone: '111',
-      hash: null,
-      addressesId: null,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null
-    }
-  },
-  level: 'debug'
-}
-{
-  message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
-      createdAt: 2023-05-08T16:02:33.810Z,
-      updatedAt: 2023-05-08T16:02:33.810Z,
-      name: 'Adrian',
-      lastName: 'Abadin',
-      username: 'aabadin@gmail.com',
-      phone: '111',
-      hash: null,
-      addressesId: null,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null
+    accessToken: 'ya29.a0AWY7CkkUrqb5mVHkSTq7N7QEQuyMDNX1SmXi6qz2urz2AOYTvRPBN8S3Mz4gyV5zgeO3dT5p2_45LHswae8DbEVr2I_EomSjNuJda7iGVOsMzgQy6jYaPmGgFhxxCGrDS0nsAyDWS0QpR2MtMs5F7OMeCErXaCgYKAd4SARESFQG1tDrpe0qiSnOwOwccE1P7L3x7bQ0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
     }
   },
   level: 'debug'
@@ -189,23 +177,552 @@
 { message: 'Listening on 8080', level: 'info' }
 {
   message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
-      createdAt: 2023-05-08T16:02:33.810Z,
-      updatedAt: 2023-05-08T16:02:33.810Z,
-      name: 'Adrian',
-      lastName: 'Abadin',
-      username: 'aabadin@gmail.com',
-      phone: '111',
-      hash: null,
-      addressesId: null,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null
+    accessToken: 'ya29.a0AWY7CkkJTOjpsdAEtzvIzjt7rX2hIyBapObskT2mkFvrmCNxvpXYfgB7FCx0YMjyBwRcbbmoczmgheftMKAm3dpjU6K1ivBctVRyVsHqBXoEEe6VObObQjal-pcXCmJxM4t9R1_LBjVtItwwqe3Ditgk1-PNaCgYKAYESARESFQG1tDrpDV9ZV_HO3Z3Eu2bo4RTHHg0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
     }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7CklE6qGBiwt8UVVYLKVItkx8QNOV_0Ih7ZCVOZDSyPhXOUjj2FGip14CVXNgsEye1nj694n6f1EW5FBVpj-5u1eWVNBfl7vmNwlQI7gnxQ5-QOqCQHZoHrUhM1OQLxIqWHcctJ3atuGE2mAI-hg8_JUuaCgYKAVgSARESFQG1tDrpsMIeg3wsgOVvGM1WGcEB2g0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7CkkatG6nO-dHgw1AJp3Sq4vxFR4pMOYBuE0L-3GJiM7IZBuZ1TRus0jF4FFMQKwyI2Zcyz0Fyd9ilggGiR0fp3CBLlr-JfOBWk1mXq3NG4UF2WQ2RctVnyqV-M5NEgS5d8WvD7OV_sWK4YiThqZ2HPXYaCgYKARYSARESFQG1tDrpUCwzrB1k0u_vIoR1WLOYkg0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7CknPNOM5NP3N6HE_M3N4UgZVg-k5UNzWXzH0Asbi7KW92UBJpYGwMMrWats81cWIaRN5OpS1HO0Hk5xkd1zMG5kd_0TPMoORV28p82X3SpPZ2MHvg6_IytdXmQ3S3zMN8oW2pWrY-1kVX8OevlQmaQH0aCgYKAQgSARESFQG1tDrpmG1qRhnXss21yxITp6T9NQ0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7CkmgVYP2QBd00deiswjRmWOnK-iz3IaCeOSY4H3DtzPpYeqpMumLejCY5JmQol5rAH-39JmYWVJZfwcRFE0-rA36v_Ji0NN0Phn0TuUq7CI2r8-_Fz7YT-30DdQygqLs6hLogsyijXtXRAhZTv6SfQ6yaCgYKAU4SARESFQG1tDrphBxLwyv-P-_hKRaADOrREg0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    }
+  },
+  level: 'debug'
+}
+{ message: 'caboom', level: 'error' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'caboom', level: 'error' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7Cklc9xPmKdfL2atV5X67dRn-zFBZ_Y4m-34ijK__1vhzs9Rjlu9mFxujDsj02eRxfegCFk35yBu7bibbiXaop1Sx8KCNb3rPIjv1z78CL3p-AM8FgLn8m9lop83ihG7lfojww3dm8jI2nKNT29XV2S2faCgYKAVYSARESFQG1tDrpJM_ZNMJdHiN53Zo15fH-xw0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    },
+    email: 'a'
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'caboom', level: 'error' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7CkmdwW85R8O6_15frcbZW42VjDSzhMQICje2lJe-xfGuuOW3I9hDjG3OksjuAkejjJZ8ZzCAnZgP3C6DzSkvuZksxE2Gpwvgoy6f0qNsB6YF89k-bw_Ryt7onMIKRoYSjIhTaIXqdVF8y2cGzN47n9a1aCgYKAeMSARESFQG1tDrpeH4BYhan2F7YLyPHVQa-7A0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    },
+    email: 'a'
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'caboom', level: 'error' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7CkkVihh7zx-gKWOH8PCCB6IaVCqGEZH2VsOQEdtwzMaCOClhfNFCERlIcirKHfTfXCzNk5cxZ4ydm4P5wtBseOFYOf2DBklaTOmGgdUK62C0YmfcZTQ9cLF24SBe4wk477Gu9ILxrp4vaoxY402B5B83aCgYKAdASARESFQG1tDrpwF2gZYQuyuw_gLfFtAIvLw0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    },
+    tipo: 'object'
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'caboom', level: 'error' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7CknayZ3uk7R88xq3_UxuKGehw_rqFhP-87JTUBtWil96DcHb-APvav4PETRDmrK-Sglyqp6t4D8cvFqnRTAAcANnXXZKd1uQFlykPGxXA-4fF1F5D7u4I2_xn9G1QUpJP007cWTfl5Bn2qdgvm36eNTHaCgYKAdoSARESFQG1tDrpRdqt7E8ZpWg1MzkrI31GPQ0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    },
+    tipo: 'object'
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'caboom', level: 'error' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7CklXt7werD01yNoBwSvivq6Ua9XpQc5InIWlUy2y8gTWXCFHAkaPYHM5T_R3_3FHF_QfblV3OZYYluTrU0EpD4tR2n5JtAORrco1huAis2zkm7WH1h8T7pbZEcBalwaPB_ZkarCqZWiceIhWd3WRrIrSaCgYKAVASARESFQG1tDrpLWKHvbSUdVQJbrOL-6r4GQ0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    },
+    tipo: 'object'
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'caboom', level: 'error' }
+{
+  message: {
+    accessToken: 'ya29.a0AWY7Cknyx53rryIKA3IGr-fBJ-VWZTWWS494XTXWKmeUo68LA0qB5bpiZguASCnHIrl7gyVqscljIGgrCasKE--NTnUsiLcGkBGXDat3P2TtFoBjuGNlCpG7iDazlHGQLKUfE0R1ku2XZe8I2FzVrdeq3oMBaCgYKAUoSARESFQG1tDrpZ55wVCESzTQRewlw-bzItA0163',
+    profile: {
+      provider: 'google',
+      sub: '106124197220253993275',
+      id: '106124197220253993275',
+      displayName: 'Adrian Abadin',
+      name: { givenName: 'Adrian', familyName: 'Abadin' },
+      given_name: 'Adrian',
+      family_name: 'Abadin',
+      email_verified: true,
+      verified: true,
+      language: 'es',
+      locale: undefined,
+      email: 'aabadin@gmail.com',
+      emails: [ { value: 'aabadin@gmail.com', type: 'account' } ],
+      photos: [
+        {
+          value: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+          type: 'default'
+        }
+      ],
+      picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+      _raw: '{\n' +
+        '  "sub": "106124197220253993275",\n' +
+        '  "name": "Adrian Abadin",\n' +
+        '  "given_name": "Adrian",\n' +
+        '  "family_name": "Abadin",\n' +
+        '  "picture": "https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg\\u003ds96-c",\n' +
+        '  "email": "aabadin@gmail.com",\n' +
+        '  "email_verified": true,\n' +
+        '  "locale": "es"\n' +
+        '}',
+      _json: {
+        sub: '106124197220253993275',
+        name: 'Adrian Abadin',
+        given_name: 'Adrian',
+        family_name: 'Abadin',
+        picture: 'https://lh3.googleusercontent.com/a/AGNmyxZicb7GRxxZ2F4v1VhYjV6SF75qstjVOFJ0fVOocg=s96-c',
+        email: 'aabadin@gmail.com',
+        email_verified: true,
+        locale: 'es'
+      }
+    },
+    tipo: 'aabadin@gmail.com'
   },
   level: 'debug'
 }
@@ -213,329 +730,52 @@
 { message: 'Listening on 8080', level: 'info' }
 {
   message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
-      createdAt: 2023-05-08T16:02:33.810Z,
-      updatedAt: 2023-05-08T16:02:33.810Z,
-      name: 'Adrian',
-      lastName: 'Abadin',
-      username: 'aabadin@gmail.com',
-      phone: '111',
-      hash: null,
-      addressesId: null,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null
-    }
-  },
-  level: 'debug'
-}
-{ message: 'Listening on 8080', level: 'info' }
-{
-  message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '15b312b1-05cd-4edf-9c61-1313cb2db5de',
-      createdAt: 2023-05-08T16:02:33.810Z,
-      updatedAt: 2023-05-08T16:02:33.810Z,
-      name: 'Adrian',
-      lastName: 'Abadin',
-      username: 'aabadin@gmail.com',
-      phone: '111',
-      hash: null,
-      addressesId: null,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null
-    }
-  },
-  level: 'debug'
-}
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{ message: 'Listening on 8080', level: 'info' }
-{
-  message: {
-    function: 'AuthService.localLoginVerify',
-    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
-        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:6701
-        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:6641 {
-      code: 'P2025',
+    function: 'AuthService.googleAuthVerify',
+    error: PrismaClientInitializationError: 
+    Invalid `this.prisma.users.findUnique()` invocation in
+    /run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:77:27
+    
+      74 public googleAuthVerify = (req: Request, accessToken: string, refreshToken: string, profile: any, done: DoneType) => {
+      75   try {
+      76     const { email } = profile
+    → 77     this.prisma.users.findUnique(
+    Can't reach database server at `127.0.0.1`:`3306`
+    
+    Please make sure your database server is running at `127.0.0.1`:`3306`.
+        at pn.handleRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:176:6750)
+        at pn.handleAndLogRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:176:5907)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:3087
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:3294
+        at t._executeRequest (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:10755)
+        at t._request (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:10484) {
       clientVersion: '4.13.0',
-      meta: undefined
+      errorCode: undefined
     }
   },
   level: 'error'
 }
-{ message: 'Listening on 8080', level: 'info' }
 {
   message: {
-    function: 'AuthService.localSignUpVerify',
-    user: {
-      name: 'Adrian',
-      username: 'aabadin@gmail.com',
-      lastName: 'abadin',
-      phone: '+542344426406',
-      birthDate: '2023-05-26',
-      city: '',
-      gender: 'NO_BINARIO',
-      hash: null
-    }
-  },
-  level: 'debug'
-}
-{
-  message: {
-    function: 'DatabaseHandler.create',
-    error: PrismaClientValidationError: 
-    Invalid `prisma.users.create()` invocation:
+    function: 'AuthService.googleAuthVerify',
+    error: PrismaClientInitializationError: 
+    Invalid `this.prisma.users.findUnique()` invocation in
+    /run/media/adrianabadin/code/informe5Backend/auth/auth.service.ts:77:27
     
-    {
-      data: {
-        name: 'Adrian',
-        username: 'aabadin@gmail.com',
-        lastName: 'abadin',
-        phone: '+542344426406',
-        birthDate: '2023-05-26',
-        ~~~~~~~~~
-        city: '',
-        ~~~~
-        gender: 'NO_BINARIO',
-        ~~~~~~
-        hash: '$argon2id$v=19$m=65536,t=3,p=4$2Oy0gxaWU/8vwyNe/5AL4g$Lou9Jr08Qc4VQGdx0pc7GlE6P6gyZI98c4cRCsY0gn8'
-      }
-    }
+      74 public googleAuthVerify = (req: Request, accessToken: string, refreshToken: string, profile: any, done: DoneType) => {
+      75   try {
+      76     const { email } = profile
+    → 77     this.prisma.users.findUnique(
+    Can't reach database server at `127.0.0.1`:`3306`
     
-    Unknown arg `birthDate` in data.birthDate for type UsersCreateInput. Available args:
-    
-    type UsersCreateInput {
-      id?: String
-      createdAt?: DateTime
-      updatedAt?: DateTime
-      name: String
-      lastName: String
-      username: String
-      phone: String
-      hash?: String | Null
-      rol?: UserRoles
-      isVerified?: Boolean
-      password?: String | Null
-      accessToken?: String | Null
-      refreshToken?: String | Null
-      address?: AddressesCreateNestedOneWithoutUsersInput
-      posts?: PostsCreateNestedManyWithoutAuthorInput
-      Video?: VideoCreateNestedManyWithoutAuthorInput
-      RadioPost?: RadioPostCreateNestedManyWithoutAuthorInput
-      Ads?: AdsCreateNestedManyWithoutUserInput
-    }
-    Unknown arg `city` in data.city for type UsersCreateInput. Did you mean `id`? Available args:
-    type UsersCreateInput {
-      id?: String
-      createdAt?: DateTime
-      updatedAt?: DateTime
-      name: String
-      lastName: String
-      username: String
-      phone: String
-      hash?: String | Null
-      rol?: UserRoles
-      isVerified?: Boolean
-      password?: String | Null
-      accessToken?: String | Null
-      refreshToken?: String | Null
-      address?: AddressesCreateNestedOneWithoutUsersInput
-      posts?: PostsCreateNestedManyWithoutAuthorInput
-      Video?: VideoCreateNestedManyWithoutAuthorInput
-      RadioPost?: RadioPostCreateNestedManyWithoutAuthorInput
-      Ads?: AdsCreateNestedManyWithoutUserInput
-    }
-    Unknown arg `gender` in data.gender for type UsersCreateInput. Did you mean `Video`? Available args:
-    type UsersCreateInput {
-      id?: String
-      createdAt?: DateTime
-      updatedAt?: DateTime
-      name: String
-      lastName: String
-      username: String
-      phone: String
-      hash?: String | Null
-      rol?: UserRoles
-      isVerified?: Boolean
-      password?: String | Null
-      accessToken?: String | Null
-      refreshToken?: String | Null
-      address?: AddressesCreateNestedOneWithoutUsersInput
-      posts?: PostsCreateNestedManyWithoutAuthorInput
-      Video?: VideoCreateNestedManyWithoutAuthorInput
-      RadioPost?: RadioPostCreateNestedManyWithoutAuthorInput
-      Ads?: AdsCreateNestedManyWithoutUserInput
-    }
-    
-    
-        at mi.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:149:91)
-        at tn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:166:1205)
-        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10962
-        at runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:70:25817)
-        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10951)
-        at t._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10484) {
-      clientVersion: '4.13.0'
-    }
-  },
-  level: 'error'
-}
-{ message: 'Listening on 8080', level: 'info' }
-{
-  message: {
-    function: 'AuthService.localSignUpVerify',
-    user: {
-      name: 'Adrian',
-      username: 'aabadin@gmail.com',
-      lastName: 'abadin',
-      phone: '+542344426406',
-      birthDate: '2023-06-02',
-      gender: 'NOT_BINARY',
-      hash: null
-    }
-  },
-  level: 'debug'
-}
-{
-  message: {
-    function: 'DatabaseHandler.create',
-    error: PrismaClientValidationError: 
-    Invalid `prisma.users.create()` invocation:
-    
-    {
-      data: {
-        name: 'Adrian',
-        username: 'aabadin@gmail.com',
-        lastName: 'abadin',
-        phone: '+542344426406',
-        birthDate: '2023-06-02',
-        ~~~~~~~~~
-        gender: 'NOT_BINARY',
-        hash: '$argon2id$v=19$m=65536,t=3,p=4$p4Gp1Vxh7H3BpVtsYxsKjA$7CbcAkqPavLAJAnLIoqtLat01vtNnS62JDX8GPThY5c'
-      }
-    }
-    
-    Unknown arg `birthDate` in data.birthDate for type UsersCreateInput. Available args:
-    
-    type UsersCreateInput {
-      id?: String
-      createdAt?: DateTime
-      updatedAt?: DateTime
-      name: String
-      lastName: String
-      username: String
-      phone: String
-      hash?: String | Null
-      rol?: UserRoles
-      isVerified?: Boolean
-      password?: String | Null
-      accessToken?: String | Null
-      refreshToken?: String | Null
-      gender?: Gender | Null
-      posts?: PostsCreateNestedManyWithoutAuthorInput
-      Video?: VideoCreateNestedManyWithoutAuthorInput
-      RadioPost?: RadioPostCreateNestedManyWithoutAuthorInput
-      Ads?: AdsCreateNestedManyWithoutUserInput
-      Addresses?: AddressesCreateNestedOneWithoutUsersInput
-    }
-    
-    
-        at mi.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:149:91)
-        at tn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:166:1205)
-        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10962
-        at runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:70:25817)
-        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10951)
-        at t._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10484) {
-      clientVersion: '4.13.0'
-    }
-  },
-  level: 'error'
-}
-{ message: 'Listening on 8080', level: 'info' }
-{
-  message: {
-    function: 'AuthService.localSignUpVerify',
-    user: {
-      name: 'Adrian',
-      username: 'aabadin@gmail.com',
-      lastName: 'abadin',
-      phone: '+542344426406',
-      birthDate: '2023-06-02',
-      gender: 'NOT_BINARY',
-      hash: null
-    }
-  },
-  level: 'debug'
-}
-{
-  message: {
-    function: 'DatabaseHandler.create',
-    error: PrismaClientValidationError: 
-    Invalid `prisma.users.create()` invocation:
-    
-    {
-      data: {
-        name: 'Adrian',
-        username: 'aabadin@gmail.com',
-        lastName: 'abadin',
-        phone: '+542344426406',
-        birthDate: '2023-06-02',
-                   ~~~~~~~~~~~~
-        gender: 'NOT_BINARY',
-        hash: '$argon2id$v=19$m=65536,t=3,p=4$0nWmmcv3Dj2gZeYxleWSOA$sZdaLIvYrrNImSGeB61ClybhQb5pm4dZFDaOt5EtSWI'
-      }
-    }
-    
-    Argument birthDate: Got invalid value '2023-06-02' on prisma.createOneUsers. Provided String, expected DateTime or Null.
-    
-    
-        at mi.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:149:91)
-        at tn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:166:1205)
-        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10962
-        at runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:70:25817)
-        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10951)
-        at t._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:179:10484) {
-      clientVersion: '4.13.0'
+    Please make sure your database server is running at `127.0.0.1`:`3306`.
+        at pn.handleRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:176:6750)
+        at pn.handleAndLogRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:176:5907)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:3087
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:3294
+        at t._executeRequest (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:10755)
+        at t._request (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:10484) {
+      clientVersion: '4.13.0',
+      errorCode: undefined
     }
   },
   level: 'error'
@@ -543,115 +783,5 @@
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
-{
-  message: {
-    function: 'AuthService.localSignUpVerify',
-    user: {
-      name: 'Adrian',
-      username: 'aabadin@gmail.com',
-      lastName: 'abadin',
-      phone: '+542344426406',
-      birthDate: '2023-06-02',
-      gender: 'NOT_BINARY',
-      hash: null
-    }
-  },
-  level: 'debug'
-}
-{
-  message: {
-    function: 'DatabaseHandler.create',
-    data: {
-      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
-      createdAt: 2023-05-13T17:53:41.042Z,
-      updatedAt: 2023-05-13T17:53:41.042Z,
-      name: 'Adrian',
-      lastName: 'abadin',
-      username: 'aabadin@gmail.com',
-      phone: '+542344426406',
-      hash: '$argon2id$v=19$m=65536,t=3,p=4$TGVSLjVCZ3/iq4Dx19g0Zg$99kewNa2JQGmEveMj6E3L4Kaj5X+nYRgjiw/kSOmlEA',
-      birthDate: 2023-06-02T00:00:00.000Z,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null,
-      gender: 'NOT_BINARY',
-      addressesId: null
-    }
-  },
-  level: 'debug'
-}
-{
-  message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
-      createdAt: 2023-05-13T17:53:41.042Z,
-      updatedAt: 2023-05-13T17:53:41.042Z,
-      name: 'Adrian',
-      lastName: 'abadin',
-      username: 'aabadin@gmail.com',
-      phone: '+542344426406',
-      hash: null,
-      birthDate: 2023-06-02T00:00:00.000Z,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null,
-      gender: 'NOT_BINARY',
-      addressesId: null
-    }
-  },
-  level: 'debug'
-}
 { message: 'Listening on 8080', level: 'info' }
-{
-  message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
-      createdAt: 2023-05-13T17:53:41.042Z,
-      updatedAt: 2023-05-13T17:53:41.042Z,
-      name: 'Adrian',
-      lastName: 'abadin',
-      username: 'aabadin@gmail.com',
-      phone: '+542344426406',
-      hash: null,
-      birthDate: 2023-06-02T00:00:00.000Z,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null,
-      gender: 'NOT_BINARY',
-      addressesId: null
-    }
-  },
-  level: 'debug'
-}
-{
-  message: {
-    function: 'AuthService.localLoginVerify',
-    user: {
-      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
-      createdAt: 2023-05-13T17:53:41.042Z,
-      updatedAt: 2023-05-13T17:53:41.042Z,
-      name: 'Adrian',
-      lastName: 'abadin',
-      username: 'aabadin@gmail.com',
-      phone: '+542344426406',
-      hash: null,
-      birthDate: 2023-06-02T00:00:00.000Z,
-      rol: 'USER',
-      isVerified: false,
-      password: null,
-      accessToken: null,
-      refreshToken: null,
-      gender: 'NOT_BINARY',
-      addressesId: null
-    }
-  },
-  level: 'debug'
-}
+{ message: 'Listening on 8080', level: 'info' }

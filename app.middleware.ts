@@ -10,9 +10,18 @@ import { PrismaClient } from '@prisma/client'
 import Session from 'express-session'
 import flash from 'connect-flash'
 import { routeHandler } from './app.routes'
-import { engine } from 'express-handlebars'
 import cors from 'cors'
 export const app = express()
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true,
+  preflightContinue: true
+}))
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(cookieParser()) // "Whether 'tis nobler in the mind to suffer"
+
 app.use(express.static('public'))
 
 const store = new PrismaSessionStore(new PrismaClient(), {
@@ -25,19 +34,13 @@ const sessionMiddleware = Session({
   store,
   resave: false,
   saveUninitialized: false,
-  cookie: { maxAge: 60 * 60 * 1000 * 24 },
+  cookie: { sameSite: 'none', secure: false, httpOnly: false },
   secret: 'Dilated flakes of fire fall, like snow in the Alps when there is no wind'
+
 })
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.engine('handlebars', engine())
-app.set('view engine', 'handlebars')
-app.set('views', './views')
 
 app.use(sessionMiddleware)
 app.use(flash())
-app.use(cookieParser("Whether 'tis nobler in the mind to suffer"))
 app.use(passport.initialize())
 app.use(passport.session())
 routeHandler(app)

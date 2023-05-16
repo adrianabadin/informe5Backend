@@ -7,10 +7,13 @@ import jwt from 'jsonwebtoken'
 import fs from 'fs'
 import dotenv from 'dotenv'
 import { type IResponseObject, type DoneType } from '../Entities'
+import { encrypt, decrypt } from '../Services/keypair.service'
 dotenv.config()
+const simetricKey = process.env.SIMETRICKEY
 const privateKey = fs.readFileSync('auth/privateKey.pem', 'utf-8')
 export class AuthService extends DatabaseHandler {
   constructor (
+    protected crypt = { encrypt, decrypt },
     public localSignUpVerify = async (req: Request, username: string, password: string, done: DoneType) => {
       try {
         let user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput | null = await this.prisma.users.findUnique({ where: { username } })
@@ -22,7 +25,6 @@ export class AuthService extends DatabaseHandler {
           })
           user = (await this.prisma.users.gCreate({ ...body, birthDate: (body.birthDate !== undefined) ? new Date(body.birthDate as string) : undefined })).data
           if (user?.id !== undefined) {
-            this.tokenIssuance(user.id, req)
             done(null, user, { message: 'Successfully Registred' })
           } else done(null, false, { message: 'Error in registration' })
         } else done(null, false, { message: 'user exists' })
@@ -54,13 +56,14 @@ export class AuthService extends DatabaseHandler {
       }
     },
     public tokenIssuance = (id: string): string => {
-      return jwt.sign({ sub: id }, privateKey, { algorithm: 'RS256', expiresIn: process.env.TKN_EXPIRATION })
+      const jwToken = jwt.sign({ sub: id }, privateKey, { algorithm: 'RS256', expiresIn: process.env.TKN_EXPIRATION })
+      if (simetricKey !== undefined) { return this.crypt.encrypt(jwToken, simetricKey) } else throw new Error('simetricKey is undefined')
     },
     public jwtLoginVerify = async (req: Request, jwtPayload: string, done: DoneType) => {
       try {
         const id = jwtPayload.sub as unknown as string
         const user = await this.prisma.users.gFindById(id)
-        if ('username' in user && user.username !== undefined && user.username !== null) {
+        if ('username' in user?.data && user?.data.username !== undefined && user?.data.username !== null) {
           done(null, user.data, { message: 'Successfully Logged In' })
         } else done(null, false, { message: 'ID doesnt match any registred users' })
       } catch (error) {
@@ -69,11 +72,11 @@ export class AuthService extends DatabaseHandler {
       }
     },
     public googleAuthVerify = (req: Request, accessToken: string, refreshToken: string, profile: any, done: DoneType) => {
-      console.log(profile)
       try {
-        const [email] = profile.emails.value
+        const { email } = profile
         this.prisma.users.findUnique({ where: { username: email } }).then(user => {
           if (user?.username != null) {
+            console.log(user, 'user')
             return done(null, user, { message: 'Successfully Logged in!' })
           } else {
             req.flash('at', accessToken)
