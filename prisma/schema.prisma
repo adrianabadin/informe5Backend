@@ -123,14 +123,14 @@ model Posts {
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
   title          String
-  subTitle       String
+  subTitle       String?
   heading        String
   text           String
   classification String
   images         Photos[]
   author         Users    @relation(fields: [usersId], references: [id])
   usersId        String
-  importance     Int
+  importance     Int      @default(1)
   metrics        Metric[]
 
   @@index([usersId])
