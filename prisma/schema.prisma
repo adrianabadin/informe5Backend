@@ -119,19 +119,19 @@ model Ads {
 }
 
 model Posts {
-  id         String   @id @default(uuid())
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-  title      String
-  subTitle   String
-  heading    String
-  text       String
-  tags       String
-  photos     Photos[]
-  author     Users    @relation(fields: [usersId], references: [id])
-  usersId    String
-  importance Int
-  metrics    Metric[]
+  id             String   @id @default(uuid())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  title          String
+  subTitle       String
+  heading        String
+  text           String
+  classification String
+  images         Photos[]
+  author         Users    @relation(fields: [usersId], references: [id])
+  usersId        String
+  importance     Int
+  metrics        Metric[]
 
   @@index([usersId])
 }
