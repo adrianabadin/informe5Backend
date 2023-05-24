@@ -3,3 +3,4 @@ node_modules
 .env
 ./auth/privateKey.pem
 ./auth/publicKey.pem
+./google/informe5.json
