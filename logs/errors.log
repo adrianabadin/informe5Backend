@@ -87,3 +87,70 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.posts.create()` invocation:
+    
+    {
+      data: {
+        author: {
+          connect: {
+            id: 'usuario'
+          }
+        },
+        classification: 'Municipales',
+        heading: 'Wado presidente',
+        title: 'Breaking News',
+        text: 'Finaly he made it ',
+        importance: '1',
+                    ~~~
+        images: {
+          create: [
+            {
+              url: 'https://www.facebook.com/photo.php?fbid=709951107804705&set=p.709951107804705&type=3'
+            },
+            {
+              url: 'https://www.facebook.com/photo.php?fbid=709951114471371&set=p.709951114471371&type=3'
+            }
+          ]
+        }
+      }
+    }
+    
+    Argument importance: Got invalid value '1' on prisma.createOnePosts. Provided String, expected Int.
+    
+    
+        at mi.validate (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:149:91)
+        at tn.createMessage (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:166:1205)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:10962
+        at runInChildSpan (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:70:25817)
+        at t._executeRequest (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:10951)
+        at t._request (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:10484) {
+      clientVersion: '4.13.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    error: PrismaClientKnownRequestError: 
+    Invalid `prisma.posts.create()` invocation:
+    
+    
+    An operation failed because it depends on one or more records that were required but not found. No 'Users' record(s) (needed to inline the relation on 'Posts' record(s)) was found for a nested connect on one-to-many relation 'PostsToUsers'.
+        at pn.handleRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:176:6477)
+        at pn.handleAndLogRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:176:5907)
+        at pn.request (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:176:5786)
+        at t._request (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:179:10484) {
+      code: 'P2025',
+      clientVersion: '4.13.0',
+      meta: {
+        cause: "No 'Users' record(s) (needed to inline the relation on 'Posts' record(s)) was found for a nested connect on one-to-many relation 'PostsToUsers'."
+      }
+    }
+  },
+  level: 'error'
+}
