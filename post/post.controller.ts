@@ -1,15 +1,82 @@
+/* eslint-disable @typescript-eslint/prefer-optional-chain */
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import { type Request, type Response } from 'express'
 import { PostService } from './post.service'
 import { type Prisma } from '@prisma/client'
+import { GoogleService } from '../google/google.service'
+import { FacebookService } from '../Services/facebook.service'
+import { logger } from '../Services/logger.service'
 export class PostController {
   constructor (
     protected service = new PostService(),
-    public createPost = (req: Request, res: Response) => {
-      console.log('hi')
+    protected googleService = new GoogleService(),
+    protected facebookService = new FacebookService(),
+    public createPost = async (req: Request, res: Response) => {
       const body: Prisma.PostsCreateInput = req.body
       const files = req.files
-      console.log(body, files)
-      res.send({ body, files })
+      const dataArray: any = []
+      // primero se valida que hayan archivos adjuntos en la nota y en el caso de que sea un array de files toma la primera via
+      // como multer puede tener un objeto con un array de files o un array de files directamente se arma el condicional que valida el
+      // tipo de request y luego continua con la generacion de los datos
+      if (files !== undefined && Array.isArray(files)) {
+        // por cada archivo que tenga adjunto hago un request a facebook para guardar el archivo no publicado y obtengo un ID
+        files.forEach(async (file, index): Promise<any> => {
+          try {
+            const response = await this.facebookService.postPhoto(file)
+            if (response.ok) {
+            // uso el id que me devuele la funcion facebook postPhoto para obtener el link publico de esa imagen
+              try {
+                const link = await this.facebookService.getLinkFromId(response)
+                if (link.ok) dataArray.push({ url: link.data })
+              } catch (error) { logger.error({ function: 'PostController.create.getLink', error }) }
+              // en el caso de que esta sea la ultima vuelta del forEach genero los post y devuelvo el response
+              if (index === files.length - 1) {
+                // crear el post en la base de datos
+                let postResponse
+                if ((req.user !== undefined && 'id' in req.user)) {
+                  postResponse = await this.service.createPost(body, req.user.id as string, dataArray)
+                  const { title, heading, classification, text } = body
+                  const finalRequest = await this.facebookService.facebookFeed({ title, heading, classification, text }, dataArray, postResponse.data.id)
+                  console.log(finalRequest)
+                } else { res.status(401).send({ error: 'Unauthorized User' }) }
+                console.log('database response', postResponse)
+                res.status(200).send(postResponse)
+              }
+            // en el caso de que el response no fue ok , no agrego nada al array y verifico si es la ultima vuelta del each tambien
+            // termino el request
+            } else if (index === files.length - 1) res.status(200).send(dataArray)
+          } catch (error) { logger.error({ function: 'PostController.create.postPhto', error }) }
+        })
+      } else {
+        if (files !== undefined) {
+          // en el caso de que multer devuelva un objeto con un array de files obtengo la key de ese objeto y luego itero dentro de lla
+
+          Object.keys(files).forEach(field => {
+            files[field].forEach(async (file, index) => {
+              // aqui llamo a fb para subir la foto
+              let response
+              try {
+                response = await this.facebookService.postPhoto(file)
+
+                if (response.ok) {
+                // si el response es ok uso el id para obtener el link publico
+                  let link
+                  try {
+                    link = await this.facebookService.getLinkFromId(response)
+                    if (link.ok) { dataArray.push(link.data) }
+                  } catch (error) { logger.error({ function: 'PostController.create.getLink', error }) }
+
+                  // si es la ultima  iteracion termina el request
+                  if (index === files[field].length - 1) {
+                    res.status(200).send(dataArray)
+                  }
+                // si hubo algun problema en el request a fb se fija si es la ultima iteracion y termina el request en ese caso
+                } else if (index === files[field].length - 1) res.status(200).send(dataArray)
+              } catch (error) { logger.error({ function: 'PostController.create.postPhoto', error }) }
+            })
+          })
+        }
+      }
     }
   ) {
 
