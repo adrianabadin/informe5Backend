@@ -6,6 +6,7 @@ import { type Prisma } from '@prisma/client'
 import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
+import { type FacebookData } from '../Entities'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -33,12 +34,12 @@ export class PostController {
               if (index === files.length - 1) {
                 // crear el post en la base de datos
                 let postResponse
-                if ((req.user !== undefined && 'id' in req.user)) {
-                  postResponse = await this.service.createPost(body, req.user.id as string, dataArray)
-                  const { title, heading, classification, text } = body
-                  const finalRequest = await this.facebookService.facebookFeed({ title, heading, classification, text }, dataArray, postResponse.data.id)
-                  console.log(finalRequest)
-                } else { res.status(401).send({ error: 'Unauthorized User' }) }
+                // if ((req.user !== undefined && 'id' in req.user)) {
+                postResponse = await this.service.createPost(body, /* req.user.id as string */'62d7d65d-0ba1-4f2c-8ade-818c7e36d92a', dataArray)
+                const { title, heading, classification, text }: FacebookData = body
+                const finalRequest = await this.facebookService.facebookFeed(body, dataArray, postResponse.data.id)
+                console.log(finalRequest)
+                // } else { res.status(401).send({ error: 'Unauthorized User' }) }
                 console.log('database response', postResponse)
                 res.status(200).send(postResponse)
               }

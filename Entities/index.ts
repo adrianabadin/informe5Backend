@@ -7,3 +7,13 @@ export type DoneType = (
   user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput | false,
   message?: { message: string }
 ) => any
+
+export interface IFacebookData { title: string, heading: string, text: string, classification: string }
+
+export class FacebookData implements IFacebookData {
+  constructor (
+    public classification: string,
+    public heading: string,
+    public text: string,
+    public title: string) {}
+}

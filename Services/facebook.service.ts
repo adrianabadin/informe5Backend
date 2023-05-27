@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 import axios from 'axios'
 import fs from 'fs'
-import { ResponseObject } from '../Entities'
+import { type IFacebookData, ResponseObject } from '../Entities'
 import { logger } from './logger.service'
 dotenv.config()
 export class FacebookService {
@@ -58,9 +58,12 @@ export class FacebookService {
         return new ResponseObject('Parameter missmatch shpuld be a ResponseObject', false, null)
       }
     },
-    public facebookFeed = async (data: { title: string, heading: string, text: string, classification: string }, pictures: string[], id: string) => {
+    public facebookFeed = async (data: IFacebookData, pictures: string[], id: string) => {
       let response
-      try {
+      console.log(data)
+      // try {
+      if (data !== undefined && 'title' in data && 'heading' in data) {
+        const { title, heading } = data
         const message: string = encodeURIComponent(data.title + '\n' + data.heading + '\n\n' + 'Para leer mas click en el link')
         const pictsArray = pictures.map(picture => {
           return picture.split('fbid=')[1].split('&')[0]
@@ -77,15 +80,16 @@ export class FacebookService {
 
           }
         }
-        try {
-          console.log(data)
-          response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE as string}/feed`, data)
-          console.log(response)
-        } catch (error) { console.log(error) }
-      } catch (error) {
-        logger.error({ function: 'FacebookService.facebookFeed', error })
-        return new ResponseObject(error, false, null)
       }
+      try {
+        console.log(data)
+        response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE as string}/feed`, data)
+        console.log(response)
+      } catch (error) { console.log(error) }
+      // } catch (error) {
+      //   logger.error({ function: 'FacebookService.facebookFeed', error })
+      //   return new ResponseObject(error, false, null)
+      // }
     }
 
   ) {}
