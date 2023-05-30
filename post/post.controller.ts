@@ -23,6 +23,7 @@ export class PostController {
         // por cada archivo que tenga adjunto hago un request a facebook para guardar el archivo no publicado y obtengo un ID
         files.forEach(async (file, index): Promise<any> => {
           try {
+            console.log('holas')
             const response = await this.facebookService.postPhoto(file)
             if (response.ok) {
             // uso el id que me devuele la funcion facebook postPhoto para obtener el link publico de esa imagen
@@ -36,7 +37,6 @@ export class PostController {
                 let postResponse
                 // if ((req.user !== undefined && 'id' in req.user)) {
                 postResponse = await this.service.createPost(body, /* req.user.id as string */'62d7d65d-0ba1-4f2c-8ade-818c7e36d92a', dataArray)
-                const { title, heading, classification, text }: FacebookData = body
                 const finalRequest = await this.facebookService.facebookFeed(body, dataArray, postResponse.data.id)
                 console.log(finalRequest)
                 // } else { res.status(401).send({ error: 'Unauthorized User' }) }

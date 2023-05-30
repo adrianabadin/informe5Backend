@@ -61,18 +61,20 @@ export class FacebookService {
     public facebookFeed = async (data: IFacebookData, pictures: string[], id: string) => {
       let response
       console.log(data)
-      // try {
-      if (data !== undefined && 'title' in data && 'heading' in data) {
+      try {
         const { title, heading } = data
-        const message: string = encodeURIComponent(data.title + '\n' + data.heading + '\n\n' + 'Para leer mas click en el link')
+        const message: string = encodeURIComponent(
+      `${title as string}
+      ${heading as string}
+       Para leer mas click en el link`)
         const pictsArray = pictures.map(picture => {
           return picture.split('fbid=')[1].split('&')[0]
         })
         let link
-        let data
+        let dataRequest
         if (process.env.NEWSPAPER_URL !== undefined) {
           link = process.env.NEWSPAPER_URL + `/${id}`
-          data = {
+          dataRequest = {
             message,
             link,
             attached_media: pictsArray.map(id => ({ media_fbid: id })),
@@ -80,16 +82,16 @@ export class FacebookService {
 
           }
         }
+
+        try {
+          console.log(data)
+          response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE as string}/feed`, dataRequest)
+          console.log(response)
+        } catch (error) { console.log(error) }
+      } catch (error) {
+        logger.error({ function: 'FacebookService.facebookFeed', error })
+        return new ResponseObject(error, false, null)
       }
-      try {
-        console.log(data)
-        response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE as string}/feed`, data)
-        console.log(response)
-      } catch (error) { console.log(error) }
-      // } catch (error) {
-      //   logger.error({ function: 'FacebookService.facebookFeed', error })
-      //   return new ResponseObject(error, false, null)
-      // }
     }
 
   ) {}
