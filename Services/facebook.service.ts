@@ -58,35 +58,27 @@ export class FacebookService {
         return new ResponseObject('Parameter missmatch shpuld be a ResponseObject', false, null)
       }
     },
-    public facebookFeed = async (data: IFacebookData, pictures: string[], id: string) => {
+    public facebookFeed = async (data: IFacebookData, pictures: Array<{ url: string }>, id: string) => {
       let response
-      console.log(data)
       try {
         const { title, heading } = data
-        const message: string = encodeURIComponent(
-      `${title as string}
-      ${heading as string}
-       Para leer mas click en el link`)
-        const pictsArray = pictures.map(picture => {
-          return picture.split('fbid=')[1].split('&')[0]
+        const message: string =
+      `${title}\n${heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${id}`
+        const pictsArray = pictures.map((picture) => {
+          return picture.url.split('fbid=')[1].split('&')[0]
         })
-        let link
         let dataRequest
         if (process.env.NEWSPAPER_URL !== undefined) {
-          link = process.env.NEWSPAPER_URL + `/${id}`
           dataRequest = {
             message,
-            link,
             attached_media: pictsArray.map(id => ({ media_fbid: id })),
             access_token: process.env.FB_PAGE_TOKEN
-
           }
         }
 
         try {
-          console.log(data)
           response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE as string}/feed`, dataRequest)
-          console.log(response)
+          return new ResponseObject(null, true, response)
         } catch (error) { console.log(error) }
       } catch (error) {
         logger.error({ function: 'FacebookService.facebookFeed', error })

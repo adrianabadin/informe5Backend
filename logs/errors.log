@@ -13427,3 +13427,20 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'FacebookService.facebookFeed',
+    error: TypeError: picture.split is not a function
+        at C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:72:26
+        at Array.map (<anonymous>)
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:70:37)
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:4:12)
+        at FacebookService.facebookFeed (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:61:89)
+        at PostController.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\post\post.controller.ts:40:65)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error'
+}

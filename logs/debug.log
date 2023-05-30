@@ -14388,3 +14388,182 @@
   },
   level: 'error'
 }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: '6590fac4-5f09-49e4-a448-5d461596d9de',
+      createdAt: 2023-05-30T05:42:25.169Z,
+      updatedAt: 2023-05-30T05:42:25.169Z,
+      title: 'Somere in the Multiverse',
+      subTitle: null,
+      heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+      text: 'The end is near',
+      classification: 'Municipales',
+      usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      importance: 1
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'FacebookService.facebookFeed',
+    error: TypeError: picture.split is not a function
+        at C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:72:26
+        at Array.map (<anonymous>)
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:70:37)
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:4:12)
+        at FacebookService.facebookFeed (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:61:89)
+        at PostController.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\post\post.controller.ts:40:65)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: '57d26df7-832d-4e5b-9213-2ada1b560e32',
+      createdAt: 2023-05-30T05:44:54.024Z,
+      updatedAt: 2023-05-30T05:44:54.024Z,
+      title: 'Somere in the Multiverse',
+      subTitle: null,
+      heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+      text: 'The end is near',
+      classification: 'Municipales',
+      usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      importance: 1
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: '9c20bf78-70af-4a07-bdfd-61d851ade884',
+      createdAt: 2023-05-30T05:56:19.944Z,
+      updatedAt: 2023-05-30T05:56:19.944Z,
+      title: 'Somere in the Multiverse',
+      subTitle: null,
+      heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+      text: 'The end is near',
+      classification: 'Municipales',
+      usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      importance: 1
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: 'ef185bad-1bdc-4f9c-8c73-fea2766e2cbe',
+      createdAt: 2023-05-30T05:58:25.488Z,
+      updatedAt: 2023-05-30T05:58:25.488Z,
+      title: 'Somere in the Multiverse',
+      subTitle: null,
+      heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+      text: 'The end is near',
+      classification: 'Municipales',
+      usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      importance: 1
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: 'afbb5602-ecbe-484c-afea-9c940cea4ca7',
+      createdAt: 2023-05-30T06:00:01.291Z,
+      updatedAt: 2023-05-30T06:00:01.291Z,
+      title: 'Somere in the Multiverse',
+      subTitle: null,
+      heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+      text: 'The end is near',
+      classification: 'Municipales',
+      usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      importance: 1
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: 'c8e54f6a-bfc3-4fcf-9886-190851303a89',
+      createdAt: 2023-05-30T06:38:56.726Z,
+      updatedAt: 2023-05-30T06:38:56.726Z,
+      title: 'Somere in the Multiverse',
+      subTitle: null,
+      heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+      text: 'The end is near',
+      classification: 'Municipales',
+      usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      importance: 1
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: 'f457dee8-744c-4ef6-8206-8098ed27890a',
+      createdAt: 2023-05-30T06:41:10.809Z,
+      updatedAt: 2023-05-30T06:41:10.809Z,
+      title: 'Somere in the Multiverse',
+      subTitle: null,
+      heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+      text: 'The end is near',
+      classification: 'Municipales',
+      usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      importance: 1
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: '41219ec4-122c-483e-b565-31e342b4422a',
+      createdAt: 2023-05-30T06:42:28.464Z,
+      updatedAt: 2023-05-30T06:42:28.464Z,
+      title: 'Somere in the Multiverse',
+      subTitle: null,
+      heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+      text: 'The end is near',
+      classification: 'Municipales',
+      usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      importance: 1
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
