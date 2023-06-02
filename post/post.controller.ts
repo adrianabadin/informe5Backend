@@ -16,6 +16,8 @@ export class PostController {
       const body: Prisma.PostsCreateInput = req.body
       const files = req.files
       const dataArray: any = []
+      console.log('createPost', body, files)
+
       // primero se valida que hayan archivos adjuntos en la nota y en el caso de que sea un array de files toma la primera via
       // como multer puede tener un objeto con un array de files o un array de files directamente se arma el condicional que valida el
       // tipo de request y luego continua con la generacion de los datos

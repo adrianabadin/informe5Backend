@@ -1,7 +1,11 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
 import { Router, type Request } from 'express'
 import multer from 'multer'
 import { PostController } from './post.controller'
+import { postValidation } from './post.validation'
+import { AuthController } from '../auth/auth.controller'
+const authController = new AuthController()
 const postController = new PostController()
 const storage = multer.diskStorage({
   destination: function (_req: Request, _file: Express.Multer.File, cb: (...arg: any) => any) {
