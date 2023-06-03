@@ -21408,3 +21408,33 @@
   },
   level: 'debug'
 }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
