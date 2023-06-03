@@ -32,6 +32,7 @@ export function encrypt (value: string, simetricKey: string): string {
   return iv.toString('hex') + 'bLoquE' + encriptedText
 }
 export function decrypt (value: string, simetricKey: string): string {
+  console.log(value)
   const iv = Buffer.from(value.split('bLoquE')[0], 'hex')
   const decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(simetricKey, 'base64'), iv)
   decipher.setAutoPadding(true)

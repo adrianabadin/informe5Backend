@@ -3,6 +3,7 @@
 import { Router, type Request } from 'express'
 import multer from 'multer'
 import { PostController } from './post.controller'
+import passport from 'passport'
 import { postValidation } from './post.validation'
 import { AuthController } from '../auth/auth.controller'
 const authController = new AuthController()
@@ -18,4 +19,4 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage })
 export const postRouter = Router()
-postRouter.post('/create', upload.array('images', 5), postController.createPost)
+postRouter.post('/create', upload.array('images', 5), passport.authenticate('jwt', { session: false }), postController.createPost)

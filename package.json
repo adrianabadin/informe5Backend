@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^4.13.0",
+    "@prisma/client": "^4.15.0",
     "@quixo3/prisma-session-store": "^3.1.11",
     "argon2": "^0.30.3",
     "axios": "^1.4.0",

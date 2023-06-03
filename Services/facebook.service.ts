@@ -61,6 +61,7 @@ export class FacebookService {
     public facebookFeed = async (data: IFacebookData, pictures: Array<{ url: string }>, id: string) => {
       let response
       try {
+        console.log(data, pictures)
         const { title, heading } = data
         const message: string =
       `${title}\n${heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${id}`
@@ -75,7 +76,7 @@ export class FacebookService {
             access_token: process.env.FB_PAGE_TOKEN
           }
         }
-
+        console.log(dataRequest, 'DataRequest Var')
         try {
           response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE as string}/feed`, dataRequest)
           return new ResponseObject(null, true, response)
