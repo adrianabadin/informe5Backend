@@ -64,8 +64,12 @@ export class AuthService extends DatabaseHandler {
         const id = jwtPayload.sub as unknown as string
         const user = await this.prisma.users.gFindById(id)
         if ('username' in user?.data && user?.data.username !== undefined && user?.data.username !== null) {
+          logger.debug({ function: 'jwtLoginVerify', message: 'Successfully logged in' })
           done(null, user.data, { message: 'Successfully Logged In' })
-        } else done(null, false, { message: 'ID doesnt match any registred users' })
+        } else {
+          logger.debug({ function: 'jwtLoginVerify', message: 'ID doesent match any registred users' })
+          done(null, false, { message: 'ID doesnt match any registred users' })
+        }
       } catch (error) {
         logger.error({ function: 'AuthService.jwtLoginVerify', error })
         done(error, false, { message: 'Database Error' })

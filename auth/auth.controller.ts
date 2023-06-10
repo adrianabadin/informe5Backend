@@ -38,8 +38,8 @@ export class AuthController {
         if ('id' in req?.user) {
           const token = this.service.tokenIssuance(req.user.id as string)
           res.status(200).send({ ...req.user, token, hash: undefined, refreshToken: undefined, accessToken: undefined })
-        }
-      }
+        } else res.status(401).send({ ok: false })
+      } else res.status(401).send({ ok: false })
     },
     public localLogin = (req: Request, res: Response) => {
       if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null) {

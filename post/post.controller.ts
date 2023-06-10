@@ -79,6 +79,16 @@ export class PostController {
           })
         }
       }
+    },
+    public getAllPosts = (req: Request, res: Response) => {
+      this.service.getPosts().then(response => {
+        if (response !== undefined && response.ok) {
+          res.status(200).send(response)
+        }
+      }).catch(error => {
+        logger.error({ function: 'PostController.getAllPosts', error })
+        res.status(404).send(error)
+      })
     }
   ) {
 
