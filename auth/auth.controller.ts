@@ -15,7 +15,12 @@ export class AuthController {
       if (req.user !== undefined && 'id' in req.user) {
         id = req.user.id
       } else return
-      if (id !== undefined && id !== null) next()
+      if (id !== undefined && id !== null) {
+        const jwt = this.service.tokenIssuance(id as string)
+        res.clearCookie('jwt')
+        res.cookie('jwt', jwt)
+        next()
+      }
     },
     public issueJWT = (req: Request, res: Response, next: NextFunction) => {
       console.log('issuing')
@@ -31,7 +36,7 @@ export class AuthController {
       console.log('finished')
       next()
     },
-    public jwtLogin = (req: Request, res: Response) => {
+    public jwtLogin = (req: Request, res: Response, next: NextFunction) => {
       console.log(req.isAuthenticated(), req.user)
       if (req.isAuthenticated()) {
         console.log('is Auth')
