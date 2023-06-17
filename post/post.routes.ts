@@ -20,4 +20,5 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 export const postRouter = Router()
 postRouter.post('/create', upload.array('images', 5), postValidation, passport.authenticate('jwt', { session: false }), authController.jwtLogin, postController.createPost)
+postRouter.get('/getPostById/:id', postController.getPostById)
 postRouter.get('/getPosts', postController.getAllPosts)

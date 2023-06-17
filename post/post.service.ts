@@ -15,6 +15,13 @@ export class PostService extends DatabaseHandler {
         logger.debug({ function: 'PostService.getPosts', data })
         return data
       } catch (error) { logger.error({ function: 'PostService.getPosts', error }) }
+    },
+    public getPost = async (id: string, field: string) => {
+      try {
+        const data = await this.prisma.posts.gFindById(id, field)
+        logger.debug({ function: 'PostService.getPost', data })
+        return data
+      } catch (error) { logger.error({ function: 'PostService.getPost', error }) }
     }
   ) {
     super()

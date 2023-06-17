@@ -51,9 +51,14 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gFindById<T>(this: T & { findUniqueOrThrow: any }, id: string): Promise<IResponseObject> {
+          async gFindById<T>(this: T & { findUniqueOrThrow: any }, id: string, includeField: string): Promise<IResponseObject> {
             try {
-              const data = await this.findUniqueOrThrow({ where: { id } })
+              let data
+              if (includeField !== undefined && typeof includeField === 'string') {
+                data = await this.findUniqueOrThrow({ where: { id }, include: { [includeField]: true } })
+              } else {
+                data = await this.findUniqueOrThrow({ where: { id } })
+              }
               return new ResponseObject(null, true, data)
             } catch (error) {
               logger.error({

@@ -1,0 +1,215 @@
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.posts.findUniqueOrThrow()` invocation:
+    
+    {
+      where: {
+    ?   id?: String
+      }
+    }
+    
+    Argument where of type PostsWhereUniqueInput needs at least one argument. Available args are listed in green.
+    
+    Note: Lines with ? are optional.
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    {
+      include: {
+        images: true,
+        ~~~~~~
+    ?   posts?: true,
+    ?   Video?: true,
+    ?   RadioPost?: true,
+    ?   Ads?: true,
+    ?   Addresses?: true,
+    ?   _count?: true
+      },
+      where: {
+        id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a'
+      }
+    }
+    
+    
+    Unknown field `images` for include statement on model Users. Available options are listed in green. Did you mean `posts`?
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    {
+      include: {
+        images: true,
+        ~~~~~~
+    ?   posts?: true,
+    ?   Video?: true,
+    ?   RadioPost?: true,
+    ?   Ads?: true,
+    ?   Addresses?: true,
+    ?   _count?: true
+      },
+      where: {
+        id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a'
+      }
+    }
+    
+    
+    Unknown field `images` for include statement on model Users. Available options are listed in green. Did you mean `posts`?
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    {
+      include: {
+        images: true,
+        ~~~~~~
+    ?   posts?: true,
+    ?   Video?: true,
+    ?   RadioPost?: true,
+    ?   Ads?: true,
+    ?   Addresses?: true,
+    ?   _count?: true
+      },
+      where: {
+        id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a'
+      }
+    }
+    
+    
+    Unknown field `images` for include statement on model Users. Available options are listed in green. Did you mean `posts`?
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    {
+      include: {
+        images: true,
+        ~~~~~~
+    ?   posts?: true,
+    ?   Video?: true,
+    ?   RadioPost?: true,
+    ?   Ads?: true,
+    ?   Addresses?: true,
+    ?   _count?: true
+      },
+      where: {
+        id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a'
+      }
+    }
+    
+    
+    Unknown field `images` for include statement on model Users. Available options are listed in green. Did you mean `posts`?
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}

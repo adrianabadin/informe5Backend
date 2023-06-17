@@ -71319,3 +71319,4133 @@
   },
   level: 'debug'
 }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '00fd6b8e-ca88-45d3-b016-01ba20c020f2',
+          createdAt: 2023-06-05T05:14:04.111Z,
+          updatedAt: 2023-06-05T05:14:04.111Z,
+          title: 'titulo',
+          subTitle: null,
+          heading: 'comentario',
+          text: 'texto\r\n',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: '339c9f31-8970-4b45-8821-d6c7efd970c9',
+          createdAt: 2023-05-29T12:13:53.760Z,
+          updatedAt: 2023-05-29T12:13:53.760Z,
+          title: 'Prueba',
+          subTitle: null,
+          heading: 'Escribiendo texto',
+          text: 'Mas texto',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 3
+        },
+        {
+          id: '3c056125-9449-498f-a71c-c6ecce099aa8',
+          createdAt: 2023-06-05T03:29:28.838Z,
+          updatedAt: 2023-06-05T03:29:28.838Z,
+          title: '111',
+          subTitle: null,
+          heading: '1999',
+          text: '11111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '41219ec4-122c-483e-b565-31e342b4422a',
+          createdAt: 2023-05-30T06:42:28.464Z,
+          updatedAt: 2023-05-30T06:42:28.464Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '57d26df7-832d-4e5b-9213-2ada1b560e32',
+          createdAt: 2023-05-30T05:44:54.024Z,
+          updatedAt: 2023-05-30T05:44:54.024Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '5db9e95b-f52c-4ff3-8baf-aabc672e7193',
+          createdAt: 2023-06-03T06:08:45.250Z,
+          updatedAt: 2023-06-03T06:08:45.250Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '6590fac4-5f09-49e4-a448-5d461596d9de',
+          createdAt: 2023-05-30T05:42:25.169Z,
+          updatedAt: 2023-05-30T05:42:25.169Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '67d5048b-d80c-4d39-9335-72dceb4e9400',
+          createdAt: 2023-06-03T06:40:48.144Z,
+          updatedAt: 2023-06-03T06:40:48.144Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '68ef8b81-2f49-45b0-b9c3-91a1deedbc0c',
+          createdAt: 2023-06-03T05:44:18.927Z,
+          updatedAt: 2023-06-03T05:44:18.927Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '760ceb70-ad3e-4e74-8f69-3e1b536b1e76',
+          createdAt: 2023-06-05T04:26:45.435Z,
+          updatedAt: 2023-06-05T04:26:45.435Z,
+          title: '117',
+          subTitle: null,
+          heading: '111',
+          text: '1199',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '8ae2ab25-28a9-43af-b56e-713b45ead0fb',
+          createdAt: 2023-06-05T01:40:51.465Z,
+          updatedAt: 2023-06-05T01:40:51.465Z,
+          title: '666',
+          subTitle: null,
+          heading: '177',
+          text: '2666',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '9abab145-ccae-4e65-87c5-f7b80496a013',
+          createdAt: 2023-05-29T12:07:37.628Z,
+          updatedAt: 2023-05-29T12:07:37.628Z,
+          title: 'Prueba',
+          subTitle: null,
+          heading: 'Escribiendo texto',
+          text: 'Mas texto',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 3
+        },
+        {
+          id: '9c20bf78-70af-4a07-bdfd-61d851ade884',
+          createdAt: 2023-05-30T05:56:19.944Z,
+          updatedAt: 2023-05-30T05:56:19.944Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'a619e39d-e6f6-40f0-b503-6ded3a95bc64',
+          createdAt: 2023-06-05T05:22:03.501Z,
+          updatedAt: 2023-06-05T05:22:03.501Z,
+          title: 'titulo',
+          subTitle: null,
+          heading: 'comentario',
+          text: 'texto\r\n',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'a7cdb2c6-5b68-429f-bac3-f75d0a523544',
+          createdAt: 2023-06-05T04:26:47.361Z,
+          updatedAt: 2023-06-05T04:26:47.361Z,
+          title: '117',
+          subTitle: null,
+          heading: '111',
+          text: '1199',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'afbb5602-ecbe-484c-afea-9c940cea4ca7',
+          createdAt: 2023-05-30T06:00:01.291Z,
+          updatedAt: 2023-05-30T06:00:01.291Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'b404d338-dedf-4288-9a71-790b9e8f5ab2',
+          createdAt: 2023-05-27T19:16:54.680Z,
+          updatedAt: 2023-05-27T19:16:54.680Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin.... ',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'b831be9d-af0d-41f5-8d37-92faf26126dc',
+          createdAt: 2023-05-27T12:28:31.548Z,
+          updatedAt: 2023-05-27T12:28:31.548Z,
+          title: 'Wado Presidente',
+          subTitle: null,
+          heading: 'Massa vice',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'b9995f15-1dbc-4306-b02c-56a6d414b2bc',
+          createdAt: 2023-05-27T12:51:32.078Z,
+          updatedAt: 2023-05-27T12:51:32.078Z,
+          title: 'Wado Presidente',
+          subTitle: null,
+          heading: 'Massa vice',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'bb9c8f7b-deb5-4843-9384-3341d26cf3ca',
+          createdAt: 2023-06-03T06:07:08.331Z,
+          updatedAt: 2023-06-03T06:07:08.331Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'be5b9f4e-a5e4-4496-85d3-e3d86b34a2da',
+          createdAt: 2023-06-05T03:22:33.682Z,
+          updatedAt: 2023-06-05T03:22:33.682Z,
+          title: '111',
+          subTitle: null,
+          heading: '11111',
+          text: '11111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'c8e54f6a-bfc3-4fcf-9886-190851303a89',
+          createdAt: 2023-05-30T06:38:56.726Z,
+          updatedAt: 2023-05-30T06:38:56.726Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'caba2879-74d1-446a-b631-598b1cd0532d',
+          createdAt: 2023-06-03T06:02:54.732Z,
+          updatedAt: 2023-06-03T06:02:54.732Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'cf467fa2-49b8-46c0-82d2-9bc7b9cbbe1c',
+          createdAt: 2023-06-03T05:50:15.014Z,
+          updatedAt: 2023-06-03T05:50:15.014Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'd1382e59-afc4-4e72-9ac0-648178b00f79',
+          createdAt: 2023-05-27T11:56:23.141Z,
+          updatedAt: 2023-05-27T11:56:23.141Z,
+          title: 'Wado Presidente',
+          subTitle: null,
+          heading: 'Massa vice',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'dccf3d77-7e51-489f-83d2-ae32aa88b588',
+          createdAt: 2023-05-27T19:21:01.636Z,
+          updatedAt: 2023-05-27T19:21:01.636Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin.... ',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'ef185bad-1bdc-4f9c-8c73-fea2766e2cbe',
+          createdAt: 2023-05-30T05:58:25.488Z,
+          updatedAt: 2023-05-30T05:58:25.488Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'f457dee8-744c-4ef6-8206-8098ed27890a',
+          createdAt: 2023-05-30T06:41:10.809Z,
+          updatedAt: 2023-05-30T06:41:10.809Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'f7f7433b-b7bb-4f21-9fe1-a9e7e629700c',
+          createdAt: 2023-06-05T05:16:14.866Z,
+          updatedAt: 2023-06-05T05:16:14.866Z,
+          title: 'titulo',
+          subTitle: null,
+          heading: 'comentario',
+          text: 'texto\r\n',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'fb4a6756-175a-4a66-99b7-18d5eec23f74',
+          createdAt: 2023-06-05T03:26:36.616Z,
+          updatedAt: 2023-06-05T03:26:36.616Z,
+          title: '111',
+          subTitle: null,
+          heading: '1999',
+          text: '11111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'fd8859be-1af0-4e89-ba33-4906265b8661',
+          createdAt: 2023-06-05T01:40:48.757Z,
+          updatedAt: 2023-06-05T01:40:48.757Z,
+          title: '666',
+          subTitle: null,
+          heading: '177',
+          text: '2666',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'fda588ac-56ba-463a-a18c-808ffd6637cc',
+          createdAt: 2023-06-05T04:32:38.253Z,
+          updatedAt: 2023-06-05T04:32:38.253Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '00fd6b8e-ca88-45d3-b016-01ba20c020f2',
+          createdAt: 2023-06-05T05:14:04.111Z,
+          updatedAt: 2023-06-05T05:14:04.111Z,
+          title: 'titulo',
+          subTitle: null,
+          heading: 'comentario',
+          text: 'texto\r\n',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: '0b1b6d2e-3aea-407a-a486-2430366424f9',
+          createdAt: 2023-06-15T22:08:18.078Z,
+          updatedAt: 2023-06-15T22:08:18.078Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: '339c9f31-8970-4b45-8821-d6c7efd970c9',
+          createdAt: 2023-05-29T12:13:53.760Z,
+          updatedAt: 2023-05-29T12:13:53.760Z,
+          title: 'Prueba',
+          subTitle: null,
+          heading: 'Escribiendo texto',
+          text: 'Mas texto',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 3
+        },
+        {
+          id: '3c056125-9449-498f-a71c-c6ecce099aa8',
+          createdAt: 2023-06-05T03:29:28.838Z,
+          updatedAt: 2023-06-05T03:29:28.838Z,
+          title: '111',
+          subTitle: null,
+          heading: '1999',
+          text: '11111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '41219ec4-122c-483e-b565-31e342b4422a',
+          createdAt: 2023-05-30T06:42:28.464Z,
+          updatedAt: 2023-05-30T06:42:28.464Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '57d26df7-832d-4e5b-9213-2ada1b560e32',
+          createdAt: 2023-05-30T05:44:54.024Z,
+          updatedAt: 2023-05-30T05:44:54.024Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '5db9e95b-f52c-4ff3-8baf-aabc672e7193',
+          createdAt: 2023-06-03T06:08:45.250Z,
+          updatedAt: 2023-06-03T06:08:45.250Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '6590fac4-5f09-49e4-a448-5d461596d9de',
+          createdAt: 2023-05-30T05:42:25.169Z,
+          updatedAt: 2023-05-30T05:42:25.169Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '67d5048b-d80c-4d39-9335-72dceb4e9400',
+          createdAt: 2023-06-03T06:40:48.144Z,
+          updatedAt: 2023-06-03T06:40:48.144Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '68ef8b81-2f49-45b0-b9c3-91a1deedbc0c',
+          createdAt: 2023-06-03T05:44:18.927Z,
+          updatedAt: 2023-06-03T05:44:18.927Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '760ceb70-ad3e-4e74-8f69-3e1b536b1e76',
+          createdAt: 2023-06-05T04:26:45.435Z,
+          updatedAt: 2023-06-05T04:26:45.435Z,
+          title: '117',
+          subTitle: null,
+          heading: '111',
+          text: '1199',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '8ae2ab25-28a9-43af-b56e-713b45ead0fb',
+          createdAt: 2023-06-05T01:40:51.465Z,
+          updatedAt: 2023-06-05T01:40:51.465Z,
+          title: '666',
+          subTitle: null,
+          heading: '177',
+          text: '2666',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '9abab145-ccae-4e65-87c5-f7b80496a013',
+          createdAt: 2023-05-29T12:07:37.628Z,
+          updatedAt: 2023-05-29T12:07:37.628Z,
+          title: 'Prueba',
+          subTitle: null,
+          heading: 'Escribiendo texto',
+          text: 'Mas texto',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 3
+        },
+        {
+          id: '9c20bf78-70af-4a07-bdfd-61d851ade884',
+          createdAt: 2023-05-30T05:56:19.944Z,
+          updatedAt: 2023-05-30T05:56:19.944Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'a619e39d-e6f6-40f0-b503-6ded3a95bc64',
+          createdAt: 2023-06-05T05:22:03.501Z,
+          updatedAt: 2023-06-05T05:22:03.501Z,
+          title: 'titulo',
+          subTitle: null,
+          heading: 'comentario',
+          text: 'texto\r\n',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'a7cdb2c6-5b68-429f-bac3-f75d0a523544',
+          createdAt: 2023-06-05T04:26:47.361Z,
+          updatedAt: 2023-06-05T04:26:47.361Z,
+          title: '117',
+          subTitle: null,
+          heading: '111',
+          text: '1199',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'afbb5602-ecbe-484c-afea-9c940cea4ca7',
+          createdAt: 2023-05-30T06:00:01.291Z,
+          updatedAt: 2023-05-30T06:00:01.291Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'b404d338-dedf-4288-9a71-790b9e8f5ab2',
+          createdAt: 2023-05-27T19:16:54.680Z,
+          updatedAt: 2023-05-27T19:16:54.680Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin.... ',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'b831be9d-af0d-41f5-8d37-92faf26126dc',
+          createdAt: 2023-05-27T12:28:31.548Z,
+          updatedAt: 2023-05-27T12:28:31.548Z,
+          title: 'Wado Presidente',
+          subTitle: null,
+          heading: 'Massa vice',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'b9995f15-1dbc-4306-b02c-56a6d414b2bc',
+          createdAt: 2023-05-27T12:51:32.078Z,
+          updatedAt: 2023-05-27T12:51:32.078Z,
+          title: 'Wado Presidente',
+          subTitle: null,
+          heading: 'Massa vice',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'bb9c8f7b-deb5-4843-9384-3341d26cf3ca',
+          createdAt: 2023-06-03T06:07:08.331Z,
+          updatedAt: 2023-06-03T06:07:08.331Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'be5b9f4e-a5e4-4496-85d3-e3d86b34a2da',
+          createdAt: 2023-06-05T03:22:33.682Z,
+          updatedAt: 2023-06-05T03:22:33.682Z,
+          title: '111',
+          subTitle: null,
+          heading: '11111',
+          text: '11111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'c8e54f6a-bfc3-4fcf-9886-190851303a89',
+          createdAt: 2023-05-30T06:38:56.726Z,
+          updatedAt: 2023-05-30T06:38:56.726Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'ca6b8956-8274-4d95-a35b-1e1e452c3dbe',
+          createdAt: 2023-06-15T22:40:22.985Z,
+          updatedAt: 2023-06-15T22:40:22.985Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'caba2879-74d1-446a-b631-598b1cd0532d',
+          createdAt: 2023-06-03T06:02:54.732Z,
+          updatedAt: 2023-06-03T06:02:54.732Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'cf467fa2-49b8-46c0-82d2-9bc7b9cbbe1c',
+          createdAt: 2023-06-03T05:50:15.014Z,
+          updatedAt: 2023-06-03T05:50:15.014Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'd1382e59-afc4-4e72-9ac0-648178b00f79',
+          createdAt: 2023-05-27T11:56:23.141Z,
+          updatedAt: 2023-05-27T11:56:23.141Z,
+          title: 'Wado Presidente',
+          subTitle: null,
+          heading: 'Massa vice',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'dccf3d77-7e51-489f-83d2-ae32aa88b588',
+          createdAt: 2023-05-27T19:21:01.636Z,
+          updatedAt: 2023-05-27T19:21:01.636Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin.... ',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'dd61c690-3b26-4c86-8a8f-9dcba4237428',
+          createdAt: 2023-06-15T22:44:46.280Z,
+          updatedAt: 2023-06-15T22:44:46.280Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'ef185bad-1bdc-4f9c-8c73-fea2766e2cbe',
+          createdAt: 2023-05-30T05:58:25.488Z,
+          updatedAt: 2023-05-30T05:58:25.488Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'f457dee8-744c-4ef6-8206-8098ed27890a',
+          createdAt: 2023-05-30T06:41:10.809Z,
+          updatedAt: 2023-05-30T06:41:10.809Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'f7f7433b-b7bb-4f21-9fe1-a9e7e629700c',
+          createdAt: 2023-06-05T05:16:14.866Z,
+          updatedAt: 2023-06-05T05:16:14.866Z,
+          title: 'titulo',
+          subTitle: null,
+          heading: 'comentario',
+          text: 'texto\r\n',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'fb4a6756-175a-4a66-99b7-18d5eec23f74',
+          createdAt: 2023-06-05T03:26:36.616Z,
+          updatedAt: 2023-06-05T03:26:36.616Z,
+          title: '111',
+          subTitle: null,
+          heading: '1999',
+          text: '11111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'fd8859be-1af0-4e89-ba33-4906265b8661',
+          createdAt: 2023-06-05T01:40:48.757Z,
+          updatedAt: 2023-06-05T01:40:48.757Z,
+          title: '666',
+          subTitle: null,
+          heading: '177',
+          text: '2666',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'fda588ac-56ba-463a-a18c-808ffd6637cc',
+          createdAt: 2023-06-05T04:32:38.253Z,
+          updatedAt: 2023-06-05T04:32:38.253Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'ff1ca82b-8e09-47e0-b2e9-b06de9645d93',
+          createdAt: 2023-06-17T05:47:32.152Z,
+          updatedAt: 2023-06-17T05:47:32.152Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Economia',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.posts.findUniqueOrThrow()` invocation:
+    
+    {
+      where: {
+    ?   id?: String
+      }
+    }
+    
+    Argument where of type PostsWhereUniqueInput needs at least one argument. Available args are listed in green.
+    
+    Note: Lines with ? are optional.
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: PrismaClientValidationError: 
+      Invalid `prisma.posts.findUniqueOrThrow()` invocation:
+      
+      {
+        where: {
+      ?   id?: String
+        }
+      }
+      
+      Argument where of type PostsWhereUniqueInput needs at least one argument. Available args are listed in green.
+      
+      Note: Lines with ? are optional.
+      
+          at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+          at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+          at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+          at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+          at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+          at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+        clientVersion: '4.15.0'
+      },
+      ok: false,
+      data: null
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '00fd6b8e-ca88-45d3-b016-01ba20c020f2',
+        createdAt: 2023-06-05T05:14:04.111Z,
+        updatedAt: 2023-06-05T05:14:04.111Z,
+        title: 'titulo',
+        subTitle: null,
+        heading: 'comentario',
+        text: 'texto\r\n',
+        classification: 'Politica',
+        usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+        importance: 2
+      }
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '00fd6b8e-ca88-45d3-b016-01ba20c020f2',
+          createdAt: 2023-06-05T05:14:04.111Z,
+          updatedAt: 2023-06-05T05:14:04.111Z,
+          title: 'titulo',
+          subTitle: null,
+          heading: 'comentario',
+          text: 'texto\r\n',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: '0b1b6d2e-3aea-407a-a486-2430366424f9',
+          createdAt: 2023-06-15T22:08:18.078Z,
+          updatedAt: 2023-06-15T22:08:18.078Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: '339c9f31-8970-4b45-8821-d6c7efd970c9',
+          createdAt: 2023-05-29T12:13:53.760Z,
+          updatedAt: 2023-05-29T12:13:53.760Z,
+          title: 'Prueba',
+          subTitle: null,
+          heading: 'Escribiendo texto',
+          text: 'Mas texto',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 3
+        },
+        {
+          id: '3c056125-9449-498f-a71c-c6ecce099aa8',
+          createdAt: 2023-06-05T03:29:28.838Z,
+          updatedAt: 2023-06-05T03:29:28.838Z,
+          title: '111',
+          subTitle: null,
+          heading: '1999',
+          text: '11111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '41219ec4-122c-483e-b565-31e342b4422a',
+          createdAt: 2023-05-30T06:42:28.464Z,
+          updatedAt: 2023-05-30T06:42:28.464Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '57d26df7-832d-4e5b-9213-2ada1b560e32',
+          createdAt: 2023-05-30T05:44:54.024Z,
+          updatedAt: 2023-05-30T05:44:54.024Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '5db9e95b-f52c-4ff3-8baf-aabc672e7193',
+          createdAt: 2023-06-03T06:08:45.250Z,
+          updatedAt: 2023-06-03T06:08:45.250Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '6590fac4-5f09-49e4-a448-5d461596d9de',
+          createdAt: 2023-05-30T05:42:25.169Z,
+          updatedAt: 2023-05-30T05:42:25.169Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '67d5048b-d80c-4d39-9335-72dceb4e9400',
+          createdAt: 2023-06-03T06:40:48.144Z,
+          updatedAt: 2023-06-03T06:40:48.144Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '68ef8b81-2f49-45b0-b9c3-91a1deedbc0c',
+          createdAt: 2023-06-03T05:44:18.927Z,
+          updatedAt: 2023-06-03T05:44:18.927Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '760ceb70-ad3e-4e74-8f69-3e1b536b1e76',
+          createdAt: 2023-06-05T04:26:45.435Z,
+          updatedAt: 2023-06-05T04:26:45.435Z,
+          title: '117',
+          subTitle: null,
+          heading: '111',
+          text: '1199',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '8ae2ab25-28a9-43af-b56e-713b45ead0fb',
+          createdAt: 2023-06-05T01:40:51.465Z,
+          updatedAt: 2023-06-05T01:40:51.465Z,
+          title: '666',
+          subTitle: null,
+          heading: '177',
+          text: '2666',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: '9abab145-ccae-4e65-87c5-f7b80496a013',
+          createdAt: 2023-05-29T12:07:37.628Z,
+          updatedAt: 2023-05-29T12:07:37.628Z,
+          title: 'Prueba',
+          subTitle: null,
+          heading: 'Escribiendo texto',
+          text: 'Mas texto',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 3
+        },
+        {
+          id: '9c20bf78-70af-4a07-bdfd-61d851ade884',
+          createdAt: 2023-05-30T05:56:19.944Z,
+          updatedAt: 2023-05-30T05:56:19.944Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'a619e39d-e6f6-40f0-b503-6ded3a95bc64',
+          createdAt: 2023-06-05T05:22:03.501Z,
+          updatedAt: 2023-06-05T05:22:03.501Z,
+          title: 'titulo',
+          subTitle: null,
+          heading: 'comentario',
+          text: 'texto\r\n',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'a7cdb2c6-5b68-429f-bac3-f75d0a523544',
+          createdAt: 2023-06-05T04:26:47.361Z,
+          updatedAt: 2023-06-05T04:26:47.361Z,
+          title: '117',
+          subTitle: null,
+          heading: '111',
+          text: '1199',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'afbb5602-ecbe-484c-afea-9c940cea4ca7',
+          createdAt: 2023-05-30T06:00:01.291Z,
+          updatedAt: 2023-05-30T06:00:01.291Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'b404d338-dedf-4288-9a71-790b9e8f5ab2',
+          createdAt: 2023-05-27T19:16:54.680Z,
+          updatedAt: 2023-05-27T19:16:54.680Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin.... ',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'b831be9d-af0d-41f5-8d37-92faf26126dc',
+          createdAt: 2023-05-27T12:28:31.548Z,
+          updatedAt: 2023-05-27T12:28:31.548Z,
+          title: 'Wado Presidente',
+          subTitle: null,
+          heading: 'Massa vice',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'b9995f15-1dbc-4306-b02c-56a6d414b2bc',
+          createdAt: 2023-05-27T12:51:32.078Z,
+          updatedAt: 2023-05-27T12:51:32.078Z,
+          title: 'Wado Presidente',
+          subTitle: null,
+          heading: 'Massa vice',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'bb9c8f7b-deb5-4843-9384-3341d26cf3ca',
+          createdAt: 2023-06-03T06:07:08.331Z,
+          updatedAt: 2023-06-03T06:07:08.331Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'be5b9f4e-a5e4-4496-85d3-e3d86b34a2da',
+          createdAt: 2023-06-05T03:22:33.682Z,
+          updatedAt: 2023-06-05T03:22:33.682Z,
+          title: '111',
+          subTitle: null,
+          heading: '11111',
+          text: '11111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'c8e54f6a-bfc3-4fcf-9886-190851303a89',
+          createdAt: 2023-05-30T06:38:56.726Z,
+          updatedAt: 2023-05-30T06:38:56.726Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'ca6b8956-8274-4d95-a35b-1e1e452c3dbe',
+          createdAt: 2023-06-15T22:40:22.985Z,
+          updatedAt: 2023-06-15T22:40:22.985Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'caba2879-74d1-446a-b631-598b1cd0532d',
+          createdAt: 2023-06-03T06:02:54.732Z,
+          updatedAt: 2023-06-03T06:02:54.732Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'cf467fa2-49b8-46c0-82d2-9bc7b9cbbe1c',
+          createdAt: 2023-06-03T05:50:15.014Z,
+          updatedAt: 2023-06-03T05:50:15.014Z,
+          title: 'title',
+          subTitle: null,
+          heading: 'heading',
+          text: '1',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'd1382e59-afc4-4e72-9ac0-648178b00f79',
+          createdAt: 2023-05-27T11:56:23.141Z,
+          updatedAt: 2023-05-27T11:56:23.141Z,
+          title: 'Wado Presidente',
+          subTitle: null,
+          heading: 'Massa vice',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'dccf3d77-7e51-489f-83d2-ae32aa88b588',
+          createdAt: 2023-05-27T19:21:01.636Z,
+          updatedAt: 2023-05-27T19:21:01.636Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin.... ',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'dd61c690-3b26-4c86-8a8f-9dcba4237428',
+          createdAt: 2023-06-15T22:44:46.280Z,
+          updatedAt: 2023-06-15T22:44:46.280Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'ef185bad-1bdc-4f9c-8c73-fea2766e2cbe',
+          createdAt: 2023-05-30T05:58:25.488Z,
+          updatedAt: 2023-05-30T05:58:25.488Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'f457dee8-744c-4ef6-8206-8098ed27890a',
+          createdAt: 2023-05-30T06:41:10.809Z,
+          updatedAt: 2023-05-30T06:41:10.809Z,
+          title: 'Somere in the Multiverse',
+          subTitle: null,
+          heading: 'Theare is a tale that says spiderman was married to fantastic twin....',
+          text: 'The end is near',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'f7f7433b-b7bb-4f21-9fe1-a9e7e629700c',
+          createdAt: 2023-06-05T05:16:14.866Z,
+          updatedAt: 2023-06-05T05:16:14.866Z,
+          title: 'titulo',
+          subTitle: null,
+          heading: 'comentario',
+          text: 'texto\r\n',
+          classification: 'Politica',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        },
+        {
+          id: 'fb4a6756-175a-4a66-99b7-18d5eec23f74',
+          createdAt: 2023-06-05T03:26:36.616Z,
+          updatedAt: 2023-06-05T03:26:36.616Z,
+          title: '111',
+          subTitle: null,
+          heading: '1999',
+          text: '11111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'fd8859be-1af0-4e89-ba33-4906265b8661',
+          createdAt: 2023-06-05T01:40:48.757Z,
+          updatedAt: 2023-06-05T01:40:48.757Z,
+          title: '666',
+          subTitle: null,
+          heading: '177',
+          text: '2666',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'fda588ac-56ba-463a-a18c-808ffd6637cc',
+          createdAt: 2023-06-05T04:32:38.253Z,
+          updatedAt: 2023-06-05T04:32:38.253Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Municipales',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 1
+        },
+        {
+          id: 'ff1ca82b-8e09-47e0-b2e9-b06de9645d93',
+          createdAt: 2023-06-17T05:47:32.152Z,
+          updatedAt: 2023-06-17T05:47:32.152Z,
+          title: '111',
+          subTitle: null,
+          heading: '111',
+          text: '111',
+          classification: 'Economia',
+          usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+          importance: 2
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+      createdAt: 2023-05-13T17:53:41.042Z,
+      updatedAt: 2023-05-17T05:24:43.245Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 2023-06-02T00:00:00.000Z,
+      rol: 'GOD',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'NOT_BINARY',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '00fd6b8e-ca88-45d3-b016-01ba20c020f2',
+        createdAt: 2023-06-05T05:14:04.111Z,
+        updatedAt: 2023-06-05T05:14:04.111Z,
+        title: 'titulo',
+        subTitle: null,
+        heading: 'comentario',
+        text: 'texto\r\n',
+        classification: 'Politica',
+        usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+        importance: 2
+      }
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    {
+      include: {
+        images: true,
+        ~~~~~~
+    ?   posts?: true,
+    ?   Video?: true,
+    ?   RadioPost?: true,
+    ?   Ads?: true,
+    ?   Addresses?: true,
+    ?   _count?: true
+      },
+      where: {
+        id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a'
+      }
+    }
+    
+    
+    Unknown field `images` for include statement on model Users. Available options are listed in green. Did you mean `posts`?
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    {
+      include: {
+        images: true,
+        ~~~~~~
+    ?   posts?: true,
+    ?   Video?: true,
+    ?   RadioPost?: true,
+    ?   Ads?: true,
+    ?   Addresses?: true,
+    ?   _count?: true
+      },
+      where: {
+        id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a'
+      }
+    }
+    
+    
+    Unknown field `images` for include statement on model Users. Available options are listed in green. Did you mean `posts`?
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    {
+      include: {
+        images: true,
+        ~~~~~~
+    ?   posts?: true,
+    ?   Video?: true,
+    ?   RadioPost?: true,
+    ?   Ads?: true,
+    ?   Addresses?: true,
+    ?   _count?: true
+      },
+      where: {
+        id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a'
+      }
+    }
+    
+    
+    Unknown field `images` for include statement on model Users. Available options are listed in green. Did you mean `posts`?
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    {
+      include: {
+        images: true,
+        ~~~~~~
+    ?   posts?: true,
+    ?   Video?: true,
+    ?   RadioPost?: true,
+    ?   Ads?: true,
+    ?   Addresses?: true,
+    ?   _count?: true
+      },
+      where: {
+        id: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a'
+      }
+    }
+    
+    
+    Unknown field `images` for include statement on model Users. Available options are listed in green. Did you mean `posts`?
+    
+        at Li.validate (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:147:73)
+        at dn.createMessage (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:164:1298)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10818
+        at Object.runInChildSpan (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:174:1343)
+        at t._executeRequest (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:177:10795)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:162:5966 {
+      clientVersion: '4.15.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '00fd6b8e-ca88-45d3-b016-01ba20c020f2',
+        createdAt: 2023-06-05T05:14:04.111Z,
+        updatedAt: 2023-06-05T05:14:04.111Z,
+        title: 'titulo',
+        subTitle: null,
+        heading: 'comentario',
+        text: 'texto\r\n',
+        classification: 'Politica',
+        usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+        importance: 2
+      }
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '00fd6b8e-ca88-45d3-b016-01ba20c020f2',
+        createdAt: 2023-06-05T05:14:04.111Z,
+        updatedAt: 2023-06-05T05:14:04.111Z,
+        title: 'titulo',
+        subTitle: null,
+        heading: 'comentario',
+        text: 'texto\r\n',
+        classification: 'Politica',
+        usersId: '62d7d65d-0ba1-4f2c-8ade-818c7e36d92a',
+        importance: 2,
+        images: [
+          {
+            id: 'a6a7487a-e3e8-4c37-a93b-1189679cd708',
+            createdAt: 2023-06-05T05:14:04.111Z,
+            updatedAt: 2023-06-05T05:14:04.111Z,
+            url: 'https://www.facebook.com/photo.php?fbid=716083520524797&set=p.716083520524797&type=3'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}

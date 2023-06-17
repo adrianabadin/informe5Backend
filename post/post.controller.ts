@@ -89,6 +89,16 @@ export class PostController {
         logger.error({ function: 'PostController.getAllPosts', error })
         res.status(404).send(error)
       })
+    },
+    public getPostById = (req: Request, res: Response) => {
+      console.log('getbyid')
+      const { id } = req.params
+      this.service.getPost(id, 'images').then(response => {
+        res.status(200).send(response)
+      }).catch(error => {
+        logger.error({ function: 'PostController.getPostById', error })
+        res.status(404).send(error)
+      })
     }
   ) {
 
