@@ -51,11 +51,11 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gFindById<T>(this: T & { findUniqueOrThrow: any }, id: string, includeField: string): Promise<IResponseObject> {
+          async gFindById<T>(this: T & { findUniqueOrThrow: any }, id: string, includeField?: Prisma.Args<T, 'findUniqueOrThrow'>['include']): Promise<IResponseObject> {
             try {
               let data
-              if (includeField !== undefined && typeof includeField === 'string') {
-                data = await this.findUniqueOrThrow({ where: { id }, include: { [includeField]: true } })
+              if (includeField !== undefined) {
+                data = await this.findUniqueOrThrow({ where: { id }, include: includeField })
               } else {
                 data = await this.findUniqueOrThrow({ where: { id } })
               }

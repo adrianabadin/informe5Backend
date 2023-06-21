@@ -93,7 +93,7 @@ export class PostController {
     public getPostById = (req: Request, res: Response) => {
       console.log('getbyid')
       const { id } = req.params
-      this.service.getPost(id, 'images').then(response => {
+      this.service.getPost(id, { images: true }).then(response => {
         res.status(200).send(response)
       }).catch(error => {
         logger.error({ function: 'PostController.getPostById', error })

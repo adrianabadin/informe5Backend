@@ -16,7 +16,7 @@ export class PostService extends DatabaseHandler {
         return data
       } catch (error) { logger.error({ function: 'PostService.getPosts', error }) }
     },
-    public getPost = async (id: string, field: string) => {
+    public getPost = async (id: string, field: Prisma.PostsFindFirstOrThrowArgs['include']) => {
       try {
         const data = await this.prisma.posts.gFindById(id, field)
         logger.debug({ function: 'PostService.getPost', data })

@@ -38,7 +38,9 @@ export class FacebookService {
         // https://graph.facebook.com/391159203017232?fields=link&access_token=EAAC6VEEU92EBAMdz1ZAcWHS199UPlJqArvcZCkVVOT5vF9sZBYzMixo4IoNTnguXZB2BCb3Ui3jhGUGIIKGEtIx8ZC3iiMlpuXUNZBWHaDEJjif0M04jLyPhBCISHvnOY9oYIuj1Qrz5ZBlH63pMN3G3kB0AzioZAZCKd3HyA1Swl0mEO9Dg8k3WgqG5WrqLZANM9uEkcrn7IFjAZDZD
         if (this.pageToken !== '') {
           try {
-            const response = await axios.get(`https://graph.facebook.com/${id.data.id as string}?fields=link&access_token=${this.pageToken as string}`)
+            // TRABAJAR EN ESTE REQUEST PARA QUE DEVUELVA SOLO LA IMAGEN DE MAYOR RESOLUCION YAMODIFIQUE LINK POR IMAGES QUE DEVUELVE EL LINK PUBLICO
+            // DE LA IMAGEN DE FACEBOOK
+            const response = await axios.get(`https://graph.facebook.com/${id.data.id as string}?fields=images&access_token=${this.pageToken as string}`)
             if ('link' in response.data && response.data.link !== undefined) {
               return new ResponseObject(null, true, response.data.link)
             } else {
