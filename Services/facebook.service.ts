@@ -41,6 +41,7 @@ export class FacebookService {
             // TRABAJAR EN ESTE REQUEST PARA QUE DEVUELVA SOLO LA IMAGEN DE MAYOR RESOLUCION YAMODIFIQUE LINK POR IMAGES QUE DEVUELVE EL LINK PUBLICO
             // DE LA IMAGEN DE FACEBOOK
             const response = await axios.get(`https://graph.facebook.com/${id.data.id as string}?fields=images&access_token=${this.pageToken as string}`)
+                  return new ResponseObject(null, true, data.source as string)
             if ('link' in response.data && response.data.link !== undefined) {
               return new ResponseObject(null, true, response.data.link)
             } else {
