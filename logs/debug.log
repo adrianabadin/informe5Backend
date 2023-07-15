@@ -92801,3 +92801,940 @@
   },
   level: 'debug'
 }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      createdAt: 2023-07-11T06:09:53.219Z,
+      updatedAt: 2023-07-11T06:09:53.219Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Posts found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: NotFoundError [PrismaClientKnownRequestError]: No Posts found
+          at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+          at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+        code: 'P2025',
+        clientVersion: '5.0.0',
+        meta: undefined
+      },
+      ok: false,
+      data: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Posts found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: NotFoundError [PrismaClientKnownRequestError]: No Posts found
+          at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+          at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+        code: 'P2025',
+        clientVersion: '5.0.0',
+        meta: undefined
+      },
+      ok: false,
+      data: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+          createdAt: 2023-07-11T06:31:03.135Z,
+          updatedAt: 2023-07-11T06:31:03.135Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: null
+        },
+        {
+          id: '6933cf05-6cb6-403e-a5b2-4e858202822a',
+          createdAt: 2023-07-11T06:16:27.413Z,
+          updatedAt: 2023-07-11T06:16:27.413Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: null
+        },
+        {
+          id: '79bf9fdc-8c71-4469-93a0-cf60377c64d1',
+          createdAt: 2023-07-11T06:19:29.288Z,
+          updatedAt: 2023-07-11T06:19:29.288Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: null
+        },
+        {
+          id: '9c58c48d-e3ef-4e2d-938d-f6b59ee39aeb',
+          createdAt: 2023-07-11T06:12:41.037Z,
+          updatedAt: 2023-07-11T06:12:41.037Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: null
+        },
+        {
+          id: 'b6ac6761-68db-4bb8-b4d0-c72005478dcc',
+          createdAt: 2023-07-11T06:24:06.328Z,
+          updatedAt: 2023-07-11T06:24:06.328Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: null
+        },
+        {
+          id: 'd00ce6f7-95c0-4e8b-abbe-be1fce23722e',
+          createdAt: 2023-07-11T06:25:52.989Z,
+          updatedAt: 2023-07-11T06:25:52.989Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: null
+        },
+        {
+          id: 'ed34565c-fed0-4eb2-bca9-255e08cf65a4',
+          createdAt: 2023-07-11T06:35:43.713Z,
+          updatedAt: 2023-07-11T06:35:43.713Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: null
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T06:31:03.135Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=LdJjrhlbrJ8AX-JQciw&_nc_oc=AQmjZ8AlXfNHD2eSvtdOD86_YDk3_iyBp_GbEA50Ekcb3DLo_L5fFM-0qYf0QpV4uHQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBzV_sEnxhTNnG1FkNAU2Pqpo4smyfwm-MD7iSV28XCVQ&oe=64B2BC6A',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T06:31:03.135Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=LdJjrhlbrJ8AX-JQciw&_nc_oc=AQmjZ8AlXfNHD2eSvtdOD86_YDk3_iyBp_GbEA50Ekcb3DLo_L5fFM-0qYf0QpV4uHQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBzV_sEnxhTNnG1FkNAU2Pqpo4smyfwm-MD7iSV28XCVQ&oe=64B2BC6A',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T06:31:03.135Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=LdJjrhlbrJ8AX-JQciw&_nc_oc=AQmjZ8AlXfNHD2eSvtdOD86_YDk3_iyBp_GbEA50Ekcb3DLo_L5fFM-0qYf0QpV4uHQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBzV_sEnxhTNnG1FkNAU2Pqpo4smyfwm-MD7iSV28XCVQ&oe=64B2BC6A',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '6933cf05-6cb6-403e-a5b2-4e858202822a',
+        createdAt: 2023-07-11T06:16:27.413Z,
+        updatedAt: 2023-07-11T06:16:27.413Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: []
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T06:31:03.135Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=LdJjrhlbrJ8AX-JQciw&_nc_oc=AQmjZ8AlXfNHD2eSvtdOD86_YDk3_iyBp_GbEA50Ekcb3DLo_L5fFM-0qYf0QpV4uHQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBzV_sEnxhTNnG1FkNAU2Pqpo4smyfwm-MD7iSV28XCVQ&oe=64B2BC6A',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T06:31:03.135Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=LdJjrhlbrJ8AX-JQciw&_nc_oc=AQmjZ8AlXfNHD2eSvtdOD86_YDk3_iyBp_GbEA50Ekcb3DLo_L5fFM-0qYf0QpV4uHQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBzV_sEnxhTNnG1FkNAU2Pqpo4smyfwm-MD7iSV28XCVQ&oe=64B2BC6A',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '6933cf05-6cb6-403e-a5b2-4e858202822a',
+        createdAt: 2023-07-11T06:16:27.413Z,
+        updatedAt: 2023-07-11T06:16:27.413Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: []
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T06:31:03.135Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=LdJjrhlbrJ8AX-JQciw&_nc_oc=AQmjZ8AlXfNHD2eSvtdOD86_YDk3_iyBp_GbEA50Ekcb3DLo_L5fFM-0qYf0QpV4uHQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBzV_sEnxhTNnG1FkNAU2Pqpo4smyfwm-MD7iSV28XCVQ&oe=64B2BC6A',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '79bf9fdc-8c71-4469-93a0-cf60377c64d1',
+        createdAt: 2023-07-11T06:19:29.288Z,
+        updatedAt: 2023-07-11T06:19:29.288Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: []
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T06:31:03.135Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=LdJjrhlbrJ8AX-JQciw&_nc_oc=AQmjZ8AlXfNHD2eSvtdOD86_YDk3_iyBp_GbEA50Ekcb3DLo_L5fFM-0qYf0QpV4uHQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBzV_sEnxhTNnG1FkNAU2Pqpo4smyfwm-MD7iSV28XCVQ&oe=64B2BC6A',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: null,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T06:31:03.135Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=LdJjrhlbrJ8AX-JQciw&_nc_oc=AQmjZ8AlXfNHD2eSvtdOD86_YDk3_iyBp_GbEA50Ekcb3DLo_L5fFM-0qYf0QpV4uHQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBzV_sEnxhTNnG1FkNAU2Pqpo4smyfwm-MD7iSV28XCVQ&oe=64B2BC6A',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }

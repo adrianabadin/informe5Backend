@@ -286,3 +286,29 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Posts found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Posts found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}

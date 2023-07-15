@@ -132,6 +132,7 @@ model Posts {
   author         Users    @relation(fields: [usersId], references: [id])
   usersId        String
   importance     Int      @default(1)
+  fbid           String?
   metrics        Metric[]
 
   @@index([usersId])
