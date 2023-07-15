@@ -19,6 +19,7 @@ export class FacebookService {
           }
         }).then(response => {
           fs.unlinkSync(data.path)
+          console.log(data.path, 'File Deleted?', response)
           return response.data
         }).catch(error => {
           logger.error({ function: 'FacebookService.postPhoto.axiosPostRequest', error })
@@ -30,7 +31,7 @@ export class FacebookService {
         if (fs.existsSync(data.path)) { fs.unlinkSync(data.path) }
         return new ResponseObject(error, false, null)
       }
-
+      // console.log(response)
       return new ResponseObject(null, true, response)
     },
     public getLinkFromId = async (id: ResponseObject): Promise<ResponseObject> => {
@@ -41,25 +42,44 @@ export class FacebookService {
             // TRABAJAR EN ESTE REQUEST PARA QUE DEVUELVA SOLO LA IMAGEN DE MAYOR RESOLUCION YAMODIFIQUE LINK POR IMAGES QUE DEVUELVE EL LINK PUBLICO
             // DE LA IMAGEN DE FACEBOOK
             const response = await axios.get(`https://graph.facebook.com/${id.data.id as string}?fields=images&access_token=${this.pageToken as string}`)
-            console.log(response)
+            console.log(response, 'LINKS RESPONSE')
             if ('error' in response && response.error !== undefined && response.error !== null && typeof response.error === 'object') {
               if ('code' in response.error && typeof response.error.code === 'string' && 'message' in response.error) {
                 throw new Error(`Codigo de error: ${response.error.code} ${response.error.message as string}`)
               }
-            } else if ('images' in response) {
-              if (Array.isArray(response.images) && response.images.length > 0) {
-                const data = response.images.filter(image => image.heigth === 720 && image.width === 480)
+            } else if ('images' in response?.data) {
+              console.log('images existe')
+
+              if (Array.isArray(response?.data.images) && response?.data.images.length > 0) {
+                console.log('images es array')
+                const responseTyped: { images: Array<{ width: number, heigth: number, source: string }> } = response.data as { images: Array<{ width: number, heigth: number, source: string }> }
+                let data: Array<{ width: number, heigth: number, source: string }> | { width: number, heigth: number, source: string } = responseTyped.images.filter(image => image.heigth === 720 && image.width === 480)
                 if (data.length > 0 && 'source' in data) {
-                  return new ResponseObject(null, true, data.source as string)
+                  return new ResponseObject(null, true, { url: data.source, fbid: id.data.id })
+                } else {
+                  data = responseTyped.images.filter(image => image.heigth === 480 && image.width === 720)
+                  if (data.length > 0 && 'source' in data) {
+                    return new ResponseObject(null, true, { url: data.source, fbid: id.data.id })
+                  } else {
+                    data = responseTyped.images.reduce((max, objeto) => {
+                      if (objeto.heigth * objeto.width > max.heigth * max.width) {
+                        return objeto
+                      } else return max
+                    })
+                    console.log(data, 'Aca vamos')
+                    if (typeof data.source === 'string' && data.source !== null) {
+                      return new ResponseObject(null, true, { url: data.source, fbid: id.data.id })
+                    } else return new ResponseObject('Unable to find an image source', false, null)
+                  }
                 }
-              }
-            }
-            if ('link' in response.data && response.data.link !== undefined) {
-              return new ResponseObject(null, true, response.data.link)
-            } else {
-              logger.error({ function: 'FacebookService.getLinkFromId', error: 'Unable to find a link for the id provided' })
-              return new ResponseObject('Unable to find a link for the id provided', false, null)
-            }
+              } else return new ResponseObject('Unable to find an image source', false, null)
+            } return new ResponseObject('Unable to find an image source', false, null)
+            // if ('link' in response.data && response.data.link !== undefined) {
+            //   return new ResponseObject(null, true, response.data.link)
+            // } else {
+            //   logger.error({ function: 'FacebookService.getLinkFromId', error: 'Unable to find a link for the id provided' })
+            //   return new ResponseObject('Unable to find a link for the id provided', false, null)
+            // }
           } catch (error) {
             logger.error({ function: 'FacebookService.getLinkFromId.axiosRequest', error })
             return new ResponseObject('Something went wrong on get Request to FacebookService. ', false, null)
@@ -73,15 +93,15 @@ export class FacebookService {
         return new ResponseObject('Parameter missmatch shpuld be a ResponseObject', false, null)
       }
     },
-    public facebookFeed = async (data: IFacebookData, pictures: Array<{ url: string }>, id: string) => {
+    public facebookFeed = async (data: IFacebookData, pictures: Array<{ url: string, fbid: string }>, id: string) => {
       let response
       try {
         console.log(data, pictures)
         const { title, heading } = data
         const message: string =
-      `${title}\n${heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${id}`
+          `${title}\n${heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${id}`
         const pictsArray = pictures.map((picture) => {
-          return picture.url.split('fbid=')[1].split('&')[0]
+          return picture.fbid // picture.url.split('fbid=')[1].split('&')[0]
         })
         let dataRequest
         if (process.env.NEWSPAPER_URL !== undefined) {
@@ -102,5 +122,5 @@ export class FacebookService {
       }
     }
 
-  ) {}
+  ) { }
 }

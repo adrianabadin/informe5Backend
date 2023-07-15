@@ -12,13 +12,13 @@ dotenv.config()
 const simetricKey = process.env.SIMETRICKEY
 const privateKey = fs.readFileSync('auth/privateKey.pem', 'utf-8')
 export class AuthService extends DatabaseHandler {
-  constructor (
+  constructor(
     protected crypt = { encrypt, decrypt },
     public localSignUpVerify = async (req: Request, username: string, password: string, done: DoneType) => {
       try {
         let user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput | null = await this.prisma.users.findUnique({ where: { username } })
         if (user === null) {
-          const body: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = { ...req.body, hash: await argon2.hash(password) }
+          const body: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = { ...req.body, hash: await argon2.hash(password), id: undefined }
           if ('password' in body) { delete body.password }
           logger.debug({
             function: 'AuthService.localSignUpVerify', user: { ...body, hash: null }

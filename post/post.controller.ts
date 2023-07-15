@@ -27,10 +27,11 @@ export class PostController {
           try {
             const response = await this.facebookService.postPhoto(file)
             if (response.ok) {
-            // uso el id que me devuele la funcion facebook postPhoto para obtener el link publico de esa imagen
+              // uso el id que me devuele la funcion facebook postPhoto para obtener el link publico de esa imagen
               try {
                 const link = await this.facebookService.getLinkFromId(response)
-                if (link.ok) dataArray.push({ url: link.data })
+                console.log(link, 'Texto')
+                if (link.ok) dataArray.push({ url: link.data.url, fbid: link.data.fbid })
               } catch (error) { logger.error({ function: 'PostController.create.getLink', error }) }
               // en el caso de que esta sea la ultima vuelta del forEach genero los post y devuelvo el response
               if (index === files.length - 1) {
@@ -44,8 +45,8 @@ export class PostController {
                 console.log('database response', postResponse)
                 res.status(200).send(postResponse)
               }
-            // en el caso de que el response no fue ok , no agrego nada al array y verifico si es la ultima vuelta del each tambien
-            // termino el request
+              // en el caso de que el response no fue ok , no agrego nada al array y verifico si es la ultima vuelta del each tambien
+              // termino el request
             } else if (index === files.length - 1) res.status(200).send(dataArray)
           } catch (error) { logger.error({ function: 'PostController.create.postPhto', error }) }
         })
@@ -61,7 +62,7 @@ export class PostController {
                 response = await this.facebookService.postPhoto(file)
 
                 if (response.ok) {
-                // si el response es ok uso el id para obtener el link publico
+                  // si el response es ok uso el id para obtener el link publico
                   let link
                   try {
                     link = await this.facebookService.getLinkFromId(response)
@@ -72,7 +73,7 @@ export class PostController {
                   if (index === files[field].length - 1) {
                     res.status(200).send(dataArray)
                   }
-                // si hubo algun problema en el request a fb se fija si es la ultima iteracion y termina el request en ese caso
+                  // si hubo algun problema en el request a fb se fija si es la ultima iteracion y termina el request en ese caso
                 } else if (index === files[field].length - 1) res.status(200).send(dataArray)
               } catch (error) { logger.error({ function: 'PostController.create.postPhoto', error }) }
             })

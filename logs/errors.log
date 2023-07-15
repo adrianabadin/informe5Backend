@@ -213,3 +213,76 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:162:12389
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:162:12328 {
+      code: 'P2025',
+      clientVersion: '4.16.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:162:12389
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:162:12328 {
+      code: 'P2025',
+      clientVersion: '4.16.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.posts.create()` invocation:
+    
+    {
+      data: {
+        author: {
+          connect: {
+            id: 'c462c917-ba21-4d46-bd44-29413edc520c'
+          }
+        },
+        classification: 'Economia',
+        heading: 'aaa',
+        title: 'aaa',
+        text: '11s',
+        importance: 1,
+        images: {
+          create: {
+            '0': {
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/358694344_742216924578123_2041940801588558414_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeGhjqH_OqNgBqXxwwmAYjx200nVhI9XCjjTSdWEj1cKONR5sltMAOLWYkgtYq-TvOtdc2lV7ohE5QGHcoqn8a3T&_nc_ohc=RDH0oaP5RpIAX-FEJ1T&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCa9Fg3wV-H_kn-yLjGSlOE84KzqI2gkss7vXrClvS6OQ&oe=64B25833',
+    +         fbid: String,
+    ?         id?: String,
+    ?         createdAt?: DateTime,
+    ?         updatedAt?: DateTime
+            }
+          }
+        }
+      }
+    }
+    
+    Argument fbid for data.images.create.0.fbid is missing.
+    
+    Note: Lines with + are required, lines with ? are optional.
+    
+        at Ki.validate (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:148:73)
+        at gn.createMessage (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:164:1298)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:11600
+        at Object.runInChildSpan (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:174:1394)
+        at t._executeRequest (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:11577)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5) {
+      clientVersion: '4.16.0'
+    }
+  },
+  level: 'error'
+}
