@@ -7,6 +7,7 @@ import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type FacebookData } from '../Entities'
+import { ResponseObject } from '../Entities/response'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -100,6 +101,18 @@ export class PostController {
         logger.error({ function: 'PostController.getPostById', error })
         res.status(404).send(error)
       })
+    }, protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput) => {
+      if (photosObject?.id !== null) {
+        if (photosObject.updatedAt !== null && photosObject.updatedAt instanceof Date && photosObject.updatedAt.getTime() - Date.now() > 1000 * 60 * 60 * 24 * 2) {
+          return await this.facebookService.getLinkFromId(new ResponseObject(null, true, { ...photosObject, id: photosObject.fbid }))
+            .then(response => {
+              console.log(response, 'New updated Link ', 'Previus link', photosObject.url)
+              // crear service function to update photos on db
+              return new ResponseObject(null, true, { ...photosObject, url: response.data.url })
+            })
+            .catch(error => logger.error({ function: 'Post.controller.checkphotoage', error }))
+        } else return photosObject
+      }
     }
   ) {
 
