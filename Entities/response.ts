@@ -11,3 +11,8 @@ export class ResponseObject implements IResponseObject {
     public ok: boolean,
     public data: any) {}
 }
+export interface GenericResponseObject<T> {
+  error: any
+  ok: boolean
+  data: T
+}

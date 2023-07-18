@@ -7,7 +7,8 @@ import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type FacebookData } from '../Entities'
-import { ResponseObject } from '../Entities/response'
+import { type GenericResponseObject, IResponseObject, ResponseObject } from '../Entities/response'
+import { IUser } from '../../Informe5Front/src/entities/user'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -95,24 +96,43 @@ export class PostController {
     public getPostById = (req: Request, res: Response) => {
       console.log('getbyid')
       const { id } = req.params
-      this.service.getPost(id, { images: true }).then(response => {
-        res.status(200).send(response)
+      this.service.getPost(id, { images: true }).then(async (response) => {
+        if (response?.ok !== undefined && response.ok && 'data' in response) {
+          console.log(response?.data.images[0].updatedAt.getTime())
+          const checkedPhotos: GenericResponseObject<Prisma.PhotosCreateInput[]> = await this.checkPhotosAge(response?.data.images)
+          console.log(checkedPhotos.data)
+          response.data = { ...response.data, images: checkedPhotos.data }
+          res.status(200).send(response)
+        } else res.status(404).send(response)
       }).catch(error => {
         logger.error({ function: 'PostController.getPostById', error })
         res.status(404).send(error)
       })
-    }, protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput) => {
-      if (photosObject?.id !== null) {
-        if (photosObject.updatedAt !== null && photosObject.updatedAt instanceof Date && photosObject.updatedAt.getTime() - Date.now() > 1000 * 60 * 60 * 24 * 2) {
-          return await this.facebookService.getLinkFromId(new ResponseObject(null, true, { ...photosObject, id: photosObject.fbid }))
-            .then(response => {
-              console.log(response, 'New updated Link ', 'Previus link', photosObject.url)
-              // crear service function to update photos on db
-              return new ResponseObject(null, true, { ...photosObject, url: response.data.url })
-            })
-            .catch(error => logger.error({ function: 'Post.controller.checkphotoage', error }))
-        } else return photosObject
+    }, protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput[]) => {
+      console.log('CheckPhotos', photosObject)
+      if (Array.isArray(photosObject)) {
+        return new ResponseObject(null, true, photosObject.map(async (photo) => {
+          if (photo?.id !== null) {
+            if (photo.updatedAt instanceof Date) {
+              if (photo.updatedAt !== null && photo.updatedAt instanceof Date && Date.now() - photo.updatedAt.getTime() > 1000 * 60 * 60 * 24 * 2) {
+                return await this.facebookService.getLinkFromId(new ResponseObject(null, true, { ...photo, id: photo.fbid }))
+                  .then(async (response) => {
+                    console.log(response, 'New updated Link ', 'Previus link', photo.url)
+                    try {
+                      const updatedPhoto = await this.service.updatePhoto({ ...photo, url: response.data.url })
+                      console.log('Db Updated', updatedPhoto)
+                      return updatedPhoto
+                    } catch (error) {
+                      logger.error({ function: 'PostController.checkphotoage.updatePhoto', error })
+                    }
+                  })
+                  .catch(error => logger.error({ function: 'Post.controller.checkphotoage', error }))
+              } else return photo
+            }
+          }
+        }))
       }
+      return new ResponseObject('Unespected Error', false, null)
     }
   ) {
 
