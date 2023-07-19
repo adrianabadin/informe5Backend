@@ -98,39 +98,35 @@ export class PostController {
       const { id } = req.params
       this.service.getPost(id, { images: true }).then(async (response) => {
         if (response?.ok !== undefined && response.ok && 'data' in response) {
-          console.log(response?.data.images[0].updatedAt.getTime())
-          const checkedPhotos: GenericResponseObject<Prisma.PhotosCreateInput[]> = await this.checkPhotosAge(response?.data.images)
-          console.log(checkedPhotos.data)
-          response.data = { ...response.data, images: checkedPhotos.data }
-          res.status(200).send(response)
+          this.checkPhotosAge(response?.data.images).then(async (checkedPhotos: GenericResponseObject<Prisma.PhotosCreateInput[]>) => {
+            console.log(checkedPhotos.data, 'LOKO')
+            response.data = { ...response.data, images: checkedPhotos.data }
+            res.status(200).send(response)
+          }).catch((error: any) => logger.error({ function: 'PostController.getByid', error }))
         } else res.status(404).send(response)
       }).catch(error => {
         logger.error({ function: 'PostController.getPostById', error })
         res.status(404).send(error)
       })
-    }, protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput[]) => {
-      console.log('CheckPhotos', photosObject)
+    }, protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput[]): Promise<ResponseObject> => {
       if (Array.isArray(photosObject)) {
-        return new ResponseObject(null, true, photosObject.map(async (photo) => {
+        const data = await Promise.all(photosObject.map((photo): any => {
           if (photo?.id !== null) {
             if (photo.updatedAt instanceof Date) {
               if (photo.updatedAt !== null && photo.updatedAt instanceof Date && Date.now() - photo.updatedAt.getTime() > 1000 * 60 * 60 * 24 * 2) {
-                return await this.facebookService.getLinkFromId(new ResponseObject(null, true, { ...photo, id: photo.fbid }))
-                  .then(async (response) => {
-                    console.log(response, 'New updated Link ', 'Previus link', photo.url)
-                    try {
-                      const updatedPhoto = await this.service.updatePhoto({ ...photo, url: response.data.url })
-                      console.log('Db Updated', updatedPhoto)
-                      return updatedPhoto
-                    } catch (error) {
-                      logger.error({ function: 'PostController.checkphotoage.updatePhoto', error })
-                    }
-                  })
+                return this.facebookService.getLinkFromId(new ResponseObject(null, true, { ...photo, id: photo.fbid }))
+                  .then((response): any => {
+                    return this.service.updatePhoto({ ...photo, url: response.data.url })
+                      .then(updatephotoResponse => updatephotoResponse)
+                      .catch(error => logger.error({ function: 'PostController', error }))
+                  }
+                  )
                   .catch(error => logger.error({ function: 'Post.controller.checkphotoage', error }))
               } else return photo
-            }
-          }
+            } else return undefined
+          } else return undefined
         }))
+        return new ResponseObject(null, true, data)
       }
       return new ResponseObject('Unespected Error', false, null)
     }

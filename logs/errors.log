@@ -312,3 +312,38 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientInitializationError: 
+    Invalid `prisma.posts.findUniqueOrThrow()` invocation:
+    
+    
+    Can't reach database server at `127.0.0.1`:`3306`
+    
+    Please make sure your database server is running at `127.0.0.1`:`3306`.
+        at Rn.handleRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:174:7601)
+        at Rn.handleAndLogRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:174:6754)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:3010
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:3225
+        at t._executeRequest (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:11403)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:162:12328 {
+      clientVersion: '4.16.0',
+      errorCode: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostController.getPostById',
+    error: TypeError: this.checkPhotosAge(...).then is not a function
+        at PostController.<anonymous> (/run/media/adrianabadin/code/informe5Backend/post/post.controller.ts:103:54)
+        at Generator.next (<anonymous>)
+        at /run/media/adrianabadin/code/informe5Backend/post/post.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/run/media/adrianabadin/code/informe5Backend/post/post.controller.ts:4:12)
+        at /run/media/adrianabadin/code/informe5Backend/post/post.controller.ts:99:74
+  },
+  level: 'error'
+}

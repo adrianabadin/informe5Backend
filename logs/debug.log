@@ -94734,3 +94734,683 @@
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T06:49:27.595Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX_O2rTP&_nc_oc=AQk46qAgEG6ShzdhFl7LoEgPbuTR-1nI2xDNXvJQlA_RO0soaKEZ_3a7i1DRAtPhFwE&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfD1c0ghqJ8psm5tz3pA2Pw7iQABMsfqEqueHb1e4lbvbA&oe=64BAA56A',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-18T21:49:28.705Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX__EJm1&_nc_oc=AQkUC9T2d7rBAMyruAN7zkrp2OvVojcnweiuzG-DtLeSQyLd1CK-gQxIYa0k0cNvi34&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfCcVowlD2yFyzFdDKSq70E5Bx76RjGJDQWNG_VbyXKWKw&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-11T21:49:28.705Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX__EJm1&_nc_oc=AQkUC9T2d7rBAMyruAN7zkrp2OvVojcnweiuzG-DtLeSQyLd1CK-gQxIYa0k0cNvi34&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfCcVowlD2yFyzFdDKSq70E5Bx76RjGJDQWNG_VbyXKWKw&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-18T21:55:51.616Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX__EJm1&_nc_oc=AQkUC9T2d7rBAMyruAN7zkrp2OvVojcnweiuzG-DtLeSQyLd1CK-gQxIYa0k0cNvi34&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfCcVowlD2yFyzFdDKSq70E5Bx76RjGJDQWNG_VbyXKWKw&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-18T21:55:51.616Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX__EJm1&_nc_oc=AQkUC9T2d7rBAMyruAN7zkrp2OvVojcnweiuzG-DtLeSQyLd1CK-gQxIYa0k0cNvi34&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfCcVowlD2yFyzFdDKSq70E5Bx76RjGJDQWNG_VbyXKWKw&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-18T21:55:51.616Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX__EJm1&_nc_oc=AQkUC9T2d7rBAMyruAN7zkrp2OvVojcnweiuzG-DtLeSQyLd1CK-gQxIYa0k0cNvi34&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfCcVowlD2yFyzFdDKSq70E5Bx76RjGJDQWNG_VbyXKWKw&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T15:16:50.247Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T15:16:50.247Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T15:18:51.083Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T15:18:51.083Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T15:20:05.523Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T15:20:05.523Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T15:21:09.627Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientInitializationError: 
+    Invalid `prisma.posts.findUniqueOrThrow()` invocation:
+    
+    
+    Can't reach database server at `127.0.0.1`:`3306`
+    
+    Please make sure your database server is running at `127.0.0.1`:`3306`.
+        at Rn.handleRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:174:7601)
+        at Rn.handleAndLogRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:174:6754)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:3010
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:3225
+        at t._executeRequest (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:11403)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:162:12328 {
+      clientVersion: '4.16.0',
+      errorCode: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: PrismaClientInitializationError: 
+      Invalid `prisma.posts.findUniqueOrThrow()` invocation:
+      
+      
+      Can't reach database server at `127.0.0.1`:`3306`
+      
+      Please make sure your database server is running at `127.0.0.1`:`3306`.
+          at Rn.handleRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:174:7601)
+          at Rn.handleAndLogRequestError (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:174:6754)
+          at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:3010
+          at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:3225
+          at t._executeRequest (/run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:177:11403)
+          at /run/media/adrianabadin/code/informe5Backend/node_modules/@prisma/client/runtime/library.js:162:12328 {
+        clientVersion: '4.16.0',
+        errorCode: undefined
+      },
+      ok: false,
+      data: null
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T15:21:09.627Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostController.getPostById',
+    error: TypeError: this.checkPhotosAge(...).then is not a function
+        at PostController.<anonymous> (/run/media/adrianabadin/code/informe5Backend/post/post.controller.ts:103:54)
+        at Generator.next (<anonymous>)
+        at /run/media/adrianabadin/code/informe5Backend/post/post.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/run/media/adrianabadin/code/informe5Backend/post/post.controller.ts:4:12)
+        at /run/media/adrianabadin/code/informe5Backend/post/post.controller.ts:99:74
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T15:29:12.041Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T15:29:12.041Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T15:31:25.264Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T15:31:25.264Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T15:34:10.238Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T15:34:10.238Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T15:36:09.178Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T15:36:09.178Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T15:41:43.831Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T15:41:43.831Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T21:02:10.554Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+        createdAt: 2023-07-11T06:31:03.135Z,
+        updatedAt: 2023-07-11T06:31:03.135Z,
+        title: 'aaa',
+        subTitle: null,
+        heading: 'aaa',
+        text: '11s',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        images: [
+          {
+            id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+            createdAt: 2023-07-11T06:31:03.135Z,
+            updatedAt: 2023-07-19T21:02:10.554Z,
+            url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+            fbid: '742217761244706'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePhoto',
+    data: {
+      id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+      createdAt: 2023-07-11T06:31:03.135Z,
+      updatedAt: 2023-07-19T21:04:55.144Z,
+      url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+      fbid: '742217761244706'
+    }
+  },
+  level: 'debug'
+}

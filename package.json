@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only app.ts"
+    "start": "ts-node-dev --respawn --transpile-only app.ts",
+    "db": "pscale connect informe5 main"
   },
   "keywords": [],
   "author": "",
