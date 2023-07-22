@@ -1,6 +1,6 @@
 import { PrismaClient, type Prisma } from '@prisma/client'
 import { logger } from './logger.service'
-import { type IResponseObject, ResponseObject } from '../Entities'
+import { type IResponseObject, ResponseObject, type GenericResponseObject } from '../Entities'
 export abstract class DatabaseHandler {
   static Instance: any
   constructor (
@@ -67,10 +67,46 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gGetAll<T>(this: T & { findMany: any }) {
+          async gGetAll<T>(
+            this: T & { findMany: any },
+            includeFields: Prisma.Args<T, 'findMany'>['include'],
+            paginationObject?: { cusor?: any, pagination: number },
+            filter?: Prisma.Args<T, 'findMany'>['where']
+          ) {
             try {
-              const data = await this.findMany({})
-              return new ResponseObject(null, true, data)
+              if (paginationObject !== undefined) {
+                if (paginationObject?.cusor !== undefined) { // cursor and pagination provided second page and so on
+                  const data = await this.findMany(
+                    {
+                      take: paginationObject.pagination,
+                      cursor: paginationObject.cusor,
+                      include: includeFields,
+                      orderBy: { createdAt: 'desc' },
+                      where: filter === undefined ? undefined : filter
+                    }
+                  )
+                  return new ResponseObject(null, true, data)
+                } else { // first page case paginationObject not undefined cursor not privided
+                  const data = await this.findMany(
+                    {
+                      take: paginationObject.pagination,
+                      include: includeFields,
+                      orderBy: { createdAt: 'desc' },
+                      where: filter === undefined ? undefined : filter
+                    }
+                  )
+                  return new ResponseObject(null, true, data)
+                }
+              } else { // no pagination object defined request the entire collection
+                const data = await this.findMany(
+                  {
+                    include: includeFields,
+                    orderBy: { createdAt: 'desc' },
+                    where: filter === undefined ? undefined : filter
+                  }
+                )
+                return new ResponseObject(null, true, data)
+              }
             } catch (error) {
               logger.error({
                 function: 'DatabaseHandler.GetAll', error

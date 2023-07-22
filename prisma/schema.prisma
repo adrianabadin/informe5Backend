@@ -3,7 +3,7 @@
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["clientExtensions"]
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 datasource db {
@@ -136,6 +136,8 @@ model Posts {
   metrics        Metric[]
 
   @@index([usersId])
+  @@fulltext([title])
+  @@fulltext([title, text, heading, subtitle])
 }
 
 model Video {

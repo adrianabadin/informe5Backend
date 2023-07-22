@@ -2,13 +2,11 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { type Request, type Response } from 'express'
 import { PostService } from './post.service'
-import { type Prisma } from '@prisma/client'
+import { PrismaClient, type Prisma, type Posts } from '@prisma/client'
 import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
-import { type FacebookData } from '../Entities'
-import { type GenericResponseObject, IResponseObject, ResponseObject } from '../Entities/response'
-import { IUser } from '../../Informe5Front/src/entities/user'
+import { type GenericResponseObject, ResponseObject } from '../Entities/response'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -84,9 +82,69 @@ export class PostController {
       }
     },
     public getAllPosts = (req: Request, res: Response) => {
-      this.service.getPosts().then(response => {
+      const { cursor, title, search, minDate, maxDate } = req.query
+      const query: Prisma.PostsFindManyArgs['where'] & { AND: Array<Prisma.PostsFindManyArgs['where']> } = { AND: [] }
+      if (title !== undefined) {
+        query.AND.push({
+          title: { contains: title as string }
+        }
+        )
+      }
+      if (search !== undefined) {
+        query.AND.push({
+          OR:
+         [{
+           title: search as string
+         },
+         {
+           text: search as string
+         },
+         { heading: search as string },
+         { subTitle: search as string }
+         ]
+
+        }
+        )
+      }
+      if (minDate !== undefined || maxDate !== undefined) {
+        query.AND.push({
+          AND: []
+        }
+        )
+        if (minDate !== undefined && query !== undefined && 'AND' in query) {
+          const data = query.AND[query.AND.length - 1]
+          if (data !== undefined && 'AND' in data && Array.isArray(data.AND)) { data.AND.push({ createdAt: { gte: new Date(minDate as string) } }) }
+        }
+        if (maxDate !== undefined) {
+          const data = query.AND[query.AND.length - 1]
+          if (data !== undefined && "AND" in data && data?.AND !==undefined && Array.isArray(data.AND)) {
+          data.AND.push({ createdAt: { lte: new Date(maxDate as string) } })
+        }
+      }
+      this.service.getPosts(
+        {
+          cursor: cursor === undefined ? undefined : { createdAt: new Date(cursor as string) },
+          pagination: 50
+        }
+      ).then(async (response) => {
         if (response !== undefined && response.ok) {
-          res.status(200).send(response)
+          const data = response.data
+          const checkedResponse = await Promise.all(data.map(async (post) => {
+            return await this.checkPhotosAge(post?.images as Prisma.PhotosCreateInput[])
+              .then(checkedPhotos => {
+                if (checkedPhotos.data !== undefined) {
+                  const finalData: Prisma.PhotosCreateInput[] = checkedPhotos.data// as Prisma.PhotosCreateNestedManyWithoutPostsInput
+                  console.log(finalData, finalData.length)
+                  // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+                  post = { ...post, images: finalData.length === 1 && finalData[0] === undefined ? [] : finalData } as Prisma.PostsCreateInput
+                  return post
+                }
+              }
+              )
+
+              .catch((error) => logger.error({ function: 'PostController.getAllPosts', error }))
+          }))
+          res.status(200).send(checkedResponse)
         }
       }).catch(error => {
         logger.error({ function: 'PostController.getAllPosts', error })
@@ -108,20 +166,27 @@ export class PostController {
         logger.error({ function: 'PostController.getPostById', error })
         res.status(404).send(error)
       })
-    }, protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput[]): Promise<ResponseObject> => {
+    }, protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput[]): Promise<GenericResponseObject<Prisma.PhotosCreateInput[]>> => {
       if (Array.isArray(photosObject)) {
         const data = await Promise.all(photosObject.map((photo): any => {
           if (photo?.id !== null) {
             if (photo.updatedAt instanceof Date) {
               if (photo.updatedAt !== null && photo.updatedAt instanceof Date && Date.now() - photo.updatedAt.getTime() > 1000 * 60 * 60 * 24 * 2) {
                 return this.facebookService.getLinkFromId(new ResponseObject(null, true, { ...photo, id: photo.fbid }))
-                  .then((response): any => {
-                    return this.service.updatePhoto({ ...photo, url: response.data.url })
-                      .then(updatephotoResponse => updatephotoResponse)
-                      .catch(error => logger.error({ function: 'PostController', error }))
+                  .then(async (response) => {
+                    console.log(response)
+                    if (response.ok) {
+                      return await this.service.updatePhoto({ ...photo, url: response.data.url })
+                        .then(updatephotoResponse => updatephotoResponse)
+                        .catch(error => {
+                          logger.error({ function: 'PostController.checkPhotosAge.updatePhoto', error })
+                        })
+                    }
                   }
                   )
-                  .catch(error => logger.error({ function: 'Post.controller.checkphotoage', error }))
+                  .catch(error => {
+                    logger.error({ function: 'Post.controller.checkphotoage.getLinkFromId', error })
+                  })
               } else return photo
             } else return undefined
           } else return undefined

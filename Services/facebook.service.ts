@@ -70,9 +70,10 @@ export class FacebookService {
                 }
               } else return new ResponseObject('Unable to find an image source', false, null)
             } return new ResponseObject('Unable to find an image source', false, null)
-          } catch (error) {
-            logger.error({ function: 'FacebookService.getLinkFromId.axiosRequest', error })
-            return new ResponseObject('Something went wrong on get Request to FacebookService. ', false, null)
+          } catch (error: any) {
+          //  logger.error({ function: 'FacebookService.getLinkFromId.axiosRequest', error })
+            logger.error({ function: 'FacebookService.getLinkFromId.axiosPostRequest', error: error?.response.data.error })
+            return new ResponseObject(error?.response.data.error, false, null)
           }
         } else {
           logger.error({ function: 'FacebookService.getLinkFromId', error: 'Must provide a page Token' })
