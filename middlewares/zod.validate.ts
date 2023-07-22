@@ -1,12 +1,27 @@
 import { type NextFunction, type Request, type Response } from 'express'
-import { type AnyZodObject } from 'zod'
+import { ZodError, type AnyZodObject } from 'zod'
 import { logger } from '../Services/logger.service'
 
-export const schemaValidator = (schema: AnyZodObject) => (req: Request, _res: Response, next: NextFunction) => {
+export const schemaValidator = <T>(schema: AnyZodObject | AnyZodObject[]) => <T>(req: Request, res: Response, next: NextFunction) => {
   try {
-    schema.parse(req)
+    if (Array.isArray(schema)) {
+      schema.forEach(singleSchema => {
+        singleSchema.parse({
+          body: req.body,
+          query: req.query,
+          params: req.params
+        })
+      })
+    } else {
+      schema.parse({
+        body: req.body,
+        query: req.query,
+        params: req.params
+      })
+    }
     next()
   } catch (error) {
     logger.error({ function: 'schemaValidator', error })
+    res.status(404).send({ err: error })
   }
 }
