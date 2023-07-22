@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { type Request, type Response } from 'express'
 import { PostService } from './post.service'
-import { PrismaClient, type Prisma, type Posts } from '@prisma/client'
+import { type Prisma } from '@prisma/client'
 import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
@@ -82,13 +82,17 @@ export class PostController {
       }
     },
     public getAllPosts = (req: Request, res: Response) => {
-      const { cursor, title, search, minDate, maxDate } = req.query
+      const { cursor, title, search, minDate, maxDate, category } = req.query
       const query: Prisma.PostsFindManyArgs['where'] & { AND: Array<Prisma.PostsFindManyArgs['where']> } = { AND: [] }
+
       if (title !== undefined) {
         query.AND.push({
           title: { contains: title as string }
         }
         )
+      }
+      if (category !== undefined) {
+        query.AND.push({ classification: { contains: category as string } })
       }
       if (search !== undefined) {
         query.AND.push({
@@ -111,21 +115,23 @@ export class PostController {
           AND: []
         }
         )
-        if (minDate !== undefined && query !== undefined && 'AND' in query) {
-          const data = query.AND[query.AND.length - 1]
-          if (data !== undefined && 'AND' in data && Array.isArray(data.AND)) { data.AND.push({ createdAt: { gte: new Date(minDate as string) } }) }
-        }
-        if (maxDate !== undefined) {
-          const data = query.AND[query.AND.length - 1]
-          if (data !== undefined && "AND" in data && data?.AND !==undefined && Array.isArray(data.AND)) {
+      }
+      if (minDate !== undefined && query !== undefined && 'AND' in query) {
+        const data = query.AND[query.AND.length - 1]
+        if (data !== undefined && 'AND' in data && Array.isArray(data.AND)) { data.AND.push({ createdAt: { gte: new Date(minDate as string) } }) }
+      }
+      if (maxDate !== undefined) {
+        const data = query.AND[query.AND.length - 1]
+        if (data !== undefined && 'AND' in data && data?.AND !== undefined && Array.isArray(data.AND)) {
           data.AND.push({ createdAt: { lte: new Date(maxDate as string) } })
         }
       }
+      console.log(query, query.AND[0])
       this.service.getPosts(
         {
           cursor: cursor === undefined ? undefined : { createdAt: new Date(cursor as string) },
           pagination: 50
-        }
+        }, query
       ).then(async (response) => {
         if (response !== undefined && response.ok) {
           const data = response.data

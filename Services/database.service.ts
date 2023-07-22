@@ -1,23 +1,13 @@
 import { PrismaClient, type Prisma } from '@prisma/client'
 import { logger } from './logger.service'
-import { type IResponseObject, ResponseObject, type GenericResponseObject } from '../Entities'
+import { type IResponseObject, ResponseObject } from '../Entities'
 export abstract class DatabaseHandler {
   static Instance: any
   constructor (
     protected unExtendedPrisma = new PrismaClient(),
 
     protected prisma = unExtendedPrisma.$extends({
-      // result: {
-      //   users: {
-      //     toggleVerify: {
-      //       needs: { id: true, isVerified: true },
-      //       compute (user) {
-      //         return () => unExtendedPrisma.users.update({ where: { id: user.id }, data: { isVerified: !user.isVerified } })
-      //       }
-      //     }
-      //   }
 
-      // },
       model: {
 
         $allModels:
@@ -75,10 +65,12 @@ export abstract class DatabaseHandler {
           ) {
             try {
               if (paginationObject !== undefined) {
-                if (paginationObject?.cusor !== undefined) { // cursor and pagination provided second page and so on
+                if (paginationObject?.cusor !== undefined) {
+                  // cursor and pagination provided second page and so on
                   const data = await this.findMany(
                     {
                       take: paginationObject.pagination,
+                      skip: 1,
                       cursor: paginationObject.cusor,
                       include: includeFields,
                       orderBy: { createdAt: 'desc' },
@@ -86,7 +78,8 @@ export abstract class DatabaseHandler {
                     }
                   )
                   return new ResponseObject(null, true, data)
-                } else { // first page case paginationObject not undefined cursor not privided
+                } else {
+                  // first page case paginationObject not undefined cursor not privided
                   const data = await this.findMany(
                     {
                       take: paginationObject.pagination,
@@ -97,7 +90,8 @@ export abstract class DatabaseHandler {
                   )
                   return new ResponseObject(null, true, data)
                 }
-              } else { // no pagination object defined request the entire collection
+              } else {
+                // no pagination object defined request the entire collection
                 const data = await this.findMany(
                   {
                     include: includeFields,
@@ -159,36 +153,3 @@ export abstract class DatabaseHandler {
     return DatabaseHandler.Instance
   }
 }
-
-// users: {
-//   async toggleVerify (id: string) {
-// try {
-//   const user = await prisma.users.findUniqueOrThrow({ where: { id } })
-//   const data = await prisma.users.update({ where: { id }, data: { isVerified: !user.isVerified } })
-//   logger.debug({
-//     function: 'DatabaseHandler.toggleVerify', data
-//   })
-//   return new ResponseObject(null, true, data)
-// } catch (error) {
-//   logger.error({
-//     function: 'DatabaseHandler.toggleVerify', error
-//   })
-// }
-// }
-// }
-
-// protected usersExtended = unExtendedPrisma.$extends({
-//   result: {
-//     users: {
-//       toggleVerify: {
-//         needs: { id: true, isVerified: true },
-//         async compute (user) {
-//           const userDb = await unExtendedPrisma.users.findUniqueOrThrow({ where: { id: user.id } })
-//           return await unExtendedPrisma.users.update({ where: { id: user.id }, data: { isVerified: !userDb.isVerified } })
-//         }
-//       }
-//     }
-
-//   }
-
-// }),

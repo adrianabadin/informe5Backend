@@ -137,7 +137,7 @@ model Posts {
 
   @@index([usersId])
   @@fulltext([title])
-  @@fulltext([title, text, heading, subtitle])
+  @@fulltext([title, text, heading, subTitle])
 }
 
 model Video {

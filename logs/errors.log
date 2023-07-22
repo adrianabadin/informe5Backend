@@ -288,3 +288,367 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AvEOwswqgUJgfSyppAeped-'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'ALkgzefOEfGY3z9Abdh3xSw'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'ANdYd_qFd3rhqWIwm64rqtE'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'At3trMCI469rsc8sLKmu9Cl'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AKOq6WAxMi5lN2m30H8wYup'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'A_4PlRRbOXUvr2Yu7LYiEDt'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AUeOfrqhAyNF2uGWBE7JHjw'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AAn3vK-XyOg84X47L5K3nGn'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'ADGpH-aMHX6s64FQfFUnmvs'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AOq0K5jbKqnClIAPRULlXbp'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AtsGNNmEzkaSBCo29qDDFoV'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'Apo6LVV6xhxBbH_1K_nRTmp'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AaT-LrBITfC9yxpeFrqU0I7'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'Ahk4EXItnASUSKcV-Kn0LS7'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AzrwSLmbYwAi5PDI-QR97QY'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AdsKFXx7P5Sr6BjJJdpfhkf'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'Am0RUtieEvePJ3_HdpFWcdK'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AyfTWhRdivUu5hmYOb2lq6D'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'A4SLRmk22gp8n7j0zCujfDp'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AI7U_dKHRCpUNQZg5oyBblX'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'A1ftNH0i5ti3yq6eiBuHa3O'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'A2iO1nmjzQFFgONeeHfB9NJ'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AiKzEjh0j8vC_GLkDpiLDC3'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'A7IS_WVlQeLizU3YzSCajdY'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'Ap-FqUztYkc2d92bv9Usw5O'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'Agl8oAjffxTl4hlnT5ljM40'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'A1TRzXWHWqpK4UtVHkJ4fgx'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'A7s4cZghlc8s_ksg6bGCBqp'
+    }
+  },
+  level: 'error'
+}
