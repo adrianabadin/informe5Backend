@@ -5,8 +5,9 @@ import multer from 'multer'
 import { PostController } from './post.controller'
 import passport from 'passport'
 import { postValidation } from './post.validation'
-import { getPostsSchema } from './post.schema'
+import { getPostsSchema, getPostById, createPostSchema } from './post.schema'
 import { schemaValidator } from '../middlewares/zod.validate'
+
 const postController = new PostController()
 const storage = multer.diskStorage({
   destination: function (_req: Request, _file: Express.Multer.File, cb: (...arg: any) => any) {
@@ -19,6 +20,14 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage })
 export const postRouter = Router()
-postRouter.post('/create', upload.array('images', 5), postValidation, passport.authenticate('jwt', { session: false }), postController.createPost)
-postRouter.get('/getPostById/:id', postController.getPostById)
-postRouter.get('/getPosts', schemaValidator(getPostsSchema), postController.getAllPosts)
+postRouter.post('/create',
+  upload.array('images', 5),
+  schemaValidator(createPostSchema),
+  passport.authenticate('jwt', { session: false }),
+  postController.createPost)
+postRouter.get('/getPostById/:id',
+  schemaValidator(getPostById),
+  postController.getPostById)
+postRouter.get('/getPosts',
+  schemaValidator(getPostsSchema),
+  postController.getAllPosts)

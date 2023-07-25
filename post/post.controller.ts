@@ -7,7 +7,7 @@ import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type GenericResponseObject, ResponseObject } from '../Entities/response'
-import { type CreatePostType, type GetPostsType } from './post.schema'
+import { type CreatePostType, type GetPostsType, type GetPostById } from './post.schema'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -158,7 +158,7 @@ export class PostController {
         res.status(404).send(error)
       })
     },
-    public getPostById = (req: Request, res: Response) => {
+    public getPostById = (req: Request<GetPostById['params']>, res: Response) => {
       console.log('getbyid')
       const { id } = req.params
       this.service.getPost(id, { images: true }).then(async (response) => {
@@ -173,7 +173,8 @@ export class PostController {
         logger.error({ function: 'PostController.getPostById', error })
         res.status(404).send(error)
       })
-    }, protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput[]): Promise<GenericResponseObject<Prisma.PhotosCreateInput[]>> => {
+    },
+    protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput[]): Promise<GenericResponseObject<Prisma.PhotosCreateInput[]>> => {
       if (Array.isArray(photosObject)) {
         const data = await Promise.all(photosObject.map((photo): any => {
           if (photo?.id !== null) {

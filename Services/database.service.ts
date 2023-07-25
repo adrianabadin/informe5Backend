@@ -27,7 +27,7 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gUpdate<T>(this: T & { update: any }, dataObject: Prisma.Args<T, 'update'>['data'], id: string): Promise<IResponseObject> {
+          async gUpdate<T>(this: T & { update: any }, dataObject: Partial<Prisma.Args<T, 'update'>['data']>, id: string): Promise<IResponseObject> {
             try {
               const data = await this.update({ where: { id }, data: dataObject })
               logger.debug({
