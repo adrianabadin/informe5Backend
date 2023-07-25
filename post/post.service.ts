@@ -37,36 +37,30 @@ export class PostService extends DatabaseHandler {
     },
     public updatePost = async (postObject: Prisma.PostsUpdateInput, idParam: string, photoObject: Array<{ id: string, url: string, fbid: string }>) => {
       try {
-        let photosId: string[] = []
-        if (Array.isArray(photoObject) && photoObject[0].id !== undefined) {
-          photosId = photoObject.map((photo) => photo.id)
-        }
-        if (photosId.length > 0) {
-          const data = await this.prisma.posts.update(
-            {
-              where: { id: idParam },
-              data: {
-                ...postObject,
-                updatedAt: undefined,
-                images: {
-                  deleteMany: {
-                    NOT: {
-                      id: { in: photosId }
-                    }
-                  },
-                  upsert: photoObject.map(photo =>
-                    (
-                      {
-                        where: { id: photo.id },
-                        update: { ...photo },
-                        create: { ...photo }
-                      }))
-                }
+        const data = await this.prisma.posts.update(
+          {
+            where: { id: idParam },
+            data: {
+              ...postObject,
+              updatedAt: undefined,
+              images: {
+                deleteMany: {
+                  NOT: {
+                    id: { in: photoObject.map((photo) => photo.id) }
+                  }
+                },
+                upsert: photoObject.map(photo =>
+                  (
+                    {
+                      where: { id: photo.id },
+                      update: { ...photo },
+                      create: { ...photo }
+                    }))
               }
-            })
-          logger.debug({ function: 'PostService.updatePost', data })
-          return new ResponseObject(null, true, data)
-        }
+            }
+          })
+        logger.debug({ function: 'PostService.updatePost', data })
+        return new ResponseObject(null, true, data)
       } catch (error) {
         logger.error({ function: 'PostService.updatePost', error })
         return new ResponseObject(error, false, null)
