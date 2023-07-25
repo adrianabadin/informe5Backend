@@ -7,13 +7,14 @@ import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type GenericResponseObject, ResponseObject } from '../Entities/response'
+import { type CreatePostType, type GetPostsType } from './post.schema'
 export class PostController {
   constructor (
     protected service = new PostService(),
     protected googleService = new GoogleService(),
     protected facebookService = new FacebookService(),
-    public createPost = async (req: Request, res: Response) => {
-      const body: Prisma.PostsCreateInput = req.body
+    public createPost = async (req: Request<any, any, CreatePostType>, res: Response) => {
+      const body = req.body
       const files = req.files
       const dataArray: any = []
       console.log('createPost', body, files)
@@ -81,13 +82,13 @@ export class PostController {
         }
       }
     },
-    public getAllPosts = (req: Request, res: Response) => {
+    public getAllPosts = (req: Request<any, any, any, GetPostsType['query']>, res: Response) => {
       const { cursor, title, search, minDate, maxDate, category } = req.query
       const query: Prisma.PostsFindManyArgs['where'] & { AND: Array<Prisma.PostsFindManyArgs['where']> } = { AND: [] }
 
       if (title !== undefined) {
         query.AND.push({
-          title: { contains: title as string }
+          title: { contains: title }
         }
         )
       }
@@ -98,13 +99,13 @@ export class PostController {
         query.AND.push({
           OR:
          [{
-           title: search as string
+           title: search
          },
          {
-           text: search as string
+           text: search
          },
-         { heading: search as string },
-         { subTitle: search as string }
+         { heading: search },
+         { subTitle: search }
          ]
 
         }
@@ -118,18 +119,18 @@ export class PostController {
       }
       if (minDate !== undefined && query !== undefined && 'AND' in query) {
         const data = query.AND[query.AND.length - 1]
-        if (data !== undefined && 'AND' in data && Array.isArray(data.AND)) { data.AND.push({ createdAt: { gte: new Date(minDate as string) } }) }
+        if (data !== undefined && 'AND' in data && Array.isArray(data.AND)) { data.AND.push({ createdAt: { gte: new Date(minDate) } }) }
       }
       if (maxDate !== undefined) {
         const data = query.AND[query.AND.length - 1]
         if (data !== undefined && 'AND' in data && data?.AND !== undefined && Array.isArray(data.AND)) {
-          data.AND.push({ createdAt: { lte: new Date(maxDate as string) } })
+          data.AND.push({ createdAt: { lte: new Date(maxDate) } })
         }
       }
       console.log(query, query.AND[0])
       this.service.getPosts(
         {
-          cursor: cursor === undefined ? undefined : { createdAt: new Date(cursor as string) },
+          cursor: cursor === undefined ? undefined : { createdAt: new Date(cursor) },
           pagination: 50
         }, query
       ).then(async (response) => {

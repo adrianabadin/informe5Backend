@@ -10,7 +10,7 @@ export type MyCursor = {
   [K in keyof Prisma.PostsCreateInput]: any
 }
 export interface IFacebookData { title: string, heading: string, text: string, classification: string }
-
+export const ClassificationArray = ['Municipales', 'Economia', 'Politica'] as const
 export class FacebookData implements IFacebookData {
   constructor (
     public classification: string,

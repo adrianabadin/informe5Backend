@@ -602,3 +602,498 @@
   },
   level: 'error'
 }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: 'ed34565c-fed0-4eb2-bca9-255e08cf65a4',
+          createdAt: 2023-07-11T06:35:43.713Z,
+          updatedAt: 2023-07-11T06:35:43.713Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          images: [
+            {
+              id: '16fd0853-37da-4754-aadf-d042152a4ded',
+              createdAt: 2023-07-11T06:35:43.713Z,
+              updatedAt: 2023-07-11T21:46:52.520Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/358429626_742219834577832_5852323595588309570_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeEASjtLgV_dmZWEmB2-fk1eTOqzx9W8mkFM6rPH1byaQeVELEMmzHPzR8tKl_BmjHafme2gDqUKY-oUKn9oolZQ&_nc_ohc=yWAUv0BtF5wAX9roFWz&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfDjbd5SL-SV-Ah4C4__wsi1ptbr2m6hETa9hNkXhmpmtg&oe=64B16A5C',
+              fbid: '742217761244701'
+            }
+          ]
+        },
+        {
+          id: '27cf29fb-b9d1-4ab7-8d8d-f2a980187dd5',
+          createdAt: 2023-07-11T06:31:03.135Z,
+          updatedAt: 2023-07-11T06:31:03.135Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          images: [
+            {
+              id: '5fa4dd04-268d-44a3-ada7-e401ba4a8415',
+              createdAt: 2023-07-11T06:31:03.135Z,
+              updatedAt: 2023-07-19T21:04:55.144Z,
+              url: 'https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/359348143_742217754578040_6134728367335453039_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5c7b18&_nc_eui2=AeHyw6oDG9idOVXCivbXwJBFWXZCU35xfo1ZdkJTfnF-jdswWuhR9xKOhWJv45VrwVsYnxIKye2B_HFUy-IxwMeL&_nc_ohc=E5_3Pkl1P6wAX-8_5x4&_nc_oc=AQlsg91ADvMpJ6QpmUd-aEjhPgTRbwX2RDV6ApGJG23miyQ_SWrYRjp_pwedjJaNK3s&_nc_ht=scontent.faep9-2.fna&edm=AMAeTUEEAAAA&oh=00_AfAq5Gfn4ZTRHlmkVAcCpsFOt5QUOh0t745alaqbwCtEVQ&oe=64BC9FAA',
+              fbid: '742217761244706'
+            }
+          ]
+        },
+        {
+          id: 'd00ce6f7-95c0-4e8b-abbe-be1fce23722e',
+          createdAt: 2023-07-11T06:25:52.989Z,
+          updatedAt: 2023-07-11T06:25:52.989Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          images: []
+        },
+        {
+          id: 'b6ac6761-68db-4bb8-b4d0-c72005478dcc',
+          createdAt: 2023-07-11T06:24:06.328Z,
+          updatedAt: 2023-07-11T06:24:06.328Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          images: []
+        },
+        {
+          id: '79bf9fdc-8c71-4469-93a0-cf60377c64d1',
+          createdAt: 2023-07-11T06:19:29.288Z,
+          updatedAt: 2023-07-11T06:19:29.288Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          images: []
+        },
+        {
+          id: '6933cf05-6cb6-403e-a5b2-4e858202822a',
+          createdAt: 2023-07-11T06:16:27.413Z,
+          updatedAt: 2023-07-11T06:16:27.413Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          images: []
+        },
+        {
+          id: '9c58c48d-e3ef-4e2d-938d-f6b59ee39aeb',
+          createdAt: 2023-07-11T06:12:41.037Z,
+          updatedAt: 2023-07-11T06:12:41.037Z,
+          title: 'aaa',
+          subTitle: null,
+          heading: 'aaa',
+          text: '11s',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          images: []
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AyjyMHIqOCWmdEVWPoWDikT'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookService.getLinkFromId.axiosPostRequest',
+    error: {
+      message: 'Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.',
+      type: 'OAuthException',
+      code: 190,
+      error_subcode: 460,
+      fbtrace_id: 'AXOmjfWNK3460XMOGUITUSl'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El titulo debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "query",
+          "title"
+        ]
+      }
+    ]
+        at Object.get error [as error] (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:43:31)
+        at ZodObject.parse (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:141:22)
+        at /run/media/adrianabadin/code/informe5Backend/middlewares/zod.validate.ts:16:14
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:284:15
+        at Function.process_params (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:346:12)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:280:10) {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    queryOptions: {
+      AND: [ { title: { contains: '555' } } ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El titulo debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "query",
+          "title"
+        ]
+      }
+    ]
+        at Object.get error [as error] (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:43:31)
+        at ZodObject.parse (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:141:22)
+        at /run/media/adrianabadin/code/informe5Backend/middlewares/zod.validate.ts:16:14
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:284:15
+        at Function.process_params (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:346:12)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:280:10) {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El titulo debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "query",
+          "title"
+        ]
+      }
+    ]
+        at Object.get error [as error] (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:43:31)
+        at ZodObject.parse (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:141:22)
+        at /run/media/adrianabadin/code/informe5Backend/middlewares/zod.validate.ts:16:14
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:284:15
+        at Function.process_params (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:346:12)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:280:10) {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El titulo debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "query",
+          "title"
+        ]
+      }
+    ]
+        at Object.get error [as error] (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:43:31)
+        at ZodObject.parse (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:141:22)
+        at /run/media/adrianabadin/code/informe5Backend/middlewares/zod.validate.ts:16:14
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:284:15
+        at Function.process_params (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:346:12)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:280:10) {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El titulo debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "query",
+          "title"
+        ]
+      }
+    ]
+        at Object.get error [as error] (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:43:31)
+        at ZodObject.parse (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:141:22)
+        at /run/media/adrianabadin/code/informe5Backend/middlewares/zod.validate.ts:16:14
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:284:15
+        at Function.process_params (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:346:12)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:280:10) {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'query', 'title' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El search field debe tener 3 caracteres de longitud",
+        "path": [
+          "query",
+          "search"
+        ]
+      }
+    ]
+        at Object.get error [as error] (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:43:31)
+        at ZodObject.parse (/run/media/adrianabadin/code/informe5Backend/node_modules/zod/lib/types.js:141:22)
+        at /run/media/adrianabadin/code/informe5Backend/middlewares/zod.validate.ts:16:14
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/layer.js:95:5)
+        at /run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:284:15
+        at Function.process_params (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:346:12)
+        at next (/run/media/adrianabadin/code/informe5Backend/node_modules/express/lib/router/index.js:280:10) {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El search field debe tener 3 caracteres de longitud',
+          path: [ 'query', 'search' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El search field debe tener 3 caracteres de longitud',
+          path: [ 'query', 'search' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
