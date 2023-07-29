@@ -3,10 +3,33 @@ import { type Prisma } from '@prisma/client'
 import { logger } from '../Services/logger.service'
 import { type MyCursor, type GenericResponseObject, ResponseObject } from '../Entities'
 import { type UpdatePostType, type CreatePostType } from './post.schema'
-import { createData } from '../../Informe5Front/src/components/posts/helpers/post.functions'
+import { FacebookService } from '../Services/facebook.service'
 
 export class PostService extends DatabaseHandler {
   constructor (
+    protected facebookService = new FacebookService(),
+    public photoGenerator = async (files?: Express.Multer.File[], images?: UpdatePostType['body']['images']) => {
+      let photoArray: Array<{ id: string } | undefined> = []
+      if (files !== undefined && Array.isArray(files)) {
+        photoArray = await Promise.all(files.map(async (file) => {
+          const data = await this.facebookService.postPhoto(file)
+          if (data.ok && 'id' in data.data && data.data.id !== undefined) { return data.data as { id: string } } else return undefined
+        }))
+        if (images !== undefined) { photoArray = [...photoArray, ...images?.map(image => ({ id: image.fbid }))] }
+        if (photoArray !== null && Array.isArray(photoArray)) {
+          const response = await this.facebookService.getLinkFromId(photoArray)
+          console.log(response, 'hecho')
+          // aqui se asigna a imagesArray todas las imagenes que debera tener el post ya sean las que no se eliminaron y las que se agreguen si hubiere
+          if (response.ok) {
+            if (images !== null && Array.isArray(images)) images = [...images, ...response.data]
+            else images = [...response.data]
+          }
+          // ACA HAY QUE CONTINUAR LA LOGICA DE ACTUALIZACION DE LA BASE DE DATOS. HAY QUE VER SI CONVIENE USAR LA FUNCION UPDATEPIOST QUE HICE O
+          // EVALUAR BORRAR TODAS LAS IMAGENES QUE HAY VINCULADAS AL POST Y REESCRIBIR LA BASE DE DATOS CON IMAGENES NUEVAS.
+        }
+      }
+      return images
+    },
 
     public createPost = async (body: CreatePostType, id: string, dataArray: Array<{ url: string, fbid: string }>) => {
       let { title, text, heading, classification, importance } = body
@@ -35,35 +58,86 @@ export class PostService extends DatabaseHandler {
         return data
       } catch (error) { logger.error({ function: 'PostService.updatePhoto', error }) }
     },
-    public updatePost = async (postObject: Prisma.PostsUpdateInput, idParam: string, photoObject: Array<{ id: string, url: string, fbid: string }>) => {
-      try {
-        const data = await this.prisma.posts.update(
-          {
-            where: { id: idParam },
-            data: {
-              ...postObject,
-              updatedAt: undefined,
-              images: {
-                deleteMany: {
-                  NOT: {
-                    id: { in: photoObject.map((photo) => photo.id) }
-                  }
-                },
-                upsert: photoObject.map(photo =>
-                  (
-                    {
-                      where: { id: photo.id },
+    public updatePost = async (postObject: Omit<Prisma.PostsUpdateInput, 'images'>, idParam: string, photoObject: UpdatePostType['body']['images']) => {
+      let ids
+      let ids2
+      let photoObjectNoUndefinedFalse
+      let photoObjectNoUndef
+      if (photoObject !== undefined) {
+        ids = photoObject.map((photo): string | undefined => {
+          if (typeof photo === 'object' && photo !== null && 'id' in photo && photo.id !== undefined && typeof photo.id === 'string') { return photo?.id } else return undefined
+        })
+        ids2 = ids.filter(img => img !== undefined) as string[]
+        photoObjectNoUndefinedFalse = photoObject.map((photo) => {
+          if (photo !== undefined && photo !== null) {
+            if (typeof photo === 'object' && 'id' in photo && 'fbid' in photo && 'url' in photo) { return { fbid: photo.fbid, url: photo.url, id: photo.id } }
+          }
+          return false
+        })
+        photoObjectNoUndef = photoObjectNoUndefinedFalse.filter(img => img !== false) as Array<{ id?: string, fbid: string, url: string }>
+
+        try {
+          const data = await this.prisma.posts.update(
+            {
+              where: { id: idParam },
+              data: {
+                ...postObject,
+                updatedAt: undefined,
+                images: {
+                  deleteMany: {
+                    NOT: {
+                      id: {
+                        in: ids2
+                      }
+                    }
+                  },
+
+                  upsert: photoObjectNoUndef.map(photo => {
+                    let id: string = 'zorongo'
+                    if (photo.id !== undefined) id = photo.id
+                    return {
+                      where: { id },
                       update: { ...photo },
                       create: { ...photo }
-                    }))
+                    }
+                  })
+                }
               }
-            }
-          })
-        logger.debug({ function: 'PostService.updatePost', data })
-        return new ResponseObject(null, true, data)
-      } catch (error) {
-        logger.error({ function: 'PostService.updatePost', error })
-        return new ResponseObject(error, false, null)
+            })
+
+          logger.debug({ function: 'PostService.updatePost', data })
+          return new ResponseObject(null, true, data)
+        } catch (error) {
+          logger.error({ function: 'PostService.updatePost', error })
+          return new ResponseObject(error, false, null)
+        }
+      } else {
+        try {
+          const data = await this.prisma.posts.update(
+            {
+              where: { id: idParam },
+              data: {
+                ...postObject,
+                updatedAt: undefined,
+                images: {
+                  deleteMany: {
+                    NOT: {
+                      id: {
+                        in: ids2
+                      }
+                    }
+                  }
+
+                }
+              }
+            })
+          logger.debug({ function: 'PostService.updatePost', data })
+          return new ResponseObject(null, true, data)
+          // va el codigo si no hay cambios en las photos
+        } catch (error) {
+          logger.error({ function: 'PostService.updatePost', error })
+          return new ResponseObject(null, false, error)
+        }
       }
     }
   ) {

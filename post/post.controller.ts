@@ -7,12 +7,25 @@ import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type GenericResponseObject, ResponseObject } from '../Entities/response'
-import { type CreatePostType, type GetPostsType, type GetPostById } from './post.schema'
+import { type CreatePostType, type GetPostsType, type GetPostById, type UpdatePostType } from './post.schema'
+import { File } from 'buffer'
 export class PostController {
   constructor (
     protected service = new PostService(),
     protected googleService = new GoogleService(),
     protected facebookService = new FacebookService(),
+    public updatePost = async (req: Request<GetPostById['params'], any, UpdatePostType['body'] >, res: Response) => {
+      const files = req.files
+      const { images } = req.body
+      const { id } = req.params
+      const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[], images)
+      let body = req.body
+      if (body !== null && typeof body === 'object' && 'images' in body) { body = { ...body, images: undefined } }
+      const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, imagesArray)
+    // aca va el codigo que updatea el post pero para eso necesito un id valido.
+    // el nodo es pageid_postiD?message=texto&attached_media=array de media_fbid
+    // eso hay que construirlo en el facebookservice
+    },
     public createPost = async (req: Request<any, any, CreatePostType>, res: Response) => {
       const body = req.body
       const files = req.files
