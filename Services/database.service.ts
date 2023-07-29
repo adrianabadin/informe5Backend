@@ -1,6 +1,6 @@
 import { PrismaClient, type Prisma } from '@prisma/client'
 import { logger } from './logger.service'
-import { type IResponseObject, ResponseObject } from '../Entities'
+import { type IResponseObject, ResponseObject, GenericResponseObject } from '../Entities'
 export abstract class DatabaseHandler {
   static Instance: any
   constructor (
@@ -12,10 +12,10 @@ export abstract class DatabaseHandler {
 
         $allModels:
         {
-          async gCreate <T>(
+          async  gCreate <T>(
             this: T & { create: any },
             args: Prisma.Args<T, 'create'>['data']
-          ): Promise<ResponseObject> {
+          ): Promise<GenericResponseObject<unknown>> {
             try {
               const data = await this.create({ data: args })
               logger.debug({

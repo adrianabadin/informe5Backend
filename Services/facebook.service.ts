@@ -3,7 +3,7 @@ import axios from 'axios'
 import fs from 'fs'
 import { type IFacebookData, ResponseObject } from '../Entities'
 import { logger } from './logger.service'
-import { type GenericResponseObject, ResponseObject } from '../Entities/response'
+import { type GenericResponseObject } from '../Entities/response'
 dotenv.config()
 export class FacebookService {
   constructor (
