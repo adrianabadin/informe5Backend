@@ -21,8 +21,12 @@ const cookieExtractor = (req: Request): string => {
       token = req.cookies.jwt
     }
   }
-  console.log(token, req.body)
-  if (simetricKey !== undefined) { return decrypt(token, simetricKey) } else throw new Error('simetricKey is undefined')
+
+  if (token !== undefined) {
+    console.log(token, req.body)
+    if (simetricKey !== undefined) return decrypt(token, simetricKey)
+    else throw new Error('simetricKey is undefined')
+  } else throw new Error('simetricKey is undefined')
 }
 passport.use(new Strategy({
   jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),

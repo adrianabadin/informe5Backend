@@ -180,7 +180,7 @@ export class FacebookService {
         return new ResponseObject(error, false, null)
       }
     },
-    public updateFacebookPost = (id:string,data:{title:string,heading:string,classification:string,newspaperID:string,images:string[]) => {}
-    
+    public updateFacebookPost = (id: string, data: { title: string, heading: string, classification: string, newspaperID: string, images: string[] }) => {}
+
   ) { }
 }

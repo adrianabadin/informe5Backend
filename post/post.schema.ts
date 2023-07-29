@@ -12,7 +12,7 @@ export const postCreateSchema = z.object({
     heading: z.string({ invalid_type_error: 'El encabezado debe se una cadena', required_error: 'Debes proveer un encabezado' }).min(3, 'La cadena debe contener al menos 3 caracteres'),
     text: z.string({ invalid_type_error: 'El cuerpo debe se una cadena', required_error: 'Debes proveer un texto para la nota' }).min(3, 'La cadena debe contener al menos 3 caracteres'),
     classification: z.enum(ClassificationArray, { invalid_type_error: `La clasificacion debe estar dentro de las siguientes opciones  ${ClassificationArray.join(',')}. `, required_error: 'Debes proveer una clasificacion' }),
-    importance: z.number({ invalid_type_error: 'La importancia debe ser un numero' }).optional(),
+    importance: z.enum(['1', '2', '3', '4', '5'], { invalid_type_error: 'La importancia de la nota debe ser string de  un numero del 1 al 5' }),
     fbid: z.string({ invalid_type_error: 'Facebook ID debe ser una cadena' }).nullable().optional(),
     author: z.string({ invalid_type_error: 'El autor debe ser una cadena que represente el id del usuario', required_error: 'Debes proveer un autor' }).uuid({ message: 'El autor debe ser un UUID' })
   })
@@ -29,13 +29,16 @@ export const getPostsSchema = z.object({
   })
 })
 export const createPostSchema = z.object({
-  title: z.string({ invalid_type_error: 'El titulo debe ser una cadena' }).min(3, 'El titulo debe tener al menos 3 caracteres de longitud'),
-  subTitle: z.string({ invalid_type_error: 'El subtitulo debe ser una cadena' }).min(3, 'El subtitulo debe tener al menos 3 caracteres de longitud').optional(),
-  heading: z.string({ invalid_type_error: 'El encabezado de la nota debe ser una cadena' }).min(3, 'El encabezado de la nota debe tener al menos 3 caracteres de longitud'),
-  text: z.string({ invalid_type_error: 'El texto de la nota debe ser una cadena' }).min(3, 'El texto de la nota debe tener al menos 3 caracteres de longitud'),
-  classification: z.enum(ClassificationArray, { invalid_type_error: `La categoria debe pertenecer a ${ClassificationArray.join(',')}` }),
-  importance: z.number({ invalid_type_error: 'La importancia de la nota debe ser un numero' }).optional(),
-  author: z.string({ invalid_type_error: 'El autor debe ser un string' }).uuid({ message: 'El autor debe ser una cadena que represente a un uuid' })
+  body: z.object({
+    title: z.string({ invalid_type_error: 'El titulo debe ser una cadena' }).min(3, 'El titulo debe tener al menos 3 caracteres de longitud'),
+    subTitle: z.string({ invalid_type_error: 'El subtitulo debe ser una cadena' }).min(3, 'El subtitulo debe tener al menos 3 caracteres de longitud').optional(),
+    heading: z.string({ invalid_type_error: 'El encabezado de la nota debe ser una cadena' }).min(3, 'El encabezado de la nota debe tener al menos 3 caracteres de longitud'),
+    text: z.string({ invalid_type_error: 'El texto de la nota debe ser una cadena' }).min(3, 'El texto de la nota debe tener al menos 3 caracteres de longitud'),
+    classification: z.enum(ClassificationArray, { invalid_type_error: `La categoria debe pertenecer a ${ClassificationArray.join(',')}` }),
+    importance: z.enum(['1', '2', '3', '4', '5'], { invalid_type_error: 'La importancia de la nota debe ser string de  un numero del 1 al 5' }),
+    author: z.string({ invalid_type_error: 'El autor debe ser un string' }).uuid({ message: 'El autor debe ser una cadena que represente a un uuid' })
+
+  })
 })
 export const getPostById = z.object({
   params: z.object({ id: z.string({ invalid_type_error: 'El ID debe ser una cadena' }).uuid({ message: 'La cadena debe ser un UUID' }) })
@@ -47,7 +50,7 @@ export const updatePostSchema = z.object({
     heading: z.string({ invalid_type_error: 'El encabezado de la nota debe ser una cadena' }).min(3, 'El encabezado de la nota debe tener al menos 3 caracteres de longitud').optional(),
     text: z.string({ invalid_type_error: 'El texto de la nota debe ser una cadena' }).min(3, 'El texto de la nota debe tener al menos 3 caracteres de longitud').optional(),
     classification: z.enum(ClassificationArray, { invalid_type_error: `La categoria debe pertenecer a ${ClassificationArray.join(',')}` }).optional(),
-    importance: z.number({ invalid_type_error: 'La importancia de la nota debe ser un numero' }).optional(),
+    importance: z.enum(['1', '2', '3', '4', '5'], { invalid_type_error: 'La importancia de la nota debe ser string de  un numero del 1 al 5' }).optional(),
     author: z.string({ invalid_type_error: 'El autor debe ser un string' }).uuid({ message: 'El autor debe ser una cadena que represente a un uuid' }).optional(),
     images: z.array(z.object({
       id: z.string({ invalid_type_error: 'Images ID debe ser un string' }).uuid({ message: 'Images ID debe ser una cadena que represente a un uuid' }).optional(),

@@ -12,7 +12,7 @@ dotenv.config()
 const simetricKey = process.env.SIMETRICKEY
 const privateKey = fs.readFileSync('auth/privateKey.pem', 'utf-8')
 export class AuthService extends DatabaseHandler {
-  constructor(
+  constructor (
     protected crypt = { encrypt, decrypt },
     public localSignUpVerify = async (req: Request, username: string, password: string, done: DoneType) => {
       try {
@@ -23,7 +23,7 @@ export class AuthService extends DatabaseHandler {
           logger.debug({
             function: 'AuthService.localSignUpVerify', user: { ...body, hash: null }
           })
-          user = (await this.prisma.users.gCreate({ ...body, birthDate: (body.birthDate !== undefined) ? new Date(body.birthDate as string) : undefined })).data
+          user = (await this.prisma.users.gCreate({ ...body, birthDate: (body.birthDate !== undefined) ? new Date(body.birthDate as string) : undefined })).data as Prisma.UsersCreateInput
           if (user?.id !== undefined) {
             done(null, user, { message: 'Successfully Registred' })
           } else done(null, false, { message: 'Error in registration' })

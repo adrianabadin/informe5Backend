@@ -22,8 +22,9 @@ const upload = multer({ storage })
 export const postRouter = Router()
 postRouter.post('/create',
   upload.array('images', 5),
-  schemaValidator(createPostSchema),
   passport.authenticate('jwt', { session: false }),
+  schemaValidator(createPostSchema),
+
   postController.createPost)
 postRouter.get('/getPostById/:id',
   schemaValidator(getPostById),

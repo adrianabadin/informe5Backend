@@ -139,6 +139,15 @@ export class PostService extends DatabaseHandler {
           return new ResponseObject(null, false, error)
         }
       }
+    }, public addFBIDtoDatabase = async (fbid: string, id: string) => {
+      try {
+        console.log(fbid, id, 'addFBIDtoDatabase')
+        const response = await this.prisma.posts.update({ where: { id }, data: { fbid } })
+        return response
+      } catch (error) {
+        logger.error({ function: 'PostService.addFBIDtoDB', error })
+        return new ResponseObject(error, false, null)
+      }
     }
   ) {
     super()

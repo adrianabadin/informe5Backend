@@ -8,7 +8,6 @@ import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type GenericResponseObject, ResponseObject } from '../Entities/response'
 import { type CreatePostType, type GetPostsType, type GetPostById, type UpdatePostType } from './post.schema'
-import { File } from 'buffer'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -29,24 +28,26 @@ export class PostController {
     public createPost = async (req: Request<any, any, CreatePostType>, res: Response) => {
       const body = req.body
       const files = req.files
-      console.log("create")
-      try{
-      const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[]) 
-      console.log({imagesArray},"photos")
-      if (req.user !== undefined && "id" in req.user && typeof req.user.id === "string"&& imagesArray !== undefined) {
-       const responseDB=await  this.service.createPost(body,req.user.id,imagesArray as {fbid:string,url:string}[])
-       console.log({responseDB},"DB")
-       if (responseDB.ok && typeof responseDB.data === 'object' && responseDB.data !==null &&"id" in responseDB.data && typeof responseDB.data.id ==="string") {
-              const facebookFeedResponse = await this.facebookService.facebookFeed(body, imagesArray, responseDB.data.id)
-              console.log({facebookFeedResponse},"FB")
-
-       }
+      console.log('create')
+      try {
+        const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[])
+        console.log({ imagesArray }, 'photos')
+        if (req.user !== undefined && 'id' in req.user && typeof req.user.id === 'string' && imagesArray !== undefined) {
+          const responseDB = await this.service.createPost(body, req.user.id, imagesArray as Array<{ fbid: string, url: string }>)
+          console.log({ responseDB }, 'DB')
+          if (responseDB.ok && typeof responseDB.data === 'object' && responseDB.data !== null && 'id' in responseDB.data && typeof responseDB.data.id === 'string') {
+            const facebookFeedResponse = await this.facebookService.facebookFeed(body, imagesArray, responseDB.data.id)
+            console.log(facebookFeedResponse?.data, { facebookFeedResponse }, 'FB')
+            if (facebookFeedResponse !== undefined && facebookFeedResponse.ok && 'id' in facebookFeedResponse.data.data) {
+              const fbidUpdate = await this.service.addFBIDtoDatabase(facebookFeedResponse?.data.data.id as string, responseDB.data.id)
+              res.status(200).send(fbidUpdate)
+            } else throw new Error('Error Updating Facebook Page Post')
+          } else throw new Error('Error updating Database')
+        }
+      } catch (error) {
+        logger.error({ function: 'PostController.createPost', error })
+        res.status(404).send(error)
       }
-    }
-    catch(error){
-      logger.error({function:"PostController.createPost",error})
-      res.status(404).send(error)
-    }
       // const dataArray: any = []
       //   console.log('createPost', body, files)
 
