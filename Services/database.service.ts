@@ -13,11 +13,11 @@ export abstract class DatabaseHandler {
 
         $allModels:
         {
-          async  gCreate <K extends keyof Prisma.ModelName & keyof PrismaClient,T extends GetSubTypes<PrismaClient[T]>>(
-            this: T /* & { create: (...args: any) => any } */,
+          async  gCreate <T>(
+            this: T & { create: any }, /* & { create: (...args: any) => any } */
             args: Prisma.Args<T, 'create'>['data']
           ): Promise<GenericResponseObject<unknown>> {
-            try {this.
+            try {
               const data = await this.create({ data: args })
               logger.debug({
                 function: 'DatabaseHandler.create', data

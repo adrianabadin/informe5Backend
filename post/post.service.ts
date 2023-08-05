@@ -32,9 +32,10 @@ export class PostService extends DatabaseHandler {
     },
 
     public createPost = async (body: CreatePostType['body'], id: string, dataArray: Array<{ url: string, fbid: string }>) => {
-      let { title, text, heading, classification, importance } = body
-      if (importance !== undefined && typeof importance === 'string') importance = parseInt(importance)
-      return await this.prisma.posts.gCreate({ author: { connect: { id } }, classification, heading, title, text, importance, images: { create: dataArray } })
+      const { title, text, heading, classification, importance } = body
+      let numberImportance = 0
+      if (importance !== undefined && typeof importance === 'string') numberImportance = parseInt(importance)
+      return await this.prisma.posts.gCreate({ author: { connect: { id } }, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
     },
     public getPosts = async (paginationOptions?: { cursor?: Partial< MyCursor>, pagination: number }, queryOptions?: Prisma.PostsFindManyArgs['where']): Promise<GenericResponseObject<Prisma.PostsCreateInput[]> | undefined> => {
       try {

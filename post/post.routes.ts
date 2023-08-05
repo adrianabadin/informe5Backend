@@ -4,7 +4,6 @@ import { Router, type Request } from 'express'
 import multer from 'multer'
 import { PostController } from './post.controller'
 import passport from 'passport'
-import { postValidation } from './post.validation'
 import { getPostsSchema, getPostById, createPostSchema } from './post.schema'
 import { schemaValidator } from '../middlewares/zod.validate'
 

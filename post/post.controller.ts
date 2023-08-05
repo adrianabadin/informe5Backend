@@ -8,7 +8,6 @@ import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type GenericResponseObject, ResponseObject } from '../Entities/response'
 import { type CreatePostType, type GetPostsType, type GetPostById, type UpdatePostType } from './post.schema'
-import { DatabaseHandler } from '../Services/database.service'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -23,11 +22,12 @@ export class PostController {
       let body = req.body
       if (body !== null && typeof body === 'object' && 'images' in body) { body = { ...body, images: undefined } }
       const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, imagesArray)
-    // aca va el codigo que updatea el post pero para eso necesito un id valido.
+      res.send(updateDbResponse.data)
+      // aca va el codigo que updatea el post pero para eso necesito un id valido.
     // el nodo es pageid_postiD?message=texto&attached_media=array de media_fbid
     // eso hay que construirlo en el facebookservice
     },
-    public createPost = async (req: Request<any, any, CreatePostType>, res: Response) => {
+    public createPost = async (req: Request<any, any, CreatePostType['body']>, res: Response) => {
       const body = req.body
       const files = req.files
       console.log('create')
@@ -163,6 +163,7 @@ export class PostController {
           return new ResponseObject(error, false, null)
         }
       }
+      return new ResponseObject(new Error('Error updating photos'), false, null)
     }
     //   const data = await Promise.all(photosObject.map((photo): any => {
     //     if (photo?.id !== null) {
