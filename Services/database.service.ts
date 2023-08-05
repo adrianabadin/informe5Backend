@@ -1,6 +1,7 @@
 import { PrismaClient, type Prisma } from '@prisma/client'
 import { logger } from './logger.service'
-import { type IResponseObject, ResponseObject, GenericResponseObject } from '../Entities'
+import { type IResponseObject, ResponseObject, type GenericResponseObject } from '../Entities'
+type GetSubTypes<T> = { [K in keyof T]: any extends Record<any, infer U> ? GetSubTypes<U> : T[K] }
 export abstract class DatabaseHandler {
   static Instance: any
   constructor (
@@ -12,11 +13,11 @@ export abstract class DatabaseHandler {
 
         $allModels:
         {
-          async  gCreate <T>(
-            this: T & { create: any },
+          async  gCreate <K extends keyof Prisma.ModelName & keyof PrismaClient,T extends GetSubTypes<PrismaClient[T]>>(
+            this: T /* & { create: (...args: any) => any } */,
             args: Prisma.Args<T, 'create'>['data']
           ): Promise<GenericResponseObject<unknown>> {
-            try {
+            try {this.
               const data = await this.create({ data: args })
               logger.debug({
                 function: 'DatabaseHandler.create', data
