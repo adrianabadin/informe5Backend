@@ -29,6 +29,6 @@ postRouter.get('/getPostById/:id',
   schemaValidator(getPostById),
   postController.getPostById)
 postRouter.get('/getPosts',
-  schemaValidator(getPostsSchema),
+  /* schemaValidator(getPostsSchema), */
   postController.getAllPosts)
 postRouter.put('/updatePost', upload.array('images', 5), postController.updatePost)

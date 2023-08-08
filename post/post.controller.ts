@@ -52,6 +52,7 @@ export class PostController {
       }
     },
     public getAllPosts = (req: Request<any, any, any, GetPostsType['query']>, res: Response) => {
+      console.log('geting posts')
       const { cursor, title, search, minDate, maxDate, category } = req.query
       const query: Prisma.PostsFindManyArgs['where'] & { AND: Array<Prisma.PostsFindManyArgs['where']> } = { AND: [] }
 
@@ -148,15 +149,27 @@ export class PostController {
     protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput[]): Promise<GenericResponseObject<Prisma.PhotosCreateInput[]>> => {
       if (Array.isArray(photosObject)) {
         try {
-          const idArray = photosObject.map(photo => ({ id: photo.fbid }))
-          const updatedLinksArray = await this.facebookService.getLinkFromId(idArray)
-          const dbResponse: unknown[] = await this.prisma.$transaction(
-            updatedLinksArray.data.map((photo): any =>
-              this.prisma.photos.updateMany({
-                where: { fbid: photo.fbid },
-                data: { url: photo.url }
-              })))
-          console.log(dbResponse)
+          let idArray
+          let updatedLinksArray
+          let dbResponse: unknown[]
+          const photoArray = photosObject.filter(photo => {
+            if (photo.createdAt !== undefined && Date.now() > new Date(photo.createdAt).getTime() + 1000 * 60 * 60 * 24 * 2) { return true } else return false
+          })
+          if (Array.isArray(photoArray) && photoArray.length > 0) {
+            idArray = photoArray.map(photo => ({ id: photo.fbid }))
+            updatedLinksArray = await this.facebookService.getLinkFromId(idArray)
+            dbResponse = await Promise.all(updatedLinksArray.data.map(async (photo) => {
+              const response = await this.prisma.$transaction([
+                this.prisma.photos.updateMany({ where: { fbid: photo.fbid }, data: { url: photo.url } }),
+                this.prisma.photos.findMany({ where: { fbid: photo.fbid } })
+              ])
+              return response[1][0]
+            }))
+          } else dbResponse = photosObject
+
+          // aca esta roto hay que sacar la tansaccion sino la respuesta es un entero con la cantidad
+          // de operaciones
+
           return new ResponseObject(null, true, dbResponse)
         } catch (error) {
           logger.error({ function: 'PostController.checkedPhotos', error })
@@ -193,6 +206,6 @@ export class PostController {
     // return new ResponseObject('Unespected Error', false, null)
     // }
   ) {
-
+    console.log('Loading controller')
   }
 }

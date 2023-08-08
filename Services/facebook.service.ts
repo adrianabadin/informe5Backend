@@ -109,49 +109,7 @@ export class FacebookService {
         return new ResponseObject(error, false, null)
       }
     },
-    //       // const response = await axios.get(`https://graph.facebook.com/${id.data.id as string}?fields=images&access_token=${this.pageToken as string}`)
-    //       if ('error' in response && response.error !== undefined && response.error !== null && typeof response.error === 'object') {
-    //         if ('code' in response.error && typeof response.error.code === 'string' && 'message' in response.error) {
-    //           throw new Error(`Codigo de error: ${response.error.code} ${response.error.message as string}`)
-    //         }
-    //       } else if ('images' in response?.data) {
-    //         if (Array.isArray(response?.data.images) && response?.data.images.length > 0) {
-    //           console.log('images es array')
-    //           const responseTyped: { images: Array<{ width: number, heigth: number, source: string }> } = response.data as { images: Array<{ width: number, heigth: number, source: string }> }
-    //           let data: Array<{ width: number, heigth: number, source: string }> | { width: number, heigth: number, source: string } = responseTyped.images.filter(image => image.heigth === 720 && image.width === 480)
-    //           if (data.length > 0 && 'source' in data) {
-    //             return new ResponseObject(null, true, { url: data.source, fbid: id.data.id })
-    //           } else {
-    //             data = responseTyped.images.filter(image => image.heigth === 480 && image.width === 720)
-    //             if (data.length > 0 && 'source' in data) {
-    //               return new ResponseObject(null, true, { url: data.source, fbid: id.data.id })
-    //             } else {
-    //               data = responseTyped.images.reduce((max, objeto) => {
-    //                 if (objeto.heigth * objeto.width > max.heigth * max.width) {
-    //                   return objeto
-    //                 } else return max
-    //               })
-    //               if (typeof data.source === 'string' && data.source !== null) {
-    //                 return new ResponseObject(null, true, { url: data.source, fbid: id.data.id })
-    //               } else return new ResponseObject('Unable to find an image source', false, null)
-    //             }
-    //           }
-    //         } else return new ResponseObject('Unable to find an image source', false, null)
-    //       } return new ResponseObject('Unable to find an image source', false, null)
-    //     } catch (error: any) {
-    //     //  logger.error({ function: 'FacebookService.getLinkFromId.axiosRequest', error })
-    //       logger.error({ function: 'FacebookService.getLinkFromId.axiosPostRequest', error: error?.response.data.error })
-    //       return new ResponseObject(error?.response.data.error, false, null)
-    //     }
-    //   } else {
-    //     logger.error({ function: 'FacebookService.getLinkFromId', error: 'Must provide a page Token' })
-    //     return new ResponseObject('Must provide a page Token', false, null)
-    //   }
-    // } else {
-    //   logger.error({ function: 'FacebookService.getLinkFromId', error: 'Parameter missmatch shpuld be a ResponseObject' })
-    //   return new ResponseObject('Parameter missmatch shpuld be a ResponseObject', false, null)
-    // }
-    // },
+
     public facebookFeed = async (data: IFacebookData, pictures: Array<{ url: string, fbid: string }>, id: string) => {
       let response
       try {
