@@ -16,14 +16,21 @@ export class PostController {
     protected facebookService = new FacebookService(),
     public updatePost = async (req: Request<GetPostById['params'], any, UpdatePostType['body'] >, res: Response) => {
       const files = req.files
-      const { images } = req.body
+      let { images, title, heading, classification, importance } = req.body
       const { id } = req.params
       const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[], images)
       let body = req.body
       if (body !== null && typeof body === 'object' && 'images' in body) { body = { ...body, images: undefined } }
       const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, imagesArray)
-      const finalResponse = await this.facebookService.updateFacebookPost(body.fbid, { title: body.title })
+      console.log(updateDbResponse)
+      if (title === undefined) {
+        title = updateDbResponse.data.title as string
+      }
+      // ACA DEBO VER LA LOGICA PARA QUE GENERE UN MERGE DE LOS DATOS QUE YA ESTAN EN LA DB Y LO QUE SE VA A ACTUALIZAR
+
+      // const finalResponse = await this.facebookService.updateFacebookPost(body.fbid, { title, heading, classification, images: imagesArray?.map(id => id.fbid) })
       res.send(updateDbResponse.data)
+
       // aca va el codigo que updatea el post pero para eso necesito un id valido.
     // el nodo es pageid_postiD?message=texto&attached_media=array de media_fbid
     // eso hay que construirlo en el facebookservice
