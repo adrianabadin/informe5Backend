@@ -138,8 +138,18 @@ export class FacebookService {
         return new ResponseObject(error, false, null)
       }
     },
-    public updateFacebookPost = (id: string, data: { title: string, heading: string, classification: string, newspaperID: string, images: string[] }) => {
+    public updateFacebookPost = async (id: string, data: { title: string, heading: string, classification: string, newspaperID: string, images: string[] }) => {
+      const message = `${data.title}\n${data.heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${data.newspaperID}`
+      const dataRequest = {
+        message,
+        attached_media: data.images,
+        access_token: process.env.FB_PAGE_TOKEN
 
+      }
+      try {
+        const response = await axios.post(` https://graph.facebook.com/${id}/feed`, dataRequest)
+        return new ResponseObject(null, true, response.data)
+      } catch (error) { return new ResponseObject(error, false, null) }
     }
 
   ) { }

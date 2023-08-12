@@ -1,7 +1,7 @@
 import { PrismaClient, type Prisma } from '@prisma/client'
 import { logger } from './logger.service'
 import { type IResponseObject, ResponseObject, type GenericResponseObject } from '../Entities'
-type GetSubTypes<T> = { [K in keyof T]: any extends Record<any, infer U> ? GetSubTypes<U> : T[K] }
+
 export abstract class DatabaseHandler {
   static Instance: any
   constructor (
@@ -13,10 +13,10 @@ export abstract class DatabaseHandler {
 
         $allModels:
         {
-          async  gCreate <T>(
-            this: T & { create: any }, /* & { create: (...args: any) => any } */
-            args: Prisma.Args<T, 'create'>['data']
-          ): Promise<GenericResponseObject<unknown>> {
+          async  gCreate <T, A>(
+            this: T & { create: any },
+            args: Prisma.Exact<A, Prisma.Args<T, 'create'>['data'] & Prisma.Args<T, 'create'>['data']['images']['create']>
+          ): Promise<GenericResponseObject<Prisma.Result<T, A, 'create'>>> {
             try {
               const data = await this.create({ data: args })
               logger.debug({
@@ -28,7 +28,7 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gUpdate<T>(this: T & { update: any }, dataObject: Partial<Prisma.Args<T, 'update'>['data']>, id: string): Promise<IResponseObject> {
+          async gUpdate<T, A>(this: T & { update: any }, dataObject: Prisma.Exact<A, Partial<Prisma.Args<T, 'update'>['data']> >, id: string): Promise<GenericResponseObject<Prisma.Result<T, A, 'update'>>> {
             try {
               const data = await this.update({ where: { id }, data: dataObject })
               logger.debug({
@@ -42,7 +42,7 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gFindById<T>(this: T & { findUniqueOrThrow: any }, id: string, includeField?: Prisma.Args<T, 'findUniqueOrThrow'>['include']): Promise<IResponseObject> {
+          async gFindById<T, A>(this: T & { findUniqueOrThrow: any }, id: string, includeField?: Prisma.Exact<A, Prisma.Args<T, 'findUniqueOrThrow'>['include']>): Promise<GenericResponseObject<Prisma.Result<T, A, 'findUniqueOrThrow'>>> {
             try {
               let data
               if (includeField !== undefined) {
@@ -58,12 +58,12 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gGetAll<T>(
+          async gGetAll<T, A>(
             this: T & { findMany: any },
-            includeFields: Prisma.Args<T, 'findMany'>['include'],
+            includeFields: Prisma.Exact<A, Prisma.Args<T, 'findMany'>['include']>,
             paginationObject?: { cusor?: any, pagination: number },
-            filter?: Prisma.Args<T, 'findMany'>['where']
-          ) {
+            filter?: Prisma.Exact<A, Prisma.Args<T, 'findMany'>['where']>
+          ):Promise<GenericResponseObject<Prisma.Result<T,A,"findMany"> {
             try {
               if (paginationObject !== undefined) {
                 if (paginationObject?.cusor !== undefined) {
@@ -130,7 +130,7 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gDelete<T>(this: T & { delete: any }, id: string) {
+          async gDelete<T,A>(this: T & { delete: any }, id: Prisma.Exact<A,Prisma.Args<T,"delete">["where"]["id"]>):Promise<GenericResponseObject<Prisma.Result<T,A,"delete">>> {
             try {
               const data = await this.delete({ where: { id } })
               return new ResponseObject(null, true, data)

@@ -22,6 +22,7 @@ export class PostController {
       let body = req.body
       if (body !== null && typeof body === 'object' && 'images' in body) { body = { ...body, images: undefined } }
       const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, imagesArray)
+      const finalResponse = await this.facebookService.updateFacebookPost(body.fbid, { title: body.title })
       res.send(updateDbResponse.data)
       // aca va el codigo que updatea el post pero para eso necesito un id valido.
     // el nodo es pageid_postiD?message=texto&attached_media=array de media_fbid
@@ -132,12 +133,14 @@ export class PostController {
       console.log('getbyid')
       const { id } = req.params
       this.service.getPost(id, { images: true }).then(async (response) => {
-        if (response?.ok !== undefined && response.ok && 'data' in response) {
-          this.checkPhotosAge(response?.data.images)
+        if (response?.ok !== undefined && response.ok && 'data' in response && 'images' in response?.data && Array.isArray(response.data.images)) {
+          this.checkPhotosAge(response?.data.images as Prisma.PhotosCreateInput[])
             .then(async (checkedPhotos: GenericResponseObject<Prisma.PhotosCreateInput[]>) => {
               console.log(checkedPhotos.data, 'LOKO')
-              response.data = { ...response.data, images: checkedPhotos.data }
-              res.status(200).send(response)
+              if ('images' in response.data) {
+                const data = { ...response.data, images: checkedPhotos.data }
+                res.status(200).send({ error: null, ok: true, data })
+              }
             })
             .catch((error: any) => logger.error({ function: 'PostController.getByid', error }))
         } else res.status(404).send(response)
@@ -178,34 +181,6 @@ export class PostController {
       }
       return new ResponseObject(new Error('Error updating photos'), false, null)
     }
-    //   const data = await Promise.all(photosObject.map((photo): any => {
-    //     if (photo?.id !== null) {
-    //       if (photo.updatedAt instanceof Date) {
-    //         if (photo.updatedAt !== null && photo.updatedAt instanceof Date && Date.now() - photo.updatedAt.getTime() > 1000 * 60 * 60 * 24 * 2) {
-    //           return this.facebookService.getLinkFromId(new ResponseObject(null, true, { ...photo, id: photo.fbid }))
-    //             .then(async (response) => {
-    //               console.log(response)
-    //               if (response.ok) {
-    //                 return await this.service.updatePhoto({ ...photo, url: response.data.url })
-    //                   .then(updatephotoResponse => updatephotoResponse)
-    //                   .catch(error => {
-    //                     logger.error({ function: 'PostController.checkPhotosAge.updatePhoto', error })
-    //                   })
-    //               }
-    //             }
-    //             )
-    //             .catch(error => {
-    //               logger.error({ function: 'Post.controller.checkphotoage.getLinkFromId', error })
-    //             })
-    //         } else return photo
-    //       } else return undefined
-    //     } else return undefined
-    //   }))
-    //   return new ResponseObject(null, true, data)
-    // }
-    // return new ResponseObject('Unespected Error', false, null)
-    // }
   ) {
-    console.log('Loading controller')
   }
 }

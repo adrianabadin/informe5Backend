@@ -52,6 +52,7 @@ export const updatePostSchema = z.object({
     classification: z.enum(ClassificationArray, { invalid_type_error: `La categoria debe pertenecer a ${ClassificationArray.join(',')}` }).optional(),
     importance: z.enum(['1', '2', '3', '4', '5'], { invalid_type_error: 'La importancia de la nota debe ser string de  un numero del 1 al 5' }).optional(),
     author: z.string({ invalid_type_error: 'El autor debe ser un string' }).uuid({ message: 'El autor debe ser una cadena que represente a un uuid' }).optional(),
+    fbid: z.string({ invalid_type_error: 'Post FBID must be a string' }),
     images: z.array(z.object({
       id: z.string({ invalid_type_error: 'Images ID debe ser un string' }).uuid({ message: 'Images ID debe ser una cadena que represente a un uuid' }).optional(),
       fbid: z.string({ invalid_type_error: 'Images FBID debe ser un string' }).uuid({ message: 'Images FBID debe ser una cadena que represente a un uuid' }),

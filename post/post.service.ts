@@ -59,7 +59,7 @@ export class PostService extends DatabaseHandler {
         return data
       } catch (error) { logger.error({ function: 'PostService.updatePhoto', error }) }
     },
-    public updatePost = async (postObject: Omit<Prisma.PostsUpdateInput, 'images'>, idParam: string, photoObject: UpdatePostType['body']['images']) => {
+    public updatePost = async (postObject: Omit<Prisma.PostsUpdateInput, 'images'>, idParam: string, photoObject: UpdatePostType['body']['images']): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
       let ids
       let ids2
       let photoObjectNoUndefinedFalse
@@ -114,7 +114,7 @@ export class PostService extends DatabaseHandler {
         }
       } else {
         try {
-          const data = await this.prisma.posts.update(
+          const data: T = await this.prisma.posts.update(
             {
               where: { id: idParam },
               data: {
