@@ -18,7 +18,9 @@ export class PostController {
       const files = req.files
       let { images, title, heading, classification, importance } = req.body
       const { id } = req.params
-      const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[], images)
+      console.log(req.body, 'data psoted', req.params)
+
+      if (Array.isArray()) { const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[], JSON.parse(images !== undefined ? images : '[]')) }
       let body = req.body
       if (body !== null && typeof body === 'object' && 'images' in body) { body = { ...body, images: undefined } }
       const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, imagesArray)

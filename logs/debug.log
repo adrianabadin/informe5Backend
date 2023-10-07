@@ -3661,3 +3661,2622 @@
   },
   level: 'debug'
 }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      createdAt: 2023-07-11T06:09:53.219Z,
+      updatedAt: 2023-07-11T06:09:53.219Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T09:52:03.064Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=RfOcWDyWTXUAX80QpUj&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfDXWABtwqwySptM14Kd1K1KzYw3__9wo_7MNn4seetj3Q&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T09:52:03.064Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=RfOcWDyWTXUAX80QpUj&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfDXWABtwqwySptM14Kd1K1KzYw3__9wo_7MNn4seetj3Q&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T13:42:17.071Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T13:42:25.447Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      createdAt: 2023-07-11T06:09:53.219Z,
+      updatedAt: 2023-07-11T06:09:53.219Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T13:43:37.415Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T13:43:37.415Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T16:33:36.829Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T16:33:39.994Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T16:43:36.800Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    error: Error: Error creating link from id array
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:106:22)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      createdAt: 2023-07-11T06:09:53.219Z,
+      updatedAt: 2023-07-11T06:09:53.219Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T16:43:42.990Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T19:52:14.413Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T19:52:19.089Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T19:53:59.494Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T19:54:04.583Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T19:55:45.179Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T19:55:50.602Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T20:12:25.258Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:86:48
+    
+      83 photoObjectNoUndef = photoObjectNoUndefinedFalse.filter(img => img !== false) as Array<{ id?: string, fbid: string, url: string }>
+      84 
+      85 try {
+    → 86   const data = await this.prisma.posts.update({
+             where: {
+               id: undefined
+             },
+             data: {
+               author: "c462c917-ba21-4d46-bd44-29413edc520c",
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               classification: "Economia",
+               heading: "Daniel",
+               text: "Abadin",
+               title: "Adrian",
+               importance: "1",
+               images: {
+                 deleteMany: {
+                   NOT: {
+                     id: {
+                       in: [
+                         "6212977c-d236-4ee1-a649-f0b370d9d561"
+                       ]
+                     }
+                   }
+                 },
+                 upsert: [
+                   {
+                     where: {
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     }
+                   }
+                 ]
+               },
+               jwt: "13608b22c76c7fcca1f6ba06c3012778bLoquE19515afb12d9365f959e6ab0eb86a28d49d6b073705f1603ad77f59f4d76976b5df6e43f0f3647893f4df0d74f334f45a4aedb0527dcbad73619b13ecdc57ce03f5366b93521c392488446989da8ea82e246cac2f4cc0e596c3ccf951641b306ee9ad5bfd426b90ac8c02d5f454b1a0b8ce67aaa62c18df0d4265358c58230270ee695b48f6f19fae512a4c6b2c55996c361e8fa47ddeff8fc7bdb75719d8c6ac1d232c7a08f906c56830cc92a2a763ef4112679f20028623d98067d0ba977a1671aa088f546d5eb2f592764e7dbfa5796e88e329e454a2d15461d1808c1d46cfab019c3134a04e7f202d94de9c9933c9bad82270b5b0b2c4cee399eb32ca29f13bc1afc556d0e23e86f816a2abe354061ddceb138b967710c0a23337699eefbfd705345888fc8ed70d7c11f3a70858a594385024e60d16fa20fdf64207a9944a8837cbd6f0687fa41d1a201e4a370ce1722617ef9b2e92130fafdf01c57fd25029f34c7147388343fd02acad6dad16f314f14f90e48b36ffd017674d94a964b2816d89531c3b6db556f383f789816184235af2232bd9f7245429d31e0f976b05cea6963f9a03bf706b7940a696ce941d3d76ccd8465e3ec4538a2891e5845c85531be29a73f4a97fb34821e41072d91ee45e2571a9c7318e68dadb7f41e651e4fec928bc02bed529c707385c7c546778a45177d5596154b2fd1f98715093d45907da10ee66465eae7817ea42c099b3b32e25d267d5f90362c88422f6469b1cdba393d8fd862309a8b6b735c4154f8d16a069d62a11507543012d8306c88f91ad0a6b84e0a807181551fbdd085235276cfd65bec591d31eb40c19c3f50ebe487c20377f8a5df6b9312eb73de3f17b981e399372c631b51850c5ec03a240ac0e2732ddba57aeda144a2596b8e5b6c3d30e84570e2ce87f370cc9dddc0ce86ba9960ac7f0d460917f4685566ac948ec3a63bbcce9dc474414332a82773f8b08deea7c4ae090f569e9535749c8bec0249b36e36b4fa76beedfc82b18c7a057223e39240f51eeb8e3be58ca3142c34c68b3102a271654bae27ebd1794eaa15b89c138d9f4b6578fed68180809c899d3fb5913a53ced461d308b7d7b5455df29d9373cd74f37e01ba38d1f3e71589838ecf57316acbbe993c996061296f0ae0734d00",
+               updatedAt: undefined
+             }
+           })
+    
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:88:48
+    
+      85 try {
+      86   const author: Prisma.UsersWhereUniqueInput = postObject.author as Prisma.UsersWhereUniqueInput
+      87   if (author === undefined) throw new Error('No author specified')
+    → 88   const data = await this.prisma.posts.update({
+             where: {
+               id: undefined
+             },
+             data: {
+               author: {
+                 connect: "c462c917-ba21-4d46-bd44-29413edc520c"
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               },
+               classification: "Economia",
+               heading: "Daniel",
+               text: "Abadin",
+               title: "Adrian",
+               importance: "1",
+               images: {
+                 deleteMany: {
+                   NOT: {
+                     id: {
+                       in: [
+                         "6212977c-d236-4ee1-a649-f0b370d9d561"
+                       ]
+                     }
+                   }
+                 },
+                 upsert: [
+                   {
+                     where: {
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     }
+                   }
+                 ]
+               },
+               jwt: "13608b22c76c7fcca1f6ba06c3012778bLoquE19515afb12d9365f959e6ab0eb86a28d49d6b073705f1603ad77f59f4d76976b5df6e43f0f3647893f4df0d74f334f45a4aedb0527dcbad73619b13ecdc57ce03f5366b93521c392488446989da8ea82e246cac2f4cc0e596c3ccf951641b306ee9ad5bfd426b90ac8c02d5f454b1a0b8ce67aaa62c18df0d4265358c58230270ee695b48f6f19fae512a4c6b2c55996c361e8fa47ddeff8fc7bdb75719d8c6ac1d232c7a08f906c56830cc92a2a763ef4112679f20028623d98067d0ba977a1671aa088f546d5eb2f592764e7dbfa5796e88e329e454a2d15461d1808c1d46cfab019c3134a04e7f202d94de9c9933c9bad82270b5b0b2c4cee399eb32ca29f13bc1afc556d0e23e86f816a2abe354061ddceb138b967710c0a23337699eefbfd705345888fc8ed70d7c11f3a70858a594385024e60d16fa20fdf64207a9944a8837cbd6f0687fa41d1a201e4a370ce1722617ef9b2e92130fafdf01c57fd25029f34c7147388343fd02acad6dad16f314f14f90e48b36ffd017674d94a964b2816d89531c3b6db556f383f789816184235af2232bd9f7245429d31e0f976b05cea6963f9a03bf706b7940a696ce941d3d76ccd8465e3ec4538a2891e5845c85531be29a73f4a97fb34821e41072d91ee45e2571a9c7318e68dadb7f41e651e4fec928bc02bed529c707385c7c546778a45177d5596154b2fd1f98715093d45907da10ee66465eae7817ea42c099b3b32e25d267d5f90362c88422f6469b1cdba393d8fd862309a8b6b735c4154f8d16a069d62a11507543012d8306c88f91ad0a6b84e0a807181551fbdd085235276cfd65bec591d31eb40c19c3f50ebe487c20377f8a5df6b9312eb73de3f17b981e399372c631b51850c5ec03a240ac0e2732ddba57aeda144a2596b8e5b6c3d30e84570e2ce87f370cc9dddc0ce86ba9960ac7f0d460917f4685566ac948ec3a63bbcce9dc474414332a82773f8b08deea7c4ae090f569e9535749c8bec0249b36e36b4fa76beedfc82b18c7a057223e39240f51eeb8e3be58ca3142c34c68b3102a271654bae27ebd1794eaa15b89c138d9f4b6578fed68180809c899d3fb5913a53ced461d308b7d7b5455df29d9373cd74f37e01ba38d1f3e71589838ecf57316acbbe993c996061296f0ae0734d00",
+               updatedAt: undefined
+             }
+           })
+    
+    Argument `connect`: Invalid value provided. Expected UsersWhereUniqueInput, provided String.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:90:48
+    
+      87 try {
+      88   const author: string = postObject.author as string
+      89   if (author === undefined) throw new Error('No author specified')
+    → 90   const data = await this.prisma.posts.update({
+             where: {
+               id: undefined
+             },
+             data: {
+               author: {
+                 connect: {
+                   id: "c462c917-ba21-4d46-bd44-29413edc520c"
+                 }
+               },
+               classification: "Economia",
+               heading: "Daniel",
+               text: "Abadin",
+               title: "Adrian",
+               importance: "1",
+                           ~~~
+               images: {
+                 deleteMany: {
+                   NOT: {
+                     id: {
+                       in: [
+                         "6212977c-d236-4ee1-a649-f0b370d9d561"
+                       ]
+                     }
+                   }
+                 },
+                 upsert: [
+                   {
+                     where: {
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     }
+                   }
+                 ]
+               },
+               jwt: "13608b22c76c7fcca1f6ba06c3012778bLoquE19515afb12d9365f959e6ab0eb86a28d49d6b073705f1603ad77f59f4d76976b5df6e43f0f3647893f4df0d74f334f45a4aedb0527dcbad73619b13ecdc57ce03f5366b93521c392488446989da8ea82e246cac2f4cc0e596c3ccf951641b306ee9ad5bfd426b90ac8c02d5f454b1a0b8ce67aaa62c18df0d4265358c58230270ee695b48f6f19fae512a4c6b2c55996c361e8fa47ddeff8fc7bdb75719d8c6ac1d232c7a08f906c56830cc92a2a763ef4112679f20028623d98067d0ba977a1671aa088f546d5eb2f592764e7dbfa5796e88e329e454a2d15461d1808c1d46cfab019c3134a04e7f202d94de9c9933c9bad82270b5b0b2c4cee399eb32ca29f13bc1afc556d0e23e86f816a2abe354061ddceb138b967710c0a23337699eefbfd705345888fc8ed70d7c11f3a70858a594385024e60d16fa20fdf64207a9944a8837cbd6f0687fa41d1a201e4a370ce1722617ef9b2e92130fafdf01c57fd25029f34c7147388343fd02acad6dad16f314f14f90e48b36ffd017674d94a964b2816d89531c3b6db556f383f789816184235af2232bd9f7245429d31e0f976b05cea6963f9a03bf706b7940a696ce941d3d76ccd8465e3ec4538a2891e5845c85531be29a73f4a97fb34821e41072d91ee45e2571a9c7318e68dadb7f41e651e4fec928bc02bed529c707385c7c546778a45177d5596154b2fd1f98715093d45907da10ee66465eae7817ea42c099b3b32e25d267d5f90362c88422f6469b1cdba393d8fd862309a8b6b735c4154f8d16a069d62a11507543012d8306c88f91ad0a6b84e0a807181551fbdd085235276cfd65bec591d31eb40c19c3f50ebe487c20377f8a5df6b9312eb73de3f17b981e399372c631b51850c5ec03a240ac0e2732ddba57aeda144a2596b8e5b6c3d30e84570e2ce87f370cc9dddc0ce86ba9960ac7f0d460917f4685566ac948ec3a63bbcce9dc474414332a82773f8b08deea7c4ae090f569e9535749c8bec0249b36e36b4fa76beedfc82b18c7a057223e39240f51eeb8e3be58ca3142c34c68b3102a271654bae27ebd1794eaa15b89c138d9f4b6578fed68180809c899d3fb5913a53ced461d308b7d7b5455df29d9373cd74f37e01ba38d1f3e71589838ecf57316acbbe993c996061296f0ae0734d00",
+               updatedAt: undefined
+             }
+           })
+    
+    Argument `importance`: Invalid value provided. Expected Int or IntFieldUpdateOperationsInput, provided String.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:90:48
+    
+      87 try {
+      88   const author: string = postObject.author as string
+      89   if (author === undefined) throw new Error('No author specified')
+    → 90   const data = await this.prisma.posts.update({
+             where: {
+               id: undefined
+             },
+             data: {
+               author: {
+                 connect: {
+                   id: "c462c917-ba21-4d46-bd44-29413edc520c"
+                 }
+               },
+               classification: "Economia",
+               heading: "Daniel",
+               text: "Abadin",
+               title: "Adrian",
+               importance: 1,
+               images: {
+                 deleteMany: {
+                   NOT: {
+                     id: {
+                       in: [
+                         "6212977c-d236-4ee1-a649-f0b370d9d561"
+                       ]
+                     }
+                   }
+                 },
+                 upsert: [
+                   {
+                     where: {
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     }
+                   }
+                 ]
+               },
+               jwt: "13608b22c76c7fcca1f6ba06c3012778bLoquE19515afb12d9365f959e6ab0eb86a28d49d6b073705f1603ad77f59f4d76976b5df6e43f0f3647893f4df0d74f334f45a4aedb0527dcbad73619b13ecdc57ce03f5366b93521c392488446989da8ea82e246cac2f4cc0e596c3ccf951641b306ee9ad5bfd426b90ac8c02d5f454b1a0b8ce67aaa62c18df0d4265358c58230270ee695b48f6f19fae512a4c6b2c55996c361e8fa47ddeff8fc7bdb75719d8c6ac1d232c7a08f906c56830cc92a2a763ef4112679f20028623d98067d0ba977a1671aa088f546d5eb2f592764e7dbfa5796e88e329e454a2d15461d1808c1d46cfab019c3134a04e7f202d94de9c9933c9bad82270b5b0b2c4cee399eb32ca29f13bc1afc556d0e23e86f816a2abe354061ddceb138b967710c0a23337699eefbfd705345888fc8ed70d7c11f3a70858a594385024e60d16fa20fdf64207a9944a8837cbd6f0687fa41d1a201e4a370ce1722617ef9b2e92130fafdf01c57fd25029f34c7147388343fd02acad6dad16f314f14f90e48b36ffd017674d94a964b2816d89531c3b6db556f383f789816184235af2232bd9f7245429d31e0f976b05cea6963f9a03bf706b7940a696ce941d3d76ccd8465e3ec4538a2891e5845c85531be29a73f4a97fb34821e41072d91ee45e2571a9c7318e68dadb7f41e651e4fec928bc02bed529c707385c7c546778a45177d5596154b2fd1f98715093d45907da10ee66465eae7817ea42c099b3b32e25d267d5f90362c88422f6469b1cdba393d8fd862309a8b6b735c4154f8d16a069d62a11507543012d8306c88f91ad0a6b84e0a807181551fbdd085235276cfd65bec591d31eb40c19c3f50ebe487c20377f8a5df6b9312eb73de3f17b981e399372c631b51850c5ec03a240ac0e2732ddba57aeda144a2596b8e5b6c3d30e84570e2ce87f370cc9dddc0ce86ba9960ac7f0d460917f4685566ac948ec3a63bbcce9dc474414332a82773f8b08deea7c4ae090f569e9535749c8bec0249b36e36b4fa76beedfc82b18c7a057223e39240f51eeb8e3be58ca3142c34c68b3102a271654bae27ebd1794eaa15b89c138d9f4b6578fed68180809c899d3fb5913a53ced461d308b7d7b5455df29d9373cd74f37e01ba38d1f3e71589838ecf57316acbbe993c996061296f0ae0734d00",
+               ~~~
+               updatedAt: undefined,
+           ?   id?: String | StringFieldUpdateOperationsInput,
+           ?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+           ?   subTitle?: String | NullableStringFieldUpdateOperationsInput | Null,
+           ?   fbid?: String | NullableStringFieldUpdateOperationsInput | Null,
+           ?   metrics?: MetricUpdateManyWithoutPostsNestedInput
+             }
+           })
+    
+    Unknown argument `jwt`. Did you mean `id`? Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:92:48
+    
+      89 try {
+      90   const author: string = postObject.author as string
+      91   if (author === undefined) throw new Error('No author specified')
+    → 92   const data = await this.prisma.posts.update({
+             where: {
+               id: undefined,
+           ?   AND?: PostsWhereInput | PostsWhereInput[],
+           ?   OR?: PostsWhereInput[],
+           ?   NOT?: PostsWhereInput | PostsWhereInput[],
+           ?   createdAt?: DateTimeFilter | DateTime,
+           ?   updatedAt?: DateTimeFilter | DateTime,
+           ?   title?: StringFilter | String,
+           ?   subTitle?: StringNullableFilter | String | Null,
+           ?   heading?: StringFilter | String,
+           ?   text?: StringFilter | String,
+           ?   classification?: StringFilter | String,
+           ?   usersId?: StringFilter | String,
+           ?   importance?: IntFilter | Int,
+           ?   fbid?: StringNullableFilter | String | Null,
+           ?   images?: PhotosListRelationFilter,
+           ?   author?: UsersRelationFilter | UsersWhereInput,
+           ?   metrics?: MetricListRelationFilter
+             },
+             data: {
+               author: {
+                 connect: {
+                   id: "c462c917-ba21-4d46-bd44-29413edc520c"
+                 }
+               },
+               classification: "Economia",
+               heading: "Daniel",
+               text: "Abadin",
+               title: "Adrian",
+               importance: 1,
+               images: {
+                 deleteMany: {
+                   NOT: {
+                     id: {
+                       in: [
+                         "6212977c-d236-4ee1-a649-f0b370d9d561"
+                       ]
+                     }
+                   }
+                 },
+                 upsert: [
+                   {
+                     where: {
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     }
+                   }
+                 ]
+               },
+               jwt: undefined,
+               updatedAt: undefined
+             }
+           })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 console.log(idParam, 'TheId')
+      91 const author: string = postObject.author as string
+      92 if (author === undefined) throw new Error('No author specified')
+    → 93 const data = await this.prisma.posts.update({
+           where: {
+             id: undefined,
+         ?   AND?: PostsWhereInput | PostsWhereInput[],
+         ?   OR?: PostsWhereInput[],
+         ?   NOT?: PostsWhereInput | PostsWhereInput[],
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   title?: StringFilter | String,
+         ?   subTitle?: StringNullableFilter | String | Null,
+         ?   heading?: StringFilter | String,
+         ?   text?: StringFilter | String,
+         ?   classification?: StringFilter | String,
+         ?   usersId?: StringFilter | String,
+         ?   importance?: IntFilter | Int,
+         ?   fbid?: StringNullableFilter | String | Null,
+         ?   images?: PhotosListRelationFilter,
+         ?   author?: UsersRelationFilter | UsersWhereInput,
+         ?   metrics?: MetricListRelationFilter
+           },
+           data: {
+             author: {
+               connect: {
+                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
+               }
+             },
+             classification: "Economia",
+             heading: "Daniel",
+             text: "Abadin",
+             title: "Adrian",
+             importance: 1,
+             images: {
+               deleteMany: {
+                 NOT: {
+                   id: {
+                     in: [
+                       "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     ]
+                   }
+                 }
+               },
+               upsert: [
+                 {
+                   where: {
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   update: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   create: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   }
+                 }
+               ]
+             },
+             jwt: undefined,
+             updatedAt: undefined
+           }
+         })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 console.log(idParam, 'TheId')
+      91 const author: string = postObject.author as string
+      92 if (author === undefined) throw new Error('No author specified')
+    → 93 const data = await this.prisma.posts.update({
+           where: {
+             id: undefined,
+         ?   AND?: PostsWhereInput | PostsWhereInput[],
+         ?   OR?: PostsWhereInput[],
+         ?   NOT?: PostsWhereInput | PostsWhereInput[],
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   title?: StringFilter | String,
+         ?   subTitle?: StringNullableFilter | String | Null,
+         ?   heading?: StringFilter | String,
+         ?   text?: StringFilter | String,
+         ?   classification?: StringFilter | String,
+         ?   usersId?: StringFilter | String,
+         ?   importance?: IntFilter | Int,
+         ?   fbid?: StringNullableFilter | String | Null,
+         ?   images?: PhotosListRelationFilter,
+         ?   author?: UsersRelationFilter | UsersWhereInput,
+         ?   metrics?: MetricListRelationFilter
+           },
+           data: {
+             author: {
+               connect: {
+                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
+               }
+             },
+             classification: "Economia",
+             heading: "Daniel",
+             text: "Abadin",
+             title: "Adrian",
+             importance: 1,
+             images: {
+               deleteMany: {
+                 NOT: {
+                   id: {
+                     in: [
+                       "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     ]
+                   }
+                 }
+               },
+               upsert: [
+                 {
+                   where: {
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   update: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   create: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   }
+                 }
+               ]
+             },
+             jwt: undefined,
+             updatedAt: undefined
+           }
+         })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 console.log(idParam, 'TheId')
+      91 const author: string = postObject.author as string
+      92 if (author === undefined) throw new Error('No author specified')
+    → 93 const data = await this.prisma.posts.update({
+           where: {
+             id: undefined,
+         ?   AND?: PostsWhereInput | PostsWhereInput[],
+         ?   OR?: PostsWhereInput[],
+         ?   NOT?: PostsWhereInput | PostsWhereInput[],
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   title?: StringFilter | String,
+         ?   subTitle?: StringNullableFilter | String | Null,
+         ?   heading?: StringFilter | String,
+         ?   text?: StringFilter | String,
+         ?   classification?: StringFilter | String,
+         ?   usersId?: StringFilter | String,
+         ?   importance?: IntFilter | Int,
+         ?   fbid?: StringNullableFilter | String | Null,
+         ?   images?: PhotosListRelationFilter,
+         ?   author?: UsersRelationFilter | UsersWhereInput,
+         ?   metrics?: MetricListRelationFilter
+           },
+           data: {
+             author: {
+               connect: {
+                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
+               }
+             },
+             classification: "Economia",
+             heading: "Daniel",
+             text: "Abadin",
+             title: "Adrian",
+             importance: 1,
+             images: {
+               deleteMany: {
+                 NOT: {
+                   id: {
+                     in: [
+                       "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     ]
+                   }
+                 }
+               },
+               upsert: [
+                 {
+                   where: {
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   update: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   create: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   }
+                 }
+               ]
+             },
+             jwt: undefined,
+             updatedAt: undefined
+           }
+         })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 console.log(idParam, 'TheId', postObject.id)
+      91 const author: string = postObject.author as string
+      92 if (author === undefined) throw new Error('No author specified')
+    → 93 const data = await this.prisma.posts.update({
+           where: {
+             id: undefined,
+         ?   AND?: PostsWhereInput | PostsWhereInput[],
+         ?   OR?: PostsWhereInput[],
+         ?   NOT?: PostsWhereInput | PostsWhereInput[],
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   title?: StringFilter | String,
+         ?   subTitle?: StringNullableFilter | String | Null,
+         ?   heading?: StringFilter | String,
+         ?   text?: StringFilter | String,
+         ?   classification?: StringFilter | String,
+         ?   usersId?: StringFilter | String,
+         ?   importance?: IntFilter | Int,
+         ?   fbid?: StringNullableFilter | String | Null,
+         ?   images?: PhotosListRelationFilter,
+         ?   author?: UsersRelationFilter | UsersWhereInput,
+         ?   metrics?: MetricListRelationFilter
+           },
+           data: {
+             author: {
+               connect: {
+                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
+               }
+             },
+             classification: "Economia",
+             heading: "Daniel",
+             text: "Abadin",
+             title: "Adrian",
+             importance: 1,
+             images: {
+               deleteMany: {
+                 NOT: {
+                   id: {
+                     in: [
+                       "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     ]
+                   }
+                 }
+               },
+               upsert: [
+                 {
+                   where: {
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   update: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   create: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   }
+                 }
+               ]
+             },
+             jwt: undefined,
+             updatedAt: undefined
+           }
+         })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T20:12:31.180Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T21:14:43.984Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 console.log(idParam, 'TheId', postObject.id)
+      91 const author: string = postObject.author as string
+      92 if (author === undefined) throw new Error('No author specified')
+    → 93 const data = await this.prisma.posts.update({
+           where: {
+             id: undefined,
+         ?   AND?: PostsWhereInput | PostsWhereInput[],
+         ?   OR?: PostsWhereInput[],
+         ?   NOT?: PostsWhereInput | PostsWhereInput[],
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   title?: StringFilter | String,
+         ?   subTitle?: StringNullableFilter | String | Null,
+         ?   heading?: StringFilter | String,
+         ?   text?: StringFilter | String,
+         ?   classification?: StringFilter | String,
+         ?   usersId?: StringFilter | String,
+         ?   importance?: IntFilter | Int,
+         ?   fbid?: StringNullableFilter | String | Null,
+         ?   images?: PhotosListRelationFilter,
+         ?   author?: UsersRelationFilter | UsersWhereInput,
+         ?   metrics?: MetricListRelationFilter
+           },
+           data: {
+             author: {
+               connect: {
+                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
+               }
+             },
+             classification: "Economia",
+             heading: "Daniel",
+             text: "Abadin",
+             title: "Adrian",
+             importance: 1,
+             images: {
+               deleteMany: {
+                 NOT: {
+                   id: {
+                     in: [
+                       "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     ]
+                   }
+                 }
+               },
+               upsert: [
+                 {
+                   where: {
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   update: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   create: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   }
+                 }
+               ]
+             },
+             jwt: undefined,
+             updatedAt: undefined
+           }
+         })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T21:14:44.991Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAXSogPkONUKNK-R6OUp2MGSXpGFB08MTt1k52VfpyiBQ&oe=6525BF47',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T21:30:26.741Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T21:30:43.055Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T21:31:47.639Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-10-07T21:31:59.895Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T21:32:07.319Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T21:47:02.665Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-07T21:48:27.262Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 console.log(idParam, 'TheId', postObject.id)
+      91 const author: string = postObject.author as string
+      92 if (author === undefined) throw new Error('No author specified')
+    → 93 const data = await this.prisma.posts.update({
+           where: {
+             id: undefined,
+         ?   AND?: PostsWhereInput | PostsWhereInput[],
+         ?   OR?: PostsWhereInput[],
+         ?   NOT?: PostsWhereInput | PostsWhereInput[],
+         ?   createdAt?: DateTimeFilter | DateTime,
+         ?   updatedAt?: DateTimeFilter | DateTime,
+         ?   title?: StringFilter | String,
+         ?   subTitle?: StringNullableFilter | String | Null,
+         ?   heading?: StringFilter | String,
+         ?   text?: StringFilter | String,
+         ?   classification?: StringFilter | String,
+         ?   usersId?: StringFilter | String,
+         ?   importance?: IntFilter | Int,
+         ?   fbid?: StringNullableFilter | String | Null,
+         ?   images?: PhotosListRelationFilter,
+         ?   author?: UsersRelationFilter | UsersWhereInput,
+         ?   metrics?: MetricListRelationFilter
+           },
+           data: {
+             author: {
+               connect: {
+                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
+               }
+             },
+             classification: "Economia",
+             heading: "Daniel",
+             text: "Abadin",
+             title: "Adr",
+             importance: 1,
+             images: {
+               deleteMany: {
+                 NOT: {
+                   id: {
+                     in: [
+                       "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     ]
+                   }
+                 }
+               },
+               upsert: [
+                 {
+                   where: {
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   update: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   },
+                   create: {
+                     fbid: "116807198170525",
+                     url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987",
+                     id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                   }
+                 }
+               ]
+             },
+             jwt: undefined,
+             updatedAt: undefined
+           }
+         })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:91:48
+    
+      88 try {
+      89   const author: string = postObject.author as string
+      90   if (author === undefined) throw new Error('No author specified')
+    → 91   const data = await this.prisma.posts.update({
+             where: {
+               id: undefined,
+           ?   AND?: PostsWhereInput | PostsWhereInput[],
+           ?   OR?: PostsWhereInput[],
+           ?   NOT?: PostsWhereInput | PostsWhereInput[],
+           ?   createdAt?: DateTimeFilter | DateTime,
+           ?   updatedAt?: DateTimeFilter | DateTime,
+           ?   title?: StringFilter | String,
+           ?   subTitle?: StringNullableFilter | String | Null,
+           ?   heading?: StringFilter | String,
+           ?   text?: StringFilter | String,
+           ?   classification?: StringFilter | String,
+           ?   usersId?: StringFilter | String,
+           ?   importance?: IntFilter | Int,
+           ?   fbid?: StringNullableFilter | String | Null,
+           ?   images?: PhotosListRelationFilter,
+           ?   author?: UsersRelationFilter | UsersWhereInput,
+           ?   metrics?: MetricListRelationFilter
+             },
+             data: {
+               author: {
+                 connect: {
+                   id: "c462c917-ba21-4d46-bd44-29413edc520c"
+                 }
+               },
+               classification: "Economia",
+               heading: "Daniel",
+               text: "Abadin",
+               title: "Adr",
+               importance: 1,
+               images: {
+                 deleteMany: {
+                   NOT: {
+                     id: {
+                       in: [
+                         "6212977c-d236-4ee1-a649-f0b370d9d561"
+                       ]
+                     }
+                   }
+                 },
+                 upsert: [
+                   {
+                     where: {
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX-tFACf&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCvw6_HRDORj7F-fQUEaiDwSotkmwYzadZbWjR_3SibLQ&oe=6527B987",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     }
+                   }
+                 ]
+               },
+               jwt: undefined,
+               updatedAt: undefined
+             }
+           })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }

@@ -13,9 +13,14 @@ export class PostService extends DatabaseHandler {
       if (files !== undefined && Array.isArray(files)) {
         photoArray = await Promise.all(files.map(async (file) => {
           const data = await this.facebookService.postPhoto(file)
+          console.log(data)
           if (data.ok && 'id' in data.data && data.data.id !== undefined) { return data.data as { id: string } } else return undefined
         }))
-        if (images !== undefined) { photoArray = [...photoArray, ...images?.map(image => ({ id: image.fbid }))] }
+        console.log(files, 'text', images)
+        if (images !== undefined && Array.isArray(images)) {
+          console.log('entro', images)
+          photoArray = [...photoArray, ...images?.map(image => ({ id: image.fbid }))]
+        } else throw new Error(JSON.stringify({ error: 'No se enviaron imagenes', images }))
         if (photoArray !== null && Array.isArray(photoArray)) {
           const response = await this.facebookService.getLinkFromId(photoArray)
           console.log(response, 'hecho')
@@ -64,11 +69,14 @@ export class PostService extends DatabaseHandler {
       let ids2
       let photoObjectNoUndefinedFalse
       let photoObjectNoUndef
+      if ('jwt' in postObject) {
+        postObject.jwt = undefined
+      }
       if (photoObject !== undefined) {
         ids = photoObject.map((photo): string | undefined => {
           if (typeof photo === 'object' && photo !== null && 'id' in photo && photo.id !== undefined && typeof photo.id === 'string') { return photo?.id } else return undefined
         })
-        ids2 = ids.filter(img => img !== undefined) as string[]
+        ids2 = ids.filter((img: any) => img !== undefined) as string[]
         photoObjectNoUndefinedFalse = photoObject.map((photo) => {
           if (photo !== undefined && photo !== null) {
             if (typeof photo === 'object' && 'id' in photo && 'fbid' in photo && 'url' in photo) { return { fbid: photo.fbid, url: photo.url, id: photo.id } }
@@ -78,12 +86,17 @@ export class PostService extends DatabaseHandler {
         photoObjectNoUndef = photoObjectNoUndefinedFalse.filter(img => img !== false) as Array<{ id?: string, fbid: string, url: string }>
 
         try {
+          const author: string = postObject.author as string
+          if (author === undefined) throw new Error('No author specified')
           const data = await this.prisma.posts.update(
             {
-              where: { id: idParam },
+              where: { id: postObject.id as string },
               data: {
                 ...postObject,
                 updatedAt: undefined,
+                author: { connect: { id: author } },
+                importance: parseInt(postObject.importance as string),
+
                 images: {
                   deleteMany: {
                     NOT: {

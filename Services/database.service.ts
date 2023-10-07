@@ -63,7 +63,7 @@ export abstract class DatabaseHandler {
             includeFields: Prisma.Exact<A, Prisma.Args<T, 'findMany'>['include']>,
             paginationObject?: { cusor?: any, pagination: number },
             filter?: Prisma.Exact<A, Prisma.Args<T, 'findMany'>['where']>
-          ):Promise<GenericResponseObject<Prisma.Result<T,A,"findMany"> {
+          ): Promise<GenericResponseObject<Prisma.Result<T, A, 'findMany'>>> {
             try {
               if (paginationObject !== undefined) {
                 if (paginationObject?.cusor !== undefined) {
@@ -130,7 +130,7 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gDelete<T,A>(this: T & { delete: any }, id: Prisma.Exact<A,Prisma.Args<T,"delete">["where"]["id"]>):Promise<GenericResponseObject<Prisma.Result<T,A,"delete">>> {
+          async gDelete<T, A>(this: T & { delete: any }, id: Prisma.Exact<A, Prisma.Args<T, 'delete'>['where']['id']>): Promise<GenericResponseObject<Prisma.Result<T, A, 'delete'>>> {
             try {
               const data = await this.delete({ where: { id } })
               return new ResponseObject(null, true, data)
