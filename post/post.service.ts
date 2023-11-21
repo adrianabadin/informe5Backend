@@ -101,28 +101,33 @@ export class PostService extends DatabaseHandler {
                 importance: parseInt(postObject.importance as string),
 
                 images: {
-                  deleteMany: {
-                    NOT: {
-                      id: {
-                        in: ids2
-                      }
-                    }
-                  },
+                  deleteMany:
+                  {
 
-                  upsert: photoObjectNoUndef.map(photo => {
-                    let id: string = 'zorongo'
-                    if (photo.id !== undefined) {
-                      if (ids2 !== undefined) {
-                        if (!ids2.includes(photo.id)) { id = photo.id }
-                      }
-                    } if (id !== 'zorongo') {
-                      return {
-                        where: { id },
-                        update: { ...photo },
-                        create: { ...photo }
-                      }
-                    } else return undefined
+                    // NOT: {
+                    //   id: {
+                    //     in: ids2
+                    //   }
+                    // }
+                  },
+                  create: photoObjectNoUndef.map(photo => {
+                    return { ...photo }
                   })
+                  /* en upsert deberia agregar todos los photo objects a la db */
+                  // upsert: photoObjectNoUndef.map(photo => {
+                  //   let id: string = 'zorongo'
+                  //   if (photo.id !== undefined) {
+                  //     if (ids2 !== undefined) {
+                  //       if (!ids2.includes(photo.id)) { id = photo.id }
+                  //     }
+                  //   } if (id !== 'zorongo') {
+                  //     return {
+                  //       where: { id },
+                  //       update: { ...photo },
+                  //       create: { ...photo }
+                  //     }
+                  //   } else return undefined
+                  // })
                 }
               }
             })
