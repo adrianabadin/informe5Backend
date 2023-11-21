@@ -7,7 +7,7 @@ import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type GenericResponseObject, ResponseObject } from '../Entities/response'
-import { type CreatePostType, type GetPostsType, type GetPostById, type UpdatePostType } from './post.schema'
+import { type CreatePostType, type GetPostsType, type GetPostById, type UpdatePostType, type ImagesSchema } from './post.schema'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -18,12 +18,21 @@ export class PostController {
       const files = req.files
       let { images, title, heading, classification, importance } = req.body
       const { id } = req.params
-      console.log(req.body, 'data psoted', req.params)
-
-      if (Array.isArray()) { const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[], JSON.parse(images !== undefined ? images : '[]')) }
+      console.log(req.body, 'data posted', req.params)
+      let imagesArray: ImagesSchema[] | undefined
+      if (images !== undefined && typeof images === 'string') {
+        imagesArray = JSON.parse(images)
+        console.log(imagesArray, 'imagenes')
+      }
+      // hasta aca, tengo que en imagesArray o hay un array de imagenes o tengo undefined
+      /* como manejo el hecho de que me lleguen imagenes ya cargadas y filas nuevas agregadas? */
+      let nuevoArray: ImagesSchema[] | undefined
+      if (files !== undefined) { // aqui valido si hay files de multer para agregar.
+        nuevoArray = await this.service.photoGenerator(files as Express.Multer.File[], imagesArray)
+      } else nuevoArray = imagesArray
       let body = req.body
       if (body !== null && typeof body === 'object' && 'images' in body) { body = { ...body, images: undefined } }
-      const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, imagesArray)
+      const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, nuevoArray)
       console.log(updateDbResponse)
       if (title === undefined) {
         title = updateDbResponse.data.title as string

@@ -43,6 +43,18 @@ export const createPostSchema = z.object({
 export const getPostById = z.object({
   params: z.object({ id: z.string({ invalid_type_error: 'El ID debe ser una cadena' }).uuid({ message: 'La cadena debe ser un UUID' }) })
 })
+const imageSchema = z.object({
+  id: z.string({ invalid_type_error: 'Images ID debe ser un string' }).uuid({ message: 'Images ID debe ser una cadena que represente a un uuid' }).optional(),
+  fbid: z.string({ invalid_type_error: 'Images FBID debe ser un string' }).uuid({ message: 'Images FBID debe ser una cadena que represente a un uuid' }),
+  url: z.string({ invalid_type_error: 'Images URL must be a string' }).url({ message: 'The string provided must be a URL' })
+})
+const stringifiedImage = z.custom < string >((data) => {
+  try {
+    const dataParsed = JSON.parse(data as string)
+    imageSchema.parse(dataParsed)
+    return true
+  } catch (e) { return false }
+})
 export const updatePostSchema = z.object({
   body: z.object({
     title: z.string({ invalid_type_error: 'El titulo debe ser una cadena' }).min(3, 'El titulo debe tener al menos 3 caracteres de longitud').optional(),
@@ -53,11 +65,7 @@ export const updatePostSchema = z.object({
     importance: z.enum(['1', '2', '3', '4', '5'], { invalid_type_error: 'La importancia de la nota debe ser string de  un numero del 1 al 5' }).optional(),
     author: z.string({ invalid_type_error: 'El autor debe ser un string' }).uuid({ message: 'El autor debe ser una cadena que represente a un uuid' }).optional(),
     fbid: z.string({ invalid_type_error: 'Post FBID must be a string' }),
-    images: z.array(z.object({
-      id: z.string({ invalid_type_error: 'Images ID debe ser un string' }).uuid({ message: 'Images ID debe ser una cadena que represente a un uuid' }).optional(),
-      fbid: z.string({ invalid_type_error: 'Images FBID debe ser un string' }).uuid({ message: 'Images FBID debe ser una cadena que represente a un uuid' }),
-      url: z.string({ invalid_type_error: 'Images URL must be a string' }).url({ message: 'The string provided must be a URL' })
-    })).optional()
+    images: z.array(stringifiedImage).optional()
   })
 
 })
@@ -69,3 +77,4 @@ export type CreatePostType = z.infer<typeof createPostSchema>
 export type GetPostsType = z.infer<typeof getPostsSchema>
 export type GetPostById = z.infer<typeof getPostById>
 export type UpdatePostType = z.infer<typeof updatePostSchema>
+export type ImagesSchema = z.infer<typeof imageSchema>

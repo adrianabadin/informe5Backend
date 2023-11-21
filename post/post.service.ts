@@ -2,14 +2,15 @@ import { DatabaseHandler } from '../Services/database.service'
 import { type Prisma } from '@prisma/client'
 import { logger } from '../Services/logger.service'
 import { type MyCursor, type GenericResponseObject, ResponseObject } from '../Entities'
-import { type UpdatePostType, type CreatePostType } from './post.schema'
+import { type UpdatePostType, type CreatePostType, type ImagesSchema } from './post.schema'
 import { FacebookService } from '../Services/facebook.service'
 
 export class PostService extends DatabaseHandler {
   constructor (
     protected facebookService = new FacebookService(),
-    public photoGenerator = async (files?: Express.Multer.File[], images?: UpdatePostType['body']['images']) => {
+    public photoGenerator = async (files: Express.Multer.File[], imagesParam?: ImagesSchema[]) => {
       let photoArray: Array<{ id: string } | undefined> = []
+      let images: ImagesSchema[] | undefined = imagesParam
       if (files !== undefined && Array.isArray(files)) {
         photoArray = await Promise.all(files.map(async (file) => {
           const data = await this.facebookService.postPhoto(file)
@@ -64,11 +65,11 @@ export class PostService extends DatabaseHandler {
         return data
       } catch (error) { logger.error({ function: 'PostService.updatePhoto', error }) }
     },
-    public updatePost = async (postObject: Omit<Prisma.PostsUpdateInput, 'images'>, idParam: string, photoObject: UpdatePostType['body']['images']): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+    public updatePost = async (postObject: Omit<Prisma.PostsUpdateInput, 'images'>, idParam: string, photoObject: ImagesSchema[] | undefined): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
       let ids
-      let ids2
-      let photoObjectNoUndefinedFalse
-      let photoObjectNoUndef
+      let ids2: string[] | undefined
+      let photoObjectNoUndefinedFalse: ImagesSchema[]
+      let photoObjectNoUndef: ImagesSchema[]
       if ('jwt' in postObject) {
         postObject.jwt = undefined
       }
@@ -76,21 +77,23 @@ export class PostService extends DatabaseHandler {
         ids = photoObject.map((photo): string | undefined => {
           if (typeof photo === 'object' && photo !== null && 'id' in photo && photo.id !== undefined && typeof photo.id === 'string') { return photo?.id } else return undefined
         })
-        ids2 = ids.filter((img: any) => img !== undefined) as string[]
+        ids2 = ids.filter((img: string | undefined) => img !== undefined) as string[] | undefined
         photoObjectNoUndefinedFalse = photoObject.map((photo) => {
           if (photo !== undefined && photo !== null) {
-            if (typeof photo === 'object' && 'id' in photo && 'fbid' in photo && 'url' in photo) { return { fbid: photo.fbid, url: photo.url, id: photo.id } }
+            return { fbid: photo.fbid, url: photo.url, id: photo.id }
+            // if (typeof photo === 'object' && 'id' in photo && 'fbid' in photo && 'url' in photo) { return { fbid: photo.fbid, url: photo.url, id: photo.id } }
           }
-          return false
+          return { fbid: 'false', url: 'false', id: 'false' }
         })
-        photoObjectNoUndef = photoObjectNoUndefinedFalse.filter(img => img !== false) as Array<{ id?: string, fbid: string, url: string }>
+        photoObjectNoUndef = photoObjectNoUndefinedFalse.filter(img => img.fbid !== 'false') as Array<{ id?: string, fbid: string, url: string }>
 
         try {
           const author: string = postObject.author as string
+          /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
           if (author === undefined) throw new Error('No author specified')
           const data = await this.prisma.posts.update(
             {
-              where: { id: postObject.id as string },
+              where: { id: idParam },
               data: {
                 ...postObject,
                 updatedAt: undefined,
@@ -108,12 +111,17 @@ export class PostService extends DatabaseHandler {
 
                   upsert: photoObjectNoUndef.map(photo => {
                     let id: string = 'zorongo'
-                    if (photo.id !== undefined) id = photo.id
-                    return {
-                      where: { id },
-                      update: { ...photo },
-                      create: { ...photo }
-                    }
+                    if (photo.id !== undefined) {
+                      if (ids2 !== undefined) {
+                        if (!ids2.includes(photo.id)) { id = photo.id }
+                      }
+                    } if (id !== 'zorongo') {
+                      return {
+                        where: { id },
+                        update: { ...photo },
+                        create: { ...photo }
+                      }
+                    } else return undefined
                   })
                 }
               }
@@ -127,7 +135,7 @@ export class PostService extends DatabaseHandler {
         }
       } else {
         try {
-          const data: T = await this.prisma.posts.update(
+          const data = await this.prisma.posts.update(
             {
               where: { id: idParam },
               data: {

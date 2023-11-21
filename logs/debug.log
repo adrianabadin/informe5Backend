@@ -6280,3 +6280,520 @@
 }
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      createdAt: 2023-07-11T06:09:53.219Z,
+      updatedAt: 2023-07-11T06:09:53.219Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-08-08T05:30:55.822Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-10-08T23:47:59.109Z,
+              url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3fb9c2&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=-VIsBySFs2MAX_W6lJs&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfCUnR2g2HqbFwKPf-V86xkBouWkBKQw-hO3DVUXetI-GA&oe=6527B987',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-08-08T05:30:55.822Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadin',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-11-21T04:09:39.174Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 try {
+      91   const author: string = postObject.author as string
+      92   if (author === undefined) throw new Error('No author specified')
+    → 93   const data = await this.prisma.posts.update({
+             where: {
+               id: undefined,
+           ?   AND?: PostsWhereInput | PostsWhereInput[],
+           ?   OR?: PostsWhereInput[],
+           ?   NOT?: PostsWhereInput | PostsWhereInput[],
+           ?   createdAt?: DateTimeFilter | DateTime,
+           ?   updatedAt?: DateTimeFilter | DateTime,
+           ?   title?: StringFilter | String,
+           ?   subTitle?: StringNullableFilter | String | Null,
+           ?   heading?: StringFilter | String,
+           ?   text?: StringFilter | String,
+           ?   classification?: StringFilter | String,
+           ?   usersId?: StringFilter | String,
+           ?   importance?: IntFilter | Int,
+           ?   fbid?: StringNullableFilter | String | Null,
+           ?   images?: PhotosListRelationFilter,
+           ?   author?: UsersRelationFilter | UsersWhereInput,
+           ?   metrics?: MetricListRelationFilter
+             },
+             data: {
+               author: {
+                 connect: {
+                   id: "c462c917-ba21-4d46-bd44-29413edc520c"
+                 }
+               },
+               classification: "Municipales",
+               heading: "Daniel",
+               text: "Abadi",
+               title: "Adrian",
+               importance: 1,
+               images: {
+                 deleteMany: {
+                   NOT: {
+                     id: {
+                       in: [
+                         "6212977c-d236-4ee1-a649-f0b370d9d561"
+                       ]
+                     }
+                   }
+                 },
+                 upsert: [
+                   {
+                     where: {
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     }
+                   },
+                   {
+                     where: {
+                       id: "zorongo"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7",
+                       id: undefined
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7",
+                       id: undefined
+                     }
+                   }
+                 ]
+               },
+               jwt: undefined,
+               updatedAt: undefined
+             }
+           })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    data: {
+      id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+      createdAt: 2023-08-08T05:30:53.316Z,
+      updatedAt: 2023-11-21T06:33:02.989Z,
+      title: 'Adrian',
+      subTitle: null,
+      heading: 'Daniel',
+      text: 'Abadi',
+      classification: 'Municipales',
+      usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      importance: 1,
+      fbid: '112768655243132_116807228170522'
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-11-21T06:33:02.989Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadi',
+          classification: 'Municipales',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '233efa42-9ad9-46b4-8a49-47a351581224',
+              createdAt: 2023-11-21T06:33:02.989Z,
+              updatedAt: 2023-11-21T06:33:02.989Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7',
+              fbid: '116807198170525'
+            },
+            {
+              id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+              createdAt: 2023-08-08T05:30:53.316Z,
+              updatedAt: 2023-11-21T06:33:02.989Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7',
+              fbid: '116807198170525'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-11-21T06:33:02.989Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadi',
+        classification: 'Municipales',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '233efa42-9ad9-46b4-8a49-47a351581224',
+            createdAt: 2023-11-21T06:33:02.989Z,
+            updatedAt: 2023-11-21T06:34:49.948Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7',
+            fbid: '116807198170525'
+          },
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-11-21T06:34:49.948Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-11-21T06:33:02.989Z,
+        title: 'Adrian',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Abadi',
+        classification: 'Municipales',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '233efa42-9ad9-46b4-8a49-47a351581224',
+            createdAt: 2023-11-21T06:33:02.989Z,
+            updatedAt: 2023-11-21T06:34:54.442Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7',
+            fbid: '116807198170525'
+          },
+          {
+            id: '6212977c-d236-4ee1-a649-f0b370d9d561',
+            createdAt: 2023-08-08T05:30:53.316Z,
+            updatedAt: 2023-11-21T06:34:54.442Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7',
+            fbid: '116807198170525'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '116807198170525',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientKnownRequestError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 try {
+      91   const author: string = postObject.author as string
+      92   if (author === undefined) throw new Error('No author specified')
+    → 93   const data = await this.prisma.posts.update(
+    Unique constraint failed on the (not available)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8308)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      code: 'P2002',
+      clientVersion: '5.0.0',
+      meta: { target: null }
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }

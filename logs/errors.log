@@ -1240,3 +1240,124 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 try {
+      91   const author: string = postObject.author as string
+      92   if (author === undefined) throw new Error('No author specified')
+    → 93   const data = await this.prisma.posts.update({
+             where: {
+               id: undefined,
+           ?   AND?: PostsWhereInput | PostsWhereInput[],
+           ?   OR?: PostsWhereInput[],
+           ?   NOT?: PostsWhereInput | PostsWhereInput[],
+           ?   createdAt?: DateTimeFilter | DateTime,
+           ?   updatedAt?: DateTimeFilter | DateTime,
+           ?   title?: StringFilter | String,
+           ?   subTitle?: StringNullableFilter | String | Null,
+           ?   heading?: StringFilter | String,
+           ?   text?: StringFilter | String,
+           ?   classification?: StringFilter | String,
+           ?   usersId?: StringFilter | String,
+           ?   importance?: IntFilter | Int,
+           ?   fbid?: StringNullableFilter | String | Null,
+           ?   images?: PhotosListRelationFilter,
+           ?   author?: UsersRelationFilter | UsersWhereInput,
+           ?   metrics?: MetricListRelationFilter
+             },
+             data: {
+               author: {
+                 connect: {
+                   id: "c462c917-ba21-4d46-bd44-29413edc520c"
+                 }
+               },
+               classification: "Municipales",
+               heading: "Daniel",
+               text: "Abadi",
+               title: "Adrian",
+               importance: 1,
+               images: {
+                 deleteMany: {
+                   NOT: {
+                     id: {
+                       in: [
+                         "6212977c-d236-4ee1-a649-f0b370d9d561"
+                       ]
+                     }
+                   }
+                 },
+                 upsert: [
+                   {
+                     where: {
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7",
+                       id: "6212977c-d236-4ee1-a649-f0b370d9d561"
+                     }
+                   },
+                   {
+                     where: {
+                       id: "zorongo"
+                     },
+                     update: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7",
+                       id: undefined
+                     },
+                     create: {
+                       fbid: "116807198170525",
+                       url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/365735118_116807191503859_3087967412448480967_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHhJJvayTpBckOsjprCBldBVIg_yB2U7ddUiD_IHZTt1-CghYSx9ykwlMgWmvbHKkiujA9xneC_K3L2IDSispzD&_nc_ohc=ZO4T8YFcCzoAX8cuOeQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCGf5gYidhzl_bs2Y0_zecT0p5uOJw7QiCz36bzcPBCyg&oe=656112C7",
+                       id: undefined
+                     }
+                   }
+                 ]
+               },
+               jwt: undefined,
+               updatedAt: undefined
+             }
+           })
+    
+    Argument `where` of type PostsWhereUniqueInput needs at least one of `id` arguments. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientKnownRequestError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:93:48
+    
+      90 try {
+      91   const author: string = postObject.author as string
+      92   if (author === undefined) throw new Error('No author specified')
+    → 93   const data = await this.prisma.posts.update(
+    Unique constraint failed on the (not available)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8308)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      code: 'P2002',
+      clientVersion: '5.0.0',
+      meta: { target: null }
+    }
+  },
+  level: 'error'
+}
