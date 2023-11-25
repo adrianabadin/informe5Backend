@@ -20,6 +20,7 @@ export class FacebookService {
           }
         }).then(response => {
           fs.unlinkSync(data.path)
+          logger.debug({ response })
           console.log(data.path, 'File Deleted?', response)
           return response.data
         }).catch(error => {

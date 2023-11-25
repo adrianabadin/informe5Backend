@@ -11,10 +11,11 @@ export class PostService extends DatabaseHandler {
     public photoGenerator = async (files: Express.Multer.File[], imagesParam?: ImagesSchema[]) => {
       let photoArray: Array<{ id: string } | undefined> = []
       let images: ImagesSchema[] | undefined = imagesParam
+      logger.debug({ function: 'photoGenerator', files, imagesParam })
       if (files !== undefined && Array.isArray(files)) {
         photoArray = await Promise.all(files.map(async (file) => {
           const data = await this.facebookService.postPhoto(file)
-          console.log(data)
+          logger.debug({ data })
           if (data.ok && 'id' in data.data && data.data.id !== undefined) { return data.data as { id: string } } else return undefined
         }))
         console.log(files, 'text', images)
@@ -86,7 +87,7 @@ export class PostService extends DatabaseHandler {
           return { fbid: 'false', url: 'false', id: 'false' }
         })
         photoObjectNoUndef = photoObjectNoUndefinedFalse.filter(img => img.fbid !== 'false') as Array<{ id?: string, fbid: string, url: string }>
-
+        console.log(photoObjectNoUndef, 'XXXXXXXXXXXXXXXXX')
         try {
           const author: string = postObject.author as string
           /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */

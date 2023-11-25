@@ -23,7 +23,6 @@ postRouter.post('/create',
   upload.array('images', 5),
   passport.authenticate('jwt', { session: false }),
   schemaValidator(createPostSchema),
-
   postController.createPost)
 postRouter.get('/getPostById/:id',
   schemaValidator(getPostById),
@@ -31,4 +30,4 @@ postRouter.get('/getPostById/:id',
 postRouter.get('/getPosts',
   /* schemaValidator(getPostsSchema), */
   postController.getAllPosts)
-postRouter.put('/updatePost/:id', upload.array('images', 5), postController.updatePost)
+postRouter.post('/updatePost/:id', upload.array('images', 5), postController.updatePost)
