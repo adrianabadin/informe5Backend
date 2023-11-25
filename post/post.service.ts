@@ -2,7 +2,7 @@ import { DatabaseHandler } from '../Services/database.service'
 import { type Prisma } from '@prisma/client'
 import { logger } from '../Services/logger.service'
 import { type MyCursor, type GenericResponseObject, ResponseObject } from '../Entities'
-import { type UpdatePostType, type CreatePostType, type ImagesSchema } from './post.schema'
+import { type CreatePostType, type ImagesSchema } from './post.schema'
 import { FacebookService } from '../Services/facebook.service'
 
 export class PostService extends DatabaseHandler {
@@ -24,8 +24,6 @@ export class PostService extends DatabaseHandler {
             if (images !== null && Array.isArray(images)) images = [...images, ...response.data]
             else images = [...response.data]
           }
-          // ACA HAY QUE CONTINUAR LA LOGICA DE ACTUALIZACION DE LA BASE DE DATOS. HAY QUE VER SI CONVIENE USAR LA FUNCION UPDATEPIOST QUE HICE O
-          // EVALUAR BORRAR TODAS LAS IMAGENES QUE HAY VINCULADAS AL POST Y REESCRIBIR LA BASE DE DATOS CON IMAGENES NUEVAS.
         }
         if (images !== undefined && Array.isArray(images)) {
           photoArray = [...photoArray, ...images?.map(image => ({ id: image.fbid }))]
@@ -42,10 +40,13 @@ export class PostService extends DatabaseHandler {
       if (importance !== undefined && typeof importance === 'string') numberImportance = parseInt(importance)
       return await this.prisma.posts.gCreate({ author: { connect: { id } }, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
     },
-    public getPosts = async (paginationOptions?: { cursor?: Partial< MyCursor>, pagination: number }, queryOptions?: Prisma.PostsFindManyArgs['where']): Promise<GenericResponseObject<Prisma.PostsCreateInput[]> | undefined> => {
+    public getPosts = async (paginationOptions?:
+    { cursor?: Partial< MyCursor>, pagination: number },
+    queryOptions?: Prisma.PostsFindManyArgs['where']
+    ): Promise<GenericResponseObject<Prisma.PostsCreateInput[]> | undefined> => {
       try {
         logger.debug({ queryOptions })
-        const data = await this.prisma.posts.gGetAll({ images: true }, paginationOptions, queryOptions)
+        const data = await this.prisma.posts.gGetAll({ images: true }, paginationOptions, queryOptions as any)
         logger.debug({ function: 'PostService.getPosts', data })
         return data
       } catch (error) { logger.error({ function: 'PostService.getPosts', error }) }

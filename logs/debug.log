@@ -1391,3 +1391,325 @@
   },
   level: 'debug'
 }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      createdAt: 2023-07-11T06:09:53.219Z,
+      updatedAt: 2023-07-11T06:09:53.219Z,
+      name: 'Adrian',
+      lastName: 'abadin',
+      username: 'aabadin@gmail.com',
+      phone: '+542344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-11-25T15:28:22.698Z,
+          title: 'Adr',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Aba',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '5e1a762b-92a0-4bfe-b466-43b85fc9fba9',
+              createdAt: 2023-11-25T15:28:22.698Z,
+              updatedAt: 2023-11-25T15:28:22.698Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405967761_182238558294055_8156399027570529112_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFlzV052jm9-Ez3VIbZcj6EgWJ3nZowFHaBYnedmjAUdkYVjveJvS2a6nTJJZw5AEGbcXFnN8OzLZLcmyFVABcZ&_nc_ohc=cbxfF_5lnh0AX8UEkvo&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAh1hZ9eykevV3jhKc9dJLQFBfFOgdhRyx0cV18OkpMCA&oe=65667582',
+              fbid: '182238561627388'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '182473134937264',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/404326891_182473131603931_4200060967178487644_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFMh7ecKbWt0dzk4rzH6Da1ImJQJNKQbbMiYlAk0pBts2V3YeFbmcSJ0I6VQX1QyAGwBcAILVgNImLGBJYbacjL&_nc_ohc=HxJRw0jMBpkAX9EsLBy&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAfJ0AOQLM8dglcqK2E05tMf97WomOZderOJ4J-fu0u6w&oe=656801B8'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'pOSTsERVICE.photoGenerator',
+    images: [
+      {
+        fbid: '182473134937264',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/404326891_182473131603931_4200060967178487644_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFMh7ecKbWt0dzk4rzH6Da1ImJQJNKQbbMiYlAk0pBts2V3YeFbmcSJ0I6VQX1QyAGwBcAILVgNImLGBJYbacjL&_nc_ohc=HxJRw0jMBpkAX9EsLBy&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAfJ0AOQLM8dglcqK2E05tMf97WomOZderOJ4J-fu0u6w&oe=656801B8'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: 'b2640b83-b640-42ca-abd2-aa084ee90740',
+      createdAt: 2023-11-25T21:29:31.584Z,
+      updatedAt: 2023-11-25T21:29:31.584Z,
+      title: 'Adrian',
+      subTitle: null,
+      heading: 'Daniel',
+      text: 'Abadin',
+      classification: 'Municipales',
+      usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      importance: 1,
+      fbid: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: 'b2640b83-b640-42ca-abd2-aa084ee90740',
+          createdAt: 2023-11-25T21:29:31.584Z,
+          updatedAt: 2023-11-25T21:29:35.239Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Municipales',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_182473158270595',
+          images: [
+            {
+              id: '8e477c6a-2138-47c9-8729-5049529fe2c2',
+              createdAt: 2023-11-25T21:29:31.584Z,
+              updatedAt: 2023-11-25T21:29:31.584Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/404326891_182473131603931_4200060967178487644_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFMh7ecKbWt0dzk4rzH6Da1ImJQJNKQbbMiYlAk0pBts2V3YeFbmcSJ0I6VQX1QyAGwBcAILVgNImLGBJYbacjL&_nc_ohc=HxJRw0jMBpkAX9EsLBy&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAfJ0AOQLM8dglcqK2E05tMf97WomOZderOJ4J-fu0u6w&oe=656801B8',
+              fbid: '182473134937264'
+            }
+          ]
+        },
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-11-25T15:28:22.698Z,
+          title: 'Adr',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Aba',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '5e1a762b-92a0-4bfe-b466-43b85fc9fba9',
+              createdAt: 2023-11-25T15:28:22.698Z,
+              updatedAt: 2023-11-25T15:28:22.698Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405967761_182238558294055_8156399027570529112_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFlzV052jm9-Ez3VIbZcj6EgWJ3nZowFHaBYnedmjAUdkYVjveJvS2a6nTJJZw5AEGbcXFnN8OzLZLcmyFVABcZ&_nc_ohc=cbxfF_5lnh0AX8UEkvo&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAh1hZ9eykevV3jhKc9dJLQFBfFOgdhRyx0cV18OkpMCA&oe=65667582',
+              fbid: '182238561627388'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+        createdAt: 2023-08-08T05:30:53.316Z,
+        updatedAt: 2023-11-25T15:28:22.698Z,
+        title: 'Adr',
+        subTitle: null,
+        heading: 'Daniel',
+        text: 'Aba',
+        classification: 'Economia',
+        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+        importance: 1,
+        fbid: '112768655243132_116807228170522',
+        images: [
+          {
+            id: '5e1a762b-92a0-4bfe-b466-43b85fc9fba9',
+            createdAt: 2023-11-25T15:28:22.698Z,
+            updatedAt: 2023-11-25T15:28:22.698Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405967761_182238558294055_8156399027570529112_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFlzV052jm9-Ez3VIbZcj6EgWJ3nZowFHaBYnedmjAUdkYVjveJvS2a6nTJJZw5AEGbcXFnN8OzLZLcmyFVABcZ&_nc_ohc=cbxfF_5lnh0AX8UEkvo&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAh1hZ9eykevV3jhKc9dJLQFBfFOgdhRyx0cV18OkpMCA&oe=65667582',
+            fbid: '182238561627388'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    dbImages: '[{"id":"5e1a762b-92a0-4bfe-b466-43b85fc9fba9","createdAt":"2023-11-25T15:28:22.698Z","updatedAt":"2023-11-25T15:28:22.698Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405967761_182238558294055_8156399027570529112_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFlzV052jm9-Ez3VIbZcj6EgWJ3nZowFHaBYnedmjAUdkYVjveJvS2a6nTJJZw5AEGbcXFnN8OzLZLcmyFVABcZ&_nc_ohc=cbxfF_5lnh0AX8UEkvo&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAh1hZ9eykevV3jhKc9dJLQFBfFOgdhRyx0cV18OkpMCA&oe=65667582","fbid":"182238561627388"}]',
+    files: [],
+    body: [Object: null prototype] {
+      author: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      classification: 'Economia',
+      heading: 'Lucio',
+      text: 'Aba',
+      title: 'Alicia',
+      importance: '1',
+      dbImages: '[{"id":"5e1a762b-92a0-4bfe-b466-43b85fc9fba9","createdAt":"2023-11-25T15:28:22.698Z","updatedAt":"2023-11-25T15:28:22.698Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405967761_182238558294055_8156399027570529112_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFlzV052jm9-Ez3VIbZcj6EgWJ3nZowFHaBYnedmjAUdkYVjveJvS2a6nTJJZw5AEGbcXFnN8OzLZLcmyFVABcZ&_nc_ohc=cbxfF_5lnh0AX8UEkvo&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAh1hZ9eykevV3jhKc9dJLQFBfFOgdhRyx0cV18OkpMCA&oe=65667582","fbid":"182238561627388"}]',
+      jwt: '521e1c4e597aaead90ea32113747b5bfbLoquEa8d99629422907918d8abee07ca4b947510cab881f2f7e921f5023bf9ba2d835ae416fd6ddbddf735ecbc0e2bb1f797de7886f21bbc2986192c48fcb11ec74f7220976aa7da5211ac6b5eaa0c0122b7df025505016c7aa48c90c1808c569a92398dfd7984da5b8c5cdd5482f3618fb87116cdedf5c5dfa6a3ad2262b6c52998c1dca9b613c5687a1596a30899f286f677086b107a7b3666089a16508b61e34e50808c3781ee723e5c4d0778b78c1822e3a21d92194c66e79b892b2c7a5ffa3b0c195e8bed23a9e64922ef51b603859d57de8e122447177fbbd0dbc572d8ef7b17c3b0d240a446ada7ea3cdb62b533e5dfed574d2bdf73af39ea4c35eb78beece31af7504a5c1f25abd8c892ea26eecdc218ddecbc4bc8c8073357348184446c27a1fe6e836652bb9f122b3e4f014ff17d62bc603780c941995c8a41706847479ab19e3dc1e408906f9a3edacdcf5b0db7b5fad2085bb54f750693b6f60c0b4d34ba9645e7e83900838c3a152221f21a6634657b06f81dc92e0c5ad474e919826408282675b2b385fc94376f5da6f6528c7499e8affe0df29f88bb73c2aea2bcff9dae5471ea375a19b3f18bc3639aa7640afc79765353d4cd1785bf476d692d9f85a32b2d18c2e17f09197066f0effa0cbbdddbfa5ca53ba8e794857e74ad127234f092a7fdb0dcc2af74998d5ad5ffd161eb6b2b777b0ab0aaac746fc42b9a87352245f8708f12f1e739c122f2462fb143cbcff069ea136639e64c023bb0c7f3c8eb6f5cfbf23d969ae220d7e0c42f266eccd5344893c9b815b202ac4facef2db2edf2ff709811567b013f1f19fff7827d365d46b86f0b6cdcd8de6e9dd8f706b977a4decc5806971ff97dcd3d37cb71883a1bcf40d39797e7c7e1349d1f13c437fb36535556655aca4b6b8128d9a1f72fc89b302c185c17ee9c5860a8b29654ef8fb584fcf4c0bedf35a75b0601eaeeaece88451c1e26584ca57c4fb8b83a3700172fb41f4aa77bb2e67b2ab4a069c33f2e388364b2fdaf0c797e059445499865fd47ec91d70a7f852e1720c199b3b2c4f986adc9b51a6fba701bcb3e41bb297dad5068cc2fe35c575721716b0418cdd3b8a53ebd7541adb7689318d08c79b87bf4e94213128189cd64312adc73fb7297bc03e648d97de25d14d2bc16d64cc'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    data: {
+      id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+      createdAt: 2023-08-08T05:30:53.316Z,
+      updatedAt: 2023-11-25T22:26:26.791Z,
+      title: 'Alicia',
+      subTitle: null,
+      heading: 'Lucio',
+      text: 'Aba',
+      classification: 'Economia',
+      usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      importance: 1,
+      fbid: '112768655243132_116807228170522'
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: 'b2640b83-b640-42ca-abd2-aa084ee90740',
+          createdAt: 2023-11-25T21:29:31.584Z,
+          updatedAt: 2023-11-25T21:29:35.239Z,
+          title: 'Adrian',
+          subTitle: null,
+          heading: 'Daniel',
+          text: 'Abadin',
+          classification: 'Municipales',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_182473158270595',
+          images: [
+            {
+              id: '8e477c6a-2138-47c9-8729-5049529fe2c2',
+              createdAt: 2023-11-25T21:29:31.584Z,
+              updatedAt: 2023-11-25T21:29:31.584Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/404326891_182473131603931_4200060967178487644_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFMh7ecKbWt0dzk4rzH6Da1ImJQJNKQbbMiYlAk0pBts2V3YeFbmcSJ0I6VQX1QyAGwBcAILVgNImLGBJYbacjL&_nc_ohc=HxJRw0jMBpkAX9EsLBy&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAfJ0AOQLM8dglcqK2E05tMf97WomOZderOJ4J-fu0u6w&oe=656801B8',
+              fbid: '182473134937264'
+            }
+          ]
+        },
+        {
+          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+          createdAt: 2023-08-08T05:30:53.316Z,
+          updatedAt: 2023-11-25T22:26:26.791Z,
+          title: 'Alicia',
+          subTitle: null,
+          heading: 'Lucio',
+          text: 'Aba',
+          classification: 'Economia',
+          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+          importance: 1,
+          fbid: '112768655243132_116807228170522',
+          images: [
+            {
+              id: '5e1a762b-92a0-4bfe-b466-43b85fc9fba9',
+              createdAt: 2023-11-25T22:26:26.791Z,
+              updatedAt: 2023-11-25T22:26:26.791Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405967761_182238558294055_8156399027570529112_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFlzV052jm9-Ez3VIbZcj6EgWJ3nZowFHaBYnedmjAUdkYVjveJvS2a6nTJJZw5AEGbcXFnN8OzLZLcmyFVABcZ&_nc_ohc=cbxfF_5lnh0AX8UEkvo&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfAh1hZ9eykevV3jhKc9dJLQFBfFOgdhRyx0cV18OkpMCA&oe=65667582',
+              fbid: '182238561627388'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
