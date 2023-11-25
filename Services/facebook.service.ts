@@ -1,8 +1,9 @@
 import dotenv from 'dotenv'
 import axios from 'axios'
 import fs from 'fs'
-import { type IFacebookData, ResponseObject } from '../Entities'
+import { type IFacebookData, ResponseObject, type ClassificationArray } from '../Entities'
 import { logger } from './logger.service'
+
 import { type GenericResponseObject } from '../Entities/response'
 dotenv.config()
 export class FacebookService {
@@ -20,8 +21,6 @@ export class FacebookService {
           }
         }).then(response => {
           fs.unlinkSync(data.path)
-          logger.debug({ response })
-          console.log(data.path, 'File Deleted?', response)
           return response.data
         }).catch(error => {
           logger.error({ function: 'FacebookService.postPhoto.axiosPostRequest', error })
@@ -51,8 +50,6 @@ export class FacebookService {
                   method: 'GET',
                   relative_url: `${id.id}?fields=images`
                 })
-
-                console.log(id.id)
               }
             })
             const response = await axios.post('https://graph.facebook.com/', { batch }, { headers: { 'Content-Type': 'application/json' }, params: { access_token: this.pageToken } })
@@ -139,7 +136,7 @@ export class FacebookService {
         return new ResponseObject(error, false, null)
       }
     },
-    public updateFacebookPost = async (id: string, data: { title: string, heading: string, classification: string, newspaperID: string, images: string[] }) => {
+    public updateFacebookPost = async (id: string, data: { title: string, heading: string, classification: typeof ClassificationArray[number], newspaperID: string, images: string[] }) => {
       const message = `${data.title}\n${data.heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${data.newspaperID}`
       const dataRequest = {
         message,

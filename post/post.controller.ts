@@ -6,6 +6,7 @@ import { PrismaClient, type Prisma } from '@prisma/client'
 import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
+import { type ClassificationArray } from '../Entities'
 import { type GenericResponseObject, ResponseObject } from '../Entities/response'
 import { type CreatePostType, type GetPostsType, type GetPostById, type UpdatePostType, type ImagesSchema } from './post.schema'
 export class PostController {
@@ -16,28 +17,36 @@ export class PostController {
     protected facebookService = new FacebookService(),
     public updatePost = async (req: Request<GetPostById['params'], any, UpdatePostType['body'] >, res: Response) => {
       const files = req.files
-      let { images, title, heading, classification, importance } = req.body
+      let { dbImages, title, heading, classification, importance } = req.body
       const { id } = req.params
       let imagesArray: ImagesSchema[] | undefined
-      logger.debug({ files, images, function: 'updatePost' })
-      if (images !== undefined && typeof images === 'string') {
-        imagesArray = JSON.parse(images)
+      logger.debug({ dbImages, files, body: req.body })
+      if (dbImages !== undefined && typeof dbImages === 'string') {
+        imagesArray = JSON.parse(dbImages)
       }
       // hasta aca, tengo que en imagesArray o hay un array de imagenes o tengo undefined
-      /* como manejo el hecho de que me lleguen imagenes ya cargadas y filas nuevas agregadas? */
+      // como manejo el hecho de que me lleguen imagenes ya cargadas y filas nuevas agregadas?
       let nuevoArray: ImagesSchema[] | undefined
-      if (files !== undefined) { // aqui valido si hay files de multer para agregar.
+      console.log(files)
+      if (files !== undefined && files.length !== 0) { // aqui valido si hay files de multer para agregar.
         nuevoArray = await this.service.photoGenerator(files as Express.Multer.File[], imagesArray)
+        logger.debug({ function: 'postController.updade', nuevoArray })
       } else nuevoArray = imagesArray
+      console.log(nuevoArray)
       let body = req.body
-      if (body !== null && typeof body === 'object' && 'images' in body) { body = { ...body, images: undefined } }
+      if (body !== null && typeof body === 'object' && 'dbImages' in body) { body = { ...body, dbImages: undefined } }
       const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, nuevoArray)
       if (title === undefined) {
         title = updateDbResponse.data.title as string
       }
+      if (heading === undefined) {
+        heading = updateDbResponse.data.heading as string
+      }
+      if (classification === undefined) {
+        if (updateDbResponse.data.classification !== undefined) { classification = updateDbResponse.data.classification as typeof ClassificationArray[number] } else classification = 'Municipales'
+      }
       // ACA DEBO VER LA LOGICA PARA QUE GENERE UN MERGE DE LOS DATOS QUE YA ESTAN EN LA DB Y LO QUE SE VA A ACTUALIZAR
-
-      // const finalResponse = await this.facebookService.updateFacebookPost(body.fbid, { title, heading, classification, images: imagesArray?.map(id => id.fbid) })
+      if (nuevoArray !== undefined) { const finalResponse = await this.facebookService.updateFacebookPost(body.fbid, { title, heading, classification, images: nuevoArray?.map(id => id.fbid) }) }
       res.send(updateDbResponse.data)
 
       // aca va el codigo que updatea el post pero para eso necesito un id valido.

@@ -11,21 +11,14 @@ export class PostService extends DatabaseHandler {
     public photoGenerator = async (files: Express.Multer.File[], imagesParam?: ImagesSchema[]) => {
       let photoArray: Array<{ id: string } | undefined> = []
       let images: ImagesSchema[] | undefined = imagesParam
-      logger.debug({ function: 'photoGenerator', files, imagesParam })
       if (files !== undefined && Array.isArray(files)) {
         photoArray = await Promise.all(files.map(async (file) => {
           const data = await this.facebookService.postPhoto(file)
-          logger.debug({ data })
           if (data.ok && 'id' in data.data && data.data.id !== undefined) { return data.data as { id: string } } else return undefined
         }))
-        console.log(files, 'text', images)
-        if (images !== undefined && Array.isArray(images)) {
-          console.log('entro', images)
-          photoArray = [...photoArray, ...images?.map(image => ({ id: image.fbid }))]
-        } else throw new Error(JSON.stringify({ error: 'No se enviaron imagenes', images }))
+        // else throw new Error(JSON.stringify({ error: 'No se enviaron imagenes', images }))
         if (photoArray !== null && Array.isArray(photoArray)) {
           const response = await this.facebookService.getLinkFromId(photoArray)
-          console.log(response, 'hecho')
           // aqui se asigna a imagesArray todas las imagenes que debera tener el post ya sean las que no se eliminaron y las que se agreguen si hubiere
           if (response.ok) {
             if (images !== null && Array.isArray(images)) images = [...images, ...response.data]
@@ -34,7 +27,12 @@ export class PostService extends DatabaseHandler {
           // ACA HAY QUE CONTINUAR LA LOGICA DE ACTUALIZACION DE LA BASE DE DATOS. HAY QUE VER SI CONVIENE USAR LA FUNCION UPDATEPIOST QUE HICE O
           // EVALUAR BORRAR TODAS LAS IMAGENES QUE HAY VINCULADAS AL POST Y REESCRIBIR LA BASE DE DATOS CON IMAGENES NUEVAS.
         }
+        if (images !== undefined && Array.isArray(images)) {
+          photoArray = [...photoArray, ...images?.map(image => ({ id: image.fbid }))]
+        }
       }
+      console.log(images, 'imagnes')
+      logger.debug({ function: 'pOSTsERVICE.photoGenerator', images })
       return images
     },
 

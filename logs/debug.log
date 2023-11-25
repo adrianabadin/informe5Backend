@@ -1,342 +1,190 @@
 {
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
-}
-{ message: { queryOptions: { AND: [] } }, level: 'debug' }
-{
   message: {
-    function: 'PostService.getPosts',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: [
-        {
-          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-          createdAt: 2023-08-08T05:30:53.316Z,
-          updatedAt: 2023-11-21T15:44:34.017Z,
-          title: 'Adrian',
-          subTitle: null,
-          heading: 'Daniel',
-          text: 'Abadin',
-          classification: 'Municipales',
-          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-          importance: 1,
-          fbid: '112768655243132_116807228170522',
-          images: []
-        }
-      ]
-    }
+    dbImages: '[{"id":"cd428617-39c8-49c7-9186-d13e3145cbe7","createdAt":"2023-11-25T03:48:47.080Z","updatedAt":"2023-11-25T03:48:47.080Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930","fbid":"182054074979170"}]',
+    files: []
   },
   level: 'debug'
 }
 {
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
-}
-{ message: { queryOptions: { AND: [] } }, level: 'debug' }
-{
   message: {
-    function: 'PostService.getPosts',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: [
-        {
-          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-          createdAt: 2023-08-08T05:30:53.316Z,
-          updatedAt: 2023-11-21T15:44:34.017Z,
-          title: 'Adrian',
-          subTitle: null,
-          heading: 'Daniel',
-          text: 'Abadin',
-          classification: 'Municipales',
-          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-          importance: 1,
-          fbid: '112768655243132_116807228170522',
-          images: []
-        }
-      ]
-    }
+    function: 'facebookService.getLinkFromId',
+    error: Error: Error creating link from id array
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:103:22)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
   },
-  level: 'debug'
-}
-{
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
-}
-{ message: { queryOptions: { AND: [] } }, level: 'debug' }
-{
-  message: {
-    function: 'PostService.getPosts',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: [
-        {
-          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-          createdAt: 2023-08-08T05:30:53.316Z,
-          updatedAt: 2023-11-21T15:44:34.017Z,
-          title: 'Adrian',
-          subTitle: null,
-          heading: 'Daniel',
-          text: 'Abadin',
-          classification: 'Municipales',
-          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-          importance: 1,
-          fbid: '112768655243132_116807228170522',
-          images: []
-        }
-      ]
-    }
-  },
-  level: 'debug'
-}
-{
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
+  level: 'error'
 }
 {
   message: {
-    function: 'PostService.getPost',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: {
-        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-        createdAt: 2023-08-08T05:30:53.316Z,
-        updatedAt: 2023-11-21T15:44:34.017Z,
-        title: 'Adrian',
-        subTitle: null,
-        heading: 'Daniel',
-        text: 'Abadin',
-        classification: 'Municipales',
-        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-        importance: 1,
-        fbid: '112768655243132_116807228170522',
-        images: []
+    function: 'pOSTsERVICE.photoGenerator',
+    images: [
+      {
+        id: 'cd428617-39c8-49c7-9186-d13e3145cbe7',
+        createdAt: '2023-11-25T03:48:47.080Z',
+        updatedAt: '2023-11-25T03:48:47.080Z',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930',
+        fbid: '182054074979170'
       }
-    }
+    ]
   },
   level: 'debug'
 }
 {
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
-}
-{ message: { queryOptions: { AND: [] } }, level: 'debug' }
-{
   message: {
-    function: 'PostService.getPosts',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: [
-        {
-          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-          createdAt: 2023-08-08T05:30:53.316Z,
-          updatedAt: 2023-11-21T15:44:34.017Z,
-          title: 'Adrian',
-          subTitle: null,
-          heading: 'Daniel',
-          text: 'Abadin',
-          classification: 'Municipales',
-          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-          importance: 1,
-          fbid: '112768655243132_116807228170522',
-          images: []
-        }
-      ]
-    }
-  },
-  level: 'debug'
-}
-{
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
-}
-{ message: { queryOptions: { AND: [] } }, level: 'debug' }
-{
-  message: {
-    function: 'PostService.getPosts',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: [
-        {
-          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-          createdAt: 2023-08-08T05:30:53.316Z,
-          updatedAt: 2023-11-21T15:44:34.017Z,
-          title: 'Adrian',
-          subTitle: null,
-          heading: 'Daniel',
-          text: 'Abadin',
-          classification: 'Municipales',
-          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-          importance: 1,
-          fbid: '112768655243132_116807228170522',
-          images: []
-        }
-      ]
-    }
-  },
-  level: 'debug'
-}
-{
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
-}
-{
-  message: {
-    function: 'PostService.getPost',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: {
-        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-        createdAt: 2023-08-08T05:30:53.316Z,
-        updatedAt: 2023-11-21T15:44:34.017Z,
-        title: 'Adrian',
-        subTitle: null,
-        heading: 'Daniel',
-        text: 'Abadin',
-        classification: 'Municipales',
-        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-        importance: 1,
-        fbid: '112768655243132_116807228170522',
-        images: []
+    function: 'postController.updade',
+    nuevoArray: [
+      {
+        id: 'cd428617-39c8-49c7-9186-d13e3145cbe7',
+        createdAt: '2023-11-25T03:48:47.080Z',
+        updatedAt: '2023-11-25T03:48:47.080Z',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930',
+        fbid: '182054074979170'
       }
-    }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    dbImages: '[{"id":"cd428617-39c8-49c7-9186-d13e3145cbe7","createdAt":"2023-11-25T03:48:47.080Z","updatedAt":"2023-11-25T03:48:47.080Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930","fbid":"182054074979170"}]',
+    files: []
   },
   level: 'debug'
 }
 {
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
-}
-{ message: { queryOptions: { AND: [] } }, level: 'debug' }
-{
   message: {
-    function: 'PostService.getPosts',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: [
-        {
-          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-          createdAt: 2023-08-08T05:30:53.316Z,
-          updatedAt: 2023-11-21T15:44:34.017Z,
-          title: 'Adrian',
-          subTitle: null,
-          heading: 'Daniel',
-          text: 'Abadin',
-          classification: 'Municipales',
-          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-          importance: 1,
-          fbid: '112768655243132_116807228170522',
-          images: []
-        }
-      ]
-    }
+    function: 'facebookService.getLinkFromId',
+    error: Error: Error creating link from id array
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:103:22)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
   },
-  level: 'debug'
-}
-{
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
-}
-{ message: { queryOptions: { AND: [] } }, level: 'debug' }
-{
-  message: {
-    function: 'PostService.getPosts',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: [
-        {
-          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-          createdAt: 2023-08-08T05:30:53.316Z,
-          updatedAt: 2023-11-21T15:44:34.017Z,
-          title: 'Adrian',
-          subTitle: null,
-          heading: 'Daniel',
-          text: 'Abadin',
-          classification: 'Municipales',
-          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-          importance: 1,
-          fbid: '112768655243132_116807228170522',
-          images: []
-        }
-      ]
-    }
-  },
-  level: 'debug'
-}
-{
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
-}
-{ message: { queryOptions: { AND: [] } }, level: 'debug' }
-{
-  message: {
-    function: 'PostService.getPosts',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: [
-        {
-          id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-          createdAt: 2023-08-08T05:30:53.316Z,
-          updatedAt: 2023-11-21T15:44:34.017Z,
-          title: 'Adrian',
-          subTitle: null,
-          heading: 'Daniel',
-          text: 'Abadin',
-          classification: 'Municipales',
-          usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-          importance: 1,
-          fbid: '112768655243132_116807228170522',
-          images: []
-        }
-      ]
-    }
-  },
-  level: 'debug'
-}
-{
-  function: 'jwtLoginVerify',
-  message: 'Successfully logged in',
-  level: 'debug'
+  level: 'error'
 }
 {
   message: {
-    function: 'PostService.getPost',
-    data: ResponseObject {
-      error: null,
-      ok: true,
-      data: {
-        id: '514965be-7574-4b9f-9aa4-660dacb312a4',
-        createdAt: 2023-08-08T05:30:53.316Z,
-        updatedAt: 2023-11-21T15:44:34.017Z,
-        title: 'Adrian',
-        subTitle: null,
-        heading: 'Daniel',
-        text: 'Abadin',
-        classification: 'Municipales',
-        usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
-        importance: 1,
-        fbid: '112768655243132_116807228170522',
-        images: []
+    function: 'pOSTsERVICE.photoGenerator',
+    images: [
+      {
+        id: 'cd428617-39c8-49c7-9186-d13e3145cbe7',
+        createdAt: '2023-11-25T03:48:47.080Z',
+        updatedAt: '2023-11-25T03:48:47.080Z',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930',
+        fbid: '182054074979170'
       }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'postController.updade',
+    nuevoArray: [
+      {
+        id: 'cd428617-39c8-49c7-9186-d13e3145cbe7',
+        createdAt: '2023-11-25T03:48:47.080Z',
+        updatedAt: '2023-11-25T03:48:47.080Z',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930',
+        fbid: '182054074979170'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    dbImages: '[{"id":"cd428617-39c8-49c7-9186-d13e3145cbe7","createdAt":"2023-11-25T03:48:47.080Z","updatedAt":"2023-11-25T03:48:47.080Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930","fbid":"182054074979170"}]',
+    files: []
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    dbImages: '[{"id":"cd428617-39c8-49c7-9186-d13e3145cbe7","createdAt":"2023-11-25T03:48:47.080Z","updatedAt":"2023-11-25T03:48:47.080Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930","fbid":"182054074979170"}]',
+    files: []
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    dbImages: '[{"id":"cd428617-39c8-49c7-9186-d13e3145cbe7","createdAt":"2023-11-25T03:48:47.080Z","updatedAt":"2023-11-25T03:48:47.080Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930","fbid":"182054074979170"}]',
+    files: []
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    data: {
+      id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+      createdAt: 2023-08-08T05:30:53.316Z,
+      updatedAt: 2023-11-25T06:06:04.380Z,
+      title: 'Adrian',
+      subTitle: null,
+      heading: 'Daniel',
+      text: 'Abadin',
+      classification: 'Municipales',
+      usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      importance: 1,
+      fbid: '112768655243132_116807228170522'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    dbImages: '[{"id":"cd428617-39c8-49c7-9186-d13e3145cbe7","createdAt":"2023-11-25T03:48:47.080Z","updatedAt":"2023-11-25T03:48:47.080Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930","fbid":"182054074979170"}]',
+    files: [],
+    body: [Object: null prototype] {
+      author: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      classification: 'Municipales',
+      heading: 'Daniel',
+      text: 'Abadin',
+      title: 'Adrian',
+      importance: '1',
+      dbImages: '[{"id":"cd428617-39c8-49c7-9186-d13e3145cbe7","createdAt":"2023-11-25T03:48:47.080Z","updatedAt":"2023-11-25T03:48:47.080Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930","fbid":"182054074979170"}]',
+      jwt: '386eeb434bcde5f1ec828bcb5f0b01edbLoquE62133e891b1881c8b08aa86d117125c55b31cdc985dc38a0036491de9c0d353250c922937ca3c0bf56fc48cbe01f2199536f286af3eb28e5688dabdd61bc9209ff7b85aad8a4c09c8255c9b6aad142937644b5ccc340c11e1b2776d4c0e9e531a7146abddbf38c6e5252c190b3dc0453ac453954f0b5d08ac09f90e8dcc73eb6f65f7fa57911222db9b7ec2cae088927cb0e2d988cb1f7fc9854c23bc98ccef01e9c7c3c1ab57b6ee0a781a774de74fef29ede4297e6a765714a47de842af9d3f89190ea1cc6a9caf0a492cf431d3bbbdd027b0f15ccf3a52a3fd4c7b86a73ec8cce233ce276f5f676c6cf4f680ab70acc46b5d912cce18bb92b65a3216184ff093143ea3210fad9bc4da008f6ae59aae7a16913d4ac78849fd543710cf66a7a8ad02b1cae1f0d6819e6db41a352dc0b6e7fb1cb260b9318d185f656832bdfb7578e133bc9380ea9b068fc862ad8132133ee316b74bfbf36e87134f70025ccde7e7fd4388ca9753e18cc8489bff937e427a91e661a7c5100fd657b289751d4a931775068bd4c7475c6ca910b25434d0ba53f5caf0e41a27ffd0eecfce7a64efd5f77f21fe41fdbdbcc9efbc138a62e04d81f0383f3fc49b52054a60defe7b4e08bfc9d7c7af92b5f5dac077143f7d7b27c771f94a06e92a97814cf15caa27e1dd1a9e4358ff9adf6c23d7ff6bd37741914e3dd52c5232695209dec9fdc1a0aeb7f124e8b1969fc174265d5a7288c6dcc06d583f30ca8aed5401a7153ac09a3a558b2a7dd1518bb36bd5e2ad1645a606a0aee874f3f67c4fefbae6a4a6b381d638f026b59582a80dbe00df12448f9000c6960798aa9c7793a53e6f66f4fa35de8f457f877207c50363e0f098116440dc4998c75c7f2aa38730553e38102ab6e2c4c1919b322d0457880f44ea6842b5c22b88636b7fe5a76f471e19b5b849d77aa02e99f463be663f622b1438702bd70161fa70e2e9d6dac70fe41c945951bf9b9e5af16b32fe3162e76fe723806642da6e949f95adccc5d67ae560e82f700bd823fc019ddd193428a6c606e34bdaaeb78b835b593e1477e4b8a0f6d5abd4f256c5e89d7154378fe8a4257361b280ec53807151439f588eea6aedcee7691b79a27b8505e68a97be9235773761d798e26e8c184e279c5ce715516e285154280229f'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    data: {
+      id: '514965be-7574-4b9f-9aa4-660dacb312a4',
+      createdAt: 2023-08-08T05:30:53.316Z,
+      updatedAt: 2023-11-25T06:33:24.215Z,
+      title: 'Adrian',
+      subTitle: null,
+      heading: 'Daniel',
+      text: 'Abadin',
+      classification: 'Municipales',
+      usersId: 'c462c917-ba21-4d46-bd44-29413edc520c',
+      importance: 1,
+      fbid: '112768655243132_116807228170522'
     }
   },
   level: 'debug'

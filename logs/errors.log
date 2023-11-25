@@ -2,9 +2,9 @@
   message: {
     function: 'facebookService.getLinkFromId',
     error: Error: Error creating link from id array
-        at FacebookService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:107:22)
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:103:22)
         at Generator.next (<anonymous>)
-        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:5:58)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
         at processTicksAndRejections (node:internal/process/task_queues:95:5)
   },
   level: 'error'
@@ -14,46 +14,43 @@
     function: 'PostService.updatePost',
     error: PrismaClientValidationError: 
     Invalid `this.prisma.posts.update()` invocation in
-    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:95:48
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:142:48
     
-      92 const author: string = postObject.author as string
-      93 /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
-      94 if (author === undefined) throw new Error('No author specified')
-    → 95 const data = await this.prisma.posts.update({
-           where: {
-             id: "514965be-7574-4b9f-9aa4-660dacb312a4"
-           },
-           data: {
-             author: {
-               connect: {
-                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
-               }
-             },
-             classification: "Municipales",
-             heading: "Daniel",
-             text: "Abadin",
-             title: "Adrian",
-             importance: 1,
-             images: {
-               deleteMany: {},
-               create: [
-                 {
-                   fbid: undefined,
-                   url: "blob:http://localhost:3000/1abb496e-ae33-48e1-8300-a01a0277b9b7",
-                   id: "719247a5-1b21-4ad7-9591-210fef6d0577"
-                 }
-               ]
-             },
-             jwt: undefined,
-             updatedAt: undefined
-           }
-         })
+      139   }
+      140 } else {
+      141   try {
+    → 142     const data = await this.prisma.posts.update({
+                where: {
+                  id: "514965be-7574-4b9f-9aa4-660dacb312a4"
+                },
+                data: {
+                  author: "c462c917-ba21-4d46-bd44-29413edc520c",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "Daniel",
+                  text: "Abadin",
+                  title: "Adrian",
+                  importance: "1",
+                  dbImages: "[object Object]",
+                  jwt: undefined,
+                  updatedAt: undefined,
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  }
+                }
+              })
     
-    Argument `fbid` is missing.
-        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
-        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
-        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
-        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
       clientVersion: '5.0.0'
     }
   },
@@ -63,9 +60,9 @@
   message: {
     function: 'facebookService.getLinkFromId',
     error: Error: Error creating link from id array
-        at FacebookService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:107:22)
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:103:22)
         at Generator.next (<anonymous>)
-        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:5:58)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
         at processTicksAndRejections (node:internal/process/task_queues:95:5)
   },
   level: 'error'
@@ -75,46 +72,43 @@
     function: 'PostService.updatePost',
     error: PrismaClientValidationError: 
     Invalid `this.prisma.posts.update()` invocation in
-    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:95:48
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:142:48
     
-      92 const author: string = postObject.author as string
-      93 /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
-      94 if (author === undefined) throw new Error('No author specified')
-    → 95 const data = await this.prisma.posts.update({
-           where: {
-             id: "514965be-7574-4b9f-9aa4-660dacb312a4"
-           },
-           data: {
-             author: {
-               connect: {
-                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
-               }
-             },
-             classification: "Municipales",
-             heading: "Daniel",
-             text: "Abadin",
-             title: "Adrian",
-             importance: 1,
-             images: {
-               deleteMany: {},
-               create: [
-                 {
-                   fbid: undefined,
-                   url: "blob:http://localhost:3000/1abb496e-ae33-48e1-8300-a01a0277b9b7",
-                   id: "719247a5-1b21-4ad7-9591-210fef6d0577"
-                 }
-               ]
-             },
-             jwt: undefined,
-             updatedAt: undefined
-           }
-         })
+      139   }
+      140 } else {
+      141   try {
+    → 142     const data = await this.prisma.posts.update({
+                where: {
+                  id: "514965be-7574-4b9f-9aa4-660dacb312a4"
+                },
+                data: {
+                  author: "c462c917-ba21-4d46-bd44-29413edc520c",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "Daniel",
+                  text: "Abadin",
+                  title: "Adrian",
+                  importance: "1",
+                  dbImages: "[object Object]",
+                  jwt: undefined,
+                  updatedAt: undefined,
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  }
+                }
+              })
     
-    Argument `fbid` is missing.
-        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
-        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
-        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
-        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
       clientVersion: '5.0.0'
     }
   },
@@ -124,9 +118,9 @@
   message: {
     function: 'facebookService.getLinkFromId',
     error: Error: Error creating link from id array
-        at FacebookService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:107:22)
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:103:22)
         at Generator.next (<anonymous>)
-        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:5:58)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
         at processTicksAndRejections (node:internal/process/task_queues:95:5)
   },
   level: 'error'
@@ -136,46 +130,43 @@
     function: 'PostService.updatePost',
     error: PrismaClientValidationError: 
     Invalid `this.prisma.posts.update()` invocation in
-    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:95:48
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:142:48
     
-      92 const author: string = postObject.author as string
-      93 /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
-      94 if (author === undefined) throw new Error('No author specified')
-    → 95 const data = await this.prisma.posts.update({
-           where: {
-             id: "514965be-7574-4b9f-9aa4-660dacb312a4"
-           },
-           data: {
-             author: {
-               connect: {
-                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
-               }
-             },
-             classification: "Municipales",
-             heading: "Daniel",
-             text: "Abadin",
-             title: "Adrian",
-             importance: 1,
-             images: {
-               deleteMany: {},
-               create: [
-                 {
-                   fbid: undefined,
-                   url: "blob:http://localhost:3000/3cb6f4a1-183a-4e62-9ece-7d59b43dc042",
-                   id: "073fc363-dd17-47bc-aff4-d2b1a0bb3079"
-                 }
-               ]
-             },
-             jwt: undefined,
-             updatedAt: undefined
-           }
-         })
+      139   }
+      140 } else {
+      141   try {
+    → 142     const data = await this.prisma.posts.update({
+                where: {
+                  id: "514965be-7574-4b9f-9aa4-660dacb312a4"
+                },
+                data: {
+                  author: "c462c917-ba21-4d46-bd44-29413edc520c",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "Daniel",
+                  text: "Abadin",
+                  title: "Adrian",
+                  importance: "1",
+                  dbImages: "{\"id\":\"cd428617-39c8-49c7-9186-d13e3145cbe7\",\"createdAt\":\"2023-11-25T03:48:47.080Z\",\"updatedAt\":\"2023-11-25T03:48:47.080Z\",\"url\":\"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930\",\"fbid\":\"182054074979170\"}",
+                  jwt: undefined,
+                  updatedAt: undefined,
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  }
+                }
+              })
     
-    Argument `fbid` is missing.
-        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
-        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
-        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
-        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
       clientVersion: '5.0.0'
     }
   },
@@ -185,9 +176,9 @@
   message: {
     function: 'facebookService.getLinkFromId',
     error: Error: Error creating link from id array
-        at FacebookService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:107:22)
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:103:22)
         at Generator.next (<anonymous>)
-        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:5:58)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
         at processTicksAndRejections (node:internal/process/task_queues:95:5)
   },
   level: 'error'
@@ -197,46 +188,43 @@
     function: 'PostService.updatePost',
     error: PrismaClientValidationError: 
     Invalid `this.prisma.posts.update()` invocation in
-    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:95:48
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:142:48
     
-      92 const author: string = postObject.author as string
-      93 /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
-      94 if (author === undefined) throw new Error('No author specified')
-    → 95 const data = await this.prisma.posts.update({
-           where: {
-             id: "514965be-7574-4b9f-9aa4-660dacb312a4"
-           },
-           data: {
-             author: {
-               connect: {
-                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
-               }
-             },
-             classification: "Municipales",
-             heading: "Daniel",
-             text: "Abadin",
-             title: "Adrian",
-             importance: 1,
-             images: {
-               deleteMany: {},
-               create: [
-                 {
-                   fbid: undefined,
-                   url: "blob:http://localhost:3000/d5bf60c2-fe10-4c26-83e0-b13f3a30108b",
-                   id: "f5f17b17-85ba-46f4-bfcb-63ab16f71c85"
-                 }
-               ]
-             },
-             jwt: undefined,
-             updatedAt: undefined
-           }
-         })
+      139   }
+      140 } else {
+      141   try {
+    → 142     const data = await this.prisma.posts.update({
+                where: {
+                  id: "514965be-7574-4b9f-9aa4-660dacb312a4"
+                },
+                data: {
+                  author: "c462c917-ba21-4d46-bd44-29413edc520c",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "Daniel",
+                  text: "Abadin",
+                  title: "Adrian",
+                  importance: "1",
+                  dbImages: "{\"id\":\"cd428617-39c8-49c7-9186-d13e3145cbe7\",\"createdAt\":\"2023-11-25T03:48:47.080Z\",\"updatedAt\":\"2023-11-25T03:48:47.080Z\",\"url\":\"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/405878315_182054071645837_7920805258442067503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBCxQ2AuPfGfCgUvQlpzCopJYLsTdOmgGklguxN06aAYOF1gkTWywQzMZ3aZqHtuN7jPgFwWgaSi3GQ_r1b-oa&_nc_ohc=AtT92d6oJyMAX-kBJ4H&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCERj1CoIzRrLPrdbb_OYfsGuOuhJZT5KkqspILsULVbQ&oe=65664930\",\"fbid\":\"182054074979170\"}",
+                  jwt: undefined,
+                  updatedAt: undefined,
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  }
+                }
+              })
     
-    Argument `fbid` is missing.
-        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
-        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
-        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
-        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
       clientVersion: '5.0.0'
     }
   },
@@ -246,60 +234,10 @@
   message: {
     function: 'facebookService.getLinkFromId',
     error: Error: Error creating link from id array
-        at FacebookService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:107:22)
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:103:22)
         at Generator.next (<anonymous>)
-        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:5:58)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
         at processTicksAndRejections (node:internal/process/task_queues:95:5)
-  },
-  level: 'error'
-}
-{
-  message: {
-    function: 'PostService.updatePost',
-    error: PrismaClientValidationError: 
-    Invalid `this.prisma.posts.update()` invocation in
-    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:95:48
-    
-      92 const author: string = postObject.author as string
-      93 /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
-      94 if (author === undefined) throw new Error('No author specified')
-    → 95 const data = await this.prisma.posts.update({
-           where: {
-             id: "514965be-7574-4b9f-9aa4-660dacb312a4"
-           },
-           data: {
-             author: {
-               connect: {
-                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
-               }
-             },
-             classification: "Municipales",
-             heading: "Daniel",
-             text: "Abadin",
-             title: "Adrian",
-             importance: 1,
-             images: {
-               deleteMany: {},
-               create: [
-                 {
-                   fbid: undefined,
-                   url: "blob:http://localhost:3000/cf2a5339-f7f1-4207-8bbb-a3d57108f389",
-                   id: "46f5ff8b-7352-496e-a7b0-426c5a0baceb"
-                 }
-               ]
-             },
-             jwt: undefined,
-             updatedAt: undefined
-           }
-         })
-    
-    Argument `fbid` is missing.
-        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
-        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
-        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
-        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
-      clientVersion: '5.0.0'
-    }
   },
   level: 'error'
 }
@@ -307,60 +245,21 @@
   message: {
     function: 'facebookService.getLinkFromId',
     error: Error: Error creating link from id array
-        at FacebookService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:107:22)
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:103:22)
         at Generator.next (<anonymous>)
-        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:5:58)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
         at processTicksAndRejections (node:internal/process/task_queues:95:5)
   },
   level: 'error'
 }
 {
   message: {
-    function: 'PostService.updatePost',
-    error: PrismaClientValidationError: 
-    Invalid `this.prisma.posts.update()` invocation in
-    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:95:48
-    
-      92 const author: string = postObject.author as string
-      93 /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
-      94 if (author === undefined) throw new Error('No author specified')
-    → 95 const data = await this.prisma.posts.update({
-           where: {
-             id: "514965be-7574-4b9f-9aa4-660dacb312a4"
-           },
-           data: {
-             author: {
-               connect: {
-                 id: "c462c917-ba21-4d46-bd44-29413edc520c"
-               }
-             },
-             classification: "Municipales",
-             heading: "Daniel",
-             text: "Abadin",
-             title: "Adrian",
-             importance: 1,
-             images: {
-               deleteMany: {},
-               create: [
-                 {
-                   fbid: undefined,
-                   url: "blob:http://localhost:3000/cf2a5339-f7f1-4207-8bbb-a3d57108f389",
-                   id: "46f5ff8b-7352-496e-a7b0-426c5a0baceb"
-                 }
-               ]
-             },
-             jwt: undefined,
-             updatedAt: undefined
-           }
-         })
-    
-    Argument `fbid` is missing.
-        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
-        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
-        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
-        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
-      clientVersion: '5.0.0'
-    }
+    function: 'facebookService.getLinkFromId',
+    error: Error: Error creating link from id array
+        at FacebookService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:103:22)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\Services\facebook.service.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
   },
   level: 'error'
 }
