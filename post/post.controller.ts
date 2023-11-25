@@ -17,7 +17,7 @@ export class PostController {
     protected facebookService = new FacebookService(),
     public updatePost = async (req: Request<GetPostById['params'], any, UpdatePostType['body'] >, res: Response) => {
       const files = req.files
-      let { dbImages, title, heading, classification, importance } = req.body
+      let { dbImages, title, heading, classification } = req.body
       const { id } = req.params
       let imagesArray: ImagesSchema[] | undefined
       logger.debug({ dbImages, files, body: req.body })
@@ -46,7 +46,10 @@ export class PostController {
         if (updateDbResponse.data.classification !== undefined) { classification = updateDbResponse.data.classification as typeof ClassificationArray[number] } else classification = 'Municipales'
       }
       // ACA DEBO VER LA LOGICA PARA QUE GENERE UN MERGE DE LOS DATOS QUE YA ESTAN EN LA DB Y LO QUE SE VA A ACTUALIZAR
-      if (nuevoArray !== undefined) { const finalResponse = await this.facebookService.updateFacebookPost(body.fbid, { title, heading, classification, images: nuevoArray?.map(id => id.fbid) }) }
+      if (nuevoArray !== undefined && 'fbid' in updateDbResponse.data) {
+        const finalResponse = await this.facebookService.updateFacebookPost(updateDbResponse.data.fbid as string, { title, heading, classification, newspaperID: id, images: nuevoArray?.map(id => id.fbid) })
+        console.log(finalResponse, updateDbResponse)
+      }
       res.send(updateDbResponse.data)
 
       // aca va el codigo que updatea el post pero para eso necesito un id valido.

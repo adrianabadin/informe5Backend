@@ -137,17 +137,22 @@ export class FacebookService {
       }
     },
     public updateFacebookPost = async (id: string, data: { title: string, heading: string, classification: typeof ClassificationArray[number], newspaperID: string, images: string[] }) => {
+      /*
+      Hay que elegir.
+      opcion 1 el post se actualiza borrando el previo y creando uno nuevo
+      opcion 2 solo se actualiza el texto del post sin actualizar las imagenes
+      */
       const message = `${data.title}\n${data.heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${data.newspaperID}`
       const dataRequest = {
         message,
-        attached_media: data.images,
         access_token: process.env.FB_PAGE_TOKEN
 
       }
       try {
-        const response = await axios.post(` https://graph.facebook.com/${id}/feed`, dataRequest)
+        const response = await axios.post(` https://graph.facebook.com/${id}/`, dataRequest)
+        console.log(response.data, '*****************************')
         return new ResponseObject(null, true, response.data)
-      } catch (error) { return new ResponseObject(error, false, null) }
+      } catch (error) { return new ResponseObject(error?.response?.data, false, null) }
     }
 
   ) { }
