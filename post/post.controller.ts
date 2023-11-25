@@ -8,7 +8,6 @@ import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type GenericResponseObject, ResponseObject } from '../Entities/response'
 import { type CreatePostType, type GetPostsType, type GetPostById, type UpdatePostType, type ImagesSchema } from './post.schema'
-import { Logger } from 'winston'
 export class PostController {
   constructor (
     protected service = new PostService(),
