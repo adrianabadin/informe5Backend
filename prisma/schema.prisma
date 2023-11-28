@@ -134,6 +134,7 @@ model Posts {
   importance     Int      @default(1)
   fbid           String?
   metrics        Metric[]
+  isVisible Boolean
 
   @@index([usersId])
   @@fulltext([title])
@@ -152,7 +153,7 @@ model Video {
   usersId    String
   importance Int
   metrics    Metric[]
-
+  isVisible Boolean
   @@index([usersId])
 }
 
@@ -169,6 +170,6 @@ model RadioPost {
   text            String
   tags            String
   metrics         Metric[]
-
+isVisible Boolean
   @@index([usersId])
 }

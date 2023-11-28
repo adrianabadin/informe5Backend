@@ -9,6 +9,7 @@ import { logger } from '../Services/logger.service'
 import { type ClassificationArray } from '../Entities'
 import { type GenericResponseObject, ResponseObject } from '../Entities/response'
 import { type CreatePostType, type GetPostsType, type GetPostById, type UpdatePostType, type ImagesSchema } from './post.schema'
+import { io } from '../app'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -50,7 +51,8 @@ export class PostController {
         const finalResponse = await this.facebookService.updateFacebookPost(updateDbResponse.data.fbid as string, { title, heading, classification, newspaperID: id, images: nuevoArray?.map(id => id.fbid) })
         console.log(finalResponse, updateDbResponse)
       }
-      res.send(updateDbResponse.data)
+      io.emit('postUpdate', { ...updateDbResponse, images: nuevoArray })
+      res.send({ ...updateDbResponse.data, images: nuevoArray })
 
       // aca va el codigo que updatea el post pero para eso necesito un id valido.
     // el nodo es pageid_postiD?message=texto&attached_media=array de media_fbid
