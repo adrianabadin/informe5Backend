@@ -4590,3 +4590,1104 @@
 }
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:610
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2025',
+      clientVersion: '5.0.0',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      id: undefined,
+      name: 'Adrian',
+      username: 'aabadin@gmail.com',
+      lastName: 'Abadin',
+      phone: '2344426406',
+      birthDate: '1980-08-11',
+      gender: 'MALE',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      createdAt: 2023-11-28T11:27:24.047Z,
+      updatedAt: 2023-11-28T11:27:24.047Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '2344426406',
+      hash: '$argon2id$v=19$m=65536,t=3,p=4$ee2y2lVS2Ey+74lh5IF4uQ$UVibjBo6aZg0JC/G1x4SRTa+fOQRM47CzrQXEuPEK8E',
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      createdAt: 2023-11-28T11:27:24.047Z,
+      updatedAt: 2023-11-28T11:27:24.047Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '2344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      createdAt: 2023-11-28T11:27:24.047Z,
+      updatedAt: 2023-11-28T11:27:24.047Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '2344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      createdAt: 2023-11-28T11:27:24.047Z,
+      updatedAt: 2023-11-28T11:27:24.047Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '2344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      createdAt: 2023-11-28T11:27:24.047Z,
+      updatedAt: 2023-11-28T11:27:24.047Z,
+      name: 'Adrian',
+      lastName: 'Abadin',
+      username: 'aabadin@gmail.com',
+      phone: '2344426406',
+      hash: null,
+      birthDate: 1980-08-11T00:00:00.000Z,
+      rol: 'USER',
+      isVerified: false,
+      password: null,
+      accessToken: null,
+      refreshToken: null,
+      gender: 'MALE',
+      addressesId: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '183980548119856',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/406179128_183980544786523_6419366621766379661_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH1SNlbXuyoFTAkZqhVokAH72Zz4XHG1gLvZnPhccbWAj_1qUdHusQLFALzKuBZkLeYnZtYBvA9t6bg4ZNhOYFs&_nc_ohc=d-SxeQV3e1UAX-xns1u&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfASzaPeFz4BfGPhZMztpYRTjGECaLkegw1c2o9_KiPgYQ&oe=656B38C9'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'pOSTsERVICE.photoGenerator',
+    images: [
+      {
+        fbid: '183980548119856',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/406179128_183980544786523_6419366621766379661_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH1SNlbXuyoFTAkZqhVokAH72Zz4XHG1gLvZnPhccbWAj_1qUdHusQLFALzKuBZkLeYnZtYBvA9t6bg4ZNhOYFs&_nc_ohc=d-SxeQV3e1UAX-xns1u&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfASzaPeFz4BfGPhZMztpYRTjGECaLkegw1c2o9_KiPgYQ&oe=656B38C9'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    error: PrismaClientValidationError: 
+    Invalid `prisma.posts.create()` invocation:
+    
+    {
+      data: {
+        author: {
+          connect: {
+            id: "4c2b66ed-b656-41de-96d0-664c25f9ba55"
+          }
+        },
+        classification: "Economia",
+        heading: "DANIEL",
+        title: "ADRIAN",
+        text: "ABADIN",
+        importance: 3,
+        images: {
+          create: [
+            {
+              fbid: "183980548119856",
+              url: "https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/406179128_183980544786523_6419366621766379661_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH1SNlbXuyoFTAkZqhVokAH72Zz4XHG1gLvZnPhccbWAj_1qUdHusQLFALzKuBZkLeYnZtYBvA9t6bg4ZNhOYFs&_nc_ohc=d-SxeQV3e1UAX-xns1u&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfASzaPeFz4BfGPhZMztpYRTjGECaLkegw1c2o9_KiPgYQ&oe=656B38C9"
+            }
+          ]
+        },
+    +   isVisible: Boolean
+      }
+    }
+    
+    Argument `isVisible` is missing.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostController.createPost',
+    error: Error: Error updating Database
+        at PostController.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\post\post.controller.ts:80:24)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\post\post.controller.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El texto de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "text"
+        ]
+      }
+    ]
+        at Object.get error [as error] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\zod\lib\types.js:141:22)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:17:14
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at complete (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+        at pass (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\passport\lib\authenticator.js:428:14)
+        at Authenticator.transformAuthInfo (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\passport\lib\authenticator.js:450:5)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:275:22 {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject { error: null, ok: true, data: [] }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '183982844786293',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/406195184_183982838119627_1253316046841484141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEois3HHhF2Wf1daYs7KiUQlQvPdIHUhe2VC890gdSF7RFocfeuDaXxgdmGrEt82oeVTtIgw2qZ1VepWfx1Y6iJ&_nc_ohc=MbqW-rKyEu0AX-j23Qe&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBfGdpNeRnhuSUwQ3gsP5PkxVQVIdnN6cP_oc8UVxTMkg&oe=656BD70A'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'pOSTsERVICE.photoGenerator',
+    images: [
+      {
+        fbid: '183982844786293',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/406195184_183982838119627_1253316046841484141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEois3HHhF2Wf1daYs7KiUQlQvPdIHUhe2VC890gdSF7RFocfeuDaXxgdmGrEt82oeVTtIgw2qZ1VepWfx1Y6iJ&_nc_ohc=MbqW-rKyEu0AX-j23Qe&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBfGdpNeRnhuSUwQ3gsP5PkxVQVIdnN6cP_oc8UVxTMkg&oe=656BD70A'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    data: {
+      id: '40c466f5-a48a-4764-8708-e1279e5fbb0a',
+      createdAt: 2023-11-28T15:50:59.646Z,
+      updatedAt: 2023-11-28T15:50:59.646Z,
+      title: 'ADRIAN',
+      subTitle: null,
+      heading: 'DANIEL',
+      text: 'ABADIN',
+      classification: 'Municipales',
+      usersId: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      importance: 1,
+      fbid: null,
+      isVisible: true
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'PostService.getPosts',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: [
+        {
+          id: '40c466f5-a48a-4764-8708-e1279e5fbb0a',
+          createdAt: 2023-11-28T15:50:59.646Z,
+          updatedAt: 2023-11-28T15:51:06.313Z,
+          title: 'ADRIAN',
+          subTitle: null,
+          heading: 'DANIEL',
+          text: 'ABADIN',
+          classification: 'Municipales',
+          usersId: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+          importance: 1,
+          fbid: '112768655243132_183982898119621',
+          isVisible: true,
+          images: [
+            {
+              id: 'f72026d1-73c0-4628-bf23-cd151db85a2c',
+              createdAt: 2023-11-28T15:50:59.646Z,
+              updatedAt: 2023-11-28T15:50:59.646Z,
+              url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/406195184_183982838119627_1253316046841484141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEois3HHhF2Wf1daYs7KiUQlQvPdIHUhe2VC890gdSF7RFocfeuDaXxgdmGrEt82oeVTtIgw2qZ1VepWfx1Y6iJ&_nc_ohc=MbqW-rKyEu0AX-j23Qe&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBfGdpNeRnhuSUwQ3gsP5PkxVQVIdnN6cP_oc8UVxTMkg&oe=656BD70A',
+              fbid: '183982844786293'
+            }
+          ]
+        }
+      ]
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: '40c466f5-a48a-4764-8708-e1279e5fbb0a',
+        createdAt: 2023-11-28T15:50:59.646Z,
+        updatedAt: 2023-11-28T15:51:06.313Z,
+        title: 'ADRIAN',
+        subTitle: null,
+        heading: 'DANIEL',
+        text: 'ABADIN',
+        classification: 'Municipales',
+        usersId: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+        importance: 1,
+        fbid: '112768655243132_183982898119621',
+        isVisible: true,
+        images: [
+          {
+            id: 'f72026d1-73c0-4628-bf23-cd151db85a2c',
+            createdAt: 2023-11-28T15:50:59.646Z,
+            updatedAt: 2023-11-28T15:50:59.646Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/406195184_183982838119627_1253316046841484141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEois3HHhF2Wf1daYs7KiUQlQvPdIHUhe2VC890gdSF7RFocfeuDaXxgdmGrEt82oeVTtIgw2qZ1VepWfx1Y6iJ&_nc_ohc=MbqW-rKyEu0AX-j23Qe&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBfGdpNeRnhuSUwQ3gsP5PkxVQVIdnN6cP_oc8UVxTMkg&oe=656BD70A',
+            fbid: '183982844786293'
+          }
+        ]
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    dbImages: '[{"id":"f72026d1-73c0-4628-bf23-cd151db85a2c","createdAt":"2023-11-28T15:50:59.646Z","updatedAt":"2023-11-28T15:50:59.646Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/406195184_183982838119627_1253316046841484141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEois3HHhF2Wf1daYs7KiUQlQvPdIHUhe2VC890gdSF7RFocfeuDaXxgdmGrEt82oeVTtIgw2qZ1VepWfx1Y6iJ&_nc_ohc=MbqW-rKyEu0AX-j23Qe&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBfGdpNeRnhuSUwQ3gsP5PkxVQVIdnN6cP_oc8UVxTMkg&oe=656BD70A","fbid":"183982844786293"}]',
+    files: [],
+    body: [Object: null prototype] {
+      author: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      classification: 'Municipales',
+      heading: 'DANIEL',
+      text: 'ABADIN',
+      title: 'ADRIAN',
+      importance: '1',
+      dbImages: '[{"id":"f72026d1-73c0-4628-bf23-cd151db85a2c","createdAt":"2023-11-28T15:50:59.646Z","updatedAt":"2023-11-28T15:50:59.646Z","url":"https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/406195184_183982838119627_1253316046841484141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEois3HHhF2Wf1daYs7KiUQlQvPdIHUhe2VC890gdSF7RFocfeuDaXxgdmGrEt82oeVTtIgw2qZ1VepWfx1Y6iJ&_nc_ohc=MbqW-rKyEu0AX-j23Qe&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBfGdpNeRnhuSUwQ3gsP5PkxVQVIdnN6cP_oc8UVxTMkg&oe=656BD70A","fbid":"183982844786293"}]',
+      jwt: '7f1133844c6d9531800f5fed4a719c69bLoquE9469964ce543169b7f81443ea5135361fb72423a93d5c3b437a8bfa9f638b42d19768a520ecd83efe000fd0bf3753736dfe3fcbdab403f2653af6025aa7465e4d46367e0bfb2995f7f2c38699eaa39088920682a19dae3963e236b2e0a56442dab5b2ca154fd3ba4016035db0d1a4b548c24bb6d1a7de09eb65b14fae16a691f0a6a205b23e4b62d9ad3b3e51284f2f3c9835956fceaeeadbb50d43810f89db64ae7c0fa09bbaf956a8453805aa79a93d8493744a2b6e759d9b2d1d6b91feff677172fc87cf958f3b9ccc97c1af869cb20122e060919bb145ef8253c63b5505facfba47a1cfe0c0ae7ebad33d4b10f85d8c57c6ff194286f370575dc9a8fb0cc2577fc3f82a503a3dc619e488f1bb53ccba3f2d20e74bec633712db59365c7f973e245c211ee054950c8abfffc06ee1c3d7449b100bdb2ab2a2c4f1ceee14c60e93dcc62988a916f9fe86528192d89888fc472d5b7181a86482d3f9d394c7b921415c858f3f9b72ea86f8215210c2bab93d68f0b402e90a31ce426ca3963190b7337e6444b2b4792035039bb8d41f955b3144b8420e1ab0770630c76d4e0f92acea58fb9945b00accddb7d3e9db7b2247d11d447eb453130f4545906f9f4be262a1c7a056d1b89e216c2d330d216dda2059ef550603252565007a5f5454c50fea48611359c0b3a1c3fef61b55c8f0b04d32c1f3eb740f685878c79f48fe80046a37f40743cb5c9fa55486863d6b458809b4a067ee2bb5cc2cfaf0441b394d0a8663ac56de1ae25d7f5ada1ea4ffb0378c011cd01aaa59a4298b969c04d87420d6e6c3330492575e64dda5954b147841224867c67e56e2a98c73ec348d3748686f4ad5a2a3b941db63cd46d0965283b01c58c3108fe8118221836442f59a4d153ec6be812566a228300949628cef3de234b2a5d729a7e5e148d25b3f449884520dc4d41265b7dadd37c61c76379ea1fc59574aa448c0f75f8f7f75c54959f68e9dc60be4b39fe98c9dcd2236370bc029a2af409b626bc40536a796fa156cd6b6b45c9a7d09a0afb29fa1b5d3e5a40dfe3f48230f33ab97f285b5ac7f2624658f5f3e9111f7ab0e093cc7cd289d5b8bdfd5f72fad8699471ba7a7a1c577c09ee994d9e2569cc1859e6e6ec9ee3c94109fe6cff1acd4e9520af6784a890a04516a8'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    data: {
+      id: '40c466f5-a48a-4764-8708-e1279e5fbb0a',
+      createdAt: 2023-11-28T15:50:59.646Z,
+      updatedAt: 2023-11-28T15:51:43.243Z,
+      title: 'ADRIAN',
+      subTitle: null,
+      heading: 'DANIEL',
+      text: 'ABADIN',
+      classification: 'Municipales',
+      usersId: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      importance: 1,
+      fbid: '112768655243132_183982898119621',
+      isVisible: true
+    }
+  },
+  level: 'debug'
+}

@@ -38,7 +38,7 @@ export class PostService extends DatabaseHandler {
       const { title, text, heading, classification, importance } = body
       let numberImportance = 0
       if (importance !== undefined && typeof importance === 'string') numberImportance = parseInt(importance)
-      return await this.prisma.posts.gCreate({ author: { connect: { id } }, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
+      return await this.prisma.posts.gCreate({ author: { connect: { id } }, isVisible: true, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
     },
     public getPosts = async (paginationOptions?:
     { cursor?: Partial< MyCursor>, pagination: number },
@@ -96,6 +96,7 @@ export class PostService extends DatabaseHandler {
               where: { id: idParam },
               data: {
                 ...postObject,
+                isVisible: true,
                 updatedAt: undefined,
                 author: { connect: { id: author } },
                 importance: parseInt(postObject.importance as string),

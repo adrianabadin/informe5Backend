@@ -86,6 +86,7 @@ export class PostController {
     },
     public getAllPosts = (req: Request<any, any, any, GetPostsType['query']>, res: Response) => {
       console.log('geting posts')
+      io.on('connection', () => { console.log('conn') })
       const { cursor, title, search, minDate, maxDate, category } = req.query
       const query: Prisma.PostsFindManyArgs['where'] & { AND: Array<Prisma.PostsFindManyArgs['where']> } = { AND: [] }
 
