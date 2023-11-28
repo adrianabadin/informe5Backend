@@ -51,7 +51,9 @@ export class PostController {
         const finalResponse = await this.facebookService.updateFacebookPost(updateDbResponse.data.fbid as string, { title, heading, classification, newspaperID: id, images: nuevoArray?.map(id => id.fbid) })
         console.log(finalResponse, updateDbResponse)
       }
-      io.emit('postUpdate', { ...updateDbResponse, images: nuevoArray })
+      io.on('connection', (socket) => {
+        socket.emit('postUpdate', { ...updateDbResponse, images: nuevoArray })
+      })
       res.send({ ...updateDbResponse.data, images: nuevoArray })
 
       // aca va el codigo que updatea el post pero para eso necesito un id valido.
