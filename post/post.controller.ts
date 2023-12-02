@@ -17,23 +17,27 @@ export class PostController {
     protected googleService = new GoogleService(),
     protected facebookService = new FacebookService(),
     public updatePost = async (req: Request<GetPostById['params'], any, UpdatePostType['body'] >, res: Response) => {
+      console.log('updating posts')
+      logger.debug({ body: req.body })
       const files = req.files
       let { dbImages, title, heading, classification } = req.body
       const { id } = req.params
       let imagesArray: ImagesSchema[] | undefined
-      logger.debug({ dbImages, files, body: req.body })
+      // logger.debug({ dbImages, files, body: req.body })
       if (dbImages !== undefined && typeof dbImages === 'string') {
         imagesArray = JSON.parse(dbImages)
       }
       // hasta aca, tengo que en imagesArray o hay un array de imagenes o tengo undefined
       // como manejo el hecho de que me lleguen imagenes ya cargadas y filas nuevas agregadas?
       let nuevoArray: ImagesSchema[] | undefined
-      console.log(files)
+      // console.log(files)
       if (files !== undefined && files.length !== 0) { // aqui valido si hay files de multer para agregar.
-        nuevoArray = await this.service.photoGenerator(files as Express.Multer.File[], imagesArray)
-        logger.debug({ function: 'postController.updade', nuevoArray })
+        nuevoArray = await this.service.photoGenerator(files as Express.Multer.File[])
+        if (nuevoArray != null && imagesArray != null) nuevoArray = [...nuevoArray, ...imagesArray]
+        else if (imagesArray != null) nuevoArray = imagesArray
+        // logger.debug({ function: 'postController.updade', nuevoArray })
       } else nuevoArray = imagesArray
-      console.log(nuevoArray)
+      console.log(nuevoArray, 'IMAGENES', dbImages, 'dbImages')
       let body = req.body
       if (body !== null && typeof body === 'object' && 'dbImages' in body) { body = { ...body, dbImages: undefined } }
       const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, nuevoArray)
@@ -51,24 +55,20 @@ export class PostController {
         const finalResponse = await this.facebookService.updateFacebookPost(updateDbResponse.data.fbid as string, { title, heading, classification, newspaperID: id, images: nuevoArray?.map(id => id.fbid) })
         console.log(finalResponse, updateDbResponse)
       }
-      io.on('connection', (socket) => {
-        socket.emit('postUpdate', { ...updateDbResponse, images: nuevoArray })
-      })
+      //      io.emit('postUpdate', { ...updateDbResponse, images: nuevoArray })
       res.send({ ...updateDbResponse.data, images: nuevoArray })
-
-      // aca va el codigo que updatea el post pero para eso necesito un id valido.
-    // el nodo es pageid_postiD?message=texto&attached_media=array de media_fbid
-    // eso hay que construirlo en el facebookservice
     },
     public createPost = async (req: Request<any, any, CreatePostType['body']>, res: Response) => {
       const body = req.body
       const files = req.files
+      io.emit('postLoader', { active: true })
       console.log('create')
       try {
         const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[])
-        console.log({ imagesArray }, 'photos')
+        // console.log({ imagesArray }, 'photos')
         if (req.user !== undefined && 'id' in req.user && typeof req.user.id === 'string' && imagesArray !== undefined) {
           const responseDB = await this.service.createPost(body, req.user.id, imagesArray as Array<{ fbid: string, url: string }>)
+          io.emit('postUpdate', { ...responseDB.data, images: imagesArray, stamp: Date.now() })
           console.log({ responseDB }, 'DB')
           if (responseDB.ok && typeof responseDB.data === 'object' && responseDB.data !== null && 'id' in responseDB.data && typeof responseDB.data.id === 'string') {
             const facebookFeedResponse = await this.facebookService.facebookFeed(body, imagesArray, responseDB.data.id)

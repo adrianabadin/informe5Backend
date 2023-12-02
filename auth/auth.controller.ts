@@ -29,7 +29,7 @@ export class AuthController {
         if ('id' in req?.user) {
           const jwt = this.service.tokenIssuance(req.user.id as string)
           const encriptedToken = this.cryptService.encrypt(jwt, simetricKey)
-          console.log(encriptedToken)
+
           res.status(200).send(encriptedToken)
         }
       }
@@ -37,7 +37,6 @@ export class AuthController {
       next()
     },
     public jwtLogin = (req: Request, res: Response, next: NextFunction) => {
-      console.log(req.isAuthenticated(), req.user)
       if (req.isAuthenticated()) {
         console.log('is Auth')
         if ('id' in req?.user) {
@@ -48,7 +47,6 @@ export class AuthController {
     },
     public localLogin = (req: Request, res: Response) => {
       if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null) {
-        console.log(req.cookies.jwt)
         const token = this.service.tokenIssuance(req.user.id as string)
         res.status(200).send(JSON.stringify({ ...req.user, hash: null, token }))
       } else res.status(404).send({ ok: false, message: 'Invalid Credentials' })

@@ -73,6 +73,7 @@ export class PostService extends DatabaseHandler {
       if ('jwt' in postObject) {
         postObject.jwt = undefined
       }
+      logger.debug({ photoObject, function: 'updatePost.service' })
       if (photoObject !== undefined) {
         ids = photoObject.map((photo): string | undefined => {
           if (typeof photo === 'object' && photo !== null && 'id' in photo && photo.id !== undefined && typeof photo.id === 'string') { return photo?.id } else return undefined
@@ -86,7 +87,6 @@ export class PostService extends DatabaseHandler {
           return { fbid: 'false', url: 'false', id: 'false' }
         })
         photoObjectNoUndef = photoObjectNoUndefinedFalse.filter(img => img.fbid !== 'false') as Array<{ id?: string, fbid: string, url: string }>
-        console.log(photoObjectNoUndef, 'XXXXXXXXXXXXXXXXX')
         try {
           const author: string = postObject.author as string
           /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
@@ -104,7 +104,6 @@ export class PostService extends DatabaseHandler {
                 images: {
                   deleteMany:
                   {
-
                     // NOT: {
                     //   id: {
                     //     in: ids2
@@ -147,6 +146,8 @@ export class PostService extends DatabaseHandler {
               data: {
                 ...postObject,
                 updatedAt: undefined,
+                importance: parseInt(postObject.importance as string),
+                author: { connect: { id: postObject.author as string } },
                 images: {
                   deleteMany: {
                     NOT: {

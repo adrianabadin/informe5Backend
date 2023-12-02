@@ -446,3 +446,497 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:144:48
+    
+      141   }
+      142 } else {
+      143   try {
+    → 144     const data = await this.prisma.posts.update({
+                where: {
+                  id: "40c466f5-a48a-4764-8708-e1279e5fbb0a"
+                },
+                data: {
+                  author: "4c2b66ed-b656-41de-96d0-664c25f9ba55",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "DANIEL",
+                  text: "ABADIN",
+                  title: "ADRIAN",
+                  importance: "1",
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  },
+                  jwt: undefined,
+                  updatedAt: undefined
+                }
+              })
+    
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:144:48
+    
+      141   }
+      142 } else {
+      143   try {
+    → 144     const data = await this.prisma.posts.update({
+                where: {
+                  id: "40c466f5-a48a-4764-8708-e1279e5fbb0a"
+                },
+                data: {
+                  author: "4c2b66ed-b656-41de-96d0-664c25f9ba55",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "DANIEL",
+                  text: "ABADIN",
+                  title: "ADRIAN",
+                  importance: "1",
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  },
+                  jwt: undefined,
+                  updatedAt: undefined
+                }
+              })
+    
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:144:48
+    
+      141   }
+      142 } else {
+      143   try {
+    → 144     const data = await this.prisma.posts.update({
+                where: {
+                  id: "40c466f5-a48a-4764-8708-e1279e5fbb0a"
+                },
+                data: {
+                  author: "4c2b66ed-b656-41de-96d0-664c25f9ba55",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "DANIEL",
+                  text: "ABADIN",
+                  title: "ADRIAN",
+                  importance: "1",
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  },
+                  jwt: undefined,
+                  updatedAt: undefined
+                }
+              })
+    
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:144:48
+    
+      141   }
+      142 } else {
+      143   try {
+    → 144     const data = await this.prisma.posts.update({
+                where: {
+                  id: "40c466f5-a48a-4764-8708-e1279e5fbb0a"
+                },
+                data: {
+                  author: "4c2b66ed-b656-41de-96d0-664c25f9ba55",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "DANIE",
+                  text: "ABADIN",
+                  title: "ADRIAN",
+                  importance: "1",
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  },
+                  jwt: undefined,
+                  updatedAt: undefined
+                }
+              })
+    
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:144:48
+    
+      141   }
+      142 } else {
+      143   try {
+    → 144     const data = await this.prisma.posts.update({
+                where: {
+                  id: "40c466f5-a48a-4764-8708-e1279e5fbb0a"
+                },
+                data: {
+                  author: "4c2b66ed-b656-41de-96d0-664c25f9ba55",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "DANIEL",
+                  text: "ABADIN",
+                  title: "ADRIAN",
+                  importance: "1",
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  },
+                  jwt: undefined,
+                  updatedAt: undefined
+                }
+              })
+    
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:144:48
+    
+      141   }
+      142 } else {
+      143   try {
+    → 144     const data = await this.prisma.posts.update({
+                where: {
+                  id: "40c466f5-a48a-4764-8708-e1279e5fbb0a"
+                },
+                data: {
+                  author: "4c2b66ed-b656-41de-96d0-664c25f9ba55",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  classification: "Municipales",
+                  heading: "DANIEL",
+                  text: "ABADIN",
+                  title: "ADRIAN",
+                  importance: "1",
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  },
+                  jwt: undefined,
+                  updatedAt: undefined
+                }
+              })
+    
+    Argument `author`: Invalid value provided. Expected UsersUpdateOneRequiredWithoutPostsNestedInput, provided String.
+        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.service.ts:144:48
+    
+      141   }
+      142 } else {
+      143   try {
+    → 144     const data = await this.prisma.posts.update({
+                where: {
+                  id: "40c466f5-a48a-4764-8708-e1279e5fbb0a"
+                },
+                data: {
+                  author: {
+                    connect: {
+                      id: "4c2b66ed-b656-41de-96d0-664c25f9ba55"
+                    }
+                  },
+                  classification: "Municipales",
+                  heading: "DANIEL",
+                  text: "ABADIN",
+                  title: "ADRIAN",
+                  importance: "1",
+                              ~~~
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: undefined
+                        }
+                      }
+                    }
+                  },
+                  jwt: undefined,
+                  updatedAt: undefined
+                }
+              })
+    
+    Argument `importance`: Invalid value provided. Expected Int or IntFieldUpdateOperationsInput, provided String.
+        at Ur (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientKnownRequestError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    
+    Timed out fetching a new connection from the connection pool. More info: http://pris.ly/d/connection-pool (Current connection pool timeout: 10, connection limit: 9)
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8308)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P2024',
+      clientVersion: '5.0.0',
+      meta: { connection_limit: 9, timeout: 10 }
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientKnownRequestError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    
+    Can't reach database server at `127.0.0.1`:`3306`
+    
+    Please make sure your database server is running at `127.0.0.1`:`3306`.
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8308)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P1001',
+      clientVersion: '5.0.0',
+      meta: { database_host: '127.0.0.1', database_port: 3306 }
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'DatabaseHandler.FindById',
+    error: PrismaClientKnownRequestError: 
+    Invalid `prisma.users.findUniqueOrThrow()` invocation:
+    
+    
+    Can't reach database server at `127.0.0.1`:`3306`
+    
+    Please make sure your database server is running at `127.0.0.1`:`3306`.
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8308)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      code: 'P1001',
+      clientVersion: '5.0.0',
+      meta: { database_host: '127.0.0.1', database_port: 3306 }
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot use 'in' operator to search for 'username' in null
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:66:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: PrismaClientInitializationError: 
+    Invalid `this.prisma.users.findUniqueOrThrow()` invocation in
+    C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:40:106
+    
+      37 },
+      38 public localLoginVerify = async (req: Request, username: string, password: string, done: DoneType) => {
+      39   try {
+    → 40     const user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = await this.prisma.users.findUniqueOrThrow(
+    Server has closed the connection.
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8581)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:112:550 {
+      clientVersion: '5.0.0',
+      errorCode: undefined
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El texto de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "text"
+        ]
+      }
+    ]
+        at Object.get error [as error] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:141:22)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\middlewares\zod.validate.ts:17:14
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at complete (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+        at pass (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:428:14)
+        at Authenticator.transformAuthInfo (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:450:5)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:275:22 {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}

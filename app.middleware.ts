@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import express from 'express'
+import express, { type NextFunction, type Request, type Response } from 'express'
 import cookieParser from 'cookie-parser'
 import passport from 'passport'
 import './auth/localStrategy.module'
@@ -11,7 +11,12 @@ import Session from 'express-session'
 import flash from 'connect-flash'
 import { routeHandler } from './app.routes'
 import cors from 'cors'
+import { Server } from 'socket.io'
+import { createServer } from 'http'
+import morgan from 'morgan'
 export const app = express()
+
+app.use(morgan('dev'))
 app.use(cors({
   origin: 'http://localhost:3000',
   credentials: true,
@@ -43,4 +48,12 @@ app.use(sessionMiddleware)
 app.use(flash())
 app.use(passport.initialize())
 app.use(passport.session())
+// console.log(io)
+
+// app.use((req: Request, res: Response, next: NextFunction) => {
+//   req.io = io
+//   next()
+// })
 routeHandler(app)
+// export const httpServer = createServer(app)
+// export const io = new Server(httpServer, { cors: { origin: 'http://localhost:3000/', methods: ['PUT', 'POST', 'GET'] } })
