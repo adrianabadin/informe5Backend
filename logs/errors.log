@@ -81,3 +81,20 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'postController.deletePost',
+    error: TypeError: Cannot read properties of undefined (reading 'service')
+        at C:\Users\aabadin\Documents\code\informe5Backend\post\post.controller.ts:370:35
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\post\post.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\post\post.controller.ts:4:12)
+        at deletePost (C:\Users\aabadin\Documents\code\informe5Backend\post\post.controller.ts:286:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:23:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}

@@ -157,6 +157,14 @@ export class FacebookService {
         console.log(response.data, '*****************************')
         return new ResponseObject(null, true, response.data)
       } catch (error) { return new ResponseObject(error?.response?.data, false, null) }
+    },
+    public deleteFacebookPost = async (fbid: string): Promise<any> => {
+      try {
+        const response = await axios.delete(`https://graph.facebook.com/v16.0/${fbid}?access_token=${process.env.FB_PAGE_TOKEN as string}`)
+        return response
+      } catch (error) {
+        logger.error({ function: 'facebookService.deleteFacebookPost', error })
+      }
     }
 
   ) { }

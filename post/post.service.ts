@@ -177,6 +177,24 @@ export class PostService extends DatabaseHandler {
         logger.error({ function: 'PostService.addFBIDtoDB', error })
         return new ResponseObject(error, false, null)
       }
+    },
+    public deleteById = async (id: string): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+      try {
+        const response = await this.prisma.posts.gDelete(id)
+        return response
+      } catch (error) {
+        logger.error({ function: 'PostService.deleteById', error })
+        return new ResponseObject(error, false, null)
+      }
+    },
+    public hidePost = async (id: string): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+      try {
+        const response = await this.prisma.posts.update({ where: { id }, data: { isVisible: false } })
+        return new ResponseObject(null, true, response)
+      } catch (error) {
+        logger.error({ function: 'PostService.hidePost', error })
+        return new ResponseObject(error, false, null)
+      }
     }
   ) {
     super()
