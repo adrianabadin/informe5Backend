@@ -53,6 +53,7 @@ export class FacebookService {
               }
             })
             const response = await axios.post('https://graph.facebook.com/', { batch }, { headers: { 'Content-Type': 'application/json' }, params: { access_token: this.pageToken } })
+            logger.debug({ response, title: 'facebookFeed.getLinkfromid' })
             // VALIDA QUE EL RESPONSE GENERAL SEA OK
             if (response.status === 200) {
               // VALIDA QUE HAYA DEVUELTO UN ARRAY DE RESPUESTAS
@@ -101,7 +102,10 @@ export class FacebookService {
         }
         if (imagesArray.length > 0) {
           return new ResponseObject(null, true, imagesArray)
-        } else throw new Error('Error creating link from id array')
+        } else {
+          logger.error({ imagesArray })
+          throw new Error('Error creating link from id array')
+        }
       } catch (error) {
         logger.error({ function: 'facebookService.getLinkFromId', error })
         return new ResponseObject(error, false, null)

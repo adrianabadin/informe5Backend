@@ -61,7 +61,7 @@ export class PostController {
     public createPost = async (req: Request<any, any, CreatePostType['body']>, res: Response) => {
       const body = req.body
       const files = req.files
-      io.emit('postLoader', { active: true })
+      io.emit('postLoader', { active: true, body })
       console.log('create')
       try {
         const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[])
