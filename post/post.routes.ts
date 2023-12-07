@@ -52,3 +52,5 @@ postRouter.put(
 )
 postRouter.put('/hidePost/:id', postController.hidePost)
 postRouter.delete('/deletePost/:id', schemaValidator(getPostById), postController.deletePost)
+postRouter.put('/hidePost/:id', schemaValidator(getPostById), postController.hidePost)
+postRouter.put('/showPost/:id', schemaValidator(getPostById), postController.showPost)

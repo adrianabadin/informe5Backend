@@ -375,8 +375,18 @@ export class PostController {
     public hidePost = async (req: Request<GetPostById['params']>, res: Response): Promise<void> => {
       const { id } = req.params
       try {
-        this.service.hidePost(id)
+        const response = await this.service.hidePost(id)
+        logger.debug({ function: 'PostController.hidePost', response })
+        res.status(200).send(response)
       } catch (error) { logger.error({ function: 'postController.hidePost', error }) }
+    },
+    public showPost = async (req: Request<GetPostById['params']>, res: Response): Promise<void> => {
+      const { id } = req.params
+      try {
+        const response = await this.service.showPost(id)
+        logger.debug({ function: 'PostController.showPost', response })
+        res.status(200).send(response)
+      } catch (error) { logger.error({ function: 'postController.showPost', error }) }
     }
   ) {}
 }

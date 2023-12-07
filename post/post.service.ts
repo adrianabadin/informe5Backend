@@ -104,30 +104,11 @@ export class PostService extends DatabaseHandler {
                 images: {
                   deleteMany:
                   {
-                    // NOT: {
-                    //   id: {
-                    //     in: ids2
-                    //   }
-                    // }
                   },
                   create: photoObjectNoUndef.map(photo => {
                     return { ...photo }
                   })
-                  /* en upsert deberia agregar todos los photo objects a la db */
-                  // upsert: photoObjectNoUndef.map(photo => {
-                  //   let id: string = 'zorongo'
-                  //   if (photo.id !== undefined) {
-                  //     if (ids2 !== undefined) {
-                  //       if (!ids2.includes(photo.id)) { id = photo.id }
-                  //     }
-                  //   } if (id !== 'zorongo') {
-                  //     return {
-                  //       where: { id },
-                  //       update: { ...photo },
-                  //       create: { ...photo }
-                  //     }
-                  //   } else return undefined
-                  // })
+
                 }
               }
             })
@@ -189,10 +170,19 @@ export class PostService extends DatabaseHandler {
     },
     public hidePost = async (id: string): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
       try {
-        const response = await this.prisma.posts.update({ where: { id }, data: { isVisible: false } })
+        const response = await this.prisma.posts.update({ where: { id }, data: { isVisible: { set: false } } })
         return new ResponseObject(null, true, response)
       } catch (error) {
         logger.error({ function: 'PostService.hidePost', error })
+        return new ResponseObject(error, false, null)
+      }
+    },
+    public showPost = async (id: string): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+      try {
+        const response = await this.prisma.posts.update({ where: { id }, data: { isVisible: { set: true } } })
+        return new ResponseObject(null, true, response)
+      } catch (error) {
+        logger.error({ function: 'PostService.showPost', error })
         return new ResponseObject(error, false, null)
       }
     }

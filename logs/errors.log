@@ -98,3 +98,55 @@
   },
   level: 'error'
 }
+{ message: { imagesArray: [] }, level: 'error' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    error: Error: Error creating link from id array
+        at FacebookService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:107:17)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\Services\facebook.service.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostController.checkedPhotos',
+    error: TypeError: Cannot read properties of null (reading 'map')
+        at PostController.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.controller.ts:337:38)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.controller.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostController.getAllPosts',
+    error: TypeError: Cannot read properties of null (reading 'length')
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.controller.ts:240:56
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostController.getAllPosts',
+    error: TypeError: Converting circular structure to JSON
+        --> starting at object with constructor 'DerivedLogger'
+        |     property '_readableState' -> object with constructor 'ReadableState'
+        |     property 'pipes' -> object with constructor 'Array'
+        |     index 0 -> object with constructor 'File'
+        --- property 'parent' closes the circle
+        at JSON.stringify (<anonymous>)
+        at stringify (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\response.js:1150:12)
+        at ServerResponse.json (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\response.js:271:14)
+        at ServerResponse.send (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\response.js:162:21)
+        at PostController.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.controller.ts:261:29)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\post\post.controller.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+  },
+  level: 'error'
+}
