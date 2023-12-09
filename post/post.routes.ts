@@ -46,7 +46,6 @@ postRouter.get(
 )
 postRouter.put(
   '/updatePost/:id',
-  schemaValidator(updatePostSchema),
   upload.array('images', 5),
   postController.updatePost
 )
