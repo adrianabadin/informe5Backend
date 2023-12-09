@@ -317,3 +317,92 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'PostService.showPost',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:182:50
+    
+      179 },
+      180 public showPost = async (id: string): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+      181   try {
+    → 182     const response = await this.prisma.posts.update({
+                where: {
+                  id: "1e3a361e-1617-4fca-96f6-15c96447ee66"
+                },
+                data: {
+                  isVisible: {
+                  ~~~~~~~~~
+                    set: true
+                  },
+              ?   id?: String | StringFieldUpdateOperationsInput,
+              ?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+              ?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+              ?   title?: String | StringFieldUpdateOperationsInput,
+              ?   subTitle?: String | NullableStringFieldUpdateOperationsInput | Null,
+              ?   heading?: String | StringFieldUpdateOperationsInput,
+              ?   text?: String | StringFieldUpdateOperationsInput,
+              ?   classification?: String | StringFieldUpdateOperationsInput,
+              ?   importance?: Int | IntFieldUpdateOperationsInput,
+              ?   fbid?: String | NullableStringFieldUpdateOperationsInput | Null,
+              ?   images?: PhotosUpdateManyWithoutPostsNestedInput,
+              ?   author?: UsersUpdateOneRequiredWithoutPostsNestedInput,
+              ?   metrics?: MetricUpdateManyWithoutPostsNestedInput
+                }
+              })
+    
+    Unknown argument `isVisible`. Available options are listed in green.
+        at Ur (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:115:5803)
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8007)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientKnownRequestError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:94:48
+    
+      91 const author: string = postObject.author as string
+      92 /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
+      93 if (author === undefined) throw new Error('No author specified')
+    → 94 const data = await this.prisma.posts.update(
+    The provided value for the column is too long for the column's type. Column: =
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8308)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      code: 'P2000',
+      clientVersion: '5.0.0',
+      meta: { column_name: '=' }
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'PostService.updatePost',
+    error: PrismaClientKnownRequestError: 
+    Invalid `this.prisma.posts.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\post\post.service.ts:94:48
+    
+      91 const author: string = postObject.author as string
+      92 /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
+      93 if (author === undefined) throw new Error('No author specified')
+    → 94 const data = await this.prisma.posts.update(
+    The provided value for the column is too long for the column's type. Column: =
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8308)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      code: 'P2000',
+      clientVersion: '5.0.0',
+      meta: { column_name: '=' }
+    }
+  },
+  level: 'error'
+}

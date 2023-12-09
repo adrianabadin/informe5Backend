@@ -46,7 +46,7 @@ export class PostService extends DatabaseHandler {
     ): Promise<GenericResponseObject<Prisma.PostsCreateInput[]> | undefined> => {
       try {
         logger.debug({ queryOptions })
-        const data = await this.prisma.posts.gGetAll({ images: true }, paginationOptions, queryOptions as any)
+        const data = await this.prisma.posts.gGetAll({ images: true, author: true }, paginationOptions, queryOptions as any)
         logger.debug({ function: 'PostService.getPosts', data })
         return data
       } catch (error) { logger.error({ function: 'PostService.getPosts', error }) }
