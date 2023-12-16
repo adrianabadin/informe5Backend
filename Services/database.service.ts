@@ -43,6 +43,7 @@ export abstract class DatabaseHandler {
             }
           },
           async gFindById<T, A>(this: T & { findUniqueOrThrow: any }, id: string, includeField?: Prisma.Exact<A, Prisma.Args<T, 'findUniqueOrThrow'>['select']>): Promise<GenericResponseObject<Prisma.Result<T, A, 'findUniqueOrThrow'>>> {
+            console.log(includeField, 'Textedo')
             try {
               let data
               if (includeField !== undefined) {

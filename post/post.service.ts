@@ -43,7 +43,7 @@ export class PostService extends DatabaseHandler {
     public getPosts = async (paginationOptions?:
     { cursor?: Partial< MyCursor>, pagination: number },
     queryOptions?: Prisma.PostsFindManyArgs['where']
-    ): Promise<GenericResponseObject<Prisma.PostsCreateInput[]> | undefined> => {
+    ) /*: Promise<GenericResponseObject<Prisma.PostsCreateInput[]> | undefined> */ => {
       try {
         logger.debug({ queryOptions })
         const data = await this.prisma.posts.gGetAll({ images: true, author: true }, paginationOptions, queryOptions as any)
@@ -51,9 +51,9 @@ export class PostService extends DatabaseHandler {
         return data
       } catch (error) { logger.error({ function: 'PostService.getPosts', error }) }
     },
-    public getPost = async (id: string, field: Prisma.PostsFindFirstOrThrowArgs['include']) => {
+    public getPost = async (id: string, field: Prisma.PostsFindFirstOrThrowArgs['select']) => {
       try {
-        const data = await this.prisma.posts.gFindById(id, field)
+        const data = await this.prisma.posts.gFindById(id, field as any)
         logger.debug({ function: 'PostService.getPost', data })
         return data
       } catch (error) { logger.error({ function: 'PostService.getPost', error }) }

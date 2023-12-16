@@ -19,6 +19,7 @@ import {
   type ImagesSchema
 } from './post.schema'
 import { io } from '../app'
+import { text } from 'node:stream/consumers'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -30,12 +31,12 @@ export class PostController {
       res: Response
     ) => {
       console.log('updating posts')
-      logger.debug({ body: req.body })
+      logger.debug({ body: req.body, function: 'updatePost.controller' })
       const files = req.files
       let { dbImages, title, heading, classification } = req.body
       const { id } = req.params
       let imagesArray: ImagesSchema[] | undefined
-      // logger.debug({ dbImages, files, body: req.body })
+      logger.debug({ dbImages, files, body: req.body })
       if (dbImages !== undefined && typeof dbImages === 'string') {
         imagesArray = JSON.parse(dbImages)
       }
@@ -280,7 +281,7 @@ export class PostController {
       console.log('getbyid')
       const { id } = req.params
       this.service
-        .getPost(id, { images: true })
+        .getPost(id, { images: true, author: true, classification: true, createdAt: true, heading: true, id: true, importance: true, isVisible: true, text: true, title: true })
         .then(async (response) => {
           if (
             response?.ok !== undefined &&
