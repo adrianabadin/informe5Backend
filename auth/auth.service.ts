@@ -37,7 +37,7 @@ export class AuthService extends DatabaseHandler {
     },
     public localLoginVerify = async (req: Request, username: string, password: string, done: DoneType) => {
       try {
-        const user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = await this.prisma.users.findUniqueOrThrow({ where: { username } })
+        const user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = await this.prisma.users.findUniqueOrThrow({ where: { username }, select: { isVerified: true, lastName: true, id: true, username: true, name: true, rol: true, hash: true } }) as any
         if (user !== undefined && 'username' in user && user.username !== null) {
           logger.debug({
             function: 'AuthService.localLoginVerify', user: { ...user, hash: null }
@@ -46,6 +46,8 @@ export class AuthService extends DatabaseHandler {
           if ('hash' in user && user.hash !== null && user.hash !== undefined) { isValid = await argon2.verify(user.hash, password) }
           if (isValid) {
             if (user !== null && 'id' in user && user.id !== undefined) {
+              console.log('some', user)
+              delete user.hash
               done(null, user, { message: 'Successfully Logged In' })
             } else done(null, false, { message: 'Password doesent match' })
           } else done(null, false, { message: 'username doesnt exist' })
@@ -62,7 +64,7 @@ export class AuthService extends DatabaseHandler {
     public jwtLoginVerify = async (req: Request, jwtPayload: string, done: DoneType) => {
       try {
         const id = jwtPayload.sub as unknown as string
-        const user = await this.prisma.users.gFindById(id)
+        const user = await this.prisma.users.gFindById(id, { isVerified: true, lastName: true, id: true, username: true, name: true, rol: true })
         if ('username' in user?.data && user?.data.username !== undefined && user?.data.username !== null) {
           logger.debug({ function: 'jwtLoginVerify', message: 'Successfully logged in' })
           done(null, user.data, { message: 'Successfully Logged In' })
@@ -78,10 +80,10 @@ export class AuthService extends DatabaseHandler {
     public googleAuthVerify = (req: Request, accessToken: string, refreshToken: string, profile: any, done: DoneType) => {
       try {
         const { email } = profile
-        this.prisma.users.findUnique({ where: { username: email } }).then(user => {
+        this.prisma.users.findUnique({ where: { username: email }, select: { isVerified: true, lastName: true, name: true, id: true, username: true, rol: true } }).then(user => {
           if (user?.username != null) {
             console.log(user, 'user')
-            return done(null, user, { message: 'Successfully Logged in!' })
+            return done(null, user as any, { message: 'Successfully Logged in!' })
           } else {
             req.flash('at', accessToken)
             req.flash('rt', refreshToken)

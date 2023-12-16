@@ -6,6 +6,7 @@ import { decrypt } from '../Services/keypair.service'
 import { type Request } from 'express'
 import fs from 'fs'
 import dotenv from 'dotenv'
+import { logger } from '../Services/logger.service'
 dotenv.config()
 const publicKey = fs.readFileSync(`${process.env.KEYS_PATH as string}/publicKey.pem`, 'utf-8')
 const simetricKey = process.env.SIMETRICKEY
@@ -20,7 +21,7 @@ const cookieExtractor = (req: Request): string => {
       token = req.cookies.jwt
     }
   }
-
+  logger.debug({ function: 'jwt Extractor', body: req.body })
   if (token !== undefined) {
     if (simetricKey !== undefined) return decrypt(token, simetricKey)
     else throw new Error('simetricKey is undefined')

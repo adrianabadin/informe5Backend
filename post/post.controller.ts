@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-optional-chain */
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import { type Request, type Response } from 'express'
+import { response, type Request, type Response } from 'express'
 import { PostService } from './post.service'
 import { PrismaClient, type Prisma } from '@prisma/client'
 import { GoogleService } from '../google/google.service'
@@ -114,12 +114,19 @@ export class PostController {
             req.user.id,
             imagesArray as Array<{ fbid: string, url: string }>
           )
+          // let socketData
+          // if ('author' in responseDB.data && responseDB.data?.author !== null && 'name' in responseDB.data.author) socketData = { ...responseDB.data, author: `${responseDB.data.author.name as string} ${responseDB.data.author.lastName}` }
           io.emit('postUpdate', {
             ...responseDB.data,
             images: imagesArray,
             stamp: Date.now()
           })
-          console.log({ responseDB }, 'DB')
+          console.log({
+            ...responseDB.data,
+            images: imagesArray,
+
+            stamp: Date.now()
+          }, 'Post creado en la base de datos')
           if (
             responseDB.ok &&
             typeof responseDB.data === 'object' &&
@@ -133,11 +140,11 @@ export class PostController {
                 imagesArray,
                 responseDB.data.id
               )
-            console.log(
-              facebookFeedResponse?.data,
-              { facebookFeedResponse },
-              'FB'
-            )
+            // console.log(
+            //   facebookFeedResponse?.data,
+            //   { facebookFeedResponse },
+            //   'FB'
+            // )
             if (
               facebookFeedResponse !== undefined &&
               facebookFeedResponse.ok &&

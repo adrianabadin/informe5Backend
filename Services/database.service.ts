@@ -15,10 +15,10 @@ export abstract class DatabaseHandler {
         {
           async  gCreate <T, A>(
             this: T & { create: any },
-            args: Prisma.Exact<A, Prisma.Args<T, 'create'>['data'] & Prisma.Args<T, 'create'>['data']['images']['create']>
+            args: Prisma.Exact<A, Prisma.Args<T, 'create'>['data'] & Prisma.Args<T, 'create'>['data']['images']['create']['include']>
           ): Promise<GenericResponseObject<Prisma.Result<T, A, 'create'>>> {
             try {
-              const data = await this.create({ data: args })
+              const data = await this.create({ data: args, select: { author: { select: { name: true, lastName: true } }, id: true, createdAt: true, title: true, heading: true, text: true, classification: true, usersId: true, importance: true, isVisible: true, images: true } })
               logger.debug({
                 function: 'DatabaseHandler.create', data
               })
@@ -42,11 +42,11 @@ export abstract class DatabaseHandler {
               return new ResponseObject(error, false, null)
             }
           },
-          async gFindById<T, A>(this: T & { findUniqueOrThrow: any }, id: string, includeField?: Prisma.Exact<A, Prisma.Args<T, 'findUniqueOrThrow'>['include']>): Promise<GenericResponseObject<Prisma.Result<T, A, 'findUniqueOrThrow'>>> {
+          async gFindById<T, A>(this: T & { findUniqueOrThrow: any }, id: string, includeField?: Prisma.Exact<A, Prisma.Args<T, 'findUniqueOrThrow'>['select']>): Promise<GenericResponseObject<Prisma.Result<T, A, 'findUniqueOrThrow'>>> {
             try {
               let data
               if (includeField !== undefined) {
-                data = await this.findUniqueOrThrow({ where: { id }, include: includeField })
+                data = await this.findUniqueOrThrow({ where: { id }, select: includeField })
               } else {
                 data = await this.findUniqueOrThrow({ where: { id } })
               }
