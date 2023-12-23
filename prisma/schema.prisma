@@ -85,9 +85,11 @@ model Users {
   RadioPost    RadioPost[]
   Ads          Ads[]
   password     String?
-  accessToken  String?
-  refreshToken String?
+  accessToken  String?     @db.LongText
+  refreshToken String?     @db.LongText
   gender       Gender?
+  avatar       String?
+  fbid         String?
   Addresses    Addresses?  @relation(fields: [addressesId], references: [id])
   addressesId  String?
 

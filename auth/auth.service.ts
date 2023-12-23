@@ -8,6 +8,7 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 import { type IResponseObject, type DoneType } from '../Entities'
 import { encrypt, decrypt } from '../Services/keypair.service'
+import { userLogged } from '../app'
 dotenv.config()
 const simetricKey = process.env.SIMETRICKEY
 const privateKey = fs.readFileSync('auth/privateKey.pem', 'utf-8')
@@ -64,7 +65,15 @@ export class AuthService extends DatabaseHandler {
     public jwtLoginVerify = async (req: Request, jwtPayload: string, done: DoneType) => {
       try {
         const id = jwtPayload.sub as unknown as string
-        const user = await this.prisma.users.gFindById(id, { isVerified: true, lastName: true, id: true, username: true, name: true, rol: true })
+        const user = await this.prisma.users.gFindById(id, { isVerified: true, lastName: true, id: true, username: true, name: true, rol: true, accessToken: true })
+        userLogged.accessToken = user.data.accessToken
+        userLogged.id = user.data.id
+        userLogged.isVerified = user.data.isVerified
+        userLogged.lastName = user.data.lastName
+        userLogged.name = user.data.name
+        userLogged.rol = user.data.rol
+        userLogged.username = user.data.username
+        console.log('CREANDO MIDDLEWARE', user)
         if ('username' in user?.data && user?.data.username !== undefined && user?.data.username !== null) {
           logger.debug({ function: 'jwtLoginVerify', message: 'Successfully logged in' })
           done(null, user.data, { message: 'Successfully Logged In' })
@@ -110,6 +119,75 @@ export class AuthService extends DatabaseHandler {
         .catch(error => {
           logger.error({ function: 'AuthService.deSerialize', error })
         })
+    },
+    public isFacebookAdmin = async (token: string): Promise<boolean> => {
+      let bool: boolean = false
+      try {
+        const resp = await fetch(`https://graph.facebook.com/me/accounts?access_token=${token}`)
+        const response = await resp.json()
+        if ('data' in response && Array.isArray(response.data)) {
+          response.data.forEach((page: any) => {
+            if ('id' in page && page.id === process.env.FACEBOOK_PAGE) bool = true
+          })
+        }
+      } catch (error) {
+        logger.error({ function: 'isFacebookAdmin.authService', error })
+      }
+      return bool
+    },
+    public getLongliveAccessToken = async (accessToken: string, userId: string) => {
+      let response = await fetch(`https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=${process.env.FACEBOOK_APP_ID}&client_secret=${process.env.FACEBOOK_APP_SECRET}&fb_exchange_token=${accessToken}`)
+      const longUserToken = (await response.json()).access_token as string
+      response = await fetch(`https://graph.facebook.com/${userId}/accounts?
+access_token=${longUserToken}`) // console.log(await response.json())
+      const streamResponse = (await response.json())
+      let data: string = ''
+      if (streamResponse !== null && 'data' in streamResponse && Array.isArray(streamResponse?.data)) {
+        streamResponse.data.forEach((page: any) => {
+          console.log(page, process.env.FACEBOOK_APP_ID)
+          if (page.id === process.env.FACEBOOK_PAGE) data = page.access_token
+        })
+      }
+      if (data !== '') return data
+    },
+    public findFBUserOrCreate = async (email: string, profile: any, accessToken: string, birthDay?: string, phone?: string, gender: Prisma.UsersCreateInput['gender']) => {
+      const admin = await this.isFacebookAdmin(accessToken)
+      let finalAccessToken: string | undefined = ''
+      if (admin) finalAccessToken = await this.getLongliveAccessToken(accessToken, profile.id)
+      const user = await this.prisma.users.findUnique({ where: { username: email } })
+      if (user != null) { // usuario existe
+        if (user.rol !== 'ADMIN' && admin) { // el rol del usuario no es admin, pero administra la pagina
+          const response = await this.prisma.users.update({ where: { username: email }, data: { rol: 'ADMIN', accessToken: finalAccessToken, isVerified: true, avatar: profile.photos[0].value, fbid: profile.id } })
+          return response
+        } else if (user.rol === 'ADMIN' && !admin) {
+          const response = await this.prisma.users.update({ where: { username: email }, data: { rol: 'USER', isVerified: true, accessToken: finalAccessToken, avatar: profile.photos[0].value, fbid: profile.id } })
+          return response
+        } else if (user.accessToken === null || user.avatar === null || user.fbid === null || !user.isVerified) {
+          const response = await this.prisma.users.update({ where: { username: email }, data: { accessToken: finalAccessToken, isVerified: true, avatar: profile.photos[0].value, fbid: profile.id } })
+          return response
+        }
+        return user
+      } else { // usuario no existe valida si es admin o user y si tiene la informacion lo crea
+        if (gender !== null && phone !== undefined && birthDay !== null) {
+          const response = await this.prisma.users
+            .gCreate({
+              lastName: profile.name.familName as string,
+              name: profile.name.givenName as string,
+              phone,
+              username: email,
+              rol: admin ? 'ADMIN' : 'USER',
+              isVerified: true,
+              accessToken,
+              gender,
+              birthDate: birthDay,
+              fbid: profile.id,
+              avatar: profile.photos[0].value
+
+            })
+
+          return response.data
+        } // no se pasaron los datos opcionales ala funcion entonces devuelve un undefined y vuelve  a la strategy para continuar flujo
+      }
     }
   ) { super() }
 }

@@ -1,6 +1,6 @@
-import { Router } from 'express'
+import { type NextFunction, Router, type Request, type Response } from 'express'
 import { AuthController } from './auth.controller'
-import { type Request, type Response } from 'express'
+
 import passport from 'passport'
 import dotenv from 'dotenv'
 import { AuthService } from './auth.service'
@@ -29,4 +29,14 @@ authRoutes.get('/google/getuser', passport.authenticate('google', { scope: ['pro
 
 authRoutes.get('/failedlogin', () => {
   console.log('Failed Login')
+})
+authRoutes.get('/facebook', (req: Request, res: Response, next: NextFunction) => {
+  let data
+  if (req.query !== undefined) data = req.query
+  passport.authenticate('facebook', { scope: ['email'], state: (data != null) ? JSON.stringify(data) : '' })(req, res, next)
+}, (_req: Request, _res: Response) => { console.log('logged') })
+
+authRoutes.get('/facebook/callback/', passport.authenticate('facebook'), (req: Request, res: Response) => {
+  console.log('authenticated')
+  res.send('Auth')
 })

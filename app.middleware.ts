@@ -5,6 +5,7 @@ import passport from 'passport'
 import './auth/localStrategy.module'
 import './auth/googleOauth2.module'
 import './auth/jwtStrategy.module'
+import './auth/facebook.module'
 import { PrismaSessionStore } from '@quixo3/prisma-session-store'
 import { PrismaClient } from '@prisma/client'
 import Session from 'express-session'
@@ -14,6 +15,8 @@ import cors from 'cors'
 import { Server } from 'socket.io'
 import { createServer } from 'http'
 import morgan from 'morgan'
+import { AuthService } from './auth/auth.service'
+const authService = new AuthService()
 export const app = express()
 
 app.use(morgan('dev'))
@@ -39,7 +42,7 @@ const sessionMiddleware = Session({
   store,
   resave: false,
   saveUninitialized: false,
-  cookie: { sameSite: 'none', secure: false, httpOnly: false },
+  cookie: { sameSite: 'none', secure: true, httpOnly: false },
   secret: 'Dilated flakes of fire fall, like snow in the Alps when there is no wind'
 
 })
@@ -48,6 +51,9 @@ app.use(sessionMiddleware)
 app.use(flash())
 app.use(passport.initialize())
 app.use(passport.session())
+passport.serializeUser(authService.serialize)
+passport.deserializeUser(authService.deSerialize)
+
 // console.log(io)
 
 // app.use((req: Request, res: Response, next: NextFunction) => {

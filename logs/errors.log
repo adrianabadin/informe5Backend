@@ -7805,3 +7805,525 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El titulo debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "title"
+        ]
+      },
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El encabezado de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "heading"
+        ]
+      },
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El texto de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "text"
+        ]
+      }
+    ]
+        at Object.get error [as error] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:141:22)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\middlewares\zod.validate.ts:17:14
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at complete (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+        at pass (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:428:14)
+        at Authenticator.transformAuthInfo (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:450:5)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:275:22 {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'title' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El encabezado de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'heading' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'title' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El encabezado de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'heading' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El titulo debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "title"
+        ]
+      },
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El encabezado de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "heading"
+        ]
+      },
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El texto de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "text"
+        ]
+      }
+    ]
+        at Object.get error [as error] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:141:22)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\middlewares\zod.validate.ts:17:14
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at complete (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+        at pass (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:428:14)
+        at Authenticator.transformAuthInfo (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:450:5)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:275:22 {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'title' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El encabezado de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'heading' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'title' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El encabezado de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'heading' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El titulo debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "title"
+        ]
+      },
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El encabezado de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "heading"
+        ]
+      },
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El texto de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "text"
+        ]
+      }
+    ]
+        at Object.get error [as error] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:141:22)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\middlewares\zod.validate.ts:17:14
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at complete (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+        at pass (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:428:14)
+        at Authenticator.transformAuthInfo (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:450:5)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:275:22 {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'title' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El encabezado de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'heading' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'title' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El encabezado de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'heading' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El titulo debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "title"
+        ]
+      },
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El encabezado de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "heading"
+        ]
+      },
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "El texto de la nota debe tener al menos 3 caracteres de longitud",
+        "path": [
+          "body",
+          "text"
+        ]
+      }
+    ]
+        at Object.get error [as error] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\zod\lib\types.js:141:22)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\middlewares\zod.validate.ts:17:14
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at complete (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+        at pass (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:428:14)
+        at Authenticator.transformAuthInfo (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\authenticator.js:450:5)
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:275:22 {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'title' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El encabezado de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'heading' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El titulo debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'title' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El encabezado de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'heading' ]
+        },
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'El texto de la nota debe tener al menos 3 caracteres de longitud',
+          path: [ 'body', 'text' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'FacebookStrategy',
+    error: PrismaClientKnownRequestError: 
+    Invalid `this.prisma.users.update()` invocation in
+    C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:140:52
+    
+      137   const response = await this.prisma.users.update({ where: { username: email }, data: { rol: 'USER', isVerified: true, accessToken, avatar: profile.photos[0].value, fbid: profile.id } })
+      138   return response
+      139 } else if (user.accessToken === null || user.avatar === null || user.fbid === null || !user.isVerified) {
+    → 140   const response = await this.prisma.users.update(
+    The provided value for the column is too long for the column's type. Column: =
+        at zr.handleRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8308)
+        at zr.handleAndLogRequestError (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      code: 'P2000',
+      clientVersion: '5.0.0',
+      meta: { column_name: '=' }
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot set properties of undefined (setting 'accessToken')
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:69:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot set properties of undefined (setting 'accessToken')
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:69:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot set properties of undefined (setting 'accessToken')
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:69:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: Cannot set properties of undefined (setting 'accessToken')
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:69:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}

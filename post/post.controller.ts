@@ -168,10 +168,12 @@ export class PostController {
       req: Request<any, any, any, GetPostsType['query']>,
       res: Response
     ) => {
-      console.log('geting posts')
-      io.on('connection', () => {
-        console.log('conn')
-      })
+      req.session.reload((error) => { console.log(error) })
+      console.log('geting posts', req.user)
+      // io.on('connection', () => {
+      //   console.log('conn')
+      // }
+      // )
       const { cursor, title, search, minDate, maxDate, category } = req.query
       const query: Prisma.PostsFindManyArgs['where'] & {
         AND: Array<Prisma.PostsFindManyArgs['where']>
@@ -337,22 +339,28 @@ export class PostController {
             } else return false
           })
           if (Array.isArray(photoArray) && photoArray.length > 0) {
-            idArray = photoArray.map((photo) => ({ id: photo.fbid }))
-            updatedLinksArray = await this.facebookService.getLinkFromId(
-              idArray
-            )
-            dbResponse = await Promise.all(
-              updatedLinksArray.data.map(async (photo) => {
-                const response = await this.prisma.$transaction([
-                  this.prisma.photos.updateMany({
-                    where: { fbid: photo.fbid },
-                    data: { url: photo.url }
-                  }),
-                  this.prisma.photos.findMany({ where: { fbid: photo.fbid } })
-                ])
-                return response[1][0]
-              })
-            )
+            const isValidToken = true//
+            const response1 = await this.facebookService.isTokenValid(process.env.FB_PAGE_TOKEN)
+            console.log(response1)
+            if (isValidToken) {
+            /** aca va la validacion del token del usuario que se encuentra trabajando. */
+              idArray = photoArray.map((photo) => ({ id: photo.fbid }))
+              updatedLinksArray = await this.facebookService.getLinkFromId(
+                idArray
+              )
+              dbResponse = await Promise.all(
+                updatedLinksArray.data.map(async (photo) => {
+                  const response = await this.prisma.$transaction([
+                    this.prisma.photos.updateMany({
+                      where: { fbid: photo.fbid },
+                      data: { url: photo.url }
+                    }),
+                    this.prisma.photos.findMany({ where: { fbid: photo.fbid } })
+                  ])
+                  return response[1][0]
+                })
+              )
+            }
           } else dbResponse = photosObject
 
           // aca esta roto hay que sacar la tansaccion sino la respuesta es un entero con la cantidad

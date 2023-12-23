@@ -8,7 +8,7 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 import { logger } from '../Services/logger.service'
 dotenv.config()
-const publicKey = fs.readFileSync(`${process.env.KEYS_PATH as string}/publicKey.pem`, 'utf-8')
+const publicKey = fs.readFileSync(`${process.env.KEYS_PATH}/publicKey.pem`, 'utf-8')
 const simetricKey = process.env.SIMETRICKEY
 
 const authService = new AuthService()

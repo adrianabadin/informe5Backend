@@ -53,7 +53,7 @@ export class FacebookService {
               }
             })
             const response = await axios.post('https://graph.facebook.com/', { batch }, { headers: { 'Content-Type': 'application/json' }, params: { access_token: this.pageToken } })
-            logger.debug({ response, title: 'facebookFeed.getLinkfromid' })
+            // logger.debug({ response, title: 'facebookFeed.getLinkfromid' })
             // VALIDA QUE EL RESPONSE GENERAL SEA OK
             if (response.status === 200) {
               // VALIDA QUE HAYA DEVUELTO UN ARRAY DE RESPUESTAS
@@ -118,7 +118,7 @@ export class FacebookService {
         console.log(data, pictures)
         const { title, heading } = data
         const message: string =
-          `${title}\n${heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${id}`
+          `${title}\n${heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL}/${id}`
         const pictsArray = pictures.map((picture) => {
           return picture.fbid // picture.url.split('fbid=')[1].split('&')[0]
         })
@@ -132,7 +132,7 @@ export class FacebookService {
         }
         console.log(dataRequest, 'DataRequest Var')
         try {
-          response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE as string}/feed`, dataRequest)
+          response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE}/feed`, dataRequest)
           return new ResponseObject(null, true, response)
         } catch (error) { console.log(error) }
       } catch (error) {
@@ -146,7 +146,7 @@ export class FacebookService {
       opcion 1 el post se actualiza borrando el previo y creando uno nuevo
       opcion 2 solo se actualiza el texto del post sin actualizar las imagenes
       */
-      const message = `${data.title}\n${data.heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${data.newspaperID}`
+      const message = `${data.title}\n${data.heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL}/${data.newspaperID}`
       const dataRequest = {
         message,
         access_token: process.env.FB_PAGE_TOKEN
@@ -160,11 +160,22 @@ export class FacebookService {
     },
     public deleteFacebookPost = async (fbid: string): Promise<any> => {
       try {
-        const response = await axios.delete(`https://graph.facebook.com/v16.0/${fbid}?access_token=${process.env.FB_PAGE_TOKEN as string}`)
+        const response = await axios.delete(`https://graph.facebook.com/v16.0/${fbid}?access_token=${process.env.FB_PAGE_TOKEN}`)
         return response
       } catch (error) {
         logger.error({ function: 'facebookService.deleteFacebookPost', error })
       }
+    },
+    public isTokenValid = async (token: string): Promise<boolean> => {
+      const response = await (await fetch(`https://graph.facebook.com/oauth/access_token?client_id=${process.env.FACEBOOK_APP_ID}&client_secret=${process.env.FACEBOOK_APP_SECRET}&grant_type=client_credentials`)).json()
+      let newToken: string = ''
+      if ('access_token' in response) newToken = response.access_token
+      if (newToken !== '') {
+        const validationResponse = await (await fetch(`https://graph.facebook.com/v3.2/debug_token?input_token=${token}&access_token=${newToken}`)).json()
+        console.log(validationResponse.data.is_valid)
+        if ('data' in validationResponse && 'is_valid' in validationResponse.data && validationResponse.data.is_valid === true) return true
+        else return false
+      } else throw new Error('Error generating token')
     }
 
   ) { }

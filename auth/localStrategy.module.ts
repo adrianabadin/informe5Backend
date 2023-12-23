@@ -5,5 +5,3 @@ import { AuthService } from './auth.service'
 const authService = new AuthService()
 passport.use('login', new Strategy({ passReqToCallback: true }, authService.localLoginVerify))
 passport.use('register', new Strategy({ passReqToCallback: true }, authService.localSignUpVerify))
-passport.serializeUser(authService.serialize)
-passport.deserializeUser(authService.deSerialize)
