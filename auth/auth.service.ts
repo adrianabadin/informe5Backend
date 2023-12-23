@@ -9,12 +9,14 @@ import dotenv from 'dotenv'
 import { type IResponseObject, type DoneType } from '../Entities'
 import { encrypt, decrypt } from '../Services/keypair.service'
 import { userLogged } from '../app'
+import { FacebookService } from '../Services/facebook.service'
 dotenv.config()
 const simetricKey = process.env.SIMETRICKEY
 const privateKey = fs.readFileSync('auth/privateKey.pem', 'utf-8')
 export class AuthService extends DatabaseHandler {
   constructor (
     protected crypt = { encrypt, decrypt },
+    protected facebookService = new FacebookService(),
     public localSignUpVerify = async (req: Request, username: string, password: string, done: DoneType) => {
       try {
         let user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput | null = await this.prisma.users.findUnique({ where: { username } })
@@ -73,7 +75,6 @@ export class AuthService extends DatabaseHandler {
         userLogged.name = user.data.name
         userLogged.rol = user.data.rol
         userLogged.username = user.data.username
-        console.log('CREANDO MIDDLEWARE', user)
         if ('username' in user?.data && user?.data.username !== undefined && user?.data.username !== null) {
           logger.debug({ function: 'jwtLoginVerify', message: 'Successfully logged in' })
           done(null, user.data, { message: 'Successfully Logged In' })
@@ -135,25 +136,11 @@ export class AuthService extends DatabaseHandler {
       }
       return bool
     },
-    public getLongliveAccessToken = async (accessToken: string, userId: string) => {
-      let response = await fetch(`https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=${process.env.FACEBOOK_APP_ID}&client_secret=${process.env.FACEBOOK_APP_SECRET}&fb_exchange_token=${accessToken}`)
-      const longUserToken = (await response.json()).access_token as string
-      response = await fetch(`https://graph.facebook.com/${userId}/accounts?
-access_token=${longUserToken}`) // console.log(await response.json())
-      const streamResponse = (await response.json())
-      let data: string = ''
-      if (streamResponse !== null && 'data' in streamResponse && Array.isArray(streamResponse?.data)) {
-        streamResponse.data.forEach((page: any) => {
-          console.log(page, process.env.FACEBOOK_APP_ID)
-          if (page.id === process.env.FACEBOOK_PAGE) data = page.access_token
-        })
-      }
-      if (data !== '') return data
-    },
+
     public findFBUserOrCreate = async (email: string, profile: any, accessToken: string, birthDay?: string, phone?: string, gender: Prisma.UsersCreateInput['gender']) => {
       const admin = await this.isFacebookAdmin(accessToken)
       let finalAccessToken: string | undefined = ''
-      if (admin) finalAccessToken = await this.getLongliveAccessToken(accessToken, profile.id)
+      if (admin) finalAccessToken = await this.facebookService.getLongliveAccessToken(accessToken, profile.id)
       const user = await this.prisma.users.findUnique({ where: { username: email } })
       if (user != null) { // usuario existe
         if (user.rol !== 'ADMIN' && admin) { // el rol del usuario no es admin, pero administra la pagina

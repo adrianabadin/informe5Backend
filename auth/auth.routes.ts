@@ -4,6 +4,7 @@ import { AuthController } from './auth.controller'
 import passport from 'passport'
 import dotenv from 'dotenv'
 import { AuthService } from './auth.service'
+import { userLogged } from '../app'
 const authService = new AuthService()
 dotenv.config()
 // import { loginValidator } from './login.validate'
@@ -13,10 +14,7 @@ const authController = new AuthController()
 authRoutes.post('/token', passport.authenticate('jwt'), authController.jwtLogin)
 authRoutes.post('/login', passport.authenticate('login'), authController.localLogin)
 authRoutes.post('/signup', passport.authenticate('register', { failureFlash: true, failureRedirect: '/failedsignup', successRedirect: '/' }))
-authRoutes.get('/goauth', passport.authenticate('google', { scope: ['profile', 'email'] }), (req: Request, res: Response) => {
-  if (req.isAuthenticated()) res.status(200).send({ message: 'Authenticated' })
-  else res.status(401).send({ message: 'unAuthorized' })
-})//, { successRedirect: '/', failureFlash: true, failureRedirect: '/signup' }
+authRoutes.get('/goauth', passport.authenticate('google', { scope: ['profile', 'email'] }), authController.gOAuthLogin)//, { successRedirect: '/', failureFlash: true, failureRedirect: '/signup' }
 authRoutes.get('/google/getuser', passport.authenticate('google', { scope: ['profile', 'email'] }), (req: Request, res: Response) => {
   let token: string = ''
   if (req.user !== undefined && 'id' in req?.user) { token = authService.tokenIssuance(req.user?.id as string) }
@@ -39,4 +37,9 @@ authRoutes.get('/facebook', (req: Request, res: Response, next: NextFunction) =>
 authRoutes.get('/facebook/callback/', passport.authenticate('facebook'), (req: Request, res: Response) => {
   console.log('authenticated')
   res.send('Auth')
+})
+authRoutes.get('/user', (req: Request, _res: Response) => { console.log(req.user, 'entro') })
+authRoutes.get('/logout', () => {
+  userLogged.id = ''
+  userLogged.accessToken = ''
 })

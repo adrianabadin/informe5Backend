@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import express, { type NextFunction, type Request, type Response } from 'express'
+import fs from 'fs'
 import cookieParser from 'cookie-parser'
 import passport from 'passport'
 import './auth/localStrategy.module'
@@ -12,10 +13,15 @@ import Session from 'express-session'
 import flash from 'connect-flash'
 import { routeHandler } from './app.routes'
 import cors from 'cors'
+import * as jwt from 'jsonwebtoken'
 import { Server } from 'socket.io'
 import { createServer } from 'http'
 import morgan from 'morgan'
 import { AuthService } from './auth/auth.service'
+import { userLogged } from './app'
+import { decrypt } from './Services/keypair.service'
+import { FacebookService } from './Services/facebook.service'
+
 const authService = new AuthService()
 export const app = express()
 
@@ -53,13 +59,5 @@ app.use(passport.initialize())
 app.use(passport.session())
 passport.serializeUser(authService.serialize)
 passport.deserializeUser(authService.deSerialize)
-
-// console.log(io)
-
-// app.use((req: Request, res: Response, next: NextFunction) => {
-//   req.io = io
-//   next()
-// })
+// app.use()
 routeHandler(app)
-// export const httpServer = createServer(app)
-// export const io = new Server(httpServer, { cors: { origin: 'http://localhost:3000/', methods: ['PUT', 'POST', 'GET'] } })

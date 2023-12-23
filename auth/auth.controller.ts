@@ -2,7 +2,11 @@ import { type NextFunction, type Request, type Response } from 'express'
 import { AuthService } from './auth.service'
 import { encrypt, decrypt } from '../Services/keypair.service'
 import dotenv from 'dotenv'
-
+import { userLogged } from '../app'
+import * as jwt from 'jsonwebtoken'
+import fs from 'fs'
+import { PrismaClient } from '@prisma/client'
+import { FacebookService } from '../Services/facebook.service'
 dotenv.config()
 const simetricKey = (process.env.SIMETRICKEY !== undefined) ? process.env.SIMETRICKEY : ''
 
@@ -46,10 +50,48 @@ export class AuthController {
       } else res.status(401).send({ ok: false })
     },
     public localLogin = (req: Request, res: Response) => {
-      if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null) {
-        const token = this.service.tokenIssuance(req.user.id as string)
-        res.status(200).send(JSON.stringify({ ...req.user, hash: null, token }))
+      console.log(req.user, 'Login')
+      if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {
+        const token = this.service.tokenIssuance(req.user.id)
+        console.log(token)
+        res.status(200).send({ ...req.user, password: null, token })
       } else res.status(404).send({ ok: false, message: 'Invalid Credentials' })
+    },
+    public gOAuthLogin = (req: Request, res: Response) => {
+      if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {
+        const token = this.service.tokenIssuance(req.user.id)
+        res.status(200).send({ message: 'Authenticated', token })
+      } else res.status(401).send({ message: 'unAuthorized' })
+    },
+    public authState = async (req: Request, _res: Response, next: NextFunction) => {
+      if (userLogged.id === '' && req.cookies.jwt !== null) {
+        let tempJwt = req.cookies.jwt
+        tempJwt = tempJwt !== undefined ? tempJwt : req.body.jwt !== undefined ? req.body.jwt : undefined
+        if (tempJwt !== undefined) {
+          const simetricKey = process.env.SIMETRICKEY
+          const publicKey = fs.readFileSync(`${process.env.KEYS_PATH}/publicKey.pem`, 'utf-8')
+          const jwtoken = decrypt(req.cookies.jwt, simetricKey)
+          const token = jwt.verify(jwtoken, publicKey)
+          const prisma = new PrismaClient()
+          if (token !== undefined) {
+            const user = await prisma.users.findUnique({ where: { id: token.sub as string }, select: { fbid: true, username: true, accessToken: true, id: true, isVerified: true, rol: true, lastName: true, name: true } })
+            if (user !== null) {
+              const facebookService = new FacebookService()
+              if (user.accessToken !== null) { userLogged.accessToken = await facebookService.assertValidToken(user.accessToken) }
+              userLogged.id = user.id
+              userLogged.isVerified = user.isVerified
+              userLogged.lastName = user.lastName
+              userLogged.name = user.name
+              userLogged.rol = user.rol
+              userLogged.username = user.username
+              if (user.fbid !== null) userLogged.fbid = user.fbid
+              req.user = userLogged
+            }
+          }
+        }
+        req.user = userLogged
+      }
+      next()
     }
   ) {}
 }

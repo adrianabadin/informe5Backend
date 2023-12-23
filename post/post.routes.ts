@@ -1,12 +1,15 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
-import { Router, type Request } from 'express'
+import { Router, type Request, type Response, type NextFunction } from 'express'
 import multer from 'multer'
 import { PostController } from './post.controller'
 import passport from 'passport'
 import { getPostById, createPostSchema, updatePostSchema } from './post.schema'
 import { schemaValidator } from '../middlewares/zod.validate'
-
+import { userLogged } from '../app'
+import { AuthService } from '../auth/auth.service'
+import { AuthController } from '../auth/auth.controller'
+const authController = new AuthController()
 const postController = new PostController()
 const storage = multer.diskStorage({
   destination: function (
@@ -40,7 +43,7 @@ postRouter.get(
   postController.getPostById
 )
 postRouter.get(
-  '/getPosts',
+  '/getPosts', authController.authState,
   /* schemaValidator(getPostsSchema), */
   postController.getAllPosts
 )

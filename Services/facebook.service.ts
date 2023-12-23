@@ -5,6 +5,7 @@ import { type IFacebookData, ResponseObject, type ClassificationArray } from '..
 import { logger } from './logger.service'
 
 import { type GenericResponseObject } from '../Entities/response'
+import { userLogged } from '../app'
 dotenv.config()
 export class FacebookService {
   constructor (
@@ -166,16 +167,34 @@ export class FacebookService {
         logger.error({ function: 'facebookService.deleteFacebookPost', error })
       }
     },
-    public isTokenValid = async (token: string): Promise<boolean> => {
+    public assertValidToken = async (token: string): Promise<string | null> => {
       const response = await (await fetch(`https://graph.facebook.com/oauth/access_token?client_id=${process.env.FACEBOOK_APP_ID}&client_secret=${process.env.FACEBOOK_APP_SECRET}&grant_type=client_credentials`)).json()
       let newToken: string = ''
       if ('access_token' in response) newToken = response.access_token
       if (newToken !== '') {
         const validationResponse = await (await fetch(`https://graph.facebook.com/v3.2/debug_token?input_token=${token}&access_token=${newToken}`)).json()
         console.log(validationResponse.data.is_valid)
-        if ('data' in validationResponse && 'is_valid' in validationResponse.data && validationResponse.data.is_valid === true) return true
-        else return false
-      } else throw new Error('Error generating token')
+        if ('data' in validationResponse && 'is_valid' in validationResponse.data && validationResponse.data.is_valid === true) return token
+        else {
+          const finalToken = await this.getLongliveAccessToken(newToken, userLogged.fbid)
+          return finalToken !== undefined ? finalToken : null
+        }
+      } else return null
+    },
+    public getLongliveAccessToken = async (accessToken: string, userId: string) => {
+      let response = await fetch(`https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=${process.env.FACEBOOK_APP_ID}&client_secret=${process.env.FACEBOOK_APP_SECRET}&fb_exchange_token=${accessToken}`)
+      const longUserToken = (await response.json()).access_token as string
+      response = await fetch(`https://graph.facebook.com/${userId}/accounts?
+access_token=${longUserToken}`) // console.log(await response.json())
+      const streamResponse = (await response.json())
+      let data: string = ''
+      if (streamResponse !== null && 'data' in streamResponse && Array.isArray(streamResponse?.data)) {
+        streamResponse.data.forEach((page: any) => {
+          console.log(page, process.env.FACEBOOK_APP_ID)
+          if (page.id === process.env.FACEBOOK_PAGE) data = page.access_token
+        })
+      }
+      if (data !== '') return data
     }
 
   ) { }

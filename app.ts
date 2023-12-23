@@ -3,7 +3,6 @@ import { logger } from './Services/logger.service'
 import { app } from './app.middleware'
 import flash from 'connect-flash'
 import { z } from 'zod'
-import { type NextFunction, type Request, type Response } from 'express'
 const dotenvSchema = z.object({
   DATABASE_URL: z.string({ required_error: 'Must provide a URL to connect to the database' }),
   LOG_DIRECTORY: z.string({ required_error: 'Must provide a path to the logs directory' }),
@@ -33,19 +32,18 @@ export const userLogged: {
   isVerified: boolean
   lastName: string
   id: string
+  fbid: string
   username: string
   name: string
   rol: string
   accessToken: string | null
-} = { isVerified: false, lastName: '', id: '', username: '', name: '', rol: '', accessToken: '' }
+} = { isVerified: false, lastName: '', id: '', username: '', name: '', rol: '', accessToken: '', fbid: '' }
 const PORT = process.env.PORT !== undefined ? process.env.PORT : 8080
 app.use(flash())
 
 export const server = app.listen(PORT, () => {
   logger.info(`Listening on ${PORT}`)
 })
-app.use((req: Request, res: Response, next: NextFunction) => {
-  req.user = userLogged
-})
+
 export const io = new Server(server, { cors: { origin: 'http://localhost:3000/', methods: ['PUT', 'POST', 'GET'] } })
 io.on('connection', () => { console.log('connection') })
