@@ -1,0 +1,16 @@
+{
+  message: {
+    function: 'DatabaseHandler.create',
+    error: PrismaClientUnknownRequestError: 
+    Invalid `prisma.users.create()` invocation:
+    
+    
+    Unknown nested field 'author' for operation createOneUsers does not match any query.
+        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8480)
+        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
+        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
+      clientVersion: '5.0.0'
+    }
+  },
+  level: 'error'
+}

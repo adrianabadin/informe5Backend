@@ -26,7 +26,8 @@ export class AuthService extends DatabaseHandler {
           logger.debug({
             function: 'AuthService.localSignUpVerify', user: { ...body, hash: null }
           })
-          user = (await this.prisma.users.gCreate({ ...body, birthDate: (body.birthDate !== undefined) ? new Date(body.birthDate as string) : undefined })).data as Prisma.UsersCreateInput
+          user = (await this.prisma.users.create({ data: { ...body, birthDate: new Date(body.birthDate as string) } }))
+          console.log(user, body)
           if (user?.id !== undefined) {
             done(null, user, { message: 'Successfully Registred' })
           } else done(null, false, { message: 'Error in registration' })
