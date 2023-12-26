@@ -11,7 +11,7 @@ dotenv.config()
 // import { signupValidator } from './signup.validator'
 export const authRoutes = Router()
 const authController = new AuthController()
-authRoutes.post('/token', passport.authenticate('jwt'), authController.jwtLogin)
+authRoutes.post('/token', (req: Request, res: Response, next: NextFunction) => { console.log(req.body); next() }, passport.authenticate('jwt'), authController.jwtLogin)
 authRoutes.post('/login', passport.authenticate('login'), authController.localLogin)
 authRoutes.post('/signup', passport.authenticate('register', { failureFlash: true, failureRedirect: '/failedsignup', successRedirect: '/' }))
 authRoutes.get('/goauth', passport.authenticate('google', { scope: ['profile', 'email'] }), authController.gOAuthLogin)//, { successRedirect: '/', failureFlash: true, failureRedirect: '/signup' }
