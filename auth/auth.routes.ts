@@ -1,6 +1,6 @@
 import { type NextFunction, Router, type Request, type Response } from 'express'
 import { AuthController } from './auth.controller'
-
+import { upload } from '../post/post.routes'
 import passport from 'passport'
 import dotenv from 'dotenv'
 import { AuthService } from './auth.service'
@@ -13,7 +13,7 @@ export const authRoutes = Router()
 const authController = new AuthController()
 authRoutes.post('/token', (req: Request, res: Response, next: NextFunction) => { console.log(req.body); next() }, passport.authenticate('jwt'), authController.jwtLogin)
 authRoutes.post('/login', passport.authenticate('login'), authController.localLogin)
-authRoutes.post('/signup', passport.authenticate('register', { failureFlash: true, failureRedirect: '/failedsignup', successRedirect: '/' }))
+authRoutes.post('/signup', upload.single, passport.authenticate('register', { failureFlash: true, failureRedirect: '/failedsignup', successRedirect: '/' }))
 authRoutes.get('/goauth', passport.authenticate('google', { scope: ['profile', 'email'] }), authController.gOAuthLogin)//, { successRedirect: '/', failureFlash: true, failureRedirect: '/signup' }
 authRoutes.get('/google/getuser', passport.authenticate('google', { scope: ['profile', 'email'] }), (req: Request, res: Response) => {
   let token: string = ''

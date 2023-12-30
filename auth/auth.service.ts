@@ -21,7 +21,7 @@ export class AuthService extends DatabaseHandler {
       try {
         let user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput | null = await this.prisma.users.findUnique({ where: { username } })
         if (user === null) {
-          const body: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = { ...req.body, hash: await argon2.hash(password), id: undefined }
+          const body: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = { ...req.body, hash: await argon2.hash(password), id: undefined, avatar: req.file?.path }
           if ('password' in body) { delete body.password }
           logger.debug({
             function: 'AuthService.localSignUpVerify', user: { ...body, hash: null }

@@ -6,8 +6,6 @@ import { PostController } from './post.controller'
 import passport from 'passport'
 import { getPostById, createPostSchema, updatePostSchema } from './post.schema'
 import { schemaValidator } from '../middlewares/zod.validate'
-import { userLogged } from '../app'
-import { AuthService } from '../auth/auth.service'
 import { AuthController } from '../auth/auth.controller'
 const authController = new AuthController()
 const postController = new PostController()
@@ -28,7 +26,7 @@ const storage = multer.diskStorage({
     cb(null, file.fieldname + '-' + uniqueSuffix + '-' + file.originalname)
   }
 })
-const upload = multer({ storage })
+export const upload = multer({ storage })
 export const postRouter = Router()
 postRouter.post(
   '/create',

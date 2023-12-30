@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only app.ts",
-    "db": "pscale connect informe5 main"
+    "dev": "ts-node-dev --respawn --transpile-only app.ts",
+    "db": "pscale connect informe5 main",
+    "updateDep": "npm i",
+    "updateDb":"concurrently  -k \"npm:db >db.log\" \"npx prisma db push\" ",
+    "updateAll":"concurrently  -k \"npm:updateDep\" \"npm:updateDb\"",
+    "start": "concurrently  \"npm:db\" \"npm:dev\" "
   },
   "keywords": [],
   "author": "",
@@ -18,6 +22,7 @@
     "@types/socket.io": "^3.0.2",
     "argon2": "^0.30.3",
     "axios": "^1.4.0",
+    "concurrently": "^8.2.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
