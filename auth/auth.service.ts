@@ -29,6 +29,7 @@ export class AuthService extends DatabaseHandler {
           user = (await this.prisma.users.create({ data: { ...body, birthDate: new Date(body.birthDate as string) } }))
           console.log(user, body)
           if (user?.id !== undefined) {
+            console.log('llego al final')
             done(null, user, { message: 'Successfully Registred' })
           } else done(null, false, { message: 'Error in registration' })
         } else done(null, false, { message: 'user exists' })

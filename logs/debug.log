@@ -4275,3 +4275,1630 @@
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
 { message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostController.hidePost',
+    response: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: 'ae03309c-d463-49e5-aa43-322b60b4229e',
+        createdAt: 2023-12-16T11:20:18.732Z,
+        updatedAt: 2024-01-03T19:46:30.505Z,
+        title: 'ADRIAN',
+        subTitle: null,
+        heading: 'ABADIN ADA',
+        text: '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n' +
+          '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n',
+        classification: 'Economia',
+        usersId: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+        importance: 1,
+        fbid: '112768655243132_194064450444799',
+        isVisible: false
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostController.showPost',
+    response: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        id: 'ae03309c-d463-49e5-aa43-322b60b4229e',
+        createdAt: 2023-12-16T11:20:18.732Z,
+        updatedAt: 2024-01-03T19:46:33.958Z,
+        title: 'ADRIAN',
+        subTitle: null,
+        heading: 'ABADIN ADA',
+        text: '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n' +
+          '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n',
+        classification: 'Economia',
+        usersId: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+        importance: 1,
+        fbid: '112768655243132_194064450444799',
+        isVisible: true
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        images: [
+          {
+            id: '6352f992-18a2-4d42-87a3-cbdb86700ccd',
+            createdAt: 2023-12-16T19:17:34.903Z,
+            updatedAt: 2024-01-03T19:40:00.199Z,
+            url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D',
+            fbid: '194285550422689'
+          }
+        ],
+        author: {
+          id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+          createdAt: 2023-11-28T11:27:24.047Z,
+          updatedAt: 2023-12-21T21:55:59.161Z,
+          name: 'Adrian',
+          lastName: 'Abadin',
+          username: 'aabadin@gmail.com',
+          phone: '2344426406',
+          hash: '$argon2id$v=19$m=65536,t=3,p=4$ee2y2lVS2Ey+74lh5IF4uQ$UVibjBo6aZg0JC/G1x4SRTa+fOQRM47CzrQXEuPEK8E',
+          birthDate: 1980-08-11T00:00:00.000Z,
+          rol: 'ADMIN',
+          isVerified: true,
+          password: null,
+          accessToken: 'EAAC6VEEU92EBO1pwfzasXf9K8uv2sbT9j8GLF9kdB6euEQcrZCE1aZCKdL0gO3mi0kZBiETNy7rcUjIsjjTfNkUqvYZAxJKDWVZAqZAXL5kcV09ocfWIlFc1Vlb4rk0IrHfDyNDi41vbnlcdDVpGkDYvEVgCx9hMcIJxq3gHrSel4dzNDDhl2KmnBokAQQ6ZBpGouRVm4yPGp7YvYfHt3vKN8XDZBsZC8FxPvE4QSvATrzzJtqZBffEkYkSqZCtcFqTQ34wEQZDZD',
+          refreshToken: null,
+          gender: 'MALE',
+          avatar: 'https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=7165393753490626&height=50&width=50&ext=1705787756&hash=AfqzELfev_cv9cNif6YVhsRplRsfEsH5lvydHycQcgrvLw',
+          fbid: '7165393753490626',
+          addressesId: null
+        },
+        classification: 'Economia',
+        createdAt: 2023-12-16T11:20:18.732Z,
+        heading: 'ABADIN ADA',
+        id: 'ae03309c-d463-49e5-aa43-322b60b4229e',
+        importance: 1,
+        isVisible: true,
+        text: '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n' +
+          '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n',
+        title: 'ADRIAN'
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        images: [
+          {
+            id: '6352f992-18a2-4d42-87a3-cbdb86700ccd',
+            createdAt: 2023-12-16T19:17:34.903Z,
+            updatedAt: 2024-01-03T19:46:43.452Z,
+            url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D',
+            fbid: '194285550422689'
+          }
+        ],
+        author: {
+          id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+          createdAt: 2023-11-28T11:27:24.047Z,
+          updatedAt: 2023-12-21T21:55:59.161Z,
+          name: 'Adrian',
+          lastName: 'Abadin',
+          username: 'aabadin@gmail.com',
+          phone: '2344426406',
+          hash: '$argon2id$v=19$m=65536,t=3,p=4$ee2y2lVS2Ey+74lh5IF4uQ$UVibjBo6aZg0JC/G1x4SRTa+fOQRM47CzrQXEuPEK8E',
+          birthDate: 1980-08-11T00:00:00.000Z,
+          rol: 'ADMIN',
+          isVerified: true,
+          password: null,
+          accessToken: 'EAAC6VEEU92EBO1pwfzasXf9K8uv2sbT9j8GLF9kdB6euEQcrZCE1aZCKdL0gO3mi0kZBiETNy7rcUjIsjjTfNkUqvYZAxJKDWVZAqZAXL5kcV09ocfWIlFc1Vlb4rk0IrHfDyNDi41vbnlcdDVpGkDYvEVgCx9hMcIJxq3gHrSel4dzNDDhl2KmnBokAQQ6ZBpGouRVm4yPGp7YvYfHt3vKN8XDZBsZC8FxPvE4QSvATrzzJtqZBffEkYkSqZCtcFqTQ34wEQZDZD',
+          refreshToken: null,
+          gender: 'MALE',
+          avatar: 'https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=7165393753490626&height=50&width=50&ext=1705787756&hash=AfqzELfev_cv9cNif6YVhsRplRsfEsH5lvydHycQcgrvLw',
+          fbid: '7165393753490626',
+          addressesId: null
+        },
+        classification: 'Economia',
+        createdAt: 2023-12-16T11:20:18.732Z,
+        heading: 'ABADIN ADA',
+        id: 'ae03309c-d463-49e5-aa43-322b60b4229e',
+        importance: 1,
+        isVisible: true,
+        text: '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n' +
+          '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n',
+        title: 'ADRIAN'
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '2024-01-11',
+      gender: 'FEMALE',
+      lastName: 'abadin',
+      name: 'Adrian',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704320504132-141798545-bandera.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: false,
+      lastName: 'abadin',
+      id: 'ae41ba30-e5da-401a-8177-9b5f6476bc1c',
+      username: 'aliciabeatrizlucio@gmail.com',
+      name: 'Adrian',
+      rol: 'USER',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '1980-11-02',
+      gender: 'FEMALE',
+      lastName: 'abadin',
+      name: 'Aliciia',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: undefined
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '2024-01-11',
+      gender: 'FEMALE',
+      lastName: 'abadin',
+      name: 'Adrian',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704323721051-786477508-avatargh.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '1981-11-02',
+      gender: 'FEMALE',
+      lastName: 'Lucio',
+      name: 'Alicia',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: undefined
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '2024-01-04',
+      gender: 'FEMALE',
+      lastName: 'abadin',
+      name: 'alicia',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704324078050-890580805-bandera.jpg'
+    }
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'a1abadin@gmail.com',
+      birthDate: '2024-01-16',
+      gender: 'FEMALE',
+      lastName: 'abadin',
+      name: 'Adrian',
+      phone: '542344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704324349969-355002739-bandera.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    error: TypeError: res.status is not a function
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.routes.ts:16:275
+        at Strategy.strategy.success (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:222:18)
+        at verified (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport-local\lib\strategy.js:83:10)
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:32:13)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciajbeatrizlucio@gmail.com',
+      birthDate: '2024-01-11',
+      gender: 'FEMALE',
+      lastName: 'abadin',
+      name: 'Adrian',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: undefined
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    error: TypeError: res.send is not a function
+        at C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.routes.ts:16:275
+        at Strategy.strategy.success (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:222:18)
+        at verified (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport-local\lib\strategy.js:83:10)
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:33:13)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '1981-11-02',
+      gender: 'FEMALE',
+      lastName: 'Lucio',
+      name: 'Alicia',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704335886607-998988874-avatargh.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    error: TypeError: Cannot read properties of null (reading 'user')
+        at localLogin (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.controller.ts:53:23)
+        at Strategy.strategy.success (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:222:18)
+        at verified (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport-local\lib\strategy.js:83:10)
+        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:33:13)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aa1badin@gmail.com',
+      birthDate: '2024-01-12',
+      gender: 'FEMALE',
+      lastName: 'abadin',
+      name: 'Adrian',
+      phone: '542344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704335972086-247066566-avatargh.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        images: [
+          {
+            id: '6352f992-18a2-4d42-87a3-cbdb86700ccd',
+            createdAt: 2023-12-16T19:17:34.903Z,
+            updatedAt: 2024-01-04T03:33:33.976Z,
+            url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D',
+            fbid: '194285550422689'
+          }
+        ],
+        author: {
+          id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+          createdAt: 2023-11-28T11:27:24.047Z,
+          updatedAt: 2023-12-21T21:55:59.161Z,
+          name: 'Adrian',
+          lastName: 'Abadin',
+          username: 'aabadin@gmail.com',
+          phone: '2344426406',
+          hash: '$argon2id$v=19$m=65536,t=3,p=4$ee2y2lVS2Ey+74lh5IF4uQ$UVibjBo6aZg0JC/G1x4SRTa+fOQRM47CzrQXEuPEK8E',
+          birthDate: 1980-08-11T00:00:00.000Z,
+          rol: 'ADMIN',
+          isVerified: true,
+          password: null,
+          accessToken: 'EAAC6VEEU92EBO1pwfzasXf9K8uv2sbT9j8GLF9kdB6euEQcrZCE1aZCKdL0gO3mi0kZBiETNy7rcUjIsjjTfNkUqvYZAxJKDWVZAqZAXL5kcV09ocfWIlFc1Vlb4rk0IrHfDyNDi41vbnlcdDVpGkDYvEVgCx9hMcIJxq3gHrSel4dzNDDhl2KmnBokAQQ6ZBpGouRVm4yPGp7YvYfHt3vKN8XDZBsZC8FxPvE4QSvATrzzJtqZBffEkYkSqZCtcFqTQ34wEQZDZD',
+          refreshToken: null,
+          gender: 'MALE',
+          avatar: 'https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=7165393753490626&height=50&width=50&ext=1705787756&hash=AfqzELfev_cv9cNif6YVhsRplRsfEsH5lvydHycQcgrvLw',
+          fbid: '7165393753490626',
+          addressesId: null
+        },
+        classification: 'Economia',
+        createdAt: 2023-12-16T11:20:18.732Z,
+        heading: 'ABADIN ADA',
+        id: 'ae03309c-d463-49e5-aa43-322b60b4229e',
+        importance: 1,
+        isVisible: true,
+        text: '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n' +
+          '¿Qué es Lorem Ipsum?\r\n' +
+          'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.\r\n' +
+          '\r\n' +
+          '¿Por qué lo usamos?\r\n' +
+          'Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).\r\n' +
+          '\r\n',
+        title: 'ADRIAN'
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfA1LH4-KSU9R3GDtSdg24c177iyUOZBjsr53WEzaDGshg&oe=659A605D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '1981-11-02',
+      gender: 'FEMALE',
+      lastName: 'Lucio',
+      name: 'Alicia',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704379603285-741307450-avatargh.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizluc1io@gmail.com',
+      birthDate: '1991-01-01',
+      gender: 'FEMALE',
+      lastName: 'abadin',
+      name: 'Adrian',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704380246698-271458480-ROSALES MARIA0001.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '1981-11-02',
+      gender: 'FEMALE',
+      lastName: 'ALICIA',
+      name: 'LUCIO',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704402696067-771338968-avatargh.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '1981-11-02',
+      gender: 'FEMALE',
+      lastName: 'ALICIA',
+      name: 'LUCIO',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704402816492-979874549-avatargh.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '1981-11-02',
+      gender: 'FEMALE',
+      lastName: 'ALICIA',
+      name: 'LUCIO',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704403438863-350600290-avatargh.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localSignUpVerify',
+    user: {
+      username: 'aliciabeatrizlucio@gmail.com',
+      birthDate: '1981-11-02',
+      gender: 'FEMALE',
+      lastName: 'ALICIA',
+      name: 'LUCIO',
+      phone: '02344426406',
+      hash: null,
+      id: undefined,
+      avatar: 'public\\temp\\avatar-1704404831063-478517641-avatargh.jpg'
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: false,
+      lastName: 'ALICIA',
+      id: 'd5f18c79-321f-457d-8cb7-a8f32f31c6eb',
+      username: 'aliciabeatrizlucio@gmail.com',
+      name: 'LUCIO',
+      rol: 'USER',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=nYL6elsIirkAX_GLa7j&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfBIqGvHMpPnOw2GZ4ExWdPrtmfc_IOdtM9s0vrfxvJbcw&oe=659C5A9D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=dMttroZojWQAX-CdfAm&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfDC3daSqpyuohBRFWStELYtRyfVXNclrO1l7cXWcwhmfg&oe=659B8D7E'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
