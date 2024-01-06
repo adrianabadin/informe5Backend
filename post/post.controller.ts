@@ -97,13 +97,14 @@ export class PostController {
     ) => {
       const body = req.body
       const files = req.files
-      io.emit('postLoader', { active: true, body })
+      const dataEmitted={ active: true, body }
+      console.log(dataEmitted,"objeto enviado")
+      io.emit('postLoader', dataEmitted)
       console.log('create')
       try {
         const imagesArray = await this.service.photoGenerator(
           files as Express.Multer.File[]
         )
-        // console.log({ imagesArray }, 'photos')
         if (
           req.user !== undefined &&
           'id' in req.user &&
@@ -374,6 +375,7 @@ export class PostController {
       const { id } = req.params
       try {
         const response = await this.service.deleteById(id)
+        console.log(response,"deleted object")
         let fbResponse
         if (response.data.fbid !== null && typeof response.data.fbid === 'string') fbResponse = await this.facebookService.deleteFacebookPost(response.data.fbid)
         logger.debug({ function: 'PostController.deletePost', response, fbResponse })

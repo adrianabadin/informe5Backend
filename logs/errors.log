@@ -1,55 +1,46 @@
 {
   message: {
-    function: 'DatabaseHandler.create',
-    error: PrismaClientUnknownRequestError: 
-    Invalid `prisma.users.create()` invocation:
-    
-    
-    Unknown nested field 'author' for operation createOneUsers does not match any query.
-        at zr.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:8480)
-        at zr.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7697)
-        at zr.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:122:7307) {
-      clientVersion: '5.0.0'
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "validation": "uuid",
+        "code": "invalid_string",
+        "message": "La cadena debe ser un UUID",
+        "path": [
+          "params",
+          "id"
+        ]
+      }
+    ]
+        at Object.get error [as error] (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\zod\lib\types.js:143:22)
+        at C:\Users\aabadin\Documents\code\TURCO\informe5Backend\middlewares\zod.validate.ts:17:14
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\index.js:284:15
+        at param (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\index.js:365:14)
+        at param (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\index.js:376:14) {
+      issues: [
+        {
+          validation: 'uuid',
+          code: 'invalid_string',
+          message: 'La cadena debe ser un UUID',
+          path: [ 'params', 'id' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          validation: 'uuid',
+          code: 'invalid_string',
+          message: 'La cadena debe ser un UUID',
+          path: [ 'params', 'id' ]
+        }
+      ]
     }
-  },
-  level: 'error'
-}
-{
-  message: {
-    function: 'AuthService.localSignUpVerify',
-    error: TypeError: res.status is not a function
-        at C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.routes.ts:16:275
-        at Strategy.strategy.success (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:222:18)
-        at verified (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport-local\lib\strategy.js:83:10)
-        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:32:13)
-        at Generator.next (<anonymous>)
-        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
-  },
-  level: 'error'
-}
-{
-  message: {
-    function: 'AuthService.localSignUpVerify',
-    error: TypeError: res.send is not a function
-        at C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.routes.ts:16:275
-        at Strategy.strategy.success (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:222:18)
-        at verified (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport-local\lib\strategy.js:83:10)
-        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:33:13)
-        at Generator.next (<anonymous>)
-        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
-  },
-  level: 'error'
-}
-{
-  message: {
-    function: 'AuthService.localSignUpVerify',
-    error: TypeError: Cannot read properties of null (reading 'user')
-        at localLogin (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.controller.ts:53:23)
-        at Strategy.strategy.success (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport\lib\middleware\authenticate.js:222:18)
-        at verified (C:\Users\Adria\Documents\code\turco\informe5Backend\node_modules\passport-local\lib\strategy.js:83:10)
-        at AuthService.<anonymous> (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:33:13)
-        at Generator.next (<anonymous>)
-        at fulfilled (C:\Users\Adria\Documents\code\turco\informe5Backend\auth\auth.service.ts:5:58)
   },
   level: 'error'
 }
