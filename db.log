@@ -2,6 +2,6 @@
 > informe5backend@1.0.0 db
 > pscale connect informe5 main
 
-Secure connection to database [34;1minforme5[0;22m and branch [34;1mmain[0;22m is established!.
+Secure connection to database [34;1minforme5[0m and branch [34;1mmain[0m is established!.
 
-Local address to connect your application: [34;1m127.0.0.1:3306[0;22m (press ctrl-c to quit)
+Local address to connect your application: [34;1m127.0.0.1:3306[0m (press ctrl-c to quit)
