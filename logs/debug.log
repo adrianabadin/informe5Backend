@@ -19553,3 +19553,1170 @@
   level: 'debug'
 }
 { message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent.faep8-1.fna.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=eK42E7tNedMAX-_yr4W&_nc_ht=scontent.faep8-1.fna&edm=AMAeTUEEAAAA&oh=00_AfAy2aspPgImpyavcfbcmu_HI8cQpq_39Qtj1PIlnZ6Egg&oe=659F81FE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}

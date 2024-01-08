@@ -45,6 +45,7 @@ export class AuthController {
         console.log('is Auth')
         if ('id' in req?.user) {
           const token = this.service.tokenIssuance(req.user.id as string)
+          res.clearCookie('jwt')
           res.status(200).send({ ...req.user, token, hash: undefined, refreshToken: undefined, accessToken: undefined })
         } else res.status(401).send({ ok: false })
       } else res.status(401).send({ ok: false })
@@ -53,14 +54,25 @@ export class AuthController {
       console.log(req.user, 'Login')
       if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {
         const token = this.service.tokenIssuance(req.user.id)
-        console.log(token)
         res.status(200).send({ ...req.user, password: null, token })
       } else res.status(404).send({ ok: false, message: 'Invalid Credentials' })
+    },
+    public facebookLogin = (req: Request, res: Response) => {
+      if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {
+        const token = this.service.tokenIssuance(req.user.id)
+        res.clearCookie('jwt')
+        res.cookie('jwt', token)
+        console.log(JSON.parse(req.query.state as string).cbURL as string)
+        res.redirect(JSON.parse(req.query.state as string).cbURL as string)
+      } else res.status(404).send({ ok: false, message: 'Invalid Credentials', code: '404' })
     },
     public gOAuthLogin = (req: Request, res: Response) => {
       if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {
         const token = this.service.tokenIssuance(req.user.id)
-        res.status(200).send({ message: 'Authenticated', token })
+        res.clearCookie('jwt')
+        res.cookie('jwt', token)
+        res.redirect('http://localhost:3000')
+        // res.status(200).send({ message: 'Authenticated', token })
       } else res.status(401).send({ message: 'unAuthorized' })
     },
     public authState = async (req: Request, _res: Response, next: NextFunction) => {
