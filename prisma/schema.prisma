@@ -114,7 +114,7 @@ model Ads {
   metrics    Metric[]
   user       Users    @relation(fields: [usersId], references: [id])
   usersId    String
-  url        String
+  url        String?
   title      String
   photoUrl   String
 
