@@ -31,12 +31,11 @@ app.use(cors({
   credentials: true,
   preflightContinue: true
 }))
+app.use(express.static('public'))
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser()) // "Whether 'tis nobler in the mind to suffer"
-
-app.use(express.static('public'))
 
 const store = new PrismaSessionStore(new PrismaClient(), {
   checkPeriod: 2 * 60 * 1000, // ms
@@ -59,5 +58,4 @@ app.use(passport.initialize())
 app.use(passport.session())
 passport.serializeUser(authService.serialize)
 passport.deserializeUser(authService.deSerialize)
-// app.use()
 routeHandler(app)
