@@ -5,7 +5,7 @@ import { type GenericResponseObject, ResponseObject, type GenericResponseObject 
 
 export class AdsService extends DatabaseHandler {
   constructor (
-    public createAd = async <T>(data: createAdType): Promise<GenericResponseObject<T | null>> => {
+    public createAd = async <T>(data: createAdType & { photoUrl: string }): Promise<GenericResponseObject<T | null>> => {
       try {
         const response = await this.prisma.ads.create({ data: { importance: data.importance, photoUrl: data.photoUrl, title: data.title, url: data.url, user: { connect: { id: data.usersId } } } })
         return new ResponseObject(null, true, response as T)
@@ -20,6 +20,24 @@ export class AdsService extends DatabaseHandler {
         return new ResponseObject(null, true, response)
       } catch (error) {
         logger.error({ function: 'AdsService.getAds', error })
+        return new ResponseObject(error, false, null)
+      }
+    },
+    public setActive = async (id: string) => {
+      try {
+        const result = await this.prisma.ads.update({ where: { id }, data: { isActive: true } })
+        return new ResponseObject(null, true, result)
+      } catch (error) {
+        logger.error({ function: 'AdsService.setActive', error })
+        return new ResponseObject(error, false, null)
+      }
+    },
+    public setInactive = async (id: string) => {
+      try {
+        const result = await this.prisma.ads.update({ where: { id }, data: { isActive: false } })
+        return new ResponseObject(null, true, result)
+      } catch (error) {
+        logger.error({ function: 'AdsService.setInactive', error })
         return new ResponseObject(error, false, null)
       }
     }

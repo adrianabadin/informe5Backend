@@ -117,6 +117,7 @@ model Ads {
   url        String?
   title      String
   photoUrl   String
+  isActive   Boolean  @default(true)
 
   @@index([usersId])
 }

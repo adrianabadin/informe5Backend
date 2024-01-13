@@ -30,4 +30,6 @@ adsRouter.post('/create', upload.single('image'),
   schemaValidator(createAdSchema),
   adsController.createAd)
 adsRouter.get('/getAll', adsController.getAds)
+adsRouter.put('/setActive/:id', adsController.setActive)
+adsRouter.put('/setInactive/:id', adsController.setInactive)
 export default adsRouter
