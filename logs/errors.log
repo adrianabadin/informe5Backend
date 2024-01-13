@@ -1,46 +1,155 @@
 {
   message: {
-    function: 'schemaValidator',
-    error: ZodError: [
-      {
-        "validation": "uuid",
-        "code": "invalid_string",
-        "message": "La cadena debe ser un UUID",
-        "path": [
-          "params",
-          "id"
-        ]
-      }
-    ]
-        at Object.get error [as error] (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\zod\lib\types.js:43:31)
-        at ZodObject.parse (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\zod\lib\types.js:143:22)
-        at C:\Users\aabadin\Documents\code\TURCO\informe5Backend\middlewares\zod.validate.ts:17:14
-        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
-        at next (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\route.js:144:13)
-        at Route.dispatch (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\route.js:114:3)
-        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
-        at C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\index.js:284:15
-        at param (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\index.js:365:14)
-        at param (C:\Users\aabadin\Documents\code\TURCO\informe5Backend\node_modules\express\lib\router\index.js:376:14) {
-      issues: [
-        {
-          validation: 'uuid',
-          code: 'invalid_string',
-          message: 'La cadena debe ser un UUID',
-          path: [ 'params', 'id' ]
-        }
-      ],
-      addIssue: [Function (anonymous)],
-      addIssues: [Function (anonymous)],
-      errors: [
-        {
-          validation: 'uuid',
-          code: 'invalid_string',
-          message: 'La cadena debe ser un UUID',
-          path: [ 'params', 'id' ]
-        }
-      ]
+    function: 'AdsController.createAd',
+    error: TypeError: Cannot read properties of undefined (reading 'adsService')
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:12:35
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:21:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:23:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: Cannot read properties of undefined (reading 'adsService')
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:12:35
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:22:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:23:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: Cannot read properties of undefined (reading 'service')
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:12:35
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:22:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:22:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: this.service.createAd is not a function
+        at AdsController.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:17:43)
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:24:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:22:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: this.service.createAd is not a function
+        at AdsController.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:17:43)
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:24:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:22:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: adsServiceLoad.createAd is not a function
+        at AdsController.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:17:45)
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:24:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:22:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AdsService.createAd',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.ads.create()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.service.ts:10:48
+    
+       7 constructor (
+       8   public createAd = async <T>(data: createAdType): Promise<GenericResponseObject<T | null>> => {
+       9     try {
+    → 10       const response = await this.prisma.ads.create({
+                 data: {
+                   importance: "1",
+                               ~~~
+                   photoUrl: "public\\image-1705134774367-757782038-descarga.jfif",
+                   title: "Primera Ad",
+                   url: "http://adrian.com",
+                   user: {
+                     connect: {
+                       id: "4c2b66ed-b656-41de-96d0-664c25f9ba55"
+                     }
+                   }
+                 }
+               })
+    
+    Argument `importance`: Invalid value provided. Expected Int, provided String.
+        at ti (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:118:5888)
+        at si.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:125:6473)
+        at si.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:125:6151)
+        at si.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:125:5859)
+        at l (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:130:10025) {
+      clientVersion: '5.7.1'
     }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AdsController.getAds',
+    error: TypeError: Cannot read properties of undefined (reading 'service')
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:28:35
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at getAds (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:37:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
   },
   level: 'error'
 }

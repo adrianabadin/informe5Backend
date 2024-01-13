@@ -30178,3 +30178,1763 @@
   message: 'Successfully logged in',
   level: 'debug'
 }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208768655641045',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418490844_208768652307712_1666164459986556452_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeEZsxDouoD94lERlANIeMr2rB9To0iWSTysH1OjSJZJPOWV9TWaB9SwOfqJ7kx2_EMOPDAhppAUBE8ERfP_I2HU&_nc_ohc=4micKyQKFisAX8RNpxQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCUvK4JBhxZMvPF61APz0xZq1zlVvJi9leRL7-r1CQNDA&oe=65A6648A'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209392692245308',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418435374_209392688911975_4820254755042060819_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFT-B2OZu2uerOaJyWhj-qZxFGqUU7iTF_EUapRTuJMX8rwtknVHKzvTaOaEyHoKfAr294xUvzmNtYBNxhDMWfa&_nc_ohc=vRR71gDvce8AX_dalLM&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfB0b660xlE53utW-neJ3acOPFZYdGZzVAcyjFdwTZQWYg&oe=65A6C8CC'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208352589015985',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418725026_208352585682652_4946052723636947551_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeETB74OH1lPo9y7O35KuwcUjlCs6_-g_AOOUKzr_6D8A2aBim_7MTyPzJpH0oDzH84Xy85wYHMZogMtgcMBY4fL&_nc_ohc=OYMU2L1k2IIAX-lFVfr&_nc_oc=AQmxQe80bOeTnwrWVHKYOncG32YiojSii1fkWykhrufA914J2YMdToor1zuZDLNfdp4&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfArMeQ5gJ09F_a7X6F8EbofPb9GkbR7A04oBNYhQ0f2LA&oe=65A5F76D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=MgZ9AWs_iowAX8lLwlw&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBg1dzrqB5Euh-jugkROrfPswM77fW8FlhWMfsthKtTIw&oe=65A76AFE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209393345578576',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418477593_209393342245243_5383500966870959150_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFXoo9CGbZNt3gPGnQPVjv3TlAr_PY3ZhFOUCv89jdmEdgIagSmpXDKfa_WBy46VwY7cRdEStGlOl8c6GIIVoe4&_nc_ohc=jKGlGRGCNfgAX-DeSf9&_nc_oc=AQkd_aX6SQVVGOKOseDXSiOddxkSn6mDHmIIn9TkhP_aueMlZuoOZpF4NgN8nyOtKzI&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBau3aVDMbfy_hk4P7oisevCa7Rd9_zqZRk-PzzGtgszQ&oe=65A72005'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209387248912519',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/416361608_209387245579186_2578144701113767794_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeG5YXXujNIaQdgesF6rXrjVcEeXsMpMnjhwR5ewykyeOPH1xqzVp__wd92B7_TvNrqHh2f7ACIKZ7Y0a3zrAozD&_nc_ohc=7ARtd1DyspUAX-mdYoX&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfDgwFhWXrARzE0f0PJtPNoopIvwuQR2y81v3MJW38BzCA&oe=65A6B41C'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=ar2UeqxVCa8AX9W7TdA&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBKyjDLlE6FThZvDqRu3IOBYqirX58xdfYbZnOO6OncQA&oe=65A63DDD'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'PostService.getPost',
+    data: ResponseObject {
+      error: null,
+      ok: true,
+      data: {
+        images: [
+          {
+            id: 'd0eeefcf-55df-448a-ac00-6e00c39ff020',
+            createdAt: 2024-01-11T00:46:51.358Z,
+            updatedAt: 2024-01-13T01:47:59.233Z,
+            url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418477593_209393342245243_5383500966870959150_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFXoo9CGbZNt3gPGnQPVjv3TlAr_PY3ZhFOUCv89jdmEdgIagSmpXDKfa_WBy46VwY7cRdEStGlOl8c6GIIVoe4&_nc_ohc=jKGlGRGCNfgAX-DeSf9&_nc_oc=AQkd_aX6SQVVGOKOseDXSiOddxkSn6mDHmIIn9TkhP_aueMlZuoOZpF4NgN8nyOtKzI&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBau3aVDMbfy_hk4P7oisevCa7Rd9_zqZRk-PzzGtgszQ&oe=65A72005',
+            fbid: '209393345578576'
+          }
+        ],
+        author: {
+          id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+          createdAt: 2023-11-28T11:27:24.047Z,
+          updatedAt: 2023-12-21T21:55:59.161Z,
+          name: 'Adrian',
+          lastName: 'Abadin',
+          username: 'aabadin@gmail.com',
+          phone: '2344426406',
+          hash: '$argon2id$v=19$m=65536,t=3,p=4$ee2y2lVS2Ey+74lh5IF4uQ$UVibjBo6aZg0JC/G1x4SRTa+fOQRM47CzrQXEuPEK8E',
+          birthDate: 1980-08-11T00:00:00.000Z,
+          rol: 'ADMIN',
+          isVerified: true,
+          password: null,
+          accessToken: 'EAAC6VEEU92EBO1pwfzasXf9K8uv2sbT9j8GLF9kdB6euEQcrZCE1aZCKdL0gO3mi0kZBiETNy7rcUjIsjjTfNkUqvYZAxJKDWVZAqZAXL5kcV09ocfWIlFc1Vlb4rk0IrHfDyNDi41vbnlcdDVpGkDYvEVgCx9hMcIJxq3gHrSel4dzNDDhl2KmnBokAQQ6ZBpGouRVm4yPGp7YvYfHt3vKN8XDZBsZC8FxPvE4QSvATrzzJtqZBffEkYkSqZCtcFqTQ34wEQZDZD',
+          refreshToken: null,
+          gender: 'MALE',
+          avatar: 'https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=7165393753490626&height=50&width=50&ext=1705787756&hash=AfqzELfev_cv9cNif6YVhsRplRsfEsH5lvydHycQcgrvLw',
+          fbid: '7165393753490626',
+          addressesId: null
+        },
+        classification: 'Economia',
+        createdAt: 2024-01-11T00:46:51.358Z,
+        heading: 'Hugo Lamadrid contó una anécdota de sus inicios como jugador y sorprendió a sus compañeros de radio',
+        id: '24a0b4e8-99da-4940-a70b-f8cce9fc3bb0',
+        importance: 1,
+        isVisible: true,
+        text: 'Hugo Lamadrid fue un futbolista que comenzó su carrera en Racing, donde fue campeón de la Supercopa en 1988, y tras un paso por Universidad de Chile, Mandiyú, Quilmes y Douglas Haig, entre otros, se retiró de la actividad y volvió a la escena pública al publicar contenido a las redes sociales. Escribió un libro y actualmente es columnista en el programa de radio de Beto Casella (hoy conducido por Joe Fernández), en el cual compartió sus anécdotas con un particular sentido del humor.\r\n' +
+          '“¿Quién osó robarte la novia, o a quién se la robaste?”, le consultaron al Flaco en el programa Nadie Nos Para de radio Rock & Pop (FM 95.9). “Era la pregunta que no había que hacer”, disparó el ex futbolista, quien procedió a relatar la historia que tanta expectativa había generado en el estudio y los oyentes.\r\n' +
+          '\r\n' +
+          'El relato de Lamadrid data del año 1987, cuando tenía 20 años y se encontraba en el plantel de Primera División de la Academia. “Estábamos en la concentración, a punto de salir para la cancha y cuando estaba en la habitación me suena el teléfono. ‘¿Atiendo o no atiendo?’, me pregunté. ‘Hola Hugo, ¿cómo estás? Te quiero ver esta noche’, me contestó una chica (del otro lado de la línea). Le dije que no podía porque nos estábamos yendo a la cancha. ‘Te espero a la una de la mañana en Córdoba y 9 de Julio’, dijo y cortó”, arrancó el ex mediocampista.\r\n' +
+          '\r\n' +
+          'El ex jugador, de 57 años, recordó que en ese momento se negó a ir al encuentro cuando recibió la inesperada llamada, pero que luego accedió a concurrir a la misteriosa cita simplemente por curiosidad. Se encontraron en el lugar acordado y la señorita se subió a su coche. Una vez dentro, Lamadrid le preguntó su nombre. “No puedo decirte quién soy”, recibió como respuesta, lo que generó aún más incertidumbre. Mientras conducían por la Ciudad de Buenos Aires, decidieron ir a un hotel alojamiento y, una vez concluido el asunto, el futbolista pudo saber quién era su compañera en la noche porteña.',
+        title: '“¿Querés saber el nombre?”: un conocido ex futbolista reveló que tuvo un encuentro sexual con la novia de un compañero sin saber quién era'
+      }
+    }
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209393345578576',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418477593_209393342245243_5383500966870959150_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFXoo9CGbZNt3gPGnQPVjv3TlAr_PY3ZhFOUCv89jdmEdgIagSmpXDKfa_WBy46VwY7cRdEStGlOl8c6GIIVoe4&_nc_ohc=jKGlGRGCNfgAX-DeSf9&_nc_oc=AQkd_aX6SQVVGOKOseDXSiOddxkSn6mDHmIIn9TkhP_aueMlZuoOZpF4NgN8nyOtKzI&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBau3aVDMbfy_hk4P7oisevCa7Rd9_zqZRk-PzzGtgszQ&oe=65A72005'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209387248912519',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/416361608_209387245579186_2578144701113767794_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeG5YXXujNIaQdgesF6rXrjVcEeXsMpMnjhwR5ewykyeOPH1xqzVp__wd92B7_TvNrqHh2f7ACIKZ7Y0a3zrAozD&_nc_ohc=7ARtd1DyspUAX-mdYoX&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfDgwFhWXrARzE0f0PJtPNoopIvwuQR2y81v3MJW38BzCA&oe=65A6B41C'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=MgZ9AWs_iowAX8lLwlw&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBg1dzrqB5Euh-jugkROrfPswM77fW8FlhWMfsthKtTIw&oe=65A76AFE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=ar2UeqxVCa8AX9W7TdA&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBKyjDLlE6FThZvDqRu3IOBYqirX58xdfYbZnOO6OncQA&oe=65A63DDD'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208768655641045',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418490844_208768652307712_1666164459986556452_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeEZsxDouoD94lERlANIeMr2rB9To0iWSTysH1OjSJZJPOWV9TWaB9SwOfqJ7kx2_EMOPDAhppAUBE8ERfP_I2HU&_nc_ohc=4micKyQKFisAX8RNpxQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCUvK4JBhxZMvPF61APz0xZq1zlVvJi9leRL7-r1CQNDA&oe=65A6648A'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209392692245308',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418435374_209392688911975_4820254755042060819_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFT-B2OZu2uerOaJyWhj-qZxFGqUU7iTF_EUapRTuJMX8rwtknVHKzvTaOaEyHoKfAr294xUvzmNtYBNxhDMWfa&_nc_ohc=vRR71gDvce8AX_dalLM&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfB0b660xlE53utW-neJ3acOPFZYdGZzVAcyjFdwTZQWYg&oe=65A6C8CC'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209393345578576',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418477593_209393342245243_5383500966870959150_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFXoo9CGbZNt3gPGnQPVjv3TlAr_PY3ZhFOUCv89jdmEdgIagSmpXDKfa_WBy46VwY7cRdEStGlOl8c6GIIVoe4&_nc_ohc=jKGlGRGCNfgAX-DeSf9&_nc_oc=AQkd_aX6SQVVGOKOseDXSiOddxkSn6mDHmIIn9TkhP_aueMlZuoOZpF4NgN8nyOtKzI&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBau3aVDMbfy_hk4P7oisevCa7Rd9_zqZRk-PzzGtgszQ&oe=65A72005'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208352589015985',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418725026_208352585682652_4946052723636947551_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeETB74OH1lPo9y7O35KuwcUjlCs6_-g_AOOUKzr_6D8A2aBim_7MTyPzJpH0oDzH84Xy85wYHMZogMtgcMBY4fL&_nc_ohc=OYMU2L1k2IIAX-lFVfr&_nc_oc=AQmxQe80bOeTnwrWVHKYOncG32YiojSii1fkWykhrufA914J2YMdToor1zuZDLNfdp4&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfArMeQ5gJ09F_a7X6F8EbofPb9GkbR7A04oBNYhQ0f2LA&oe=65A5F76D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209393345578576',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418477593_209393342245243_5383500966870959150_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFXoo9CGbZNt3gPGnQPVjv3TlAr_PY3ZhFOUCv89jdmEdgIagSmpXDKfa_WBy46VwY7cRdEStGlOl8c6GIIVoe4&_nc_ohc=jKGlGRGCNfgAX-DeSf9&_nc_oc=AQkd_aX6SQVVGOKOseDXSiOddxkSn6mDHmIIn9TkhP_aueMlZuoOZpF4NgN8nyOtKzI&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBau3aVDMbfy_hk4P7oisevCa7Rd9_zqZRk-PzzGtgszQ&oe=65A72005'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208352589015985',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418725026_208352585682652_4946052723636947551_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeETB74OH1lPo9y7O35KuwcUjlCs6_-g_AOOUKzr_6D8A2aBim_7MTyPzJpH0oDzH84Xy85wYHMZogMtgcMBY4fL&_nc_ohc=OYMU2L1k2IIAX-lFVfr&_nc_oc=AQmxQe80bOeTnwrWVHKYOncG32YiojSii1fkWykhrufA914J2YMdToor1zuZDLNfdp4&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfArMeQ5gJ09F_a7X6F8EbofPb9GkbR7A04oBNYhQ0f2LA&oe=65A5F76D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208768655641045',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418490844_208768652307712_1666164459986556452_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeEZsxDouoD94lERlANIeMr2rB9To0iWSTysH1OjSJZJPOWV9TWaB9SwOfqJ7kx2_EMOPDAhppAUBE8ERfP_I2HU&_nc_ohc=4micKyQKFisAX8RNpxQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCUvK4JBhxZMvPF61APz0xZq1zlVvJi9leRL7-r1CQNDA&oe=65A6648A'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209392692245308',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418435374_209392688911975_4820254755042060819_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFT-B2OZu2uerOaJyWhj-qZxFGqUU7iTF_EUapRTuJMX8rwtknVHKzvTaOaEyHoKfAr294xUvzmNtYBNxhDMWfa&_nc_ohc=vRR71gDvce8AX_dalLM&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfB0b660xlE53utW-neJ3acOPFZYdGZzVAcyjFdwTZQWYg&oe=65A6C8CC'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209387248912519',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/416361608_209387245579186_2578144701113767794_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeG5YXXujNIaQdgesF6rXrjVcEeXsMpMnjhwR5ewykyeOPH1xqzVp__wd92B7_TvNrqHh2f7ACIKZ7Y0a3zrAozD&_nc_ohc=7ARtd1DyspUAX-mdYoX&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfDgwFhWXrARzE0f0PJtPNoopIvwuQR2y81v3MJW38BzCA&oe=65A6B41C'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=ar2UeqxVCa8AX9W7TdA&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBKyjDLlE6FThZvDqRu3IOBYqirX58xdfYbZnOO6OncQA&oe=65A63DDD'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=MgZ9AWs_iowAX8lLwlw&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBg1dzrqB5Euh-jugkROrfPswM77fW8FlhWMfsthKtTIw&oe=65A76AFE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209387248912519',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/416361608_209387245579186_2578144701113767794_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeG5YXXujNIaQdgesF6rXrjVcEeXsMpMnjhwR5ewykyeOPH1xqzVp__wd92B7_TvNrqHh2f7ACIKZ7Y0a3zrAozD&_nc_ohc=7ARtd1DyspUAX-mdYoX&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfDgwFhWXrARzE0f0PJtPNoopIvwuQR2y81v3MJW38BzCA&oe=65A6B41C'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209392692245308',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418435374_209392688911975_4820254755042060819_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFT-B2OZu2uerOaJyWhj-qZxFGqUU7iTF_EUapRTuJMX8rwtknVHKzvTaOaEyHoKfAr294xUvzmNtYBNxhDMWfa&_nc_ohc=vRR71gDvce8AX_dalLM&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfB0b660xlE53utW-neJ3acOPFZYdGZzVAcyjFdwTZQWYg&oe=65A6C8CC'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208352589015985',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418725026_208352585682652_4946052723636947551_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeETB74OH1lPo9y7O35KuwcUjlCs6_-g_AOOUKzr_6D8A2aBim_7MTyPzJpH0oDzH84Xy85wYHMZogMtgcMBY4fL&_nc_ohc=OYMU2L1k2IIAX-lFVfr&_nc_oc=AQmxQe80bOeTnwrWVHKYOncG32YiojSii1fkWykhrufA914J2YMdToor1zuZDLNfdp4&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfArMeQ5gJ09F_a7X6F8EbofPb9GkbR7A04oBNYhQ0f2LA&oe=65A5F76D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=MgZ9AWs_iowAX8lLwlw&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBg1dzrqB5Euh-jugkROrfPswM77fW8FlhWMfsthKtTIw&oe=65A76AFE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=ar2UeqxVCa8AX9W7TdA&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBKyjDLlE6FThZvDqRu3IOBYqirX58xdfYbZnOO6OncQA&oe=65A63DDD'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209393345578576',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418477593_209393342245243_5383500966870959150_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFXoo9CGbZNt3gPGnQPVjv3TlAr_PY3ZhFOUCv89jdmEdgIagSmpXDKfa_WBy46VwY7cRdEStGlOl8c6GIIVoe4&_nc_ohc=jKGlGRGCNfgAX-DeSf9&_nc_oc=AQkd_aX6SQVVGOKOseDXSiOddxkSn6mDHmIIn9TkhP_aueMlZuoOZpF4NgN8nyOtKzI&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBau3aVDMbfy_hk4P7oisevCa7Rd9_zqZRk-PzzGtgszQ&oe=65A72005'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208768655641045',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418490844_208768652307712_1666164459986556452_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeEZsxDouoD94lERlANIeMr2rB9To0iWSTysH1OjSJZJPOWV9TWaB9SwOfqJ7kx2_EMOPDAhppAUBE8ERfP_I2HU&_nc_ohc=4micKyQKFisAX8RNpxQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCUvK4JBhxZMvPF61APz0xZq1zlVvJi9leRL7-r1CQNDA&oe=65A6648A'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: { queryOptions: { AND: [] } }, level: 'debug' }
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194063830444861',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/411175697_194063823778195_32548783447892591_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeHfcq9MM4WyCLjINyp3IpZ20vOxeU62PnbS87F5TrY-dg9_aNCYbWrZp_YhLtc1EEes6UwLE-B9tqsh8k-Sv0Ot&_nc_ohc=MgZ9AWs_iowAX8lLwlw&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBg1dzrqB5Euh-jugkROrfPswM77fW8FlhWMfsthKtTIw&oe=65A76AFE'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209393345578576',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418477593_209393342245243_5383500966870959150_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFXoo9CGbZNt3gPGnQPVjv3TlAr_PY3ZhFOUCv89jdmEdgIagSmpXDKfa_WBy46VwY7cRdEStGlOl8c6GIIVoe4&_nc_ohc=jKGlGRGCNfgAX-DeSf9&_nc_oc=AQkd_aX6SQVVGOKOseDXSiOddxkSn6mDHmIIn9TkhP_aueMlZuoOZpF4NgN8nyOtKzI&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBau3aVDMbfy_hk4P7oisevCa7Rd9_zqZRk-PzzGtgszQ&oe=65A72005'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208768655641045',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418490844_208768652307712_1666164459986556452_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeEZsxDouoD94lERlANIeMr2rB9To0iWSTysH1OjSJZJPOWV9TWaB9SwOfqJ7kx2_EMOPDAhppAUBE8ERfP_I2HU&_nc_ohc=4micKyQKFisAX8RNpxQ&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfCUvK4JBhxZMvPF61APz0xZq1zlVvJi9leRL7-r1CQNDA&oe=65A6648A'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209387248912519',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/416361608_209387245579186_2578144701113767794_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeG5YXXujNIaQdgesF6rXrjVcEeXsMpMnjhwR5ewykyeOPH1xqzVp__wd92B7_TvNrqHh2f7ACIKZ7Y0a3zrAozD&_nc_ohc=7ARtd1DyspUAX-mdYoX&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfDgwFhWXrARzE0f0PJtPNoopIvwuQR2y81v3MJW38BzCA&oe=65A6B41C'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '209392692245308',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418435374_209392688911975_4820254755042060819_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeFT-B2OZu2uerOaJyWhj-qZxFGqUU7iTF_EUapRTuJMX8rwtknVHKzvTaOaEyHoKfAr294xUvzmNtYBNxhDMWfa&_nc_ohc=vRR71gDvce8AX_dalLM&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfB0b660xlE53utW-neJ3acOPFZYdGZzVAcyjFdwTZQWYg&oe=65A6C8CC'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '194285550422689',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/412125798_194285547089356_5931259073241590489_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=b76d1c&_nc_eui2=AeH1n7U1v1yZkriHKL2fXafNw5OAXjEuWlfDk4BeMS5aV2LRnN1o6unBl3_5_3jaSftgr2Q1qrZgbCQu43cgZO_r&_nc_ohc=ar2UeqxVCa8AX9W7TdA&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfBKyjDLlE6FThZvDqRu3IOBYqirX58xdfYbZnOO6OncQA&oe=65A63DDD'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  message: {
+    function: 'facebookService.getLinkFromId',
+    imagesArray: [
+      {
+        fbid: '208352589015985',
+        url: 'https://scontent-eze1-1.xx.fbcdn.net/v/t39.30808-6/418725026_208352585682652_4946052723636947551_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=ab7367&_nc_eui2=AeETB74OH1lPo9y7O35KuwcUjlCs6_-g_AOOUKzr_6D8A2aBim_7MTyPzJpH0oDzH84Xy85wYHMZogMtgcMBY4fL&_nc_ohc=OYMU2L1k2IIAX-lFVfr&_nc_oc=AQmxQe80bOeTnwrWVHKYOncG32YiojSii1fkWykhrufA914J2YMdToor1zuZDLNfdp4&_nc_ht=scontent-eze1-1.xx&edm=AMAeTUEEAAAA&oh=00_AfArMeQ5gJ09F_a7X6F8EbofPb9GkbR7A04oBNYhQ0f2LA&oe=65A5F76D'
+      }
+    ]
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "string",
+        "path": [
+          "body",
+          "importance"
+        ],
+        "message": "Expected number, received string"
+      }
+    ]
+        at Object.get error [as error] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\zod\lib\types.js:143:22)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:17:14
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at done (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\multer\lib\make-middleware.js:45:7)
+        at indicateDone (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\multer\lib\make-middleware.js:49:68)
+        at C:\Users\aabadin\Documents\code\informe5Backend\node_modules\multer\lib\make-middleware.js:155:11
+        at WriteStream.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\multer\storage\disk.js:43:9)
+        at WriteStream.emit (node:events:526:35) {
+      issues: [
+        {
+          code: 'invalid_type',
+          expected: 'number',
+          received: 'string',
+          path: [ 'body', 'importance' ],
+          message: 'Expected number, received string'
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'invalid_type',
+          expected: 'number',
+          received: 'string',
+          path: [ 'body', 'importance' ],
+          message: 'Expected number, received string'
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: Cannot read properties of undefined (reading 'adsService')
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:12:35
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:21:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:23:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: Cannot read properties of undefined (reading 'adsService')
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:12:35
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:22:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:23:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: Cannot read properties of undefined (reading 'service')
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:12:35
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:22:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:22:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: this.service.createAd is not a function
+        at AdsController.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:17:43)
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:24:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:22:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: this.service.createAd is not a function
+        at AdsController.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:17:43)
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:24:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:22:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AdsController.createAd',
+    error: TypeError: adsServiceLoad.createAd is not a function
+        at AdsController.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:17:45)
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.createAd (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:24:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:22:5
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AdsService.createAd',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.ads.create()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.service.ts:10:48
+    
+       7 constructor (
+       8   public createAd = async <T>(data: createAdType): Promise<GenericResponseObject<T | null>> => {
+       9     try {
+    → 10       const response = await this.prisma.ads.create({
+                 data: {
+                   importance: "1",
+                               ~~~
+                   photoUrl: "public\\image-1705134774367-757782038-descarga.jfif",
+                   title: "Primera Ad",
+                   url: "http://adrian.com",
+                   user: {
+                     connect: {
+                       id: "4c2b66ed-b656-41de-96d0-664c25f9ba55"
+                     }
+                   }
+                 }
+               })
+    
+    Argument `importance`: Invalid value provided. Expected Int, provided String.
+        at ti (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:118:5888)
+        at si.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:125:6473)
+        at si.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:125:6151)
+        at si.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:125:5859)
+        at l (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:130:10025) {
+      clientVersion: '5.7.1'
+    }
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AdsController.getAds',
+    error: TypeError: Cannot read properties of undefined (reading 'service')
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:28:35
+        at Generator.next (<anonymous>)
+        at C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:4:12)
+        at getAds (C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.controller.ts:37:16)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}

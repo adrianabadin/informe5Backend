@@ -24,8 +24,10 @@ const storage = multer.diskStorage({
   }
 })
 export const upload = multer({ storage })
-export const router = Router()
+export const adsRouter = Router()
 
-router.post('/create', upload.single('image'),
+adsRouter.post('/create', upload.single('image'),
   schemaValidator(createAdSchema),
   adsController.createAd)
+adsRouter.get('/getAll', adsController.getAds)
+export default adsRouter

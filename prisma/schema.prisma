@@ -110,7 +110,7 @@ model Ads {
   id         String   @id @default(uuid())
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
-  importance Int
+  importance String
   metrics    Metric[]
   user       Users    @relation(fields: [usersId], references: [id])
   usersId    String
