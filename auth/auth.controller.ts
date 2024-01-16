@@ -26,6 +26,22 @@ export class AuthController {
         next()
       }
     },
+    public jwtRenewalToken = (req: Request, res: Response, next: NextFunction) => {
+      if (req.isAuthenticated()) {
+        if ('id' in req.user) {
+          const token = this.service.tokenIssuance(req.user.id as string)
+          res.clearCookie('jwt')
+          res.cookie('jwt', token)
+          next()
+        }
+      }
+    },
+    public sendAuthData = (req: Request, res: Response) => {
+      if (req.isAuthenticated()) {
+        console.log(req.user)
+        res.status(200).json(req.user)
+      } else res.status(403).send('unauthorized')
+    },
     public issueJWT = (req: Request, res: Response, next: NextFunction) => {
       console.log('issuing')
       if (req.isAuthenticated()) {

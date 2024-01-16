@@ -5,6 +5,8 @@ import { AdsController } from './ads.controller'
 import { schemaValidator } from '../middlewares/zod.validate'
 import { createAdSchema } from './ads.schema'
 import passport from 'passport'
+import { AuthController } from '../auth/auth.controller'
+const authController = new AuthController()
 const adsController = new AdsController()
 const storage = multer.diskStorage({
   destination: function (
@@ -27,13 +29,13 @@ const storage = multer.diskStorage({
 export const upload = multer({ storage })
 export const adsRouter = Router()
 
-adsRouter.post('/create', upload.single('image'),
+adsRouter.post('/create', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, upload.single('image'),
   schemaValidator(createAdSchema),
   adsController.createAd)
-adsRouter.get('/getAll', (req: Request, res: Response, next: NextFunction) => { console.log(req.cookies); next() }, adsController.getAds)
-adsRouter.put('/setActive/:id', adsController.setActive)
-adsRouter.put('/setInactive/:id', adsController.setInactive)
-adsRouter.delete('/delete/:id', adsController.deleteAd)
-adsRouter.get('/get/:id', (req: Request, res: Response, next: NextFunction) => { console.log(req.cookies, 'token'); next() }, adsController.getAd)
-adsRouter.put('/update/:id', upload.single('image'), adsController.updateAd)
+adsRouter.get('/getAll', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.getAds)
+adsRouter.put('/setActive/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.setActive)
+adsRouter.put('/setInactive/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.setInactive)
+adsRouter.delete('/delete/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.deleteAd)
+adsRouter.get('/get/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.getAd)
+adsRouter.put('/update/:id', upload.single('image'), schemaValidator(createAdSchema), passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.updateAd)
 export default adsRouter

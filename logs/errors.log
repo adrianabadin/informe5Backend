@@ -361,3 +361,198 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'AdsService.setActive',
+    error: PrismaClientValidationError: 
+    Invalid `this.prisma.ads.update()` invocation in
+    C:\Users\aabadin\Documents\code\informe5Backend\ads\ads.service.ts:29:46
+    
+      26 },
+      27 public setActive = async (id: string) => {
+      28   try {
+    → 29     const result = await this.prisma.ads.update({
+               where: {
+                 id: "550a1bae-9815-4ebd-894f-7179ae6be067"
+               },
+               data: {
+                 isActive: true,
+                 ~~~~~~~~
+             ?   id?: String | StringFieldUpdateOperationsInput,
+             ?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+             ?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+             ?   importance?: Int | IntFieldUpdateOperationsInput,
+             ?   url?: String | StringFieldUpdateOperationsInput,
+             ?   title?: String | StringFieldUpdateOperationsInput,
+             ?   photoUrl?: String | StringFieldUpdateOperationsInput,
+             ?   metrics?: MetricUpdateManyWithoutAdsNestedInput,
+             ?   user?: UsersUpdateOneRequiredWithoutAdsNestedInput
+               }
+             })
+    
+    Unknown argument `isActive`. Available options are marked with ?.
+        at ti (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:118:5888)
+        at si.handleRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:125:6473)
+        at si.handleAndLogRequestError (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:125:6151)
+        at si.request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:125:5859)
+        at l (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\@prisma\client\runtime\library.js:130:10025) {
+      clientVersion: '5.7.1'
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "Debe se una cadena de al menos 3 caracteres",
+        "path": [
+          "body",
+          "usersId"
+        ]
+      }
+    ]
+        at Object.get error [as error] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\zod\lib\types.js:143:22)
+        at C:\Users\aabadin\Documents\code\informe5Backend\middlewares\zod.validate.ts:16:14
+        at Layer.handle [as handle_request] (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at done (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\multer\lib\make-middleware.js:45:7)
+        at indicateDone (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\multer\lib\make-middleware.js:49:68)
+        at Multipart.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\multer\lib\make-middleware.js:166:7)
+        at Multipart.emit (node:events:514:28)
+        at emitCloseNT (node:internal/streams/destroy:132:10) {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'Debe se una cadena de al menos 3 caracteres',
+          path: [ 'body', 'usersId' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'Debe se una cadena de al menos 3 caracteres',
+          path: [ 'body', 'usersId' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.jwtLoginVerify',
+    error: TypeError: req.cookies is not a function
+        at AuthService.<anonymous> (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:82:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\aabadin\Documents\code\informe5Backend\auth\auth.service.ts:5:58)
+  },
+  level: 'error'
+}

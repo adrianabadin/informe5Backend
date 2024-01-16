@@ -8,8 +8,16 @@ import { userLogged } from '../app'
 dotenv.config()
 export const authRoutes = Router()
 const authController = new AuthController()
-authRoutes.post('/token', passport.authenticate('jwt'), authController.jwtLogin)
+authRoutes.post('/token', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, authController.sendAuthData)
+authRoutes.get('/token', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, authController.sendAuthData)
 authRoutes.post('/login', passport.authenticate('login'), authController.localLogin)
+authRoutes.get('/setcookie', (req: Request, res: Response) => {
+  res.cookie('adrian', 'groso')
+  res.send({ ok: true })
+})
+authRoutes.get('/getcookies', (req: Request, res: Response) => {
+  res.send({ ok: true, cookie: req.cookies })
+})
 authRoutes.post('/signup', upload.single('avatar'), passport.authenticate('register', { failureFlash: true, failureRedirect: '/failedsignup' }), authController.localLogin)
 authRoutes.get('/goauth', passport.authenticate('google', { scope: ['profile', 'email'] }), authController.gOAuthLogin)//, { successRedirect: '/', failureFlash: true, failureRedirect: '/signup' }
 authRoutes.get('/google/getuser', passport.authenticate('google', { scope: ['profile', 'email'] }), authController.gOAuthLogin)
