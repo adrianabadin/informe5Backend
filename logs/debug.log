@@ -33063,3 +33063,1340 @@
   level: 'debug'
 }
 { message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AdsController.setActive',
+    error: TypeError: Cannot read properties of undefined (reading 'service')
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:39:35
+        at Generator.next (<anonymous>)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:4:12)
+        at setActive (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:51:16)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'schemaValidator',
+    error: ZodError: [
+      {
+        "code": "too_small",
+        "minimum": 3,
+        "type": "string",
+        "inclusive": true,
+        "exact": false,
+        "message": "Debe se una cadena de al menos 3 caracteres",
+        "path": [
+          "body",
+          "usersId"
+        ]
+      }
+    ]
+        at Object.get error [as error] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\zod\lib\types.js:43:31)
+        at ZodObject.parse (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\zod\lib\types.js:143:22)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\middlewares\zod.validate.ts:16:14
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at done (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\multer\lib\make-middleware.js:45:7)
+        at indicateDone (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\multer\lib\make-middleware.js:49:68)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\multer\lib\make-middleware.js:155:11
+        at WriteStream.<anonymous> (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\multer\storage\disk.js:43:9)
+        at WriteStream.emit (node:events:526:35) {
+      issues: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'Debe se una cadena de al menos 3 caracteres',
+          path: [ 'body', 'usersId' ]
+        }
+      ],
+      addIssue: [Function (anonymous)],
+      addIssues: [Function (anonymous)],
+      errors: [
+        {
+          code: 'too_small',
+          minimum: 3,
+          type: 'string',
+          inclusive: true,
+          exact: false,
+          message: 'Debe se una cadena de al menos 3 caracteres',
+          path: [ 'body', 'usersId' ]
+        }
+      ]
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    user: {
+      isVerified: true,
+      lastName: 'Abadin',
+      id: '4c2b66ed-b656-41de-96d0-664c25f9ba55',
+      username: 'aabadin@gmail.com',
+      name: 'Adrian',
+      rol: 'ADMIN',
+      hash: null
+    }
+  },
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AdsController.updateAd',
+    error: TypeError: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+        at AdsController.<anonymous> (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:93:15)
+        at Generator.next (<anonymous>)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.updateAd (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:108:16)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AdsController.updateAd',
+    error: TypeError: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+        at AdsController.<anonymous> (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:93:15)
+        at Generator.next (<anonymous>)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.updateAd (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:108:16)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AdsController.updateAd',
+    error: TypeError: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+        at AdsController.<anonymous> (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:93:15)
+        at Generator.next (<anonymous>)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.updateAd (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:108:16)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AdsController.updateAd',
+    error: TypeError: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+        at AdsController.<anonymous> (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:93:15)
+        at Generator.next (<anonymous>)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.updateAd (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:108:16)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AdsController.updateAd',
+    error: TypeError: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+        at AdsController.<anonymous> (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:93:15)
+        at Generator.next (<anonymous>)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.updateAd (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:108:16)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AdsController.updateAd',
+    error: TypeError: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+        at AdsController.<anonymous> (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:93:15)
+        at Generator.next (<anonymous>)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.updateAd (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:108:16)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  message: {
+    function: 'AdsController.updateAd',
+    error: TypeError: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+        at AdsController.<anonymous> (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:93:15)
+        at Generator.next (<anonymous>)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.updateAd (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:108:16)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at Route.dispatch (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:114:3)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  message: {
+    function: 'AdsController.updateAd',
+    error: TypeError: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+        at AdsController.<anonymous> (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:93:15)
+        at Generator.next (<anonymous>)
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:4:12)
+        at AdsController.updateAd (C:\Users\Adria\Documents\code\turco2\informe5Backend\ads\ads.controller.ts:108:16)
+        at Layer.handle [as handle_request] (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\express\lib\router\route.js:144:13)
+        at done (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\multer\lib\make-middleware.js:45:7)
+        at indicateDone (C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\multer\lib\make-middleware.js:49:68)
+  },
+  level: 'error'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{ message: 'Listening on 8080', level: 'info' }
+{ message: 'Listening on 8080', level: 'info' }
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}
+{
+  function: 'jwtLoginVerify',
+  message: 'Successfully logged in',
+  level: 'debug'
+}

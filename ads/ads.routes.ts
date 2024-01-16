@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import { Router, type Request } from 'express'
+import { Router, type Request, type NextFunction, type Response } from 'express'
 import multer from 'multer'
 import { AdsController } from './ads.controller'
 import { schemaValidator } from '../middlewares/zod.validate'
 import { createAdSchema } from './ads.schema'
+import passport from 'passport'
 const adsController = new AdsController()
 const storage = multer.diskStorage({
   destination: function (
@@ -29,7 +30,10 @@ export const adsRouter = Router()
 adsRouter.post('/create', upload.single('image'),
   schemaValidator(createAdSchema),
   adsController.createAd)
-adsRouter.get('/getAll', adsController.getAds)
+adsRouter.get('/getAll', (req: Request, res: Response, next: NextFunction) => { console.log(req.cookies); next() }, adsController.getAds)
 adsRouter.put('/setActive/:id', adsController.setActive)
 adsRouter.put('/setInactive/:id', adsController.setInactive)
+adsRouter.delete('/delete/:id', adsController.deleteAd)
+adsRouter.get('/get/:id', (req: Request, res: Response, next: NextFunction) => { console.log(req.cookies, 'token'); next() }, adsController.getAd)
+adsRouter.put('/update/:id', upload.single('image'), adsController.updateAd)
 export default adsRouter

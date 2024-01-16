@@ -9,11 +9,12 @@ import dotenv from 'dotenv'
 // import * as jwt from 'jsonwebtoken'
 dotenv.config()
 const publicKey = fs.readFileSync(`${process.env.KEYS_PATH}/publicKey.pem`, 'utf-8')
-const simetricKey = process.env.SIMETRICKEY
+const simetricKey = '+vdKrc3rEqncv+pgGy9WmhZXoQfWsPiAuc1UA5yfujE='// process.env.SIMETRICKEY
 
 const authService = new AuthService()
 export const cookieExtractor = (req: Request): string => {
   let token: string = ''
+
   if ('jwt' in req?.body !== undefined && req.body.jwt !== null) {
     token = req.body.jwt
   } else {
@@ -21,6 +22,7 @@ export const cookieExtractor = (req: Request): string => {
       token = req.cookies.jwt
     }
   }
+
   if (token !== undefined) {
     if (simetricKey !== undefined) return decrypt(token, simetricKey)
     else throw new Error('simetricKey is undefined')

@@ -8,6 +8,6 @@ export function routeHandler (app: Application): void {
   app.use('/post', postRouter)
   app.use('/ads', adsRouter)
   app.use('/', (req: Request, res: Response) => {
-    console.log('root')
+    console.log('root', req.path)
   })
 }

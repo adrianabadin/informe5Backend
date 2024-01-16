@@ -2,6 +2,7 @@ import { DatabaseHandler } from '../Services/database.service'
 import { logger } from '../Services/logger.service'
 import { type createAdType } from './ads.schema'
 import { type GenericResponseObject, ResponseObject, type GenericResponseObject } from '../Entities/response'
+import { type AdsFormType } from '../../Informe5Front/src/ReduxGlobals/Features/adsFormSlice'
 
 export class AdsService extends DatabaseHandler {
   constructor (
@@ -38,6 +39,33 @@ export class AdsService extends DatabaseHandler {
         return new ResponseObject(null, true, result)
       } catch (error) {
         logger.error({ function: 'AdsService.setInactive', error })
+        return new ResponseObject(error, false, null)
+      }
+    },
+    public deleteAd = async (id: string) => {
+      try {
+        const response = await this.prisma.ads.delete({ where: { id } })
+        return new ResponseObject(null, true, response)
+      } catch (error) {
+        logger.error({ function: 'AdsService.deleteAd', error })
+        return new ResponseObject(error, false, null)
+      }
+    },
+    public getAd = async (id: string) => {
+      try {
+        const response = await this.prisma.ads.findUnique({ where: { id } })
+        console.log(response, 'getAd')
+        return new ResponseObject(null, true, response)
+      } catch (error) {
+        logger.error({ function: 'AdsService.getAd', error })
+      }
+    },
+    public updateAd = async (data: AdsFormType & { photoUrl: string }, id: string) => {
+      try {
+        const response = await this.prisma.ads.update({ where: { id }, data })
+        return new ResponseObject(null, true, response)
+      } catch (error) {
+        logger.error({ function: 'AdsService.updateAd', error })
         return new ResponseObject(error, false, null)
       }
     }
