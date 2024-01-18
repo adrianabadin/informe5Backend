@@ -31,7 +31,7 @@ export const postRouter = Router()
 postRouter.post(
   '/create',
   upload.array('images', 5),
-  passport.authenticate('jwt', { session: false }),
+  passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken,
   schemaValidator(createPostSchema),
   postController.createPost
 )
@@ -41,16 +41,16 @@ postRouter.get(
   postController.getPostById
 )
 postRouter.get(
-  '/getPosts', authController.authState,
+  '/getPosts',
   /* schemaValidator(getPostsSchema), */
   postController.getAllPosts
 )
 postRouter.put(
-  '/updatePost/:id',
+  '/updatePost/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken,
   upload.array('images', 5),
   postController.updatePost
 )
-postRouter.put('/hidePost/:id', postController.hidePost)
-postRouter.delete('/deletePost/:id', schemaValidator(getPostById), postController.deletePost)
-postRouter.put('/hidePost/:id', schemaValidator(getPostById), postController.hidePost)
-postRouter.put('/showPost/:id', schemaValidator(getPostById), postController.showPost)
+// postRouter.put('/hidePost/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, postController.hidePost)
+postRouter.delete('/deletePost/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, schemaValidator(getPostById), postController.deletePost)
+postRouter.put('/hidePost/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, schemaValidator(getPostById), postController.hidePost)
+postRouter.put('/showPost/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, schemaValidator(getPostById), postController.showPost)

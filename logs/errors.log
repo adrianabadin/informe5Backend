@@ -556,3 +556,16 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'AuthService.localLoginVerify',
+    error: NotFoundError [PrismaClientKnownRequestError]: No Users found
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\@prisma\client\runtime\library.js:34:610
+        at C:\Users\Adria\Documents\code\turco2\informe5Backend\node_modules\@prisma\client\runtime\library.js:34:550 {
+      code: 'P2025',
+      clientVersion: '5.7.1',
+      meta: undefined
+    }
+  },
+  level: 'error'
+}

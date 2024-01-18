@@ -32,10 +32,10 @@ export const adsRouter = Router()
 adsRouter.post('/create', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, upload.single('image'),
   schemaValidator(createAdSchema),
   adsController.createAd)
-adsRouter.get('/getAll', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.getAds)
+adsRouter.get('/getAll', adsController.getAds)
 adsRouter.put('/setActive/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.setActive)
 adsRouter.put('/setInactive/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.setInactive)
 adsRouter.delete('/delete/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.deleteAd)
-adsRouter.get('/get/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.getAd)
+adsRouter.get('/get/:id', adsController.getAd)
 adsRouter.put('/update/:id', upload.single('image'), schemaValidator(createAdSchema), passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken, adsController.updateAd)
 export default adsRouter

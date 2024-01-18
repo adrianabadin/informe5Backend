@@ -28,6 +28,7 @@ export class AuthController {
     },
     public jwtRenewalToken = (req: Request, res: Response, next: NextFunction) => {
       if (req.isAuthenticated()) {
+        console.log(req.cookies)
         if ('id' in req.user) {
           const token = this.service.tokenIssuance(req.user.id as string)
           res.clearCookie('jwt')
@@ -70,6 +71,8 @@ export class AuthController {
       console.log(req.user, 'Login')
       if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {
         const token = this.service.tokenIssuance(req.user.id)
+        res.clearCookie('jwt')
+        res.cookie('jwt', token)
         res.status(200).send({ ...req.user, password: null, token })
       } else res.status(404).send({ ok: false, message: 'Invalid Credentials' })
     },
