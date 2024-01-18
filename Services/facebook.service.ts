@@ -1,9 +1,11 @@
 import dotenv from 'dotenv'
 import axios from 'axios'
 import fs from 'fs'
-import { type IFacebookData, ResponseObject } from '../Entities'
+import { type IFacebookData, ResponseObject, type ClassificationArray } from '../Entities'
 import { logger } from './logger.service'
+
 import { type GenericResponseObject } from '../Entities/response'
+import { userLogged } from '../app'
 dotenv.config()
 export class FacebookService {
   constructor (
@@ -20,7 +22,6 @@ export class FacebookService {
           }
         }).then(response => {
           fs.unlinkSync(data.path)
-          console.log(data.path, 'File Deleted?', response)
           return response.data
         }).catch(error => {
           logger.error({ function: 'FacebookService.postPhoto.axiosPostRequest', error })
@@ -50,11 +51,10 @@ export class FacebookService {
                   method: 'GET',
                   relative_url: `${id.id}?fields=images`
                 })
-
-                console.log(id.id)
               }
             })
             const response = await axios.post('https://graph.facebook.com/', { batch }, { headers: { 'Content-Type': 'application/json' }, params: { access_token: this.pageToken } })
+            // logger.debug({ response, title: 'facebookFeed.getLinkfromid' })
             // VALIDA QUE EL RESPONSE GENERAL SEA OK
             if (response.status === 200) {
               // VALIDA QUE HAYA DEVUELTO UN ARRAY DE RESPUESTAS
@@ -103,7 +103,10 @@ export class FacebookService {
         }
         if (imagesArray.length > 0) {
           return new ResponseObject(null, true, imagesArray)
-        } else throw new Error('Error creating link from id array')
+        } else {
+          logger.error({ imagesArray })
+          throw new Error('Error creating link from id array')
+        }
       } catch (error) {
         logger.error({ function: 'facebookService.getLinkFromId', error })
         return new ResponseObject(error, false, null)
@@ -116,7 +119,7 @@ export class FacebookService {
         console.log(data, pictures)
         const { title, heading } = data
         const message: string =
-          `${title}\n${heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${id}`
+          `${title}\n${heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL}/${id}`
         const pictsArray = pictures.map((picture) => {
           return picture.fbid // picture.url.split('fbid=')[1].split('&')[0]
         })
@@ -130,7 +133,7 @@ export class FacebookService {
         }
         console.log(dataRequest, 'DataRequest Var')
         try {
-          response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE as string}/feed`, dataRequest)
+          response = await axios.post(` https://graph.facebook.com/${process.env.FACEBOOK_PAGE}/feed`, dataRequest)
           return new ResponseObject(null, true, response)
         } catch (error) { console.log(error) }
       } catch (error) {
@@ -138,18 +141,60 @@ export class FacebookService {
         return new ResponseObject(error, false, null)
       }
     },
-    public updateFacebookPost = async (id: string, data: { title: string, heading: string, classification: string, newspaperID: string, images: string[] }) => {
-      const message = `${data.title}\n${data.heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL as string}/${data.newspaperID}`
+    public updateFacebookPost = async (id: string, data: { title: string, heading: string, classification: typeof ClassificationArray[number], newspaperID: string, images: string[] }) => {
+      /*
+      Hay que elegir.
+      opcion 1 el post se actualiza borrando el previo y creando uno nuevo
+      opcion 2 solo se actualiza el texto del post sin actualizar las imagenes
+      */
+      const message = `${data.title}\n${data.heading}\n\nPara leer mas click en el link  ${process.env.NEWSPAPER_URL}/${data.newspaperID}`
       const dataRequest = {
         message,
-        attached_media: data.images,
         access_token: process.env.FB_PAGE_TOKEN
 
       }
       try {
-        const response = await axios.post(` https://graph.facebook.com/${id}/feed`, dataRequest)
+        const response = await axios.post(` https://graph.facebook.com/${id}/`, dataRequest)
+        console.log(response.data, '*****************************')
         return new ResponseObject(null, true, response.data)
-      } catch (error) { return new ResponseObject(error, false, null) }
+      } catch (error) { return new ResponseObject(error?.response?.data, false, null) }
+    },
+    public deleteFacebookPost = async (fbid: string): Promise<any> => {
+      try {
+        const response = await axios.delete(`https://graph.facebook.com/v16.0/${fbid}?access_token=${process.env.FB_PAGE_TOKEN}`)
+        return response
+      } catch (error) {
+        logger.error({ function: 'facebookService.deleteFacebookPost', error })
+      }
+    },
+    public assertValidToken = async (token: string): Promise<string | null> => {
+      const response = await (await fetch(`https://graph.facebook.com/oauth/access_token?client_id=${process.env.FACEBOOK_APP_ID}&client_secret=${process.env.FACEBOOK_APP_SECRET}&grant_type=client_credentials`)).json()
+      let newToken: string = ''
+      if ('access_token' in response) newToken = response.access_token
+      if (newToken !== '') {
+        const validationResponse = await (await fetch(`https://graph.facebook.com/v3.2/debug_token?input_token=${token}&access_token=${newToken}`)).json()
+        console.log(validationResponse.data.is_valid)
+        if ('data' in validationResponse && 'is_valid' in validationResponse.data && validationResponse.data.is_valid === true) return token
+        else {
+          const finalToken = await this.getLongliveAccessToken(newToken, userLogged.fbid)
+          return finalToken !== undefined ? finalToken : null
+        }
+      } else return null
+    },
+    public getLongliveAccessToken = async (accessToken: string, userId: string) => {
+      let response = await fetch(`https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=${process.env.FACEBOOK_APP_ID}&client_secret=${process.env.FACEBOOK_APP_SECRET}&fb_exchange_token=${accessToken}`)
+      const longUserToken = (await response.json()).access_token as string
+      response = await fetch(`https://graph.facebook.com/${userId}/accounts?
+access_token=${longUserToken}`) // console.log(await response.json())
+      const streamResponse = (await response.json())
+      let data: string = ''
+      if (streamResponse !== null && 'data' in streamResponse && Array.isArray(streamResponse?.data)) {
+        streamResponse.data.forEach((page: any) => {
+          console.log(page, process.env.FACEBOOK_APP_ID)
+          if (page.id === process.env.FACEBOOK_PAGE) data = page.access_token
+        })
+      }
+      if (data !== '') return data
     }
 
   ) { }

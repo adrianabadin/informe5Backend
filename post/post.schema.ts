@@ -65,7 +65,7 @@ export const updatePostSchema = z.object({
     importance: z.enum(['1', '2', '3', '4', '5'], { invalid_type_error: 'La importancia de la nota debe ser string de  un numero del 1 al 5' }).optional(),
     author: z.string({ invalid_type_error: 'El autor debe ser un string' }).uuid({ message: 'El autor debe ser una cadena que represente a un uuid' }).optional(),
     fbid: z.string({ invalid_type_error: 'Post FBID must be a string' }),
-    images: z.array(stringifiedImage).optional()
+    dbImages: z.array(stringifiedImage).optional()
   })
 
 })

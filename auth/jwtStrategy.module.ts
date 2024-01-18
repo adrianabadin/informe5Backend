@@ -6,27 +6,20 @@ import { decrypt } from '../Services/keypair.service'
 import { type Request } from 'express'
 import fs from 'fs'
 import dotenv from 'dotenv'
+// import * as jwt from 'jsonwebtoken'
 dotenv.config()
-const publicKey = fs.readFileSync(`${process.env.KEYS_PATH as string}/publicKey.pem`, 'utf-8')
-const simetricKey = process.env.SIMETRICKEY
+const publicKey = fs.readFileSync(`${process.env.KEYS_PATH}/publicKey.pem`, 'utf-8')
+const simetricKey = '+vdKrc3rEqncv+pgGy9WmhZXoQfWsPiAuc1UA5yfujE='// process.env.SIMETRICKEY
 
 const authService = new AuthService()
-const cookieExtractor = (req: Request): string => {
-  let token: string = ''
-  console.log(req.cookies, req.body.jwt)
-  if ('jwt' in req?.body !== undefined && req.body.jwt !== null) {
-    token = req.body.jwt
-  } else {
-    if ('jwt' in req.cookies) {
-      token = req.cookies.jwt
-    }
-  }
-
+export const cookieExtractor = (req: Request): string => {
+  let { jwt: token } = req.cookies
+  console.log(token)
+  if ('jwt' in req.body && req.body.jwt !== null && token === undefined) { token = req.body.jwt }
   if (token !== undefined) {
-    console.log(token, req.body)
     if (simetricKey !== undefined) return decrypt(token, simetricKey)
     else throw new Error('simetricKey is undefined')
-  } else throw new Error('simetricKey is undefined')
+  } else throw new Error('Token is undefined')
 }
 passport.use(new Strategy({
   jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),

@@ -85,9 +85,11 @@ model Users {
   RadioPost    RadioPost[]
   Ads          Ads[]
   password     String?
-  accessToken  String?
-  refreshToken String?
+  accessToken  String?     @db.LongText
+  refreshToken String?     @db.LongText
   gender       Gender?
+  avatar       String?
+  fbid         String?
   Addresses    Addresses?  @relation(fields: [addressesId], references: [id])
   addressesId  String?
 
@@ -108,13 +110,14 @@ model Ads {
   id         String   @id @default(uuid())
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
-  importance Int
+  importance String
   metrics    Metric[]
   user       Users    @relation(fields: [usersId], references: [id])
   usersId    String
-  url        String
+  url        String?
   title      String
   photoUrl   String
+  isActive   Boolean  @default(true)
 
   @@index([usersId])
 }
@@ -125,8 +128,8 @@ model Posts {
   updatedAt      DateTime @updatedAt
   title          String
   subTitle       String?
-  heading        String
-  text           String
+  heading        String   @db.LongText
+  text           String   @db.LongText
   classification String
   images         Photos[]
   author         Users    @relation(fields: [usersId], references: [id])
@@ -134,6 +137,7 @@ model Posts {
   importance     Int      @default(1)
   fbid           String?
   metrics        Metric[]
+  isVisible      Boolean
 
   @@index([usersId])
   @@fulltext([title])
@@ -152,6 +156,7 @@ model Video {
   usersId    String
   importance Int
   metrics    Metric[]
+  isVisible  Boolean
 
   @@index([usersId])
 }
@@ -169,6 +174,7 @@ model RadioPost {
   text            String
   tags            String
   metrics         Metric[]
+  isVisible       Boolean
 
   @@index([usersId])
 }

@@ -4,7 +4,6 @@ import { logger } from '../Services/logger.service'
 
 export const schemaValidator = (schema: AnyZodObject | AnyZodObject[]) => (req: Request, res: Response, next: NextFunction) => {
   try {
-    console.log(req.body, 'cosas', schema)
     if (Array.isArray(schema)) {
       schema.forEach(singleSchema => {
         singleSchema.parse({

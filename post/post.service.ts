@@ -2,7 +2,7 @@ import { DatabaseHandler } from '../Services/database.service'
 import { type Prisma } from '@prisma/client'
 import { logger } from '../Services/logger.service'
 import { type MyCursor, type GenericResponseObject, ResponseObject } from '../Entities'
-import { type UpdatePostType, type CreatePostType, type ImagesSchema } from './post.schema'
+import { type CreatePostType, type ImagesSchema } from './post.schema'
 import { FacebookService } from '../Services/facebook.service'
 
 export class PostService extends DatabaseHandler {
@@ -14,26 +14,23 @@ export class PostService extends DatabaseHandler {
       if (files !== undefined && Array.isArray(files)) {
         photoArray = await Promise.all(files.map(async (file) => {
           const data = await this.facebookService.postPhoto(file)
-          console.log(data)
           if (data.ok && 'id' in data.data && data.data.id !== undefined) { return data.data as { id: string } } else return undefined
         }))
-        console.log(files, 'text', images)
-        if (images !== undefined && Array.isArray(images)) {
-          console.log('entro', images)
-          photoArray = [...photoArray, ...images?.map(image => ({ id: image.fbid }))]
-        } else throw new Error(JSON.stringify({ error: 'No se enviaron imagenes', images }))
+        // else throw new Error(JSON.stringify({ error: 'No se enviaron imagenes', images }))
         if (photoArray !== null && Array.isArray(photoArray)) {
           const response = await this.facebookService.getLinkFromId(photoArray)
-          console.log(response, 'hecho')
           // aqui se asigna a imagesArray todas las imagenes que debera tener el post ya sean las que no se eliminaron y las que se agreguen si hubiere
           if (response.ok) {
             if (images !== null && Array.isArray(images)) images = [...images, ...response.data]
             else images = [...response.data]
           }
-          // ACA HAY QUE CONTINUAR LA LOGICA DE ACTUALIZACION DE LA BASE DE DATOS. HAY QUE VER SI CONVIENE USAR LA FUNCION UPDATEPIOST QUE HICE O
-          // EVALUAR BORRAR TODAS LAS IMAGENES QUE HAY VINCULADAS AL POST Y REESCRIBIR LA BASE DE DATOS CON IMAGENES NUEVAS.
+        }
+        if (images !== undefined && Array.isArray(images)) {
+          photoArray = [...photoArray, ...images?.map(image => ({ id: image.fbid }))]
         }
       }
+      console.log(images, 'imagnes')
+      logger.debug({ function: 'pOSTsERVICE.photoGenerator', images })
       return images
     },
 
@@ -41,19 +38,22 @@ export class PostService extends DatabaseHandler {
       const { title, text, heading, classification, importance } = body
       let numberImportance = 0
       if (importance !== undefined && typeof importance === 'string') numberImportance = parseInt(importance)
-      return await this.prisma.posts.gCreate({ author: { connect: { id } }, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
+      return await this.prisma.posts.gCreate({ author: { connect: { id } }, isVisible: true, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
     },
-    public getPosts = async (paginationOptions?: { cursor?: Partial< MyCursor>, pagination: number }, queryOptions?: Prisma.PostsFindManyArgs['where']): Promise<GenericResponseObject<Prisma.PostsCreateInput[]> | undefined> => {
+    public getPosts = async (paginationOptions?:
+    { cursor?: Partial< MyCursor>, pagination: number },
+    queryOptions?: Prisma.PostsFindManyArgs['where']
+    ) /*: Promise<GenericResponseObject<Prisma.PostsCreateInput[]> | undefined> */ => {
       try {
         logger.debug({ queryOptions })
-        const data = await this.prisma.posts.gGetAll({ images: true }, paginationOptions, queryOptions)
-        logger.debug({ function: 'PostService.getPosts', data })
+        const data = await this.prisma.posts.gGetAll({ images: true, author: true }, paginationOptions, queryOptions as any)
+        // logger.debug({ function: 'PostService.getPosts', data })
         return data
       } catch (error) { logger.error({ function: 'PostService.getPosts', error }) }
     },
-    public getPost = async (id: string, field: Prisma.PostsFindFirstOrThrowArgs['include']) => {
+    public getPost = async (id: string, field: Prisma.PostsFindFirstOrThrowArgs['select']) => {
       try {
-        const data = await this.prisma.posts.gFindById(id, field)
+        const data = await this.prisma.posts.gFindById(id, field as any)
         logger.debug({ function: 'PostService.getPost', data })
         return data
       } catch (error) { logger.error({ function: 'PostService.getPost', error }) }
@@ -73,6 +73,7 @@ export class PostService extends DatabaseHandler {
       if ('jwt' in postObject) {
         postObject.jwt = undefined
       }
+      logger.debug({ photoObject, function: 'updatePost.service' })
       if (photoObject !== undefined) {
         ids = photoObject.map((photo): string | undefined => {
           if (typeof photo === 'object' && photo !== null && 'id' in photo && photo.id !== undefined && typeof photo.id === 'string') { return photo?.id } else return undefined
@@ -86,7 +87,6 @@ export class PostService extends DatabaseHandler {
           return { fbid: 'false', url: 'false', id: 'false' }
         })
         photoObjectNoUndef = photoObjectNoUndefinedFalse.filter(img => img.fbid !== 'false') as Array<{ id?: string, fbid: string, url: string }>
-
         try {
           const author: string = postObject.author as string
           /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
@@ -96,6 +96,7 @@ export class PostService extends DatabaseHandler {
               where: { id: idParam },
               data: {
                 ...postObject,
+                isVisible: true,
                 updatedAt: undefined,
                 author: { connect: { id: author } },
                 importance: parseInt(postObject.importance as string),
@@ -103,31 +104,11 @@ export class PostService extends DatabaseHandler {
                 images: {
                   deleteMany:
                   {
-
-                    // NOT: {
-                    //   id: {
-                    //     in: ids2
-                    //   }
-                    // }
                   },
                   create: photoObjectNoUndef.map(photo => {
                     return { ...photo }
                   })
-                  /* en upsert deberia agregar todos los photo objects a la db */
-                  // upsert: photoObjectNoUndef.map(photo => {
-                  //   let id: string = 'zorongo'
-                  //   if (photo.id !== undefined) {
-                  //     if (ids2 !== undefined) {
-                  //       if (!ids2.includes(photo.id)) { id = photo.id }
-                  //     }
-                  //   } if (id !== 'zorongo') {
-                  //     return {
-                  //       where: { id },
-                  //       update: { ...photo },
-                  //       create: { ...photo }
-                  //     }
-                  //   } else return undefined
-                  // })
+
                 }
               }
             })
@@ -146,6 +127,8 @@ export class PostService extends DatabaseHandler {
               data: {
                 ...postObject,
                 updatedAt: undefined,
+                importance: parseInt(postObject.importance as string),
+                author: { connect: { id: postObject.author as string } },
                 images: {
                   deleteMany: {
                     NOT: {
@@ -173,6 +156,33 @@ export class PostService extends DatabaseHandler {
         return response
       } catch (error) {
         logger.error({ function: 'PostService.addFBIDtoDB', error })
+        return new ResponseObject(error, false, null)
+      }
+    },
+    public deleteById = async (id: string): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+      try {
+        const response = await this.prisma.posts.gDelete(id)
+        return response
+      } catch (error) {
+        logger.error({ function: 'PostService.deleteById', error })
+        return new ResponseObject(error, false, null)
+      }
+    },
+    public hidePost = async (id: string): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+      try {
+        const response = await this.prisma.posts.update({ where: { id }, data: { isVisible: { set: false } } })
+        return new ResponseObject(null, true, response)
+      } catch (error) {
+        logger.error({ function: 'PostService.hidePost', error })
+        return new ResponseObject(error, false, null)
+      }
+    },
+    public showPost = async (id: string): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+      try {
+        const response = await this.prisma.posts.update({ where: { id }, data: { isVisible: { set: true } } })
+        return new ResponseObject(null, true, response)
+      } catch (error) {
+        logger.error({ function: 'PostService.showPost', error })
         return new ResponseObject(error, false, null)
       }
     }

@@ -1,66 +1,161 @@
 /* eslint-disable @typescript-eslint/prefer-optional-chain */
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import { type Request, type Response } from 'express'
+import { response, type Request, type Response } from 'express'
 import { PostService } from './post.service'
 import { PrismaClient, type Prisma } from '@prisma/client'
 import { GoogleService } from '../google/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
-import { type GenericResponseObject, ResponseObject } from '../Entities/response'
-import { type CreatePostType, type GetPostsType, type GetPostById, type UpdatePostType, type ImagesSchema } from './post.schema'
+import { type ClassificationArray } from '../Entities'
+import {
+  type GenericResponseObject,
+  ResponseObject
+} from '../Entities/response'
+import {
+  type CreatePostType,
+  type GetPostsType,
+  type GetPostById,
+  type UpdatePostType,
+  type ImagesSchema
+} from './post.schema'
+import { io } from '../app'
+import { text } from 'node:stream/consumers'
 export class PostController {
   constructor (
     protected service = new PostService(),
     protected prisma = new PrismaClient(),
     protected googleService = new GoogleService(),
     protected facebookService = new FacebookService(),
-    public updatePost = async (req: Request<GetPostById['params'], any, UpdatePostType['body'] >, res: Response) => {
+    public updatePost = async (
+      req: Request<GetPostById['params'], any, UpdatePostType['body']>,
+      res: Response
+    ) => {
+      console.log('updating posts')
+      logger.debug({ body: req.body, function: 'updatePost.controller' })
       const files = req.files
-      let { images, title, heading, classification, importance } = req.body
+      let { dbImages, title, heading, classification } = req.body
       const { id } = req.params
-      console.log(req.body, 'data posted', req.params)
       let imagesArray: ImagesSchema[] | undefined
-      if (images !== undefined && typeof images === 'string') {
-        imagesArray = JSON.parse(images)
-        console.log(imagesArray, 'imagenes')
+      logger.debug({ dbImages, files, body: req.body })
+      if (dbImages !== undefined && typeof dbImages === 'string') {
+        imagesArray = JSON.parse(dbImages)
       }
       // hasta aca, tengo que en imagesArray o hay un array de imagenes o tengo undefined
-      /* como manejo el hecho de que me lleguen imagenes ya cargadas y filas nuevas agregadas? */
+      // como manejo el hecho de que me lleguen imagenes ya cargadas y filas nuevas agregadas?
       let nuevoArray: ImagesSchema[] | undefined
-      if (files !== undefined) { // aqui valido si hay files de multer para agregar.
-        nuevoArray = await this.service.photoGenerator(files as Express.Multer.File[], imagesArray)
+      // console.log(files)
+      if (files !== undefined && files.length !== 0) {
+        // aqui valido si hay files de multer para agregar.
+        nuevoArray = await this.service.photoGenerator(
+          files as Express.Multer.File[]
+        )
+        if (nuevoArray != null && imagesArray != null) { nuevoArray = [...nuevoArray, ...imagesArray] } else if (imagesArray != null) nuevoArray = imagesArray
+        // logger.debug({ function: 'postController.updade', nuevoArray })
       } else nuevoArray = imagesArray
+      console.log(nuevoArray, 'IMAGENES', dbImages, 'dbImages')
       let body = req.body
-      if (body !== null && typeof body === 'object' && 'images' in body) { body = { ...body, images: undefined } }
-      const updateDbResponse = await this.service.updatePost(body as Prisma.PostsUpdateInput, id, nuevoArray)
-      console.log(updateDbResponse)
+      if (body !== null && typeof body === 'object' && 'dbImages' in body) {
+        body = { ...body, dbImages: undefined }
+      }
+      const updateDbResponse = await this.service.updatePost(
+        body as Prisma.PostsUpdateInput,
+        id,
+        nuevoArray
+      )
       if (title === undefined) {
         title = updateDbResponse.data.title as string
       }
+      if (heading === undefined) {
+        heading = updateDbResponse.data.heading as string
+      }
+      if (classification === undefined) {
+        if (updateDbResponse.data.classification !== undefined) {
+          classification = updateDbResponse.data
+            .classification as (typeof ClassificationArray)[number]
+        } else classification = 'Municipales'
+      }
       // ACA DEBO VER LA LOGICA PARA QUE GENERE UN MERGE DE LOS DATOS QUE YA ESTAN EN LA DB Y LO QUE SE VA A ACTUALIZAR
-
-      // const finalResponse = await this.facebookService.updateFacebookPost(body.fbid, { title, heading, classification, images: imagesArray?.map(id => id.fbid) })
-      res.send(updateDbResponse.data)
-
-      // aca va el codigo que updatea el post pero para eso necesito un id valido.
-    // el nodo es pageid_postiD?message=texto&attached_media=array de media_fbid
-    // eso hay que construirlo en el facebookservice
+      if (nuevoArray !== undefined && 'fbid' in updateDbResponse.data) {
+        const finalResponse = await this.facebookService.updateFacebookPost(
+          updateDbResponse.data.fbid as string,
+          {
+            title,
+            heading,
+            classification,
+            newspaperID: id,
+            images: nuevoArray?.map((id) => id.fbid)
+          }
+        )
+        console.log(finalResponse, updateDbResponse)
+      }
+      //      io.emit('postUpdate', { ...updateDbResponse, images: nuevoArray })
+      res.send({ ...updateDbResponse.data, images: nuevoArray })
     },
-    public createPost = async (req: Request<any, any, CreatePostType['body']>, res: Response) => {
+    public createPost = async (
+      req: Request<any, any, CreatePostType['body']>,
+      res: Response
+    ) => {
       const body = req.body
       const files = req.files
+      const dataEmitted={ active: true, body }
+      console.log(dataEmitted,"objeto enviado")
+      io.emit('postLoader', dataEmitted)
       console.log('create')
       try {
-        const imagesArray = await this.service.photoGenerator(files as Express.Multer.File[])
-        console.log({ imagesArray }, 'photos')
-        if (req.user !== undefined && 'id' in req.user && typeof req.user.id === 'string' && imagesArray !== undefined) {
-          const responseDB = await this.service.createPost(body, req.user.id, imagesArray as Array<{ fbid: string, url: string }>)
-          console.log({ responseDB }, 'DB')
-          if (responseDB.ok && typeof responseDB.data === 'object' && responseDB.data !== null && 'id' in responseDB.data && typeof responseDB.data.id === 'string') {
-            const facebookFeedResponse = await this.facebookService.facebookFeed(body, imagesArray, responseDB.data.id)
-            console.log(facebookFeedResponse?.data, { facebookFeedResponse }, 'FB')
-            if (facebookFeedResponse !== undefined && facebookFeedResponse.ok && 'id' in facebookFeedResponse.data.data) {
-              const fbidUpdate = await this.service.addFBIDtoDatabase(facebookFeedResponse?.data.data.id as string, responseDB.data.id)
+        const imagesArray = await this.service.photoGenerator(
+          files as Express.Multer.File[]
+        )
+        if (
+          req.user !== undefined &&
+          'id' in req.user &&
+          typeof req.user.id === 'string' &&
+          imagesArray !== undefined
+        ) {
+          const responseDB = await this.service.createPost(
+            body,
+            req.user.id,
+            imagesArray as Array<{ fbid: string, url: string }>
+          )
+          // let socketData
+          // if ('author' in responseDB.data && responseDB.data?.author !== null && 'name' in responseDB.data.author) socketData = { ...responseDB.data, author: `${responseDB.data.author.name as string} ${responseDB.data.author.lastName}` }
+          io.emit('postUpdate', {
+            ...responseDB.data,
+            images: imagesArray,
+            stamp: Date.now()
+          })
+          console.log({
+            ...responseDB.data,
+            images: imagesArray,
+
+            stamp: Date.now()
+          }, 'Post creado en la base de datos')
+          if (
+            responseDB.ok &&
+            typeof responseDB.data === 'object' &&
+            responseDB.data !== null &&
+            'id' in responseDB.data &&
+            typeof responseDB.data.id === 'string'
+          ) {
+            const facebookFeedResponse =
+              await this.facebookService.facebookFeed(
+                body,
+                imagesArray,
+                responseDB.data.id
+              )
+            // console.log(
+            //   facebookFeedResponse?.data,
+            //   { facebookFeedResponse },
+            //   'FB'
+            // )
+            if (
+              facebookFeedResponse !== undefined &&
+              facebookFeedResponse.ok &&
+              'id' in facebookFeedResponse.data.data
+            ) {
+              const fbidUpdate = await this.service.addFBIDtoDatabase(
+                facebookFeedResponse?.data.data.id as string,
+                responseDB.data.id
+              )
               res.status(200).send(fbidUpdate)
             } else throw new Error('Error Updating Facebook Page Post')
           } else throw new Error('Error updating Database')
@@ -70,122 +165,195 @@ export class PostController {
         res.status(404).send(error)
       }
     },
-    public getAllPosts = (req: Request<any, any, any, GetPostsType['query']>, res: Response) => {
-      console.log('geting posts')
+    public getAllPosts = (
+      req: Request<any, any, any, GetPostsType['query']>,
+      res: Response
+    ) => {
+      console.log('geting posts', req.user)
       const { cursor, title, search, minDate, maxDate, category } = req.query
-      const query: Prisma.PostsFindManyArgs['where'] & { AND: Array<Prisma.PostsFindManyArgs['where']> } = { AND: [] }
+      const query: Prisma.PostsFindManyArgs['where'] & {
+        AND: Array<Prisma.PostsFindManyArgs['where']>
+      } = { AND: [] }
 
       if (title !== undefined) {
         query.AND.push({
           title: { contains: title }
-        }
-        )
+        })
       }
       if (category !== undefined) {
         query.AND.push({ classification: { contains: category as string } })
       }
       if (search !== undefined) {
         query.AND.push({
-          OR:
-         [{
-           title: search
-         },
-         {
-           text: search
-         },
-         { heading: search },
-         { subTitle: search }
-         ]
-
-        }
-        )
+          OR: [
+            {
+              title: search
+            },
+            {
+              text: search
+            },
+            { heading: search },
+            { subTitle: search }
+          ]
+        })
       }
       if (minDate !== undefined || maxDate !== undefined) {
         query.AND.push({
           AND: []
-        }
-        )
+        })
       }
       if (minDate !== undefined && query !== undefined && 'AND' in query) {
         const data = query.AND[query.AND.length - 1]
-        if (data !== undefined && 'AND' in data && Array.isArray(data.AND)) { data.AND.push({ createdAt: { gte: new Date(minDate) } }) }
+        if (data !== undefined && 'AND' in data && Array.isArray(data.AND)) {
+          data.AND.push({ createdAt: { gte: new Date(minDate) } })
+        }
       }
       if (maxDate !== undefined) {
         const data = query.AND[query.AND.length - 1]
-        if (data !== undefined && 'AND' in data && data?.AND !== undefined && Array.isArray(data.AND)) {
+        if (
+          data !== undefined &&
+          'AND' in data &&
+          data?.AND !== undefined &&
+          Array.isArray(data.AND)
+        ) {
           data.AND.push({ createdAt: { lte: new Date(maxDate) } })
         }
       }
       console.log(query, query.AND[0])
-      this.service.getPosts(
-        {
-          cursor: cursor === undefined ? undefined : { createdAt: new Date(cursor) },
-          pagination: 50
-        }, query
-      ).then(async (response) => {
-        if (response !== undefined && response.ok) {
-          const data = response.data
-          const checkedResponse = await Promise.all(data.map(async (post) => {
-            return await this.checkPhotosAge(post?.images as Prisma.PhotosCreateInput[])
-              .then(checkedPhotos => {
-                if (checkedPhotos.data !== undefined) {
-                  const finalData: Prisma.PhotosCreateInput[] = checkedPhotos.data// as Prisma.PhotosCreateNestedManyWithoutPostsInput
-                  console.log(finalData, finalData.length)
-                  // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-                  post = { ...post, images: finalData.length === 1 && finalData[0] === undefined ? [] : finalData } as Prisma.PostsCreateInput
-                  return post
-                }
-              }
-              )
+      this.service
+        .getPosts(
+          {
+            cursor:
+              cursor === undefined
+                ? undefined
+                : { createdAt: new Date(cursor) },
+            pagination: 50
+          },
+          query
+        )
+        .then(async (response) => {
+          if (response !== undefined && response.ok) {
+            const data = response.data
+            const checkedResponse = await Promise.all(
+              data.map(async (post) => {
+                return await this.checkPhotosAge(
+                  post?.images as Prisma.PhotosCreateInput[]
+                )
+                  .then((checkedPhotos) => {
+                    if (checkedPhotos.data !== undefined) {
+                      const finalData: Prisma.PhotosCreateInput[] =
+                        checkedPhotos.data // as Prisma.PhotosCreateNestedManyWithoutPostsInput
+                      console.log(finalData, finalData.length)
+                      // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+                      post = {
+                        ...post,
+                        images:
+                          finalData.length === 1 && finalData[0] === undefined
+                            ? []
+                            : finalData
+                      } as Prisma.PostsCreateInput
+                      return post
+                    }
+                  })
 
-              .catch((error) => logger.error({ function: 'PostController.getAllPosts', error }))
-          }))
-          res.status(200).send(checkedResponse)
-        }
-      }).catch(error => {
-        logger.error({ function: 'PostController.getAllPosts', error })
-        res.status(404).send(error)
-      })
+                  .catch((error) =>
+                    logger.error({
+                      function: 'PostController.getAllPosts',
+                      error
+                    })
+                  )
+              })
+            )
+            res.status(200).send(checkedResponse)
+          }
+        })
+        .catch((error) => {
+          logger.error({ function: 'PostController.getAllPosts', error })
+          res.status(404).send(error)
+        })
     },
-    public getPostById = (req: Request<GetPostById['params']>, res: Response) => {
+    public getPostById = (
+      req: Request<GetPostById['params']>,
+      res: Response
+    ) => {
       console.log('getbyid')
       const { id } = req.params
-      this.service.getPost(id, { images: true }).then(async (response) => {
-        if (response?.ok !== undefined && response.ok && 'data' in response && 'images' in response?.data && Array.isArray(response.data.images)) {
-          this.checkPhotosAge(response?.data.images as Prisma.PhotosCreateInput[])
-            .then(async (checkedPhotos: GenericResponseObject<Prisma.PhotosCreateInput[]>) => {
-              console.log(checkedPhotos.data, 'LOKO')
-              if ('images' in response.data) {
-                const data = { ...response.data, images: checkedPhotos.data }
-                res.status(200).send({ error: null, ok: true, data })
-              }
-            })
-            .catch((error: any) => logger.error({ function: 'PostController.getByid', error }))
-        } else res.status(404).send(response)
-      }).catch(error => {
-        logger.error({ function: 'PostController.getPostById', error })
-        res.status(404).send(error)
-      })
+      this.service
+        .getPost(id, { images: true, author: true, classification: true, createdAt: true, heading: true, id: true, importance: true, isVisible: true, text: true, title: true })
+        .then(async (response) => {
+          if (
+            response?.ok !== undefined &&
+            response.ok &&
+            'data' in response &&
+            'images' in response?.data &&
+            Array.isArray(response.data.images)
+          ) {
+            this.checkPhotosAge(
+              response?.data.images as Prisma.PhotosCreateInput[]
+            )
+              .then(
+                async (
+                  checkedPhotos: GenericResponseObject<
+                  Prisma.PhotosCreateInput[]
+                  >
+                ) => {
+                  console.log(checkedPhotos.data, 'LOKO')
+                  if ('images' in response.data) {
+                    const data = {
+                      ...response.data,
+                      images: checkedPhotos.data
+                    }
+                    res.status(200).send({ error: null, ok: true, data })
+                  }
+                }
+              )
+              .catch((error: any) =>
+                logger.error({ function: 'PostController.getByid', error })
+              )
+          } else res.status(404).send(response)
+        })
+        .catch((error) => {
+          logger.error({ function: 'PostController.getPostById', error })
+          res.status(404).send(error)
+        })
     },
-    protected checkPhotosAge = async (photosObject: Prisma.PhotosCreateInput[]): Promise<GenericResponseObject<Prisma.PhotosCreateInput[]>> => {
+    protected checkPhotosAge = async (
+      photosObject: Prisma.PhotosCreateInput[]
+    ): Promise<GenericResponseObject<Prisma.PhotosCreateInput[]>> => {
       if (Array.isArray(photosObject)) {
         try {
           let idArray
           let updatedLinksArray
           let dbResponse: unknown[]
-          const photoArray = photosObject.filter(photo => {
-            if (photo.createdAt !== undefined && Date.now() > new Date(photo.createdAt).getTime() + 1000 * 60 * 60 * 24 * 2) { return true } else return false
+          const photoArray = photosObject.filter((photo) => {
+            if (
+              photo.createdAt !== undefined &&
+              Date.now() >
+                new Date(photo.createdAt).getTime() + 1000 * 60 * 60 * 24 * 2
+            ) {
+              return true
+            } else return false
           })
           if (Array.isArray(photoArray) && photoArray.length > 0) {
-            idArray = photoArray.map(photo => ({ id: photo.fbid }))
-            updatedLinksArray = await this.facebookService.getLinkFromId(idArray)
-            dbResponse = await Promise.all(updatedLinksArray.data.map(async (photo) => {
-              const response = await this.prisma.$transaction([
-                this.prisma.photos.updateMany({ where: { fbid: photo.fbid }, data: { url: photo.url } }),
-                this.prisma.photos.findMany({ where: { fbid: photo.fbid } })
-              ])
-              return response[1][0]
-            }))
+            //  const response1 = await this.facebookService.isTokenValid(process.env.FB_PAGE_TOKEN)
+            // console.log(response1)
+            /** aca va la validacion del token del usuario que se encuentra trabajando. */
+            idArray = photoArray.map((photo) => ({ id: photo.fbid }))
+            updatedLinksArray = await this.facebookService.getLinkFromId(
+              idArray
+            )
+            dbResponse = await Promise.all(
+              updatedLinksArray.data.map(async (photo) => {
+                const response = await this.prisma.$transaction([
+                  this.prisma.photos.updateMany({
+                    where: { fbid: photo.fbid },
+                    data: { url: photo.url }
+                  }),
+                  this.prisma.photos.findMany({ where: { fbid: photo.fbid } })
+                ])
+                return response[1][0]
+              })
+            )
           } else dbResponse = photosObject
 
           // aca esta roto hay que sacar la tansaccion sino la respuesta es un entero con la cantidad
@@ -197,8 +365,38 @@ export class PostController {
           return new ResponseObject(error, false, null)
         }
       }
-      return new ResponseObject(new Error('Error updating photos'), false, null)
+      return new ResponseObject(
+        new Error('Error updating photos'),
+        false,
+        null
+      )
+    },
+    public deletePost = async (req: Request<GetPostById['params']>, res: Response): Promise<void> => {
+      const { id } = req.params
+      try {
+        const response = await this.service.deleteById(id)
+        console.log(response,"deleted object")
+        let fbResponse
+        if (response.data.fbid !== null && typeof response.data.fbid === 'string') fbResponse = await this.facebookService.deleteFacebookPost(response.data.fbid)
+        logger.debug({ function: 'PostController.deletePost', response, fbResponse })
+        res.status(200).send(response)
+      } catch (error) { logger.error({ function: 'postController.deletePost', error }) }
+    },
+    public hidePost = async (req: Request<GetPostById['params']>, res: Response): Promise<void> => {
+      const { id } = req.params
+      try {
+        const response = await this.service.hidePost(id)
+        logger.debug({ function: 'PostController.hidePost', response })
+        res.status(200).send(response)
+      } catch (error) { logger.error({ function: 'postController.hidePost', error }) }
+    },
+    public showPost = async (req: Request<GetPostById['params']>, res: Response): Promise<void> => {
+      const { id } = req.params
+      try {
+        const response = await this.service.showPost(id)
+        logger.debug({ function: 'PostController.showPost', response })
+        res.status(200).send(response)
+      } catch (error) { logger.error({ function: 'postController.showPost', error }) }
     }
-  ) {
-  }
+  ) {}
 }
