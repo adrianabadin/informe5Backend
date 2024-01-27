@@ -17,7 +17,10 @@ const dotenvSchema = z.object({
   FACEBOOK_APP_CB: z.string({ required_error: 'Must provide a callback url for Facebook oauth' }),
   FACEBOOK_PAGE: z.string({ required_error: 'Must provide a facebook page id you admin to post the news  ' }),
   FB_PAGE_TOKEN: z.string({ required_error: 'Must provide a permanent token for the page' }),
-  NEWSPAPER_URL: z.string({ required_error: 'Must provide the front end URL' })
+  NEWSPAPER_URL: z.string({ required_error: 'Must provide the front end URL' }),
+  CLIENTID_BUCKET: z.string({ required_error: 'Must provide google client ID for the bucket' }),
+  CLIENTSECRET_BUCKET: z.string({ required_error: 'Must provide client secret key for google bucket' }),
+  CALLBACK_BUCKET: z.string({ required_error: 'Must provide a callback URL for google o auth bucket' })
 
 })
 dotenvSchema.parse(process.env)

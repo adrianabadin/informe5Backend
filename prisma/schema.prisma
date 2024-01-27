@@ -69,32 +69,41 @@ enum Gender {
 }
 
 model Users {
-  id           String      @id @default(uuid())
-  createdAt    DateTime    @default(now())
-  updatedAt    DateTime    @updatedAt
-  name         String
-  lastName     String
-  username     String      @unique
-  phone        String
-  hash         String?
-  birthDate    DateTime?
-  rol          UserRoles   @default(USER)
-  posts        Posts[]
-  isVerified   Boolean     @default(false)
-  Video        Video[]
-  RadioPost    RadioPost[]
-  Ads          Ads[]
-  password     String?
-  accessToken  String?     @db.LongText
-  refreshToken String?     @db.LongText
-  gender       Gender?
-  avatar       String?
-  fbid         String?
-  Addresses    Addresses?  @relation(fields: [addressesId], references: [id])
-  addressesId  String?
+  id                String      @id @default(uuid())
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+  name              String
+  lastName          String
+  username          String      @unique
+  phone             String
+  hash              String?
+  birthDate         DateTime?
+  rol               UserRoles   @default(USER)
+  posts             Posts[]
+  isVerified        Boolean     @default(false)
+  Video             Video[]
+  RadioPost         RadioPost[]
+  Ads               Ads[]
+  password          String?
+  accessToken       String?     @db.LongText
+  refreshToken      String?     @db.LongText
+  innerRefreshToken String?     @db.LongText
+  gender            Gender?
+  avatar            String?
+  fbid              String?
+  Addresses         Addresses?  @relation(fields: [addressesId], references: [id])
+  addressesId       String?
 
   @@index([username])
   @@index([addressesId])
+}
+
+model DataConfig {
+  id            String   @id @default(uuid())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  refreshToken  String?  @db.LongText
+  facebookToken String   @db.LongText
 }
 
 model Photos {

@@ -64537,3 +64537,4 @@
   message: 'Successfully logged in',
   level: 'debug'
 }
+{ message: 'Listening on 8080', level: 'info' }
