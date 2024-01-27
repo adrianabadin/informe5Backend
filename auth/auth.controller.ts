@@ -7,6 +7,7 @@ import * as jwt from 'jsonwebtoken'
 import fs from 'fs'
 import { PrismaClient } from '@prisma/client'
 import { FacebookService } from '../Services/facebook.service'
+import { oauthClient } from '../Services/google.service'
 dotenv.config()
 const simetricKey = (process.env.SIMETRICKEY !== undefined) ? process.env.SIMETRICKEY : ''
 
@@ -75,6 +76,13 @@ export class AuthController {
         res.cookie('jwt', token)
         res.status(200).send({ ...req.user, password: null, token })
       } else res.status(404).send({ ok: false, message: 'Invalid Credentials' })
+    },
+    public innerToken = async (req: Request<any, any, any, { code: string }>, res: Response) => {
+      const { code } = req.query
+      if (code !== undefined) {
+        const { tokens } = await oauthClient.getToken(code)
+        if (tokens.refresh_token !== undefined) await this.service.prisma.dataConfig.upsert({ where: { id: 1 }, update: { refreshToken: tokens.refresh_token }, create: { refreshToken: tokens.refresh_token } })
+      }
     },
     public facebookLogin = (req: Request, res: Response) => {
       if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {

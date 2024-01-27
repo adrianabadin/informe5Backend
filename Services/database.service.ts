@@ -2,12 +2,12 @@ import { PrismaClient, type Prisma } from '@prisma/client'
 import { logger } from './logger.service'
 import { type IResponseObject, ResponseObject, type GenericResponseObject } from '../Entities'
 
-export abstract class DatabaseHandler {
+export class DatabaseHandler {
   static Instance: any
   constructor (
-    protected unExtendedPrisma = new PrismaClient(),
+    public unExtendedPrisma = new PrismaClient(),
 
-    protected prisma = unExtendedPrisma.$extends({
+    public prisma = unExtendedPrisma.$extends({
 
       model: {
 
@@ -154,3 +154,5 @@ export abstract class DatabaseHandler {
     return DatabaseHandler.Instance
   }
 }
+
+export const prismaClient = new DatabaseHandler()

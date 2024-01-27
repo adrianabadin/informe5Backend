@@ -123,6 +123,15 @@ export class AuthService extends DatabaseHandler {
         done(error, false, { message: 'Database Error' })
       }
     },
+    public innerVerify = async (refreshToken: string) => {
+      try {
+        let data
+        if (refreshToken !== undefined) data = await this.prisma.dataConfig.upsert({ where: { id: 1 }, update: { refreshToken }, create: { refreshToken }, select: { refreshToken: true } })
+        // if (data !== undefined) return data
+      } catch (error) {
+        logger.error({ function: 'AuthController.innerVerify', error })
+      }
+    },
     public serialize = (user: any, done: DoneType) => {
       done(null, user.id)
     },

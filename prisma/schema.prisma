@@ -99,11 +99,11 @@ model Users {
 }
 
 model DataConfig {
-  id            String   @id @default(uuid())
+  id            Int      @id @unique @default(1)
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
   refreshToken  String?  @db.LongText
-  facebookToken String   @db.LongText
+  facebookToken String?  @db.LongText
 }
 
 model Photos {

@@ -4,6 +4,7 @@ import { upload } from '../post/post.routes'
 import passport from 'passport'
 import dotenv from 'dotenv'
 import { userLogged } from '../app'
+import { url, oauthClient } from '../Services/google.service'
 
 dotenv.config()
 export const authRoutes = Router()
@@ -23,7 +24,12 @@ authRoutes.get('/goauth', passport.authenticate('google', {
   scope: ['profile', 'email', 'openid'],
   accessType: 'offline',
   prompt: 'consent'
-}), authController.gOAuthLogin)//, { successRedirect: '/', failureFlash: true, failureRedirect: '/signup' }
+}), authController.gOAuthLogin)
+authRoutes.get('/innerAuth', (req: Request, res: Response) => { res.redirect(url) })
+// eslint-disable-next-line @typescript-eslint/no-misused-promises
+authRoutes.get('/innerAuth/cb', async (req: Request<any, any, any, { code: string }>, _res: Response) => {
+
+})
 authRoutes.get('/google/getuser', passport.authenticate('google', { scope: ['profile', 'email'] }), authController.gOAuthLogin)
 authRoutes.get('/facebook', (req: Request, res: Response, next: NextFunction) => {
   let data
