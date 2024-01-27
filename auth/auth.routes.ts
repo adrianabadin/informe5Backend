@@ -19,12 +19,15 @@ authRoutes.get('/getcookies', (req: Request, res: Response) => {
   res.send({ ok: true, cookie: req.cookies })
 })
 authRoutes.post('/signup', upload.single('avatar'), passport.authenticate('register', { failureFlash: true, failureRedirect: '/failedsignup' }), authController.localLogin)
-authRoutes.get('/goauth', passport.authenticate('google', { scope: ['profile', 'email'] }), authController.gOAuthLogin)//, { successRedirect: '/', failureFlash: true, failureRedirect: '/signup' }
+authRoutes.get('/goauth', passport.authenticate('google', {
+  scope: ['profile', 'email', 'openid'],
+  accessType: 'offline',
+  prompt: 'consent'
+}), authController.gOAuthLogin)//, { successRedirect: '/', failureFlash: true, failureRedirect: '/signup' }
 authRoutes.get('/google/getuser', passport.authenticate('google', { scope: ['profile', 'email'] }), authController.gOAuthLogin)
 authRoutes.get('/facebook', (req: Request, res: Response, next: NextFunction) => {
   let data
   if (req.query !== undefined) data = req.query
-  console.log(req.query, 'algo')
   passport.authenticate('facebook', { scope: ['email'], state: (data != null) ? JSON.stringify(data) : '' })(req, res, next)
 })
 authRoutes.get('/facebook/callback/', passport.authenticate('facebook'), authController.facebookLogin)

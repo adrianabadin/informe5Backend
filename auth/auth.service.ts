@@ -19,6 +19,7 @@ export class AuthService extends DatabaseHandler {
     protected facebookService = new FacebookService(),
     public localSignUpVerify = async (req: Request, username: string, password: string, done: DoneType) => {
       try {
+        console.log(req.body, 'Request')
         let user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput | null = await this.prisma.users.findUnique({ where: { username } })
         if (user === null) {
           const body: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = { ...req.body, hash: await argon2.hash(password), id: undefined, avatar: req.file?.path }
@@ -91,20 +92,32 @@ export class AuthService extends DatabaseHandler {
     },
     public googleAuthVerify = (req: Request, accessToken: string, refreshToken: string, profile: any, done: DoneType) => {
       try {
+        console.log(accessToken, 'refresh', refreshToken)
         const { email } = profile
-        this.prisma.users.findUnique({ where: { username: email }, select: { isVerified: true, lastName: true, name: true, id: true, username: true, rol: true } }).then(user => {
-          if (user?.username != null) {
-            console.log(user, 'user')
-            return done(null, user as any, { message: 'Successfully Logged in!' })
-          } else {
-            req.flash('at', accessToken)
-            req.flash('rt', refreshToken)
-            return done(null, false, { message: 'username doesnt exist' })
-          }
-        }).catch(error => {
-          logger.error({ function: 'AuthService.googleAuthVerify', error })
-          done(error, false, { message: 'Database Error' })
-        })
+        this.prisma.users.findUnique({ where: { username: email }, select: { isVerified: true, lastName: true, name: true, id: true, username: true, rol: true, accessToken: true, refreshToken: true } })
+          .then(user => {
+            if (user?.username != null) {
+              console.log(user, 'user')
+              if (refreshToken !== undefined) {
+                this.prisma.users.update({ where: { username: email as string }, data: { refreshToken }, select: { isVerified: true, lastName: true, name: true, id: true, username: true, rol: true, accessToken: true, refreshToken: true } })
+                  .then(response => {
+                    return done(null, response as any, { message: 'Successfully Logged in!' })
+                  })
+                  .catch(error => {
+                    logger.error({ function: 'AuthService.googleAuthVerify', error })
+                    return done(null, false, { message: 'Error updating refreshToken' })
+                  })
+              }
+              return done(null, user as any, { message: 'Successfully Logged in!' })
+            } else {
+              req.flash('at', accessToken)
+              req.flash('rt', refreshToken)
+              return done(null, false, { message: 'username doesnt exist' })
+            }
+          }).catch(error => {
+            logger.error({ function: 'AuthService.googleAuthVerify', error })
+            done(error, false, { message: 'Database Error' })
+          })
       } catch (error) {
         logger.error({ function: 'AuthService.googleAuthVerify', error })
         done(error, false, { message: 'Database Error' })
