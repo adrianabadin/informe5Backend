@@ -35,6 +35,8 @@ postRouter.post(
   schemaValidator(createPostSchema),
   postController.createPost
 )
+postRouter.post('/audio', upload.array('audio'), postController.uploadAudio)
+postRouter.delete('/audioRemove', postController.eraseAudio)
 postRouter.get(
   '/getPostById/:id',
   schemaValidator(getPostById),

@@ -4,10 +4,12 @@ import { logger } from '../Services/logger.service'
 import { type MyCursor, type GenericResponseObject, ResponseObject } from '../Entities'
 import { type CreatePostType, type ImagesSchema } from './post.schema'
 import { FacebookService } from '../Services/facebook.service'
+import { GoogleService } from '../Services/google.service'
 
 export class PostService extends DatabaseHandler {
   constructor (
     protected facebookService = new FacebookService(),
+    protected googleService = new GoogleService(),
     public photoGenerator = async (files: Express.Multer.File[], imagesParam?: ImagesSchema[]) => {
       let photoArray: Array<{ id: string } | undefined> = []
       let images: ImagesSchema[] | undefined = imagesParam
@@ -35,10 +37,22 @@ export class PostService extends DatabaseHandler {
     },
 
     public createPost = async (body: CreatePostType['body'], id: string, dataArray: Array<{ url: string, fbid: string }>) => {
-      const { title, text, heading, classification, importance } = body
+      const { title, text, heading, classification, importance, audio } = body
       let numberImportance = 0
       if (importance !== undefined && typeof importance === 'string') numberImportance = parseInt(importance)
-      return await this.prisma.posts.gCreate({ author: { connect: { id } }, isVisible: true, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
+      return await this.prisma.posts.create({
+        data: {
+          isVisible: true,
+          classification,
+          heading,
+          title,
+          text,
+          importance: numberImportance,
+          images: { create: dataArray },
+          author: { connect: { id } },
+          audio: { connect: (audio !== undefined) ? audio?.map(item => ({ id: item.id })) : [] }
+        }
+      }) // gCreate({ author: { connect: { id } }, isVisible: true, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
     },
     public getPosts = async (paginationOptions?:
     { cursor?: Partial< MyCursor>, pagination: number },
@@ -53,7 +67,7 @@ export class PostService extends DatabaseHandler {
     },
     public getPost = async (id: string, field: Prisma.PostsFindFirstOrThrowArgs['select']) => {
       try {
-        const data = await this.prisma.posts.gFindById(id, field as any)
+        const data = await this.prisma.posts.findUnique({ where: { id }, include: { author: true, images: true, audio: { select: { id: true } } } }) // gFindById(id, field as any)
         logger.debug({ function: 'PostService.getPost', data })
         return data
       } catch (error) { logger.error({ function: 'PostService.getPost', error }) }
@@ -185,6 +199,12 @@ export class PostService extends DatabaseHandler {
         logger.error({ function: 'PostService.showPost', error })
         return new ResponseObject(error, false, null)
       }
+    },
+    public addAudioToDB = async (driveId: string) => {
+      try {
+        const response = await this.prisma.audio.create({ data: { driveId } })
+        return response
+      } catch (error) { logger.error({ function: 'PostService.addAudioToDB', error }) }
     }
   ) {
     super()

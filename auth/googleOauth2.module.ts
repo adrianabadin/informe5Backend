@@ -16,10 +16,10 @@ passport.use(new Strategy({
   passReqToCallback: true
 }, authService.googleAuthVerify))
 
-passport.use('inner', new Strategy({
-  clientID: process.env.CLIENTID_BUCKET,
-  clientSecret: process.env.CLIENTSECRET_BUCKET,
-  callbackURL: process.env.CALLBACK_BUCKET,
-  scope: ['openid', 'email', 'profile'],
-  passReqToCallback: true
-}, authService.googleAuthVerify))
+// passport.use('inner', new Strategy({
+//   clientID: process.env.CLIENTID_BUCKET,
+//   clientSecret: process.env.CLIENTSECRET_BUCKET,
+//   callbackURL: process.env.CALLBACK_BUCKET,
+//   scope: ['openid', 'email', 'profile'],
+//   passReqToCallback: true
+// }, authService.googleAuthVerify))

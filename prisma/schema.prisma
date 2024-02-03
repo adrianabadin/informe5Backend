@@ -43,6 +43,8 @@ model Metric {
   videoId      String?
   RadioPost    RadioPost? @relation(fields: [radioPostId], references: [id])
   radioPostId  String?
+  Audio        Audio?     @relation(fields: [audioId], references: [id])
+  audioId      String?
 
   @@index([adsId])
   @@index([postsId])
@@ -141,6 +143,7 @@ model Posts {
   text           String   @db.LongText
   classification String
   images         Photos[]
+  audio          Audio[]
   author         Users    @relation(fields: [usersId], references: [id])
   usersId        String
   importance     Int      @default(1)
@@ -186,4 +189,14 @@ model RadioPost {
   isVisible       Boolean
 
   @@index([usersId])
+}
+
+model Audio {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  driveId   String
+  metrics   Metric[]
+  Posts     Posts?   @relation(fields: [postsId], references: [id])
+  postsId   String?
 }

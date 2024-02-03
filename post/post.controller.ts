@@ -3,7 +3,8 @@
 import { response, type Request, type Response } from 'express'
 import { PostService } from './post.service'
 import { PrismaClient, type Prisma } from '@prisma/client'
-import { GoogleService } from '../google/google.service'
+// import { GoogleService } from '../google/google.service'
+// import { GoogleService } from '../Services/google.service'
 import { FacebookService } from '../Services/facebook.service'
 import { logger } from '../Services/logger.service'
 import { type ClassificationArray } from '../Entities'
@@ -20,6 +21,7 @@ import {
 } from './post.schema'
 import { io } from '../app'
 import { text } from 'node:stream/consumers'
+import { GoogleService } from '../Services/google.service'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -97,8 +99,8 @@ export class PostController {
     ) => {
       const body = req.body
       const files = req.files
-      const dataEmitted={ active: true, body }
-      console.log(dataEmitted,"objeto enviado")
+      const dataEmitted = { active: true, body }
+      console.log(dataEmitted, 'objeto enviado')
       io.emit('postLoader', dataEmitted)
       console.log('create')
       try {
@@ -375,7 +377,7 @@ export class PostController {
       const { id } = req.params
       try {
         const response = await this.service.deleteById(id)
-        console.log(response,"deleted object")
+        console.log(response, 'deleted object')
         let fbResponse
         if (response.data.fbid !== null && typeof response.data.fbid === 'string') fbResponse = await this.facebookService.deleteFacebookPost(response.data.fbid)
         logger.debug({ function: 'PostController.deletePost', response, fbResponse })
@@ -397,6 +399,38 @@ export class PostController {
         logger.debug({ function: 'PostController.showPost', response })
         res.status(200).send(response)
       } catch (error) { logger.error({ function: 'postController.showPost', error }) }
+    },
+    public uploadAudio = async (req: Request, res: Response) => {
+      try {
+        console.log(req.files)
+        if (req.files !== undefined && Array.isArray(req.files)) {
+          req.files?.forEach(async (file) => {
+            const id = await this.googleService.fileUpload('audio', file.path)
+            if (id !== undefined) {
+              const response = await this.service.addAudioToDB(id)
+              if (response !== undefined) {
+                res.status(200).send(response)
+              } else throw new Error('Couldnt add audio to database')
+            } else throw new Error('Couldnt upload file')
+          })
+        }
+      } catch (error) {
+        logger.error({ function: 'postController.uploadAudio', error })
+        res.status(500).send(error)
+      }
+    },
+    public eraseAudio = async (req: Request<any, any, any, { id: string }>, res: Response) => {
+      try {
+        const { id } = req.query
+        const driveId = await this.prisma.audio.delete({ where: { id }, select: { driveId: true } })
+        if (driveId === undefined || typeof driveId !== 'object') throw new Error('Unable to erase from database')
+        const response = await this.googleService.fileRemove(driveId.driveId)
+        if (response) res.status(200).send(response)
+        else throw new Error('Unable to erase de drive Image')
+      } catch (error) {
+        logger.error({ function: 'postController.eraseAudio', error })
+        res.status(500).send(error)
+      }
     }
   ) {}
 }

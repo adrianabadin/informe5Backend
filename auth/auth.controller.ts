@@ -8,6 +8,7 @@ import fs from 'fs'
 import { PrismaClient } from '@prisma/client'
 import { FacebookService } from '../Services/facebook.service'
 import { oauthClient } from '../Services/google.service'
+import { logger } from '../Services/logger.service'
 dotenv.config()
 const simetricKey = (process.env.SIMETRICKEY !== undefined) ? process.env.SIMETRICKEY : ''
 
@@ -38,10 +39,17 @@ export class AuthController {
         }
       }
     },
-    public sendAuthData = (req: Request, res: Response) => {
+    public sendAuthData = async (req: Request, res: Response) => {
       if (req.isAuthenticated()) {
         console.log(req.user)
-        res.status(200).json(req.user)
+        let refreshToken
+        try {
+          if ('rol' in req.user && req.user.rol === 'ADMIN') {
+            refreshToken = (await this.service.prisma.dataConfig.findUniqueOrThrow({ where: { id: 1 }, select: { refreshToken: true } })).refreshToken
+          }
+          console.log(refreshToken)
+          res.status(200).json({ ...req.user, refreshToken })
+        } catch (error) { logger.error({ function: 'AuthController.sendAuthData', error }) }
       } else res.status(403).send('unauthorized')
     },
     public issueJWT = (req: Request, res: Response, next: NextFunction) => {
@@ -68,22 +76,54 @@ export class AuthController {
         } else res.status(401).send({ ok: false })
       } else res.status(401).send({ ok: false })
     },
-    public localLogin = (req: Request, res: Response) => {
+    public localLogin = async (req: Request, res: Response) => {
       console.log(req.user, 'Login')
-      if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {
-        const token = this.service.tokenIssuance(req.user.id)
-        res.clearCookie('jwt')
-        res.cookie('jwt', token)
-        res.status(200).send({ ...req.user, password: null, token })
-      } else res.status(404).send({ ok: false, message: 'Invalid Credentials' })
-    },
-    public innerToken = async (req: Request<any, any, any, { code: string }>, res: Response) => {
-      const { code } = req.query
-      if (code !== undefined) {
-        const { tokens } = await oauthClient.getToken(code)
-        if (tokens.refresh_token !== undefined) await this.service.prisma.dataConfig.upsert({ where: { id: 1 }, update: { refreshToken: tokens.refresh_token }, create: { refreshToken: tokens.refresh_token } })
+      try {
+        if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {
+          const token = this.service.tokenIssuance(req.user.id)
+          res.clearCookie('jwt')
+          res.cookie('jwt', token)
+          let refreshToken
+          if ('rol' in req.user && req.user.rol !== null && req.user.rol === 'ADMIN') {
+            refreshToken = await this.service.prisma.dataConfig.findUniqueOrThrow({ where: { id: 1 } })
+          }
+          res.status(200).send({ ...req.user, password: null, token, refreshToken })
+        } else res.status(404).send({ ok: false, message: 'Invalid Credentials' })
+      } catch (error) {
+        logger.error({ function: 'AuthController.localLogin', error })
+        res.status(500).send(error)
       }
     },
+    public innerToken = async (req: Request<any, any, any, { code: string }>, res: Response) => {
+      try {
+        let response
+        const { code } = req.query
+        if (code !== undefined) {
+          const { tokens } = await oauthClient.getToken(code)
+          if (tokens.refresh_token !== undefined) {
+            oauthClient.setCredentials(tokens)
+            response = (await this.service.prisma.dataConfig.upsert({ where: { id: 1 }, update: { refreshToken: tokens.refresh_token }, create: { refreshToken: tokens.refresh_token } })).refreshToken
+          }
+        }
+        res.status(200).send({ token: response, ok: true })
+      } catch (error) {
+        logger.error({ function: 'AuthController.innerToken', error })
+        res.status(401).send(error)
+      }
+    },
+    public isRTValid = async (req: Request<any, any, any, { code: string }>, res: Response) => {
+      try {
+        const refreshToken = (await this.service.prisma.dataConfig.findUnique({ where: { id: 1 }, select: { refreshToken: true } }))?.refreshToken
+        oauthClient.setCredentials({ refresh_token: refreshToken })
+        const data = await oauthClient.getAccessToken()
+        console.log(data)
+        res.send(data)
+      } catch (error) {
+        console.log(error)
+        res.redirect('/auth/innerAuth')
+      }
+    },
+
     public facebookLogin = (req: Request, res: Response) => {
       if (req.isAuthenticated() && 'id' in req?.user && req.user.id !== null && typeof req.user.id === 'string') {
         const token = this.service.tokenIssuance(req.user.id)

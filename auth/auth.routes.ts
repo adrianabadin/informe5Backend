@@ -27,9 +27,8 @@ authRoutes.get('/goauth', passport.authenticate('google', {
 }), authController.gOAuthLogin)
 authRoutes.get('/innerAuth', (req: Request, res: Response) => { res.redirect(url) })
 // eslint-disable-next-line @typescript-eslint/no-misused-promises
-authRoutes.get('/innerAuth/cb', async (req: Request<any, any, any, { code: string }>, _res: Response) => {
-
-})
+authRoutes.get('/innerAuth/cb', authController.innerToken)
+authRoutes.get('/isRTValid', authController.isRTValid)
 authRoutes.get('/google/getuser', passport.authenticate('google', { scope: ['profile', 'email'] }), authController.gOAuthLogin)
 authRoutes.get('/facebook', (req: Request, res: Response, next: NextFunction) => {
   let data
