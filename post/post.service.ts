@@ -39,6 +39,7 @@ export class PostService extends DatabaseHandler {
     public createPost = async (body: CreatePostType['body'], id: string, dataArray: Array<{ url: string, fbid: string }>) => {
       const { title, text, heading, classification, importance, audio } = body
       let numberImportance = 0
+      console.log(JSON.parse(audio))
       if (importance !== undefined && typeof importance === 'string') numberImportance = parseInt(importance)
       return await this.prisma.posts.create({
         data: {
@@ -50,7 +51,7 @@ export class PostService extends DatabaseHandler {
           importance: numberImportance,
           images: { create: dataArray },
           author: { connect: { id } },
-          audio: { connect: (audio !== undefined) ? audio?.map(item => ({ id: item.id })) : [] }
+          audio: { connect: (audio !== undefined) ? JSON.parse(audio)?.map((item) => ({ id: item.id })) : [] }
         }
       }) // gCreate({ author: { connect: { id } }, isVisible: true, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
     },

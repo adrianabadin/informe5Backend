@@ -104,14 +104,17 @@ export class PostController {
       io.emit('postLoader', dataEmitted)
       console.log('create')
       try {
-        const imagesArray = await this.service.photoGenerator(
-          files as Express.Multer.File[]
-        )
+        let imagesArray
+        console.log(files, 'alfo', files?.length)
+        if (files?.length > 0) {
+          console.log('DENTRO DEL PHOTO')
+          imagesArray = await this.service.photoGenerator(files as Express.Multer.File[])
+        }
         if (
           req.user !== undefined &&
           'id' in req.user &&
-          typeof req.user.id === 'string' &&
-          imagesArray !== undefined
+          typeof req.user.id === 'string' /* &&
+          imagesArray !== undefined */
         ) {
           const responseDB = await this.service.createPost(
             body,
@@ -120,6 +123,7 @@ export class PostController {
           )
           // let socketData
           // if ('author' in responseDB.data && responseDB.data?.author !== null && 'name' in responseDB.data.author) socketData = { ...responseDB.data, author: `${responseDB.data.author.name as string} ${responseDB.data.author.lastName}` }
+          console.log(responseDB, 'Database Response')
           io.emit('postUpdate', {
             ...responseDB.data,
             images: imagesArray,
