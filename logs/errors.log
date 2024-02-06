@@ -1180,3 +1180,487 @@
   },
   level: 'error'
 }
+{
+  message: {
+    function: 'GoogleService.isRTValid',
+    error: GaxiosError: unauthorized_client
+        at Gaxios._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at OAuth2Client.refreshTokenNoCache (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+        at OAuth2Client.refreshAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+        at OAuth2Client.getAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23) {
+      config: {
+        method: 'POST',
+        url: 'https://oauth2.googleapis.com/token',
+        data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'google-api-nodejs-client/9.5.0',
+          'x-goog-api-client': 'gl-node/20.10.0'
+        },
+        paramsSerializer: [Function: paramsSerializer],
+        body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        validateStatus: [Function: validateStatus],
+        responseType: 'unknown',
+        errorRedactor: [Function: defaultErrorRedactor]
+      },
+      response: {
+        config: {
+          method: 'POST',
+          url: 'https://oauth2.googleapis.com/token',
+          data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'google-api-nodejs-client/9.5.0',
+            'x-goog-api-client': 'gl-node/20.10.0'
+          },
+          paramsSerializer: [Function: paramsSerializer],
+          body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          validateStatus: [Function: validateStatus],
+          responseType: 'unknown',
+          errorRedactor: [Function: defaultErrorRedactor]
+        },
+        data: {
+          error: 'unauthorized_client',
+          error_description: 'Unauthorized'
+        },
+        headers: {
+          'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+          'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+          connection: 'close',
+          'content-encoding': 'gzip',
+          'content-type': 'application/json; charset=utf-8',
+          date: 'Tue, 06 Feb 2024 10:15:34 GMT',
+          expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+          pragma: 'no-cache',
+          server: 'scaffolding on HTTPServer2',
+          'transfer-encoding': 'chunked',
+          vary: 'Origin, X-Origin, Referer',
+          'x-content-type-options': 'nosniff',
+          'x-frame-options': 'SAMEORIGIN',
+          'x-xss-protection': '0'
+        },
+        status: 401,
+        statusText: 'Unauthorized',
+        request: { responseURL: 'https://oauth2.googleapis.com/token' }
+      },
+      error: undefined,
+      status: 401
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'GoogleService.isRTValid',
+    error: GaxiosError: unauthorized_client
+        at Gaxios._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at OAuth2Client.refreshTokenNoCache (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+        at OAuth2Client.refreshAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+        at OAuth2Client.getAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23) {
+      config: {
+        method: 'POST',
+        url: 'https://oauth2.googleapis.com/token',
+        data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'google-api-nodejs-client/9.5.0',
+          'x-goog-api-client': 'gl-node/20.10.0'
+        },
+        paramsSerializer: [Function: paramsSerializer],
+        body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        validateStatus: [Function: validateStatus],
+        responseType: 'unknown',
+        errorRedactor: [Function: defaultErrorRedactor]
+      },
+      response: {
+        config: {
+          method: 'POST',
+          url: 'https://oauth2.googleapis.com/token',
+          data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'google-api-nodejs-client/9.5.0',
+            'x-goog-api-client': 'gl-node/20.10.0'
+          },
+          paramsSerializer: [Function: paramsSerializer],
+          body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          validateStatus: [Function: validateStatus],
+          responseType: 'unknown',
+          errorRedactor: [Function: defaultErrorRedactor]
+        },
+        data: {
+          error: 'unauthorized_client',
+          error_description: 'Unauthorized'
+        },
+        headers: {
+          'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+          'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+          connection: 'close',
+          'content-encoding': 'gzip',
+          'content-type': 'application/json; charset=utf-8',
+          date: 'Tue, 06 Feb 2024 10:17:06 GMT',
+          expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+          pragma: 'no-cache',
+          server: 'scaffolding on HTTPServer2',
+          'transfer-encoding': 'chunked',
+          vary: 'Origin, X-Origin, Referer',
+          'x-content-type-options': 'nosniff',
+          'x-frame-options': 'SAMEORIGIN',
+          'x-xss-protection': '0'
+        },
+        status: 401,
+        statusText: 'Unauthorized',
+        request: { responseURL: 'https://oauth2.googleapis.com/token' }
+      },
+      error: undefined,
+      status: 401
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'GoogleService.isRTValid',
+    error: GaxiosError: unauthorized_client
+        at Gaxios._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at OAuth2Client.refreshTokenNoCache (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+        at OAuth2Client.refreshAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+        at OAuth2Client.getAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23) {
+      config: {
+        method: 'POST',
+        url: 'https://oauth2.googleapis.com/token',
+        data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'google-api-nodejs-client/9.5.0',
+          'x-goog-api-client': 'gl-node/20.10.0'
+        },
+        paramsSerializer: [Function: paramsSerializer],
+        body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        validateStatus: [Function: validateStatus],
+        responseType: 'unknown',
+        errorRedactor: [Function: defaultErrorRedactor]
+      },
+      response: {
+        config: {
+          method: 'POST',
+          url: 'https://oauth2.googleapis.com/token',
+          data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'google-api-nodejs-client/9.5.0',
+            'x-goog-api-client': 'gl-node/20.10.0'
+          },
+          paramsSerializer: [Function: paramsSerializer],
+          body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          validateStatus: [Function: validateStatus],
+          responseType: 'unknown',
+          errorRedactor: [Function: defaultErrorRedactor]
+        },
+        data: {
+          error: 'unauthorized_client',
+          error_description: 'Unauthorized'
+        },
+        headers: {
+          'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+          'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+          connection: 'close',
+          'content-encoding': 'gzip',
+          'content-type': 'application/json; charset=utf-8',
+          date: 'Tue, 06 Feb 2024 10:18:39 GMT',
+          expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+          pragma: 'no-cache',
+          server: 'scaffolding on HTTPServer2',
+          'transfer-encoding': 'chunked',
+          vary: 'Origin, X-Origin, Referer',
+          'x-content-type-options': 'nosniff',
+          'x-frame-options': 'SAMEORIGIN',
+          'x-xss-protection': '0'
+        },
+        status: 401,
+        statusText: 'Unauthorized',
+        request: { responseURL: 'https://oauth2.googleapis.com/token' }
+      },
+      error: undefined,
+      status: 401
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'GoogleService.isRTValid',
+    error: GaxiosError: unauthorized_client
+        at Gaxios._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at OAuth2Client.refreshTokenNoCache (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+        at OAuth2Client.refreshAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+        at OAuth2Client.getAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23) {
+      config: {
+        method: 'POST',
+        url: 'https://oauth2.googleapis.com/token',
+        data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'google-api-nodejs-client/9.5.0',
+          'x-goog-api-client': 'gl-node/20.10.0'
+        },
+        paramsSerializer: [Function: paramsSerializer],
+        body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        validateStatus: [Function: validateStatus],
+        responseType: 'unknown',
+        errorRedactor: [Function: defaultErrorRedactor]
+      },
+      response: {
+        config: {
+          method: 'POST',
+          url: 'https://oauth2.googleapis.com/token',
+          data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'google-api-nodejs-client/9.5.0',
+            'x-goog-api-client': 'gl-node/20.10.0'
+          },
+          paramsSerializer: [Function: paramsSerializer],
+          body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          validateStatus: [Function: validateStatus],
+          responseType: 'unknown',
+          errorRedactor: [Function: defaultErrorRedactor]
+        },
+        data: {
+          error: 'unauthorized_client',
+          error_description: 'Unauthorized'
+        },
+        headers: {
+          'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+          'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+          connection: 'close',
+          'content-encoding': 'gzip',
+          'content-type': 'application/json; charset=utf-8',
+          date: 'Tue, 06 Feb 2024 10:20:07 GMT',
+          expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+          pragma: 'no-cache',
+          server: 'scaffolding on HTTPServer2',
+          'transfer-encoding': 'chunked',
+          vary: 'Origin, X-Origin, Referer',
+          'x-content-type-options': 'nosniff',
+          'x-frame-options': 'SAMEORIGIN',
+          'x-xss-protection': '0'
+        },
+        status: 401,
+        statusText: 'Unauthorized',
+        request: { responseURL: 'https://oauth2.googleapis.com/token' }
+      },
+      error: undefined,
+      status: 401
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'GoogleService.isRTValid',
+    error: GaxiosError: unauthorized_client
+        at Gaxios._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at OAuth2Client.refreshTokenNoCache (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+        at OAuth2Client.refreshAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+        at OAuth2Client.getAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23) {
+      config: {
+        method: 'POST',
+        url: 'https://oauth2.googleapis.com/token',
+        data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'google-api-nodejs-client/9.5.0',
+          'x-goog-api-client': 'gl-node/20.10.0'
+        },
+        paramsSerializer: [Function: paramsSerializer],
+        body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        validateStatus: [Function: validateStatus],
+        responseType: 'unknown',
+        errorRedactor: [Function: defaultErrorRedactor]
+      },
+      response: {
+        config: {
+          method: 'POST',
+          url: 'https://oauth2.googleapis.com/token',
+          data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'google-api-nodejs-client/9.5.0',
+            'x-goog-api-client': 'gl-node/20.10.0'
+          },
+          paramsSerializer: [Function: paramsSerializer],
+          body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          validateStatus: [Function: validateStatus],
+          responseType: 'unknown',
+          errorRedactor: [Function: defaultErrorRedactor]
+        },
+        data: {
+          error: 'unauthorized_client',
+          error_description: 'Unauthorized'
+        },
+        headers: {
+          'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+          'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+          connection: 'close',
+          'content-encoding': 'gzip',
+          'content-type': 'application/json; charset=utf-8',
+          date: 'Tue, 06 Feb 2024 10:26:53 GMT',
+          expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+          pragma: 'no-cache',
+          server: 'scaffolding on HTTPServer2',
+          'transfer-encoding': 'chunked',
+          vary: 'Origin, X-Origin, Referer',
+          'x-content-type-options': 'nosniff',
+          'x-frame-options': 'SAMEORIGIN',
+          'x-xss-protection': '0'
+        },
+        status: 401,
+        statusText: 'Unauthorized',
+        request: { responseURL: 'https://oauth2.googleapis.com/token' }
+      },
+      error: undefined,
+      status: 401
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'GoogleService.isRTValid',
+    error: GaxiosError: invalid_grant
+        at Gaxios._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at OAuth2Client.refreshTokenNoCache (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+        at OAuth2Client.refreshAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+        at OAuth2Client.getAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23) {
+      config: {
+        method: 'POST',
+        url: 'https://oauth2.googleapis.com/token',
+        data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'google-api-nodejs-client/9.5.0',
+          'x-goog-api-client': 'gl-node/20.10.0'
+        },
+        paramsSerializer: [Function: paramsSerializer],
+        body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        validateStatus: [Function: validateStatus],
+        responseType: 'unknown',
+        errorRedactor: [Function: defaultErrorRedactor]
+      },
+      response: {
+        config: {
+          method: 'POST',
+          url: 'https://oauth2.googleapis.com/token',
+          data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'google-api-nodejs-client/9.5.0',
+            'x-goog-api-client': 'gl-node/20.10.0'
+          },
+          paramsSerializer: [Function: paramsSerializer],
+          body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          validateStatus: [Function: validateStatus],
+          responseType: 'unknown',
+          errorRedactor: [Function: defaultErrorRedactor]
+        },
+        data: { error: 'invalid_grant', error_description: 'Bad Request' },
+        headers: {
+          'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+          'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+          connection: 'close',
+          'content-encoding': 'gzip',
+          'content-type': 'application/json; charset=utf-8',
+          date: 'Tue, 06 Feb 2024 10:33:42 GMT',
+          expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+          pragma: 'no-cache',
+          server: 'scaffolding on HTTPServer2',
+          'transfer-encoding': 'chunked',
+          vary: 'Origin, X-Origin, Referer',
+          'x-content-type-options': 'nosniff',
+          'x-frame-options': 'SAMEORIGIN',
+          'x-xss-protection': '0'
+        },
+        status: 400,
+        statusText: 'Bad Request',
+        request: { responseURL: 'https://oauth2.googleapis.com/token' }
+      },
+      error: undefined,
+      status: 400
+    }
+  },
+  level: 'error'
+}
+{
+  message: {
+    function: 'GoogleService.isRTValid',
+    error: GaxiosError: invalid_grant
+        at Gaxios._request (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at OAuth2Client.refreshTokenNoCache (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+        at OAuth2Client.refreshAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+        at OAuth2Client.getAccessTokenAsync (C:\Users\aabadin\Documents\code\informe5Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23) {
+      config: {
+        method: 'POST',
+        url: 'https://oauth2.googleapis.com/token',
+        data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'google-api-nodejs-client/9.5.0',
+          'x-goog-api-client': 'gl-node/20.10.0'
+        },
+        paramsSerializer: [Function: paramsSerializer],
+        body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+        validateStatus: [Function: validateStatus],
+        responseType: 'unknown',
+        errorRedactor: [Function: defaultErrorRedactor]
+      },
+      response: {
+        config: {
+          method: 'POST',
+          url: 'https://oauth2.googleapis.com/token',
+          data: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'User-Agent': 'google-api-nodejs-client/9.5.0',
+            'x-goog-api-client': 'gl-node/20.10.0'
+          },
+          paramsSerializer: [Function: paramsSerializer],
+          body: '<<REDACTED> - See `errorRedactor` option in `gaxios` for configuration>.',
+          validateStatus: [Function: validateStatus],
+          responseType: 'unknown',
+          errorRedactor: [Function: defaultErrorRedactor]
+        },
+        data: { error: 'invalid_grant', error_description: 'Bad Request' },
+        headers: {
+          'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+          'cache-control': 'no-cache, no-store, max-age=0, must-revalidate',
+          connection: 'close',
+          'content-encoding': 'gzip',
+          'content-type': 'application/json; charset=utf-8',
+          date: 'Tue, 06 Feb 2024 10:34:35 GMT',
+          expires: 'Mon, 01 Jan 1990 00:00:00 GMT',
+          pragma: 'no-cache',
+          server: 'scaffolding on HTTPServer2',
+          'transfer-encoding': 'chunked',
+          vary: 'Origin, X-Origin, Referer',
+          'x-content-type-options': 'nosniff',
+          'x-frame-options': 'SAMEORIGIN',
+          'x-xss-protection': '0'
+        },
+        status: 400,
+        statusText: 'Bad Request',
+        request: { responseURL: 'https://oauth2.googleapis.com/token' }
+      },
+      error: undefined,
+      status: 400
+    }
+  },
+  level: 'error'
+}

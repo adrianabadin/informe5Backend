@@ -10,7 +10,8 @@ import { logger } from '../Services/logger.service'
 import { type ClassificationArray } from '../Entities'
 import {
   type GenericResponseObject,
-  ResponseObject
+  ResponseObject,
+  GoogleError
 } from '../Entities/response'
 import {
   type CreatePostType,
@@ -410,6 +411,8 @@ export class PostController {
         if (req.files !== undefined && Array.isArray(req.files)) {
           req.files?.forEach(async (file) => {
             const id = await this.googleService.fileUpload('audio', file.path)
+            if (id instanceof GoogleError) throw id
+            console.log('paso de largo ')
             if (id !== undefined) {
               const response = await this.service.addAudioToDB(id)
               if (response !== undefined) {
