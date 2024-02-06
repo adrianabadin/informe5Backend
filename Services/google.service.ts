@@ -2,6 +2,7 @@ import { google, type drive_v3 } from 'googleapis'
 import { prismaClient } from './database.service'
 import { logger } from './logger.service'
 import fs from 'fs'
+import { FileCreateError, FolderCreateError, NeverAuthError, PermissionsCreateError, TokenError, UnknownGoogleError } from '../Entities'
 export const oauthClient = new google.auth.OAuth2(
   process.env.CLIENTID_BUCKET,
   process.env.CLIENTSECRET_BUCKET,
@@ -36,32 +37,39 @@ export class GoogleService {
     }
   }
 
-  async initiateAuth (): Promise<boolean> {
+  async initiateAuth (): Promise<true | TokenError | UnknownGoogleError | NeverAuthError> {
     try {
       if (GoogleService.rt !== undefined && GoogleService.rt !== null) {
-        return await this.isRTValid(GoogleService.rt)
+        const response = await this.isRTValid(GoogleService.rt)
+        if (response) return true
+        else throw new TokenError()
       } else {
         const result = await this.prisma.dataConfig.findUniqueOrThrow({ where: { id: 1 }, select: { refreshToken: true } })
         GoogleService.rt = result.refreshToken
-        if (result.refreshToken !== null) return await this.isRTValid(result.refreshToken)
-        else return false
+        if (result.refreshToken !== null) {
+          const response = await this.isRTValid(result.refreshToken)
+          if (response) return true
+          else throw new TokenError()
+        } else throw new NeverAuthError() // aca debe ir un error que signifique nunca fue autenticado
       }
     } catch (error) {
       logger.error({ function: 'GoogleService', error })
-      return false
+      if (error instanceof TokenError || error instanceof NeverAuthError) return error
+      else return new UnknownGoogleError(error)
     }
   }
 
-  async folderExists (folder: string): Promise<string | null | undefined> {
+  async folderExists (folder: string): Promise<string | TokenError | NeverAuthError | FolderCreateError | UnknownGoogleError> {
     try {
-      if (await this.initiateAuth()) {
+      const initiateResponse = await this.initiateAuth()
+      if (!(initiateResponse !== undefined && typeof initiateResponse === 'object' && 'code' in initiateResponse)) {
         const drive: drive_v3.Drive = google.drive({ version: 'v3', auth: oauthClient })
         const { data, status } = await drive.files.list({
           q: `mimeType='application/vnd.google-apps.folder' and name='${folder}'`,
           fields: 'files(id, name)'
         })
-        if (status > 400) throw new Error('Server error')
-        if (data.files !== undefined && data.files?.length > 0) {
+        if (status > 400) throw new FolderCreateError()
+        if (data.files !== undefined && data.files?.length > 0 && data.files[0].id !== undefined && data.files[0].id !== null) {
           return data.files[0].id
         } else {
           const { data: dataCreated, status: statusCreated } = await drive.files.create({
@@ -71,21 +79,26 @@ export class GoogleService {
             }
           })
           if (statusCreated > 400) throw new Error('Server error: ')
-          if (dataCreated !== undefined) { return dataCreated.id as string }
+          if (dataCreated?.id != null) { return dataCreated.id } else throw new FolderCreateError()
         }
-      } else throw new Error('You need to refresh your google token')
+      } else throw initiateResponse
     } catch (error) {
       logger.error({ function: 'GoogleService.folderExists', error })
+      return new UnknownGoogleError(error)
     }
   }
 
-  async fileUpload (folder: string, file: string): Promise<string | undefined> {
-    if (GoogleService.rt === undefined) await this.initiateAuth()
-    console.log(GoogleService.rt, folder, file)
-    if (GoogleService.rt !== undefined) {
-      try {
+  async fileUpload (folder: string, file: string): Promise<string | NeverAuthError | TokenError | FolderCreateError | FileCreateError | PermissionsCreateError | UnknownGoogleError> {
+    try {
+      if (GoogleService.rt === undefined) {
+        const initiateResponse = await this.initiateAuth()
+        console.log(initiateResponse)
+        if (initiateResponse instanceof TokenError || initiateResponse instanceof NeverAuthError) throw initiateResponse
+      }
+      if (GoogleService.rt !== undefined) {
         const drive: drive_v3.Drive = google.drive({ version: 'v3', auth: oauthClient })
-        const id: string | null | undefined = await this.folderExists(folder)
+        const id: string | Error = await this.folderExists(folder)
+        if (typeof id !== 'string' && id instanceof Error) throw id
         const splitedPath = file.split('/')
 
         if ((id) !== undefined && id !== null) {
@@ -102,11 +115,24 @@ export class GoogleService {
           let permissionsResponse
           if (response?.data !== null) {
             permissionsResponse = await drive.permissions.create({ fileId: response.data.id as string, requestBody: { role: 'writer', type: 'anyone' } })
-            if (permissionsResponse !== undefined) { await fs.promises.unlink(file) }
-          } else throw new Error('Response is undefined or null')
-          return response.data.id !== null ? response.data.id : undefined
-        }
-      } catch (error) { logger.error({ function: 'GoogleService.fileUpload', error }) }
+            if (permissionsResponse !== undefined) { await fs.promises.unlink(file) } else {
+              throw new PermissionsCreateError()
+            }
+          } else throw new FileCreateError()
+          if (response.data.id !== undefined && response.data?.id !== null) {
+            return response.data?.id
+          } else throw new FileCreateError()
+        } else throw new FolderCreateError()
+      } throw new NeverAuthError()
+    } catch (error) {
+      logger.error({ function: 'GoogleService.fileUpload', error })
+      if (error instanceof TokenError ||
+        error instanceof NeverAuthError ||
+        error instanceof FolderCreateError ||
+        error instanceof FileCreateError ||
+        error instanceof PermissionsCreateError) {
+        return error
+      } else return new UnknownGoogleError(error)
     }
   }
 

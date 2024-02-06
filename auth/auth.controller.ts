@@ -7,7 +7,7 @@ import * as jwt from 'jsonwebtoken'
 import fs from 'fs'
 import { PrismaClient } from '@prisma/client'
 import { FacebookService } from '../Services/facebook.service'
-import { oauthClient } from '../Services/google.service'
+import { GoogleService, oauthClient } from '../Services/google.service'
 import { logger } from '../Services/logger.service'
 dotenv.config()
 const simetricKey = (process.env.SIMETRICKEY !== undefined) ? process.env.SIMETRICKEY : ''
@@ -102,6 +102,7 @@ export class AuthController {
           const { tokens } = await oauthClient.getToken(code)
           if (tokens.refresh_token !== undefined) {
             oauthClient.setCredentials(tokens)
+            GoogleService.rt = tokens.refresh_token
             response = (await this.service.prisma.dataConfig.upsert({ where: { id: 1 }, update: { refreshToken: tokens.refresh_token }, create: { refreshToken: tokens.refresh_token } })).refreshToken
           }
         }
