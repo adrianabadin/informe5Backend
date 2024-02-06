@@ -39,7 +39,9 @@ export class PostService extends DatabaseHandler {
     public createPost = async (body: CreatePostType['body'], id: string, dataArray: Array<{ url: string, fbid: string }>) => {
       const { title, text, heading, classification, importance, audio } = body
       let numberImportance = 0
-      console.log(JSON.parse(audio))
+      let audioArray = []
+      if (audio !== undefined && Array.isArray(JSON.parse(audio ?? ''))) { audioArray = JSON.parse(audio) } else if (audio !== undefined) audioArray = [JSON.parse(audio)]
+      console.log(audioArray)
       if (importance !== undefined && typeof importance === 'string') numberImportance = parseInt(importance)
       return await this.prisma.posts.create({
         data: {
@@ -51,8 +53,9 @@ export class PostService extends DatabaseHandler {
           importance: numberImportance,
           images: { create: dataArray },
           author: { connect: { id } },
-          audio: { connect: (audio !== undefined) ? JSON.parse(audio)?.map((item) => ({ id: item.id })) : [] }
-        }
+          audio: { connect: (audio !== undefined) ? audioArray.map((item) => ({ id: item.id })) : [] }
+        },
+        include: { author: { select: { lastName: true, name: true, username: true } } }
       }) // gCreate({ author: { connect: { id } }, isVisible: true, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
     },
     public getPosts = async (paginationOptions?:
