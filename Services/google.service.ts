@@ -2,12 +2,12 @@ import { google, type drive_v3 } from 'googleapis'
 import { prismaClient } from './database.service'
 import { logger } from './logger.service'
 import fs from 'fs'
-import { FileCreateError, FolderCreateError, NeverAuthError, PermissionsCreateError, TokenError, UnknownGoogleError } from '../Entities'
+import { FileCreateError, FolderCreateError, GoogleError, NeverAuthError, PermissionsCreateError, QuotaExceededError, TokenError, UnknownGoogleError, VideoCreateError } from '../Entities'
 export const oauthClient = new google.auth.OAuth2(
   process.env.CLIENTID_BUCKET,
   process.env.CLIENTSECRET_BUCKET,
   process.env.CALLBACK_BUCKET)
-const scopes = ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/youtube', 'https://mail.google.com/']
+const scopes = ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/youtube', 'https://mail.google.com/', 'https://www.googleapis.com/auth/youtubepartner']
 export const url = oauthClient.generateAuthUrl({ access_type: 'offline', scope: scopes })
 
 export class GoogleService {
@@ -23,6 +23,7 @@ export class GoogleService {
     this.initiateAuth = this.initiateAuth.bind(this)
     this.isRTValid = this.isRTValid.bind(this)
     this.fileRemove = this.fileRemove.bind(this)
+    this.uploadVideo = this.uploadVideo.bind(this)
   }
 
   async isRTValid (tokenStr: string): Promise<boolean> {
@@ -84,20 +85,26 @@ export class GoogleService {
       } else throw initiateResponse
     } catch (error) {
       logger.error({ function: 'GoogleService.folderExists', error })
-      return new UnknownGoogleError(error)
+      if (error instanceof TokenError || error instanceof NeverAuthError || error instanceof FolderCreateError) { return error } else { return new UnknownGoogleError(error) }
     }
   }
 
   async fileUpload (folder: string, file: string): Promise<string | NeverAuthError | TokenError | FolderCreateError | FileCreateError | PermissionsCreateError | UnknownGoogleError> {
     try {
+      console.log(GoogleService.rt, ' ********************')
       if (GoogleService.rt === undefined) {
         const initiateResponse = await this.initiateAuth()
-        console.log(initiateResponse)
-        if (initiateResponse instanceof TokenError || initiateResponse instanceof NeverAuthError) throw initiateResponse
+        console.log(initiateResponse, 'Despues de initiateResponse')
+        if (initiateResponse instanceof TokenError || initiateResponse instanceof NeverAuthError) {
+          console.log('aca sale el throw')
+          throw initiateResponse
+        }
       }
       if (GoogleService.rt !== undefined) {
         const drive: drive_v3.Drive = google.drive({ version: 'v3', auth: oauthClient })
         const id: string | Error = await this.folderExists(folder)
+
+        console.log(id, 'despues de folderexists')
         if (typeof id !== 'string' && id instanceof Error) throw id
         const splitedPath = file.split('/')
 
@@ -131,13 +138,17 @@ export class GoogleService {
         error instanceof FolderCreateError ||
         error instanceof FileCreateError ||
         error instanceof PermissionsCreateError) {
+        console.log('identifica el TokenError')
         return error
       } else return new UnknownGoogleError(error)
     }
   }
 
-  async fileRemove (driveId: string): Promise<boolean> {
+  async fileRemove (driveId: string): Promise<true | Error> {
     try {
+      const initiateResponse = await this.initiateAuth()
+      console.log(initiateResponse)
+      if (initiateResponse instanceof GoogleError) throw initiateResponse
       const drive: drive_v3.Drive = google.drive({ version: 'v3', auth: oauthClient })
       const response = await drive.files.delete({
         fileId: driveId
@@ -146,7 +157,61 @@ export class GoogleService {
       return true
     } catch (error) {
       logger.error({ function: 'GoogleService.fileRemove', error })
-      return false
+      if (error instanceof TokenError || error instanceof NeverAuthError || error instanceof UnknownGoogleError) return error
+      else return error as Error
+    }
+  }
+
+  async uploadVideo (path: string, title: string, description: string, channelId?: string, tags?: string[]):
+  Promise<string | TokenError | NeverAuthError | UnknownGoogleError | VideoCreateError| QuotaExceededError> {
+    try {
+      const initiateResponse = await this.initiateAuth()
+      if (initiateResponse instanceof GoogleError) throw initiateResponse
+      const youtube = google.youtube({ version: 'v3', auth: oauthClient })
+      const video: any = await youtube.videos.insert({
+        notifySubscribers: true,
+        requestBody: {
+          snippet: { title, description, tags, channelId, defaultAudioLanguage: 'es' },
+          status: { privacyStatus: 'public' }
+        },
+        part: ['snippet', 'status'],
+        media: {
+          body: fs.createReadStream(path)
+
+        }
+
+      }
+      )
+      if (video.data === null) throw new VideoCreateError()
+      if (video.data.id === undefined || video.data.id === null) throw new VideoCreateError()
+      return video.data.id
+    } catch (error: unknown) {
+      if (typeof error === 'object' && error !== null && 'code' in error && error.code === 403) {
+        if ('errors' in error) {
+          if (Array.isArray(error.errors)) {
+            const quotas = error.errors.map((errorItem: unknown): number => {
+              if (typeof errorItem === 'object' && errorItem !== null && 'reason' in errorItem) {
+                if (errorItem.reason === 'quotaExceeded') {
+                  return 1
+                }
+              }
+              return 0
+            }).reduce((prev, cur) => prev + cur)
+            if (quotas > 0) {
+              logger.error({ function: 'GoogleService.uploadVideo', error: new QuotaExceededError(error) })
+              return new QuotaExceededError(error)
+            }
+          }
+        }
+      }
+
+      if (error instanceof TokenError || error instanceof NeverAuthError || error instanceof VideoCreateError || error instanceof QuotaExceededError) {
+        logger.error({ function: 'GoogleService.uploadVideo', error })
+        return error
+      } else {
+        logger.error({ function: 'GoogleService.uploadVideo', error: new UnknownGoogleError(error) })
+        return new UnknownGoogleError(error)
+      }
     }
   }
 }

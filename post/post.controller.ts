@@ -11,18 +11,22 @@ import { type ClassificationArray } from '../Entities'
 import {
   type GenericResponseObject,
   ResponseObject,
-  GoogleError
+  GoogleError,
+  TokenError,
+  NeverAuthError
 } from '../Entities/response'
 import {
   type CreatePostType,
   type GetPostsType,
   type GetPostById,
   type UpdatePostType,
-  type ImagesSchema
+  type ImagesSchema,
+  type VideoUpload
 } from './post.schema'
 import { io } from '../app'
 import { text } from 'node:stream/consumers'
 import { GoogleService } from '../Services/google.service'
+import { PrismaError } from '../Services/prisma.errors'
 export class PostController {
   constructor (
     protected service = new PostService(),
@@ -61,7 +65,7 @@ export class PostController {
         body = { ...body, dbImages: undefined }
       }
       const updateDbResponse = await this.service.updatePost(
-        body as Prisma.PostsUpdateInput,
+        body, // as Prisma.PostsUpdateInput,
         id,
         nuevoArray
       )
@@ -107,53 +111,52 @@ export class PostController {
       try {
         let imagesArray
         console.log(files, 'alfo', files?.length)
-        if (files?.length > 0) {
+        if (files !== undefined && Array.isArray(files) && files?.length > 0) {
           console.log('DENTRO DEL PHOTO')
-          imagesArray = await this.service.photoGenerator(files as Express.Multer.File[])
+          imagesArray = await this.service.photoGenerator(files)
         }
         if (
           req.user !== undefined &&
           'id' in req.user &&
-          typeof req.user.id === 'string' /* &&
-          imagesArray !== undefined */
+          typeof req.user.id === 'string'
+
         ) {
           const responseDB = await this.service.createPost(
             body,
             req.user.id,
             imagesArray as Array<{ fbid: string, url: string }>
           )
-          // let socketData
-          // if ('author' in responseDB.data && responseDB.data?.author !== null && 'name' in responseDB.data.author) socketData = { ...responseDB.data, author: `${responseDB.data.author.name as string} ${responseDB.data.author.lastName}` }
           console.log(responseDB, 'Database Response')
           io.emit('postUpdate', {
-            ...responseDB.data,
+            ...responseDB,
             images: imagesArray,
             stamp: Date.now()
           })
           console.log({
-            ...responseDB.data,
+            ...responseDB,
             images: imagesArray,
 
             stamp: Date.now()
           }, 'Post creado en la base de datos')
           if (
-            responseDB.ok &&
-            typeof responseDB.data === 'object' &&
-            responseDB.data !== null &&
-            'id' in responseDB.data &&
-            typeof responseDB.data.id === 'string'
+
+            responseDB !== undefined &&
+            typeof responseDB === 'object' &&
+            responseDB !== null &&
+            'id' in responseDB &&
+            typeof responseDB.id === 'string'
           ) {
+            if (imagesArray === undefined) {
+              res.status(200).send(responseDB)
+              return
+            }
             const facebookFeedResponse =
               await this.facebookService.facebookFeed(
                 body,
                 imagesArray,
-                responseDB.data.id
+                responseDB.id
               )
-            // console.log(
-            //   facebookFeedResponse?.data,
-            //   { facebookFeedResponse },
-            //   'FB'
-            // )
+
             if (
               facebookFeedResponse !== undefined &&
               facebookFeedResponse.ok &&
@@ -161,7 +164,7 @@ export class PostController {
             ) {
               const fbidUpdate = await this.service.addFBIDtoDatabase(
                 facebookFeedResponse?.data.data.id as string,
-                responseDB.data.id
+                responseDB.id
               )
               res.status(200).send(fbidUpdate)
             } else throw new Error('Error Updating Facebook Page Post')
@@ -244,7 +247,7 @@ export class PostController {
             const checkedResponse = await Promise.all(
               data.map(async (post) => {
                 return await this.checkPhotosAge(
-                  post?.images as Prisma.PhotosCreateInput[]
+                  post?.images // as Prisma.PhotosCreateInput[]
                 )
                   .then((checkedPhotos) => {
                     if (checkedPhotos.data !== undefined) {
@@ -286,17 +289,16 @@ export class PostController {
       console.log('getbyid')
       const { id } = req.params
       this.service
-        .getPost(id, { images: true, author: true, classification: true, createdAt: true, heading: true, id: true, importance: true, isVisible: true, text: true, title: true })
+        .getPost(id)
         .then(async (response) => {
           if (
-            response?.ok !== undefined &&
-            response.ok &&
-            'data' in response &&
-            'images' in response?.data &&
-            Array.isArray(response.data.images)
+            response !== undefined &&
+            response !== null &&
+            'images' in response &&
+            Array.isArray(response.images)
           ) {
             this.checkPhotosAge(
-              response?.data.images as Prisma.PhotosCreateInput[]
+              response?.images as Prisma.PhotosCreateInput[]
             )
               .then(
                 async (
@@ -305,9 +307,10 @@ export class PostController {
                   >
                 ) => {
                   console.log(checkedPhotos.data, 'LOKO')
-                  if ('images' in response.data) {
+                  // aca saqe el ..data hay que ver si sigue funcionando
+                  if ('images' in response) {
                     const data = {
-                      ...response.data,
+                      ...response,
                       images: checkedPhotos.data
                     }
                     res.status(200).send({ error: null, ok: true, data })
@@ -342,9 +345,6 @@ export class PostController {
             } else return false
           })
           if (Array.isArray(photoArray) && photoArray.length > 0) {
-            //  const response1 = await this.facebookService.isTokenValid(process.env.FB_PAGE_TOKEN)
-            // console.log(response1)
-            /** aca va la validacion del token del usuario que se encuentra trabajando. */
             idArray = photoArray.map((photo) => ({ id: photo.fbid }))
             updatedLinksArray = await this.facebookService.getLinkFromId(
               idArray
@@ -355,6 +355,7 @@ export class PostController {
                   this.prisma.photos.updateMany({
                     where: { fbid: photo.fbid },
                     data: { url: photo.url }
+
                   }),
                   this.prisma.photos.findMany({ where: { fbid: photo.fbid } })
                 ])
@@ -362,9 +363,6 @@ export class PostController {
               })
             )
           } else dbResponse = photosObject
-
-          // aca esta roto hay que sacar la tansaccion sino la respuesta es un entero con la cantidad
-          // de operaciones
 
           return new ResponseObject(null, true, dbResponse)
         } catch (error) {
@@ -381,10 +379,13 @@ export class PostController {
     public deletePost = async (req: Request<GetPostById['params']>, res: Response): Promise<void> => {
       const { id } = req.params
       try {
-        const response = await this.service.deleteById(id)
-        console.log(response, 'deleted object')
+        const { data } = await this.service.deleteById(id)
+        const { audio } = data
+        if (Array.isArray(audio) && audio.length > 0) {
+          audio.forEach(async item => await this.googleService.fileRemove(item.driveId))
+        }
         let fbResponse
-        if (response.data.fbid !== null && typeof response.data.fbid === 'string') fbResponse = await this.facebookService.deleteFacebookPost(response.data.fbid)
+        if (data.fbid !== null && typeof data.fbid === 'string') fbResponse = await this.facebookService.deleteFacebookPost(data.fbid)
         logger.debug({ function: 'PostController.deletePost', response, fbResponse })
         res.status(200).send(response)
       } catch (error) { logger.error({ function: 'postController.deletePost', error }) }
@@ -407,23 +408,28 @@ export class PostController {
     },
     public uploadAudio = async (req: Request, res: Response) => {
       try {
-        console.log(req.files)
         if (req.files !== undefined && Array.isArray(req.files)) {
           req.files?.forEach(async (file) => {
             const id = await this.googleService.fileUpload('audio', file.path)
-            if (id instanceof GoogleError) throw id
-            console.log('paso de largo ')
+            if (id instanceof TokenError || id instanceof NeverAuthError) {
+              res.status(401).json(id)
+              return
+            } else if (id instanceof GoogleError) {
+              res.status(500).json(id)
+              return
+            }
             if (id !== undefined) {
               const response = await this.service.addAudioToDB(id)
-              if (response !== undefined) {
-                res.status(200).send(response)
-              } else throw new Error('Couldnt add audio to database')
-            } else throw new Error('Couldnt upload file')
+              if (!(response instanceof Error)) {
+                res.status(200).json(response)
+              } else if (response instanceof PrismaError) res.status(500).send(response)
+            } else res.json(500).send(new Error('Couldnt upload file'))
           })
         }
       } catch (error) {
         logger.error({ function: 'postController.uploadAudio', error })
-        res.status(500).send(error)
+        console.log('se dirije al catch')
+        res.status(500).json(error)
       }
     },
     public eraseAudio = async (req: Request<any, any, any, { id: string }>, res: Response) => {
@@ -437,6 +443,69 @@ export class PostController {
       } catch (error) {
         logger.error({ function: 'postController.eraseAudio', error })
         res.status(500).send(error)
+      }
+    },
+    public videoUpload = async (req: Request<any, any, VideoUpload['body']>, res: Response) => {
+      try {
+        const { file, body: { title, description, tags, url } } = req
+        const { username } = req.user as any
+        if (url !== undefined) {
+          const createResponse =
+            await this.service.prisma.video.create(
+              {
+                data:
+                {
+                  url,
+                  author:
+                  {
+                    connect:
+                    { username }
+                  }
+                }
+              })
+          if (createResponse !== undefined && createResponse !== null) {
+            res.status(200).send(createResponse)
+            return
+          } else {
+            res.status(500).send({
+              error: new Error('Error al escribir la base de datos'),
+              code: 4001
+            })
+          }
+          return
+        }
+
+        if (file === undefined) {
+          res.status(404).send({
+            error: new Error('Error al escribir la base de datos'),
+            code: 4002
+          })
+          return
+        }
+        const response =
+          await this.googleService.uploadVideo(
+            file.path,
+            title,
+            description,
+            process.env.YOUTUBE_CHANNEL,
+            tags)
+        if (response instanceof GoogleError) {
+          res.status(500).send(response)
+          return
+        }
+        const dbResponse = await this.service.prisma.video.create({ data: { youtubeId: response, author: { connect: { username } } } })
+        if (dbResponse !== undefined && dbResponse !== null) {
+          res.status(200).send(dbResponse)
+          return
+        } else {
+          res.status(500).send({
+            error: new Error('Error al escribir la base de datos'),
+            code: 4001
+          })
+          return
+        }
+      } catch (error) {
+        logger.error({ function: 'postController.videoUpload', error })
       }
     }
   ) {}

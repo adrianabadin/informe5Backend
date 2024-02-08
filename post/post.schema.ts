@@ -65,11 +65,24 @@ export const updatePostSchema = z.object({
     importance: z.enum(['1', '2', '3', '4', '5'], { invalid_type_error: 'La importancia de la nota debe ser string de  un numero del 1 al 5' }).optional(),
     author: z.string({ invalid_type_error: 'El autor debe ser un string' }).uuid({ message: 'El autor debe ser una cadena que represente a un uuid' }).optional(),
     fbid: z.string({ invalid_type_error: 'Post FBID must be a string' }),
-    dbImages: z.array(stringifiedImage).optional()
+    dbImages: z.array(stringifiedImage).optional(),
+    audio: z.string().optional()
   })
 
 })
+export const videoUploadSchema = z.object({
+  body: z.object({
+    url: z.string().url({ message: 'Debe contener una url valida' }).optional(),
+    title: z.string().min(3, { message: 'El titulo debe tener al menos 3 letras' }).optional(),
+    description: z.string().min(3, { message: 'La descripcion debe tener al menos 3 letas' }).optional(),
+    tags: z.array(z.string()).optional()
 
+  }).refine((value) => {
+    if (value.url !== undefined) return true
+    else if (value.title !== undefined && value.description !== undefined) return true
+    return false
+  })
+})
 /*
 Inferencia de tipos
 */
@@ -78,3 +91,4 @@ export type GetPostsType = z.infer<typeof getPostsSchema>
 export type GetPostById = z.infer<typeof getPostById>
 export type UpdatePostType = z.infer<typeof updatePostSchema>
 export type ImagesSchema = z.infer<typeof imageSchema>
+export type VideoUpload = z.infer<typeof videoUploadSchema>

@@ -1,10 +1,11 @@
 import { DatabaseHandler } from '../Services/database.service'
-import { type Prisma } from '@prisma/client'
+import { Prisma } from '@prisma/client'
 import { logger } from '../Services/logger.service'
 import { type MyCursor, type GenericResponseObject, ResponseObject } from '../Entities'
 import { type CreatePostType, type ImagesSchema } from './post.schema'
 import { FacebookService } from '../Services/facebook.service'
 import { GoogleService } from '../Services/google.service'
+import { ColumnPrismaError, NotFoundPrismaError, UniqueRestraintError, UnknownPrismaError } from '../Services/prisma.errors'
 
 export class PostService extends DatabaseHandler {
   constructor (
@@ -39,7 +40,7 @@ export class PostService extends DatabaseHandler {
     public createPost = async (body: CreatePostType['body'], id: string, dataArray: Array<{ url: string, fbid: string }>) => {
       const { title, text, heading, classification, importance, audio } = body
       let numberImportance = 0
-      let audioArray = []
+      let audioArray: Array<{ driveId: string, id: string }> = []
       if (audio !== undefined && Array.isArray(JSON.parse(audio ?? ''))) { audioArray = JSON.parse(audio) } else if (audio !== undefined) audioArray = [JSON.parse(audio)]
       console.log(audioArray)
       if (importance !== undefined && typeof importance === 'string') numberImportance = parseInt(importance)
@@ -53,7 +54,7 @@ export class PostService extends DatabaseHandler {
           importance: numberImportance,
           images: { create: dataArray },
           author: { connect: { id } },
-          audio: { connect: (audio !== undefined) ? audioArray.map((item) => ({ id: item.id })) : [] }
+          audio: { connect: (audio !== undefined) ? audioArray.map(item => ({ id: item.id })) : [] }
         },
         include: { author: { select: { lastName: true, name: true, username: true } } }
       }) // gCreate({ author: { connect: { id } }, isVisible: true, classification, heading, title, text, importance: numberImportance, images: { create: dataArray } })
@@ -69,9 +70,9 @@ export class PostService extends DatabaseHandler {
         return data
       } catch (error) { logger.error({ function: 'PostService.getPosts', error }) }
     },
-    public getPost = async (id: string, field: Prisma.PostsFindFirstOrThrowArgs['select']) => {
+    public getPost = async (id: string, includeArgs?: Prisma.PostsFindFirstOrThrowArgs['include']) => {
       try {
-        const data = await this.prisma.posts.findUnique({ where: { id }, include: { author: true, images: true, audio: { select: { id: true } } } }) // gFindById(id, field as any)
+        const data = await this.prisma.posts.findUnique({ where: { id }, include: (includeArgs !== undefined) ? includeArgs : { author: { select: { avatar: true, lastName: true, name: true, id: true } }, images: true, audio: { select: { id: true, driveId: true } } } }) // gFindById(id, field as any)
         logger.debug({ function: 'PostService.getPost', data })
         return data
       } catch (error) { logger.error({ function: 'PostService.getPost', error }) }
@@ -83,11 +84,18 @@ export class PostService extends DatabaseHandler {
         return data
       } catch (error) { logger.error({ function: 'PostService.updatePhoto', error }) }
     },
-    public updatePost = async (postObject: Omit<Prisma.PostsUpdateInput, 'images'>, idParam: string, photoObject: ImagesSchema[] | undefined): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+    public updatePost = async (postObject: Omit<Prisma.PostsUpdateInput, 'images' | 'audio'> & { audio?: string | undefined }, idParam: string, photoObject: ImagesSchema[] | undefined): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
       let ids
       let ids2: string[] | undefined
       let photoObjectNoUndefinedFalse: ImagesSchema[]
       let photoObjectNoUndef: ImagesSchema[]
+      const audioFromDB: Array<{ id: string, driveId: string }> =
+      postObject.audio !== undefined &&
+      JSON.parse(postObject.audio) !== null
+        ? Array.isArray(postObject.audio)
+          ? JSON.parse(postObject.audio)
+          : [JSON.parse(postObject.audio)]
+        : undefined
       if ('jwt' in postObject) {
         postObject.jwt = undefined
       }
@@ -109,27 +117,34 @@ export class PostService extends DatabaseHandler {
           const author: string = postObject.author as string
           /* aca debo hacer distintas ramas en el caso de que se tenga imagenes para borrar, tenga imagenes para agregar  */
           if (author === undefined) throw new Error('No author specified')
-          const data = await this.prisma.posts.update(
-            {
-              where: { id: idParam },
-              data: {
-                ...postObject,
-                isVisible: true,
-                updatedAt: undefined,
-                author: { connect: { id: author } },
-                importance: parseInt(postObject.importance as string),
 
-                images: {
-                  deleteMany:
-                  {
-                  },
-                  create: photoObjectNoUndef.map(photo => {
-                    return { ...photo }
-                  })
+          const transaction = await this.prisma.$transaction([
+            this.prisma.audio.deleteMany({ where: { postsId: postObject.id as any } }),
+            this.prisma.posts.update(
+              {
+                where: { id: idParam },
+                data: {
+                  ...postObject,
+                  isVisible: true,
+                  updatedAt: undefined,
+                  author: { connect: { id: author } },
+                  importance: parseInt(postObject.importance as string),
+                  audio: (audioFromDB !== undefined) ? { create: audioFromDB.map(item => ({ driveId: item.driveId })) } : undefined,
+                  images: {
+                    deleteMany:
+                    {
+                    },
+                    create: photoObjectNoUndef.map(photo => {
+                      return { ...photo }
+                    })
 
-                }
-              }
-            })
+                  }
+                },
+                include: { audio: { select: { driveId: true, id: true } }, images: { select: { url: true, fbid: true, id: true } } }
+              })
+          ])
+
+          const [,data] = transaction
 
           logger.debug({ function: 'PostService.updatePost', data })
           return new ResponseObject(null, true, data)
@@ -139,26 +154,31 @@ export class PostService extends DatabaseHandler {
         }
       } else {
         try {
-          const data = await this.prisma.posts.update(
-            {
-              where: { id: idParam },
-              data: {
-                ...postObject,
-                updatedAt: undefined,
-                importance: parseInt(postObject.importance as string),
-                author: { connect: { id: postObject.author as string } },
-                images: {
-                  deleteMany: {
-                    NOT: {
-                      id: {
-                        in: ids2
+          const transactionResponse = await this.prisma.$transaction([
+            this.prisma.audio.deleteMany({ where: { postsId: postObject.id as any } }),
+            this.prisma.posts.update(
+              {
+                where: { id: idParam },
+                data: {
+                  ...postObject,
+                  updatedAt: undefined,
+                  importance: parseInt(postObject.importance as string),
+                  author: { connect: { id: postObject.author as string } },
+                  images: {
+                    deleteMany: {
+                      NOT: {
+                        id: {
+                          in: ids2
+                        }
                       }
                     }
-                  }
 
+                  },
+                  audio: (audioFromDB !== undefined) ? { create: audioFromDB.map(item => ({ driveId: item.driveId })) } : undefined
                 }
-              }
-            })
+              })
+          ])
+          const [,data] = transactionResponse
           logger.debug({ function: 'PostService.updatePost', data })
           return new ResponseObject(null, true, data)
           // va el codigo si no hay cambios en las photos
@@ -179,8 +199,8 @@ export class PostService extends DatabaseHandler {
     },
     public deleteById = async (id: string): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
       try {
-        const response = await this.prisma.posts.gDelete(id)
-        return response
+        const response = await this.prisma.posts.delete({ where: { id }, include: { audio: true, images: true } })// .gDelete(id)
+        return new ResponseObject(null, true, response)
       } catch (error) {
         logger.error({ function: 'PostService.deleteById', error })
         return new ResponseObject(error, false, null)
@@ -208,7 +228,21 @@ export class PostService extends DatabaseHandler {
       try {
         const response = await this.prisma.audio.create({ data: { driveId } })
         return response
-      } catch (error) { logger.error({ function: 'PostService.addAudioToDB', error }) }
+      } catch (error) {
+        logger.error({ function: 'PostService.addAudioToDB', error })
+        if (error instanceof Prisma.PrismaClientKnownRequestError) {
+          switch (error.code) {
+            case 'P2002':
+              return new UniqueRestraintError(error, error.meta)
+            case 'P2000':
+              return new ColumnPrismaError(error, error.meta)
+            case 'P2001':
+              return new NotFoundPrismaError(error, error.meta)
+            default:
+              return new UnknownPrismaError(error, error.meta)
+          }
+        } else return error as Error
+      }
     }
   ) {
     super()

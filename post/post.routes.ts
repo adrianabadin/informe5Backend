@@ -4,7 +4,7 @@ import { Router, type Request, type Response, type NextFunction } from 'express'
 import multer from 'multer'
 import { PostController } from './post.controller'
 import passport from 'passport'
-import { getPostById, createPostSchema, updatePostSchema } from './post.schema'
+import { getPostById, createPostSchema, updatePostSchema, videoUploadSchema } from './post.schema'
 import { schemaValidator } from '../middlewares/zod.validate'
 import { AuthController } from '../auth/auth.controller'
 const authController = new AuthController()
@@ -35,6 +35,9 @@ postRouter.post(
   schemaValidator(createPostSchema),
   postController.createPost
 )
+/**
+ * AUDIO ROUTES
+ */
 postRouter.post('/audio', upload.array('audio'), postController.uploadAudio)
 postRouter.delete('/audioRemove', postController.eraseAudio)
 postRouter.get(
@@ -42,6 +45,20 @@ postRouter.get(
   schemaValidator(getPostById),
   postController.getPostById
 )
+/**
+ * VIDEO ROUTES
+ */
+postRouter.post(
+  '/videoAdd',
+  upload.single('video'),
+  passport.authenticate('jwt', { session: false }),
+  authController.jwtRenewalToken,
+  schemaValidator(videoUploadSchema),
+  postController.videoUpload)
+
+/**
+ * POST ROUTES
+ */
 postRouter.get(
   '/getPosts',
   /* schemaValidator(getPostsSchema), */

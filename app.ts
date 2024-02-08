@@ -20,7 +20,8 @@ const dotenvSchema = z.object({
   NEWSPAPER_URL: z.string({ required_error: 'Must provide the front end URL' }),
   CLIENTID_BUCKET: z.string({ required_error: 'Must provide google client ID for the bucket' }),
   CLIENTSECRET_BUCKET: z.string({ required_error: 'Must provide client secret key for google bucket' }),
-  CALLBACK_BUCKET: z.string({ required_error: 'Must provide a callback URL for google o auth bucket' })
+  CALLBACK_BUCKET: z.string({ required_error: 'Must provide a callback URL for google o auth bucket' }),
+  YOUTUBE_CHANNEL: z.string({ invalid_type_error: 'Must provide a string as a channel id' }).optional()
 
 })
 dotenvSchema.parse(process.env)

@@ -157,18 +157,14 @@ model Posts {
 }
 
 model Video {
-  id         String   @id @default(uuid())
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-  url        String
-  text       String
-  tags       String
-  title      String
-  author     Users    @relation(fields: [usersId], references: [id])
-  usersId    String
-  importance Int
-  metrics    Metric[]
-  isVisible  Boolean
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  url       String?
+  youtubeId String?
+  author    Users    @relation(fields: [usersId], references: [id])
+  usersId   String
+  metrics   Metric[]
 
   @@index([usersId])
 }
@@ -199,4 +195,6 @@ model Audio {
   metrics   Metric[]
   Posts     Posts?   @relation(fields: [postsId], references: [id])
   postsId   String?
+
+  @@index([postsId])
 }

@@ -26,8 +26,7 @@ export const schemaValidator = (schema: AnyZodObject | AnyZodObject[]) => (req: 
         error:
         error.issues.map(issue => ({ path: issue.path, message: issue.message, code: issue.code }))
       })
-
-      logger.error({ function: 'schemaValidator', error })
+      logger.error({ function: 'schemaValidator', error: error.issues.map(issue => ({ path: issue.path, message: issue.message, code: issue.code })) })
     }
   }
 }
