@@ -32,7 +32,6 @@ export class PostService extends DatabaseHandler {
           photoArray = [...photoArray, ...images?.map(image => ({ id: image.fbid }))]
         }
       }
-      console.log(images, 'imagnes')
       logger.debug({ function: 'pOSTsERVICE.photoGenerator', images })
       return images
     },
@@ -42,7 +41,6 @@ export class PostService extends DatabaseHandler {
       let numberImportance = 0
       let audioArray: Array<{ driveId: string, id: string }> = []
       if (audio !== undefined && Array.isArray(JSON.parse(audio ?? ''))) { audioArray = JSON.parse(audio) } else if (audio !== undefined) audioArray = [JSON.parse(audio)]
-      console.log(audioArray)
       if (importance !== undefined && typeof importance === 'string') numberImportance = parseInt(importance)
       return await this.prisma.posts.create({
         data: {
@@ -84,7 +82,7 @@ export class PostService extends DatabaseHandler {
         return data
       } catch (error) { logger.error({ function: 'PostService.updatePhoto', error }) }
     },
-    public updatePost = async (postObject: Omit<Prisma.PostsUpdateInput, 'images' | 'audio'> & { audio?: string | undefined }, idParam: string, photoObject: ImagesSchema[] | undefined): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
+    public updatePost = async (postObject: Omit<Prisma.PostsUpdateInput, 'images' | 'audio' | 'importance'> & { audio?: string | undefined, importance: '1' | '2' | '3' | '4' | '5' }, idParam: string, photoObject: ImagesSchema[] | undefined): Promise<GenericResponseObject<Prisma.PostsUpdateInput>> => {
       let ids
       let ids2: string[] | undefined
       let photoObjectNoUndefinedFalse: ImagesSchema[]
@@ -189,7 +187,6 @@ export class PostService extends DatabaseHandler {
       }
     }, public addFBIDtoDatabase = async (fbid: string, id: string) => {
       try {
-        console.log(fbid, id, 'addFBIDtoDatabase')
         const response = await this.prisma.posts.update({ where: { id }, data: { fbid } })
         return response
       } catch (error) {
@@ -244,6 +241,7 @@ export class PostService extends DatabaseHandler {
         } else return error as Error
       }
     }
+
   ) {
     super()
   }

@@ -14,17 +14,17 @@ import {
   GoogleError,
   TokenError,
   NeverAuthError
-} from '../Entities/response'
+} from '../Services/google.errors'
 import {
   type CreatePostType,
   type GetPostsType,
   type GetPostById,
   type UpdatePostType,
   type ImagesSchema,
-  type VideoUpload
+  type VideoUpload,
+  type VideoEraseType
 } from './post.schema'
 import { io } from '../app'
-import { text } from 'node:stream/consumers'
 import { GoogleService } from '../Services/google.service'
 import { PrismaError } from '../Services/prisma.errors'
 export class PostController {
@@ -37,7 +37,6 @@ export class PostController {
       req: Request<GetPostById['params'], any, UpdatePostType['body']>,
       res: Response
     ) => {
-      console.log('updating posts')
       logger.debug({ body: req.body, function: 'updatePost.controller' })
       const files = req.files
       let { dbImages, title, heading, classification } = req.body
@@ -50,7 +49,6 @@ export class PostController {
       // hasta aca, tengo que en imagesArray o hay un array de imagenes o tengo undefined
       // como manejo el hecho de que me lleguen imagenes ya cargadas y filas nuevas agregadas?
       let nuevoArray: ImagesSchema[] | undefined
-      // console.log(files)
       if (files !== undefined && files.length !== 0) {
         // aqui valido si hay files de multer para agregar.
         nuevoArray = await this.service.photoGenerator(
@@ -59,13 +57,12 @@ export class PostController {
         if (nuevoArray != null && imagesArray != null) { nuevoArray = [...nuevoArray, ...imagesArray] } else if (imagesArray != null) nuevoArray = imagesArray
         // logger.debug({ function: 'postController.updade', nuevoArray })
       } else nuevoArray = imagesArray
-      console.log(nuevoArray, 'IMAGENES', dbImages, 'dbImages')
       let body = req.body
       if (body !== null && typeof body === 'object' && 'dbImages' in body) {
         body = { ...body, dbImages: undefined }
       }
       const updateDbResponse = await this.service.updatePost(
-        body, // as Prisma.PostsUpdateInput,
+        body as any, // as Prisma.PostsUpdateInput,
         id,
         nuevoArray
       )
@@ -83,7 +80,7 @@ export class PostController {
       }
       // ACA DEBO VER LA LOGICA PARA QUE GENERE UN MERGE DE LOS DATOS QUE YA ESTAN EN LA DB Y LO QUE SE VA A ACTUALIZAR
       if (nuevoArray !== undefined && 'fbid' in updateDbResponse.data) {
-        const finalResponse = await this.facebookService.updateFacebookPost(
+        await this.facebookService.updateFacebookPost(
           updateDbResponse.data.fbid as string,
           {
             title,
@@ -93,7 +90,6 @@ export class PostController {
             images: nuevoArray?.map((id) => id.fbid)
           }
         )
-        console.log(finalResponse, updateDbResponse)
       }
       //      io.emit('postUpdate', { ...updateDbResponse, images: nuevoArray })
       res.send({ ...updateDbResponse.data, images: nuevoArray })
@@ -105,14 +101,10 @@ export class PostController {
       const body = req.body
       const files = req.files
       const dataEmitted = { active: true, body }
-      console.log(dataEmitted, 'objeto enviado')
       io.emit('postLoader', dataEmitted)
-      console.log('create')
       try {
         let imagesArray
-        console.log(files, 'alfo', files?.length)
         if (files !== undefined && Array.isArray(files) && files?.length > 0) {
-          console.log('DENTRO DEL PHOTO')
           imagesArray = await this.service.photoGenerator(files)
         }
         if (
@@ -126,18 +118,12 @@ export class PostController {
             req.user.id,
             imagesArray as Array<{ fbid: string, url: string }>
           )
-          console.log(responseDB, 'Database Response')
           io.emit('postUpdate', {
             ...responseDB,
             images: imagesArray,
             stamp: Date.now()
           })
-          console.log({
-            ...responseDB,
-            images: imagesArray,
 
-            stamp: Date.now()
-          }, 'Post creado en la base de datos')
           if (
 
             responseDB !== undefined &&
@@ -179,7 +165,6 @@ export class PostController {
       req: Request<any, any, any, GetPostsType['query']>,
       res: Response
     ) => {
-      console.log('geting posts', req.user)
       const { cursor, title, search, minDate, maxDate, category } = req.query
       const query: Prisma.PostsFindManyArgs['where'] & {
         AND: Array<Prisma.PostsFindManyArgs['where']>
@@ -229,7 +214,6 @@ export class PostController {
           data.AND.push({ createdAt: { lte: new Date(maxDate) } })
         }
       }
-      console.log(query, query.AND[0])
       this.service
         .getPosts(
           {
@@ -253,7 +237,6 @@ export class PostController {
                     if (checkedPhotos.data !== undefined) {
                       const finalData: Prisma.PhotosCreateInput[] =
                         checkedPhotos.data // as Prisma.PhotosCreateNestedManyWithoutPostsInput
-                      console.log(finalData, finalData.length)
                       // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
                       post = {
                         ...post,
@@ -286,7 +269,6 @@ export class PostController {
       req: Request<GetPostById['params']>,
       res: Response
     ) => {
-      console.log('getbyid')
       const { id } = req.params
       this.service
         .getPost(id)
@@ -306,7 +288,6 @@ export class PostController {
                   Prisma.PhotosCreateInput[]
                   >
                 ) => {
-                  console.log(checkedPhotos.data, 'LOKO')
                   // aca saqe el ..data hay que ver si sigue funcionando
                   if ('images' in response) {
                     const data = {
@@ -428,7 +409,6 @@ export class PostController {
         }
       } catch (error) {
         logger.error({ function: 'postController.uploadAudio', error })
-        console.log('se dirije al catch')
         res.status(500).json(error)
       }
     },
@@ -438,7 +418,7 @@ export class PostController {
         const driveId = await this.prisma.audio.delete({ where: { id }, select: { driveId: true } })
         if (driveId === undefined || typeof driveId !== 'object') throw new Error('Unable to erase from database')
         const response = await this.googleService.fileRemove(driveId.driveId)
-        if (response) res.status(200).send(response)
+        if (response !== undefined || response !== null) res.status(200).send(response)
         else throw new Error('Unable to erase de drive Image')
       } catch (error) {
         logger.error({ function: 'postController.eraseAudio', error })
@@ -482,30 +462,48 @@ export class PostController {
           })
           return
         }
-        const response =
+        if (title !== undefined && (description !== undefined && description !== null && typeof description === 'string')) {
+          const response =
           await this.googleService.uploadVideo(
             file.path,
             title,
             description,
             process.env.YOUTUBE_CHANNEL,
             tags)
-        if (response instanceof GoogleError) {
-          res.status(500).send(response)
-          return
-        }
-        const dbResponse = await this.service.prisma.video.create({ data: { youtubeId: response, author: { connect: { username } } } })
-        if (dbResponse !== undefined && dbResponse !== null) {
-          res.status(200).send(dbResponse)
-          return
-        } else {
-          res.status(500).send({
-            error: new Error('Error al escribir la base de datos'),
-            code: 4001
-          })
-          return
+          if (response instanceof GoogleError) {
+            res.status(500).send(response)
+            return
+          }
+          const dbResponse = await this.service.prisma.video.create({ data: { youtubeId: response, author: { connect: { username } } } })
+          if (dbResponse !== undefined && dbResponse !== null) {
+            res.status(200).send(dbResponse)
+            return
+          } else {
+            res.status(500).send({
+              error: new Error('Error al escribir la base de datos'),
+              code: 4001
+            })
+            return
+          }
         }
       } catch (error) {
         logger.error({ function: 'postController.videoUpload', error })
+      }
+    },
+    public eraseVideo = async (req: Request<any, any, any, VideoEraseType['query']>, res: Response) => {
+      try {
+        const { youtubeId } = req.query
+        const dbResponse = await this.service.prisma.video.delete({ where: { youtubeId } })
+        if (dbResponse !== undefined) {
+          const response = await this.googleService.videoRm(youtubeId)
+          if (response instanceof GoogleError) {
+            res.status(500).send(response)
+            return
+          } else res.status(200).send(response)
+        }
+      } catch (error) {
+        logger.error({ function: 'postController.eraseVideo', error })
+        res.status(500).send(error)
       }
     }
   ) {}

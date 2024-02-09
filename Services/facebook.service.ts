@@ -4,7 +4,7 @@ import fs from 'fs'
 import { type IFacebookData, ResponseObject, type ClassificationArray } from '../Entities'
 import { logger } from './logger.service'
 
-import { type GenericResponseObject } from '../Entities/response'
+import { type GenericResponseObject } from './google.errors'
 import { userLogged } from '../app'
 dotenv.config()
 export class FacebookService {

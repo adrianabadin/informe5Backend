@@ -1,6 +1,6 @@
 
 import { type Prisma } from '@prisma/client'
-export * from './response'
+export * from '../Services/google.errors'
 export type DoneType = (
   error: any,
   user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput | false,

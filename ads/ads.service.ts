@@ -1,7 +1,7 @@
 import { DatabaseHandler } from '../Services/database.service'
 import { logger } from '../Services/logger.service'
 import { type createAdType } from './ads.schema'
-import { type GenericResponseObject, ResponseObject, type GenericResponseObject } from '../Entities/response'
+import { type GenericResponseObject, ResponseObject, type GenericResponseObject } from '../Services/google.errors'
 import { type AdsFormType } from '../../Informe5Front/src/ReduxGlobals/Features/adsFormSlice'
 
 export class AdsService extends DatabaseHandler {

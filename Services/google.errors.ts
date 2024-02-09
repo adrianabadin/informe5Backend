@@ -102,3 +102,9 @@ export class QuotaExceededError extends GoogleError {
     this.name = 'Quota Exceeded Error'
   }
 }
+/**
+ * videos.delete
+Tipo de error	Detalle del error	Descripción
+forbidden (403)	forbidden	El video que intentas eliminar no se puede eliminar. Puede que la solicitud no esté debidamente autorizada.
+notFound (404)	videoNotFound	El video que intentas eliminar no se puede encontrar. Comprueba el valor del parámetro id de la solicitud para asegurarte de que sea correcto.
+ */

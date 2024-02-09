@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z, ZodObject } from 'zod'
 import { ClassificationArray } from '../Entities'
 import { type Prisma } from '@prisma/client'
 
@@ -83,6 +83,11 @@ export const videoUploadSchema = z.object({
     return false
   })
 })
+export const videoEraseSchema = z.object({
+  query: z.object({
+    youtubeId: z.string().min(3, { message: 'El youtube ID debe tener al menos 3 letras' })
+  })
+})
 /*
 Inferencia de tipos
 */
@@ -92,3 +97,4 @@ export type GetPostById = z.infer<typeof getPostById>
 export type UpdatePostType = z.infer<typeof updatePostSchema>
 export type ImagesSchema = z.infer<typeof imageSchema>
 export type VideoUpload = z.infer<typeof videoUploadSchema>
+export type VideoEraseType = z.infer<typeof videoEraseSchema>

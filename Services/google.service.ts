@@ -91,20 +91,15 @@ export class GoogleService {
 
   async fileUpload (folder: string, file: string): Promise<string | NeverAuthError | TokenError | FolderCreateError | FileCreateError | PermissionsCreateError | UnknownGoogleError> {
     try {
-      console.log(GoogleService.rt, ' ********************')
       if (GoogleService.rt === undefined) {
         const initiateResponse = await this.initiateAuth()
-        console.log(initiateResponse, 'Despues de initiateResponse')
         if (initiateResponse instanceof TokenError || initiateResponse instanceof NeverAuthError) {
-          console.log('aca sale el throw')
           throw initiateResponse
         }
       }
       if (GoogleService.rt !== undefined) {
         const drive: drive_v3.Drive = google.drive({ version: 'v3', auth: oauthClient })
         const id: string | Error = await this.folderExists(folder)
-
-        console.log(id, 'despues de folderexists')
         if (typeof id !== 'string' && id instanceof Error) throw id
         const splitedPath = file.split('/')
 
@@ -138,7 +133,6 @@ export class GoogleService {
         error instanceof FolderCreateError ||
         error instanceof FileCreateError ||
         error instanceof PermissionsCreateError) {
-        console.log('identifica el TokenError')
         return error
       } else return new UnknownGoogleError(error)
     }
@@ -147,7 +141,6 @@ export class GoogleService {
   async fileRemove (driveId: string): Promise<true | Error> {
     try {
       const initiateResponse = await this.initiateAuth()
-      console.log(initiateResponse)
       if (initiateResponse instanceof GoogleError) throw initiateResponse
       const drive: drive_v3.Drive = google.drive({ version: 'v3', auth: oauthClient })
       const response = await drive.files.delete({
@@ -163,7 +156,7 @@ export class GoogleService {
   }
 
   async uploadVideo (path: string, title: string, description: string, channelId?: string, tags?: string[]):
-  Promise<string | TokenError | NeverAuthError | UnknownGoogleError | VideoCreateError| QuotaExceededError> {
+  Promise<string | TokenError | NeverAuthError | UnknownGoogleError | VideoCreateError | QuotaExceededError> {
     try {
       const initiateResponse = await this.initiateAuth()
       if (initiateResponse instanceof GoogleError) throw initiateResponse
@@ -212,6 +205,24 @@ export class GoogleService {
         logger.error({ function: 'GoogleService.uploadVideo', error: new UnknownGoogleError(error) })
         return new UnknownGoogleError(error)
       }
+    }
+  }
+
+  async videoRm (id: string): Promise<TokenError | NeverAuthError | UnknownGoogleError | true> {
+    try {
+      const initiateResponse = await this.initiateAuth()
+      if (initiateResponse instanceof GoogleError) throw initiateResponse
+      const youtube = google.youtube({ version: 'v3', auth: oauthClient })
+      await youtube.videos.delete({
+        id,
+        fields: 'id'
+      })
+      return true
+    } catch (error) {
+      if (error instanceof TokenError || error instanceof NeverAuthError || error instanceof UnknownGoogleError) {
+        logger.error({ function: 'PostService.videoRm', error })
+        return error
+      } else return new UnknownGoogleError(error)
     }
   }
 }

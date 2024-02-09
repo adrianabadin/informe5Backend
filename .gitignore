@@ -4,6 +4,6 @@ node_modules
 ./auth/privateKey.pem
 ./auth/publicKey.pem
 ./google/informe5.json
-./logs
-./logs/*.*
+logs
+logs/*.*
 public/temp

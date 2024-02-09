@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
-import { Router, type Request, type Response, type NextFunction } from 'express'
+import { Router, type Request } from 'express'
 import multer from 'multer'
 import { PostController } from './post.controller'
 import passport from 'passport'
-import { getPostById, createPostSchema, updatePostSchema, videoUploadSchema } from './post.schema'
+import { getPostById, createPostSchema, videoUploadSchema, videoEraseSchema } from './post.schema'
 import { schemaValidator } from '../middlewares/zod.validate'
 import { AuthController } from '../auth/auth.controller'
 const authController = new AuthController()
@@ -28,13 +28,6 @@ const storage = multer.diskStorage({
 })
 export const upload = multer({ storage })
 export const postRouter = Router()
-postRouter.post(
-  '/create',
-  upload.array('images', 5),
-  passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken,
-  schemaValidator(createPostSchema),
-  postController.createPost
-)
 /**
  * AUDIO ROUTES
  */
@@ -55,10 +48,21 @@ postRouter.post(
   authController.jwtRenewalToken,
   schemaValidator(videoUploadSchema),
   postController.videoUpload)
+postRouter.delete('/videoRm',
+  schemaValidator(videoEraseSchema),
+  passport.authenticate('jwt', { session: false }),
+  postController.eraseVideo)
 
 /**
  * POST ROUTES
  */
+postRouter.post(
+  '/create',
+  upload.array('images', 5),
+  passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken,
+  schemaValidator(createPostSchema),
+  postController.createPost
+)
 postRouter.get(
   '/getPosts',
   /* schemaValidator(getPostsSchema), */
