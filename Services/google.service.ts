@@ -214,8 +214,8 @@ export class GoogleService {
       if (initiateResponse instanceof GoogleError) throw initiateResponse
       const youtube = google.youtube({ version: 'v3', auth: oauthClient })
       await youtube.videos.delete({
-        id,
-        fields: 'id'
+        id
+
       })
       return true
     } catch (error) {
