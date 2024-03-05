@@ -1,11 +1,16 @@
 import { PrismaClient, type Prisma } from '@prisma/client'
 import { logger } from './logger.service'
 import { type IResponseObject, ResponseObject, type GenericResponseObject } from '../Entities'
-
+import { PrismaLibSQL } from '@prisma/adapter-libsql'
+import { createClient } from '@libsql/client/.'
+import dotenv from 'dotenv'
+dotenv.config()
+const client = createClient({ url: `${process.env.TURSO_DATABASE_URL}`, authToken: `${process.env.TURSO_AUTH_TOKEN}` })
+const adapter = new PrismaLibSQL(client)
 export class DatabaseHandler {
   static Instance: any
   constructor (
-    public unExtendedPrisma = new PrismaClient(),
+    public unExtendedPrisma = new PrismaClient({ adapter }),
 
     public prisma = unExtendedPrisma.$extends({
 

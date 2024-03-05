@@ -46,7 +46,7 @@ postRouter.post(
   upload.single('video'),
   passport.authenticate('jwt', { session: false }),
   authController.jwtRenewalToken,
-  schemaValidator(videoUploadSchema),
+
   postController.videoUpload)
 postRouter.delete('/videoRm',
   schemaValidator(videoEraseSchema),
@@ -63,11 +63,13 @@ postRouter.post(
   schemaValidator(createPostSchema),
   postController.createPost
 )
+postRouter.get('/getIds', postController.getPostsIds)
 postRouter.get(
   '/getPosts',
   /* schemaValidator(getPostsSchema), */
   postController.getAllPosts
 )
+postRouter.get('/get30days', postController.get30DaysPosts)
 postRouter.put(
   '/updatePost/:id', passport.authenticate('jwt', { session: false }), authController.jwtRenewalToken,
   upload.array('images', 5),

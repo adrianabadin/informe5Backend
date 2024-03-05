@@ -3,26 +3,31 @@
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
-  provider     = "mysql"
-  url          = env("DATABASE_URL")
-  relationMode = "prisma"
+  provider = "sqlite"
+  url      = "file:./dev.db"
+  // relationMode = "prisma"
 }
 
-enum UserRoles {
-  GOD
-  ADMIN
-  WRITER
-  USER
+model UserRoles {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  role      String   @unique
+  // GOD
+  // ADMIN
+  // WRITER
+  // USER
+  Users     Users[]
 }
 
 model Session {
   id        String   @id @default(uuid())
   sid       String   @unique
-  data      String   @db.LongText
+  data      String
   expiresAt DateTime
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -64,10 +69,15 @@ model Addresses {
   Users     Users[]
 }
 
-enum Gender {
-  MALE
-  FEMALE
-  NOT_BINARY
+model Gender {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  gender    String   @unique
+  // MALE
+  // FEMALE
+  // NOT_BINARY
+  Users     Users[]
 }
 
 model Users {
@@ -80,21 +90,23 @@ model Users {
   phone             String
   hash              String?
   birthDate         DateTime?
-  rol               UserRoles   @default(USER)
+  rol               UserRoles   @relation(fields: [userRolesId], references: [id])
   posts             Posts[]
   isVerified        Boolean     @default(false)
   Video             Video[]
   RadioPost         RadioPost[]
   Ads               Ads[]
   password          String?
-  accessToken       String?     @db.LongText
-  refreshToken      String?     @db.LongText
-  innerRefreshToken String?     @db.LongText
-  gender            Gender?
+  accessToken       String?
+  refreshToken      String?
+  innerRefreshToken String?
+  gender            Gender?     @relation(fields: [genderId], references: [id])
   avatar            String?
   fbid              String?
   Addresses         Addresses?  @relation(fields: [addressesId], references: [id])
   addressesId       String?
+  genderId          String?
+  userRolesId       String
 
   @@index([username])
   @@index([addressesId])
@@ -104,16 +116,16 @@ model DataConfig {
   id            Int      @id @unique @default(1)
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
-  refreshToken  String?  @db.LongText
-  facebookToken String?  @db.LongText
+  refreshToken  String?
+  facebookToken String?
 }
 
 model Photos {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  url       String   @db.Text
-  fbid      String   @db.Text
+  url       String
+  fbid      String
   Posts     Posts[]
 }
 
@@ -139,11 +151,12 @@ model Posts {
   updatedAt      DateTime @updatedAt
   title          String
   subTitle       String?
-  heading        String   @db.LongText
-  text           String   @db.LongText
+  heading        String
+  text           String
   classification String
   images         Photos[]
   audio          Audio[]
+  video          Video[]
   author         Users    @relation(fields: [usersId], references: [id])
   usersId        String
   importance     Int      @default(1)
@@ -152,8 +165,6 @@ model Posts {
   isVisible      Boolean
 
   @@index([usersId])
-  @@fulltext([title])
-  @@fulltext([title, text, heading, subTitle])
 }
 
 model Video {
@@ -165,6 +176,8 @@ model Video {
   author    Users    @relation(fields: [usersId], references: [id])
   usersId   String
   metrics   Metric[]
+  Posts     Posts?   @relation(fields: [postsId], references: [id])
+  postsId   String?
 
   @@index([usersId])
 }

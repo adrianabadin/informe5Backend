@@ -1,6 +1,6 @@
 import { DatabaseHandler } from '../Services/database.service'
 import { logger } from '../Services/logger.service'
-import { type Prisma, type Users } from '@prisma/client'
+import { type Users } from '@prisma/client'
 import { type Request } from 'express'
 import argon2 from 'argon2'
 import jwt from 'jsonwebtoken'
@@ -10,44 +10,52 @@ import { type IResponseObject, type DoneType } from '../Entities'
 import { encrypt, decrypt } from '../Services/keypair.service'
 import { userLogged } from '../app'
 import { FacebookService } from '../Services/facebook.service'
+import { UsersService } from '../users/users.service'
+import { PrismaError } from '../Services/prisma.errors'
+import { type SignUpType } from './signUp.schema'
+import { AuthError, UserCreateError, UserExistsError } from './auth.errors'
 dotenv.config()
 const simetricKey = process.env.SIMETRICKEY
 const privateKey = fs.readFileSync('auth/privateKey.pem', 'utf-8')
+const userServicePM = new UsersService()
 export class AuthService extends DatabaseHandler {
   constructor (
     protected crypt = { encrypt, decrypt },
     protected facebookService = new FacebookService(),
-    public localSignUpVerify = async (req: Request, username: string, password: string, done: DoneType) => {
+    protected usersService = userServicePM,
+    public localSignUpVerify = async (req: Request<any, any, SignUpType>, username: string, password: string, done: DoneType) => {
       try {
         console.log(req.body, 'Request')
-        let user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput | null = await this.prisma.users.findUnique({ where: { username } })
-        if (user === null) {
-          const body: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = { ...req.body, hash: await argon2.hash(password), id: undefined, avatar: req.file?.path }
-          if ('password' in body) { delete body.password }
-          logger.debug({
-            function: 'AuthService.localSignUpVerify', user: { ...body, hash: null }
-          })
-          user = (await this.prisma.users.create({ data: { ...body, birthDate: new Date(body.birthDate as string) } }))
-          console.log(user, body)
-          if (user?.id !== undefined) {
+        const user = await this.usersService.findByUserName(username)
+        if (user === null || user instanceof PrismaError) {
+          const body: SignUpType & { hash: string, avatar?: string } =
+          { ...req.body, hash: await argon2.hash(password), avatar: req.file?.path }
+          const newUser = await this.usersService.createUser(body)
+          console.log(newUser, body)
+          if (newUser instanceof PrismaError) throw newUser
+          if (newUser?.id !== undefined) {
             console.log('llego al final')
-            done(null, user, { message: 'Successfully Registred' })
-          } else done(null, false, { message: 'Error in registration' })
-        } else done(null, false, { message: 'user exists' })
+            done(null, newUser)
+          } else {
+            throw new UserCreateError()
+          }
+        } else throw new UserExistsError()
       } catch (error) {
         logger.error({
           function: 'AuthService.localSignUpVerify', error
         })
-        done(error, false, { message: 'Database error' })
+        if (error instanceof AuthError || error instanceof PrismaError) { done(error, false, { message: error.message }) } else done(error, false)
       }
     },
     public localLoginVerify = async (req: Request, username: string, password: string, done: DoneType) => {
       try {
-        const user: Prisma.UsersCreateInput | Prisma.UsersUncheckedCreateInput = await this.prisma.users.findUniqueOrThrow({ where: { username }, select: { isVerified: true, lastName: true, id: true, username: true, name: true, rol: true, hash: true } }) as any
+        const user = await this.usersService.findByUserName(username)// await this.prisma.users.findUniqueOrThrow({ where: { username }, select: { isVerified: true, lastName: true, id: true, username: true, name: true, rol: true, hash: true } }) as any
+        if (user instanceof PrismaError) done(user, false)
         if (user !== undefined && 'username' in user && user.username !== null) {
           logger.debug({
             function: 'AuthService.localLoginVerify', user: { ...user, hash: null }
           })
+
           let isValid: boolean = false
           if ('hash' in user && user.hash !== null && user.hash !== undefined) { isValid = await argon2.verify(user.hash, password) }
           if (isValid) {
@@ -70,20 +78,24 @@ export class AuthService extends DatabaseHandler {
     public jwtLoginVerify = async (req: Request, jwtPayload: string, done: DoneType) => {
       try {
         const id = jwtPayload.sub as unknown as string
-        const user = await this.prisma.users.gFindById(id, { isVerified: true, lastName: true, id: true, username: true, name: true, rol: true, accessToken: true })
-        userLogged.accessToken = user.data.accessToken
-        userLogged.id = user.data.id
-        userLogged.isVerified = user.data.isVerified
-        userLogged.lastName = user.data.lastName
-        userLogged.name = user.data.name
-        userLogged.rol = user.data.rol
-        userLogged.username = user.data.username
-        if ('username' in user?.data && user?.data.username !== undefined && user?.data.username !== null) {
-          logger.debug({ function: 'jwtLoginVerify', message: 'Successfully logged in' })
-          done(null, user.data, { message: 'Successfully Logged In' })
-        } else {
-          logger.debug({ function: 'jwtLoginVerify', message: 'ID doesent match any registred users' })
-          done(null, false, { message: 'ID doesnt match any registred users' })
+        const userResponse = await this.prisma.users.findUnique({ where: { id }, include: { gender: { select: { gender: true } }, rol: { select: { role: true } } } })
+        // await this.prisma.users.gFindById(id, { isVerified: true, lastName: true, id: true, username: true, name: true, rol: true, accessToken: true })
+        if (userResponse !== undefined && userResponse !== null) {
+          const user = { ...userResponse, rol: userResponse.rol.role, gender: userResponse.gender?.gender }
+          userLogged.accessToken = user.accessToken
+          userLogged.id = user.id
+          userLogged.isVerified = user.isVerified
+          userLogged.lastName = user.lastName
+          userLogged.name = user.name
+          userLogged.rol = user.rol
+          userLogged.username = user.username
+          if ('username' in user && user.username !== undefined && user.username !== null) {
+            logger.debug({ function: 'jwtLoginVerify', message: 'Successfully logged in' })
+            done(null, user, { message: 'Successfully Logged In' })
+          } else {
+            logger.debug({ function: 'jwtLoginVerify', message: 'ID doesent match any registred users' })
+            done(null, false, { message: 'ID doesnt match any registred users' })
+          }
         }
       } catch (error) {
         logger.error({ function: 'AuthService.jwtLoginVerify', error })
@@ -127,7 +139,7 @@ export class AuthService extends DatabaseHandler {
       try {
         let data
         if (refreshToken !== undefined) data = await this.prisma.dataConfig.upsert({ where: { id: 1 }, update: { refreshToken }, create: { refreshToken }, select: { refreshToken: true } })
-        // if (data !== undefined) return data
+        if (data !== undefined) return data
       } catch (error) {
         logger.error({ function: 'AuthController.innerVerify', error })
       }
@@ -161,42 +173,84 @@ export class AuthService extends DatabaseHandler {
       return bool
     },
 
-    public findFBUserOrCreate = async (email: string, profile: any, accessToken: string, birthDay?: string, phone?: string, gender: Prisma.UsersCreateInput['gender']) => {
+    public findFBUserOrCreate =
+    async (email: string,
+      profile: any,
+      accessToken: string,
+      birthDay?: string,
+      phone?: string,
+      gender?: 'MALE' | 'FEMALE' | 'NOT_BINARY') => {
       const admin = await this.isFacebookAdmin(accessToken)
       let finalAccessToken: string | undefined = ''
       if (admin) finalAccessToken = await this.facebookService.getLongliveAccessToken(accessToken, profile.id)
-      const user = await this.prisma.users.findUnique({ where: { username: email } })
+      const user = await this.usersService.findByUserName(email) // this.prisma.users.findUnique({ where: { username: email } })
+      if (user instanceof PrismaError) throw user
       if (user != null) { // usuario existe
         if (user.rol !== 'ADMIN' && admin) { // el rol del usuario no es admin, pero administra la pagina
-          const response = await this.prisma.users.update({ where: { username: email }, data: { rol: 'ADMIN', accessToken: finalAccessToken, isVerified: true, avatar: profile.photos[0].value, fbid: profile.id } })
-          return response
+          const response =
+            await this.prisma.users.update({
+              where: { username: email },
+              data: {
+                accessToken: finalAccessToken,
+                isVerified: true,
+                avatar: profile.photos[0].value,
+                fbid: profile.id,
+                rol: { connect: { role: 'ADMIN' } }
+              },
+              include: { rol: { select: { role: true } } }
+            })
+          return { ...response, rol: response.rol.role }
         } else if (user.rol === 'ADMIN' && !admin) {
-          const response = await this.prisma.users.update({ where: { username: email }, data: { rol: 'USER', isVerified: true, accessToken: finalAccessToken, avatar: profile.photos[0].value, fbid: profile.id } })
-          return response
-        } else if (user.accessToken === null || user.avatar === null || user.fbid === null || !user.isVerified) {
+          const response = await this.prisma.users.update(
+            {
+              where: { username: email },
+              data: {
+                isVerified: true,
+                accessToken: finalAccessToken,
+                avatar: profile.photos[0].value,
+                fbid: profile.id,
+                rol: { connect: { role: 'USER' } }
+              },
+              include: { rol: { select: { role: true } } }
+            })
+          return { ...response, rol: response.rol.role }
+        } else if (user.accessToken === null || user.avatar === null || user.fbid === null || (user.isVerified === undefined || !user.isVerified)) {
           const response = await this.prisma.users.update({ where: { username: email }, data: { accessToken: finalAccessToken, isVerified: true, avatar: profile.photos[0].value, fbid: profile.id } })
           return response
         }
         return user
       } else { // usuario no existe valida si es admin o user y si tiene la informacion lo crea
         if (gender !== null && phone !== undefined && birthDay !== null) {
-          const response = await this.prisma.users
-            .gCreate({
-              lastName: profile.name.familName as string,
-              name: profile.name.givenName as string,
-              phone,
-              username: email,
-              rol: admin ? 'ADMIN' : 'USER',
-              isVerified: true,
-              accessToken,
-              gender,
-              birthDate: birthDay,
-              fbid: profile.id,
-              avatar: profile.photos[0].value
+          // cambiar para usar userService
+          const response = await this.usersService.createUser({
+            birthDate: birthDay,
+            gender,
+            phone,
+            username: email,
+            avatar: profile.photos[0].value,
+            name: profile.name.givenName as string,
+            lastName: profile.name.familName as string,
+            hash: '',
+            password: ''
 
-            })
+          }, profile.id, accessToken)
+          // const response = await this.prisma.users
+          //   .gCreate({
+          //     lastName: profile.name.familName as string,
+          //     name: profile.name.givenName as string,
+          //     phone,
+          //     username: email,
+          //     rol: admin ? 'ADMIN' : 'USER',
+          //     isVerified: true,
+          //     accessToken,
+          //     gender,
+          //     birthDate: birthDay,
+          //     fbid: profile.id,
+          //     avatar: profile.photos[0].value
 
-          return response.data
+          //   })
+
+          return response
         } // no se pasaron los datos opcionales ala funcion entonces devuelve un undefined y vuelve  a la strategy para continuar flujo
       }
     }

@@ -39,6 +39,7 @@ export class FacebookService {
     public getLinkFromId = async (idArray: Array<{ id: string } | undefined>): Promise<GenericResponseObject<Array<{ fbid: string, url: string }>>> => {
       try {
         const imagesArray: Array<{ fbid: string, url: string }> = []
+        //    console.log({ idArray })
         if (idArray !== undefined && Array.isArray(idArray)) {
         // https://graph.facebook.com/391159203017232?fields=link&access_token=EAAC6VEEU92EBAMdz1ZAcWHS199UPlJqArvcZCkVVOT5vF9sZBYzMixo4IoNTnguXZB2BCb3Ui3jhGUGIIKGEtIx8ZC3iiMlpuXUNZBWHaDEJjif0M04jLyPhBCISHvnOY9oYIuj1Qrz5ZBlH63pMN3G3kB0AzioZAZCKd3HyA1Swl0mEO9Dg8k3WgqG5WrqLZANM9uEkcrn7IFjAZDZD
           if (this.pageToken !== '') {
@@ -68,6 +69,7 @@ export class FacebookService {
                       const imagesFromFB: unknown = JSON.parse(image.body)
                       // VALIDA QUE ESTA REQUEST TENGA UNA KEY IMAGES DE TIPO ARRAY Y UNA ID DE TIPO STRING
                       if (imagesFromFB !== null && typeof imagesFromFB === 'object' && 'images' in imagesFromFB && 'id' in imagesFromFB && typeof imagesFromFB.id === 'string' && Array.isArray(imagesFromFB.images)) {
+                      //  console.log({ imagesFromFB: imagesFromFB.images })
                         let found720: boolean = false
                         let accu: number = 0
                         let indexAcc: number = 0
@@ -92,7 +94,7 @@ export class FacebookService {
                           imagesArray.push({ fbid: imagesFromFB.id, url: imagesFromFB.images[indexAcc].source })
                         }
                       }
-                      logger.debug({ function: 'facebookService.getLinkFromId', imagesArray })
+                      //                logger.debug({ function: 'facebookService.getLinkFromId', imagesArray })
                       // hace el return de un response Object con un imagesArray Type
                     }
                   }

@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-return */
 /* eslint-disable @typescript-eslint/prefer-optional-chain */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { response, type Request, type Response } from 'express'
@@ -37,62 +38,67 @@ export class PostController {
       req: Request<GetPostById['params'], any, UpdatePostType['body']>,
       res: Response
     ) => {
-      logger.debug({ body: req.body, function: 'updatePost.controller' })
-      const files = req.files
-      let { dbImages, title, heading, classification } = req.body
-      const { id } = req.params
-      let imagesArray: ImagesSchema[] | undefined
-      logger.debug({ dbImages, files, body: req.body })
-      if (dbImages !== undefined && typeof dbImages === 'string') {
-        imagesArray = JSON.parse(dbImages)
-      }
-      // hasta aca, tengo que en imagesArray o hay un array de imagenes o tengo undefined
-      // como manejo el hecho de que me lleguen imagenes ya cargadas y filas nuevas agregadas?
-      let nuevoArray: ImagesSchema[] | undefined
-      if (files !== undefined && files.length !== 0) {
+      try {
+        logger.debug({ body: req.body, function: 'updatePost.controller' })
+        const files = req.files
+        let { dbImages, title, heading, classification, video } = req.body
+        const { id } = req.params
+        let imagesArray: ImagesSchema[] | undefined
+        logger.debug({ dbImages, files, body: req.body })
+        if (dbImages !== undefined && typeof dbImages === 'string') {
+          imagesArray = JSON.parse(dbImages)
+        }
+        // hasta aca, tengo que en imagesArray o hay un array de imagenes o tengo undefined
+        // como manejo el hecho de que me lleguen imagenes ya cargadas y filas nuevas agregadas?
+        let nuevoArray: ImagesSchema[] | undefined
+        if (files !== undefined && files.length !== 0) {
         // aqui valido si hay files de multer para agregar.
-        nuevoArray = await this.service.photoGenerator(
-          files as Express.Multer.File[]
-        )
-        if (nuevoArray != null && imagesArray != null) { nuevoArray = [...nuevoArray, ...imagesArray] } else if (imagesArray != null) nuevoArray = imagesArray
+          nuevoArray = await this.service.photoGenerator(
+            files as Express.Multer.File[]
+          )
+          if (nuevoArray != null && imagesArray != null) { nuevoArray = [...nuevoArray, ...imagesArray] } else if (imagesArray != null) nuevoArray = imagesArray
         // logger.debug({ function: 'postController.updade', nuevoArray })
-      } else nuevoArray = imagesArray
-      let body = req.body
-      if (body !== null && typeof body === 'object' && 'dbImages' in body) {
-        body = { ...body, dbImages: undefined }
-      }
-      const updateDbResponse = await this.service.updatePost(
-        body as any, // as Prisma.PostsUpdateInput,
-        id,
-        nuevoArray
-      )
-      if (title === undefined) {
-        title = updateDbResponse.data.title as string
-      }
-      if (heading === undefined) {
-        heading = updateDbResponse.data.heading as string
-      }
-      if (classification === undefined) {
-        if (updateDbResponse.data.classification !== undefined) {
-          classification = updateDbResponse.data
-            .classification as (typeof ClassificationArray)[number]
-        } else classification = 'Municipales'
-      }
-      // ACA DEBO VER LA LOGICA PARA QUE GENERE UN MERGE DE LOS DATOS QUE YA ESTAN EN LA DB Y LO QUE SE VA A ACTUALIZAR
-      if (nuevoArray !== undefined && 'fbid' in updateDbResponse.data) {
-        await this.facebookService.updateFacebookPost(
-          updateDbResponse.data.fbid as string,
-          {
-            title,
-            heading,
-            classification,
-            newspaperID: id,
-            images: nuevoArray?.map((id) => id.fbid)
-          }
+        } else nuevoArray = imagesArray
+        let body = req.body
+        if (body !== null && typeof body === 'object' && 'dbImages' in body) {
+          body = { ...body, dbImages: undefined }
+        }
+        const updateDbResponse = await this.service.updatePost(
+          body as any, // as Prisma.PostsUpdateInput,
+          id,
+          nuevoArray
         )
+        if (title === undefined) {
+          title = updateDbResponse.data.title as string
+        }
+        if (heading === undefined) {
+          heading = updateDbResponse.data.heading as string
+        }
+        if (classification === undefined) {
+          if (updateDbResponse.data.classification !== undefined) {
+            classification = updateDbResponse.data
+              .classification as (typeof ClassificationArray)[number]
+          } else classification = 'Municipales'
+        }
+        // ACA DEBO VER LA LOGICA PARA QUE GENERE UN MERGE DE LOS DATOS QUE YA ESTAN EN LA DB Y LO QUE SE VA A ACTUALIZAR
+        if (nuevoArray !== undefined && 'fbid' in updateDbResponse.data) {
+          await this.facebookService.updateFacebookPost(
+            updateDbResponse.data.fbid as string,
+            {
+              title,
+              heading,
+              classification,
+              newspaperID: id,
+              images: nuevoArray?.map((id) => id.fbid)
+            }
+          )
+        }
+        //      io.emit('postUpdate', { ...updateDbResponse, images: nuevoArray })
+        res.send({ ...updateDbResponse.data, images: nuevoArray })
+      } catch (error) {
+        logger.error({ function: 'postController.update', error })
+        res.status(500).send(error)
       }
-      //      io.emit('postUpdate', { ...updateDbResponse, images: nuevoArray })
-      res.send({ ...updateDbResponse.data, images: nuevoArray })
     },
     public createPost = async (
       req: Request<any, any, CreatePostType['body']>,
@@ -101,6 +107,7 @@ export class PostController {
       const body = req.body
       const files = req.files
       const dataEmitted = { active: true, body }
+      console.log(body, 'enviado')
       io.emit('postLoader', dataEmitted)
       try {
         let imagesArray
@@ -160,6 +167,17 @@ export class PostController {
         logger.error({ function: 'PostController.createPost', error })
         res.status(404).send(error)
       }
+    },
+    public getPostsIds = async (
+      req: Request<any, any, any>,
+      res: Response
+    ) => {
+      const response = await this.service.getIds()
+      if (response === undefined) {
+        res.status(500).send('No posts found')
+        return
+      }
+      res.status(200).send(response)
     },
     public getAllPosts = (
       req: Request<any, any, any, GetPostsType['query']>,
@@ -257,6 +275,7 @@ export class PostController {
                   )
               })
             )
+            console.log(checkedResponse, 'texto')
             res.status(200).send(checkedResponse)
           }
         })
@@ -264,6 +283,24 @@ export class PostController {
           logger.error({ function: 'PostController.getAllPosts', error })
           res.status(404).send(error)
         })
+    },
+    public get30DaysPosts = async (_req: Request<GetPostById['params']>,
+      res: Response
+    ) => {
+      try {
+        const response = await this.service.get30DaysPosts()
+        if (response instanceof PrismaError) {
+          res.status(500).send(response)
+          return
+        } else {
+          res.status(200).send(response)
+          return
+        }
+      } catch (error) {
+        logger.error({ function: 'PostController.get30DaysPosts', error })
+        res.status(500).send(error)
+        return
+      }
     },
     public getPostById = (
       req: Request<GetPostById['params']>,
@@ -429,6 +466,7 @@ export class PostController {
       try {
         const { file, body: { title, description, tags, url } } = req
         const { username } = req.user as any
+        console.log('subiendo', file, title, description, tags, url, username, req.body)
         if (url !== undefined) {
           const createResponse =
             await this.service.prisma.video.create(
@@ -436,6 +474,7 @@ export class PostController {
                 data:
                 {
                   url,
+                  youtubeId: url.split('watch?v=')[1],
                   author:
                   {
                     connect:
@@ -443,6 +482,7 @@ export class PostController {
                   }
                 }
               })
+          console.log(createResponse, 'datos ')
           if (createResponse !== undefined && createResponse !== null) {
             res.status(200).send(createResponse)
             return
@@ -463,27 +503,31 @@ export class PostController {
           return
         }
         if (title !== undefined && (description !== undefined && description !== null && typeof description === 'string')) {
-          const response =
+          console.log('Subir el Archivo opcion')
+          const response: unknown | string | GoogleError =
           await this.googleService.uploadVideo(
             file.path,
             title,
             description,
             process.env.YOUTUBE_CHANNEL,
             tags)
+          console.log(response, 'termino upload')
           if (response instanceof GoogleError) {
             res.status(500).send(response)
             return
           }
-          const dbResponse = await this.service.prisma.video.create({ data: { youtubeId: response, author: { connect: { username } } } })
-          if (dbResponse !== undefined && dbResponse !== null) {
-            res.status(200).send(dbResponse)
-            return
-          } else {
-            res.status(500).send({
-              error: new Error('Error al escribir la base de datos'),
-              code: 4001
-            })
-            return
+          if (typeof response === 'string') {
+            const dbResponse = await this.service.prisma.video.create({ data: { youtubeId: response, author: { connect: { username } } } })
+            if (dbResponse !== undefined && dbResponse !== null) {
+              res.status(200).send(dbResponse)
+              return
+            } else {
+              res.status(500).send({
+                error: new Error('Error al escribir la base de datos'),
+                code: 4001
+              })
+              return
+            }
           }
         }
       } catch (error) {
@@ -493,9 +537,10 @@ export class PostController {
     public eraseVideo = async (req: Request<any, any, any, VideoEraseType['query']>, res: Response) => {
       try {
         const { youtubeId } = req.query
-        const dbResponse = await this.service.prisma.video.delete({ where: { youtubeId } })
+        const dbResponse = await this.service.prisma.video.delete({ where: { id: youtubeId } })
+        console.log(dbResponse, 'data')
         if (dbResponse !== undefined) {
-          const response = await this.googleService.videoRm(youtubeId)
+          const response = await this.googleService.videoRm(dbResponse.youtubeId as string)
           if (response instanceof GoogleError) {
             res.status(500).send(response)
             return
