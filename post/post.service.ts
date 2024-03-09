@@ -355,13 +355,16 @@ export class PostService extends DatabaseHandler {
         } else return error as Error
       }
     },
-    public get30DaysPosts = async () => {
+    public get30DaysPosts = async (page: number = 1) => {
       try {
-        const actualDate = new Date()
-        actualDate.setDate(actualDate.getDate() - 30)
+        const fromDate = new Date()
+        fromDate.setDate(fromDate.getDate() - 30 * page)
+        const toDate = new Date(fromDate)
+        toDate.setDate(toDate.getDate() + 30)
+
         const response = await this.prisma.posts.findMany({
           orderBy: { createdAt: 'desc' },
-          where: { createdAt: { gt: actualDate } },
+          where: { createdAt: { gt: fromDate, lte: toDate } },
           include: {
             images: { select: { fbid: true, id: true, url: true, updatedAt: true } },
             video: { select: { id: true, url: true, youtubeId: true } },
@@ -391,7 +394,7 @@ export class PostService extends DatabaseHandler {
             if (Array.isArray(arrayId) && arrayId.length > 0) {
               const images = await this.facebookService.getLinkFromId(arrayId)
               if (images.ok) {
-                const dbTransaction = await this.prisma.$transaction(async (prisma) => {
+                await this.prisma.$transaction(async (prisma) => {
                   for (const image of images.data) {
                     const modd = res.images.find(imageDB => {
                       console.log(image.fbid, imageDB.id)
@@ -404,7 +407,6 @@ export class PostService extends DatabaseHandler {
                     await prisma.photos.updateMany({ where: { fbid: image.fbid }, data: { url: image.url } })
                   }
                 })
-                console.log(dbTransaction, 'XXXXXXXXXXXXXXXXX')
               }
             }
           }

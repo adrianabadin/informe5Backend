@@ -284,11 +284,13 @@ export class PostController {
           res.status(404).send(error)
         })
     },
-    public get30DaysPosts = async (_req: Request<GetPostById['params']>,
+    public get30DaysPosts = async (req: Request<any, any, any, { page?: string }>,
       res: Response
     ) => {
       try {
-        const response = await this.service.get30DaysPosts()
+        const { page } = req.query
+        
+        const response = await this.service.get30DaysPosts(page !== undefined ? parseInt(page) : undefined)
         if (response instanceof PrismaError) {
           res.status(500).send(response)
           return
